@@ -1,0 +1,7 @@
+ALTER procedure [dbo].[Sp_MostrarBeneficiario]
+as
+	BEGIN
+		Set nocount on
+		Select IdBeneficiario,Nombres+' '+Apellidos as 'Nombre',Direccion,Telefono,TelefonoAuxiliar,NumIdentidad
+		From Beneficiario
+	END
