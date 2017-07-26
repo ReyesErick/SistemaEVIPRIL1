@@ -236,7 +236,7 @@ Public Class FrmInventario
 
     End Sub
 
-    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
+    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) 
         Dim empleado As New FrmEmpleado()
         sele = 1
         FrmEmpleado.Show()

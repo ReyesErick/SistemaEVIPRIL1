@@ -37,9 +37,6 @@ Partial Class FrmInventario
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.btnEmpleado = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtNumidentidad = New System.Windows.Forms.TextBox()
         Me.cboPaisFabricacion = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CboTipoArma = New System.Windows.Forms.ComboBox()
@@ -61,6 +58,10 @@ Partial Class FrmInventario
         Me.ChLugar = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,10 +186,9 @@ Partial Class FrmInventario
         '
         Me.TabPage2.Controls.Add(Me.PictureBox3)
         Me.TabPage2.Controls.Add(Me.BtnGuardar)
-        Me.TabPage2.Controls.Add(Me.btnEmpleado)
-        Me.TabPage2.Controls.Add(Me.Label8)
-        Me.TabPage2.Controls.Add(Me.txtNumidentidad)
         Me.TabPage2.Controls.Add(Me.cboPaisFabricacion)
+        Me.TabPage2.Controls.Add(Me.Label9)
+        Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.CboTipoArma)
         Me.TabPage2.Controls.Add(Me.Label6)
@@ -197,6 +197,8 @@ Partial Class FrmInventario
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.Label2)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.TextBox1)
         Me.TabPage2.Controls.Add(Me.txtSerie)
         Me.TabPage2.Controls.Add(Me.MskCalibre)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -228,38 +230,6 @@ Partial Class FrmInventario
         Me.BtnGuardar.TabIndex = 44
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
-        '
-        'btnEmpleado
-        '
-        Me.btnEmpleado.BackgroundImage = CType(resources.GetObject("btnEmpleado.BackgroundImage"), System.Drawing.Image)
-        Me.btnEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnEmpleado.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEmpleado.FlatAppearance.BorderSize = 0
-        Me.btnEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmpleado.Location = New System.Drawing.Point(530, 323)
-        Me.btnEmpleado.Name = "btnEmpleado"
-        Me.btnEmpleado.Size = New System.Drawing.Size(26, 23)
-        Me.btnEmpleado.TabIndex = 40
-        Me.btnEmpleado.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(257, 322)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(144, 18)
-        Me.Label8.TabIndex = 13
-        Me.Label8.Text = "Numero de Identidad"
-        '
-        'txtNumidentidad
-        '
-        Me.txtNumidentidad.Location = New System.Drawing.Point(403, 323)
-        Me.txtNumidentidad.Name = "txtNumidentidad"
-        Me.txtNumidentidad.Size = New System.Drawing.Size(121, 20)
-        Me.txtNumidentidad.TabIndex = 12
         '
         'cboPaisFabricacion
         '
@@ -417,6 +387,41 @@ Partial Class FrmInventario
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(335, 310)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(66, 18)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Contrato"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(342, 347)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 18)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Estado"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(403, 311)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 0
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(403, 348)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 0
+        Me.TextBox2.Text = "0"
+        '
         'FrmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -470,8 +475,6 @@ Partial Class FrmInventario
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtSerie As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtNumidentidad As TextBox
     Friend WithEvents cboPaisFabricacion As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents CboTipoArma As ComboBox
@@ -479,8 +482,11 @@ Partial Class FrmInventario
     Friend WithEvents cboModelo As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents btnEmpleado As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
