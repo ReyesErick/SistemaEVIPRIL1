@@ -35,6 +35,7 @@ Partial Class FrmInventario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TcArma = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PbxBuscar = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.cboPaisFabricacion = New System.Windows.Forms.ComboBox()
@@ -62,17 +63,18 @@ Partial Class FrmInventario
         Me.ChLugar = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.PbxBuscar = New System.Windows.Forms.PictureBox()
+        Me.ChIdContrato = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TcArma.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -211,6 +213,17 @@ Partial Class FrmInventario
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Agregar Arma"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'PbxBuscar
+        '
+        Me.PbxBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxBuscar.Image = CType(resources.GetObject("PbxBuscar.Image"), System.Drawing.Image)
+        Me.PbxBuscar.Location = New System.Drawing.Point(509, 309)
+        Me.PbxBuscar.Name = "PbxBuscar"
+        Me.PbxBuscar.Size = New System.Drawing.Size(27, 23)
+        Me.PbxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxBuscar.TabIndex = 60
+        Me.PbxBuscar.TabStop = False
         '
         'PictureBox3
         '
@@ -381,7 +394,7 @@ Partial Class FrmInventario
         '
         'LsvInventarioArma
         '
-        Me.LsvInventarioArma.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdArma, Me.ChSerie, Me.ChCalibre, Me.ChModelo, Me.ChTipoArma, Me.ChLugar})
+        Me.LsvInventarioArma.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdArma, Me.ChSerie, Me.ChCalibre, Me.ChModelo, Me.ChTipoArma, Me.ChLugar, Me.ChIdContrato, Me.ChEstado})
         Me.LsvInventarioArma.Location = New System.Drawing.Point(6, 6)
         Me.LsvInventarioArma.Name = "LsvInventarioArma"
         Me.LsvInventarioArma.Size = New System.Drawing.Size(824, 509)
@@ -426,16 +439,13 @@ Partial Class FrmInventario
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'PbxBuscar
+        'ChIdContrato
         '
-        Me.PbxBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PbxBuscar.Image = CType(resources.GetObject("PbxBuscar.Image"), System.Drawing.Image)
-        Me.PbxBuscar.Location = New System.Drawing.Point(509, 309)
-        Me.PbxBuscar.Name = "PbxBuscar"
-        Me.PbxBuscar.Size = New System.Drawing.Size(27, 23)
-        Me.PbxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxBuscar.TabIndex = 60
-        Me.PbxBuscar.TabStop = False
+        Me.ChIdContrato.Text = "Id Contrato Cliente"
+        '
+        'ChEstado
+        '
+        Me.ChEstado.Text = "Estado"
         '
         'FrmInventario
         '
@@ -459,10 +469,10 @@ Partial Class FrmInventario
         Me.TcArma.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -506,4 +516,6 @@ Partial Class FrmInventario
     Friend WithEvents TxtEstado As TextBox
     Friend WithEvents TxtContrato As TextBox
     Friend WithEvents PbxBuscar As PictureBox
+    Friend WithEvents ChIdContrato As ColumnHeader
+    Friend WithEvents ChEstado As ColumnHeader
 End Class

@@ -210,7 +210,7 @@ Public Class FrmInventario
                     .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CboTipoArma.SelectedValue
                     .Parameters.Add("@IdFabricacion", SqlDbType.Int).Value = cboPaisFabricacion.SelectedValue
                     .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = TxtContrato.Text
-                    .Parameters.Add("@Estado", SqlDbType.Bit).Value = TxtEstado.Text
+                    .Parameters.Add("@Estado", SqlDbType.Bit).Value = Convert.ToByte(TxtEstado.Text)
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
                 End With
