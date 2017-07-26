@@ -29,7 +29,8 @@ Public Class FrmInventario
                         .SubItems.Add(MostrarEmpleado("Modelo").ToString)
                         .SubItems.Add(MostrarEmpleado("TipoArma").ToString)
                         .SubItems.Add(MostrarEmpleado("LugarFabricacion").ToString)
-                        .SubItems.Add(MostrarEmpleado("NumIdentidad").ToString)
+                        .SubItems.Add(MostrarEmpleado("IdContratoCliente").ToString)
+                        .SubItems.Add(MostrarEmpleado("Estado").ToString)
 
 
                     End With
@@ -96,12 +97,12 @@ Public Class FrmInventario
             ErrorProvider1.SetError(cboPaisFabricacion, "")
         End If
 
-        If txtNumidentidad.Text = Nothing Then
-            ErrorProvider1.SetError(txtNumidentidad, "Campo Obligatorio")
-            txtNumidentidad.Focus()
+        If TxtContrato.Text = Nothing Then
+            ErrorProvider1.SetError(TxtContrato, "Campo Obligatorio")
+            TxtContrato.Focus()
             Return
         Else
-            ErrorProvider1.SetError(txtNumidentidad, "")
+            ErrorProvider1.SetError(TxtContrato, "")
         End If
 
         Call AgregarArma()
@@ -208,7 +209,8 @@ Public Class FrmInventario
                     .Parameters.Add("@IdModelo", SqlDbType.Int).Value = cboModelo.SelectedValue
                     .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CboTipoArma.SelectedValue
                     .Parameters.Add("@IdFabricacion", SqlDbType.Int).Value = cboPaisFabricacion.SelectedValue
-                    .Parameters.Add("@NumIDentidad", SqlDbType.Char).Value = txtNumidentidad.Text
+                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = TxtContrato.Text
+                    .Parameters.Add("@Estado", SqlDbType.Bit).Value = TxtEstado.Text
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
                 End With
@@ -236,22 +238,16 @@ Public Class FrmInventario
 
     End Sub
 
-    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) 
-        Dim empleado As New FrmEmpleado()
-        sele = 1
-        FrmEmpleado.Show()
-        FrmEmpleado.TcEmpleado.Visible = True
-        FrmEmpleado.TcEmpleado.SelectedTab = FrmEmpleado.TpVer
-        txtNumidentidad.Text = FrmEmpleado.DgvVerEmpleado.CurrentRow.Cells(0).Value.ToString
-    End Sub
-
     Private Sub Limpiar()
         txtSerie.Clear()
-        txtNumidentidad.Clear()
+        TxtContrato.Clear()
         MskCalibre.Clear()
         cboModelo.Text = ""
         cboPaisFabricacion.Text = ""
         CboTipoArma.Text = ""
     End Sub
 
+    Private Sub PbxBuscar_Click(sender As Object, e As EventArgs) Handles PbxBuscar.Click
+        FrmContrato.Show()
+    End Sub
 End Class

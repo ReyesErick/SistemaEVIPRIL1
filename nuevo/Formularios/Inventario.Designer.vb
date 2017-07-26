@@ -38,6 +38,8 @@ Partial Class FrmInventario
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.cboPaisFabricacion = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CboTipoArma = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,6 +48,8 @@ Partial Class FrmInventario
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.TxtEstado = New System.Windows.Forms.TextBox()
+        Me.TxtContrato = New System.Windows.Forms.TextBox()
         Me.txtSerie = New System.Windows.Forms.TextBox()
         Me.MskCalibre = New System.Windows.Forms.MaskedTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -58,10 +62,7 @@ Partial Class FrmInventario
         Me.ChLugar = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PbxBuscar = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +72,7 @@ Partial Class FrmInventario
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -184,6 +186,7 @@ Partial Class FrmInventario
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.PbxBuscar)
         Me.TabPage2.Controls.Add(Me.PictureBox3)
         Me.TabPage2.Controls.Add(Me.BtnGuardar)
         Me.TabPage2.Controls.Add(Me.cboPaisFabricacion)
@@ -197,8 +200,8 @@ Partial Class FrmInventario
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.Label2)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.TxtEstado)
+        Me.TabPage2.Controls.Add(Me.TxtContrato)
         Me.TabPage2.Controls.Add(Me.txtSerie)
         Me.TabPage2.Controls.Add(Me.MskCalibre)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -238,6 +241,26 @@ Partial Class FrmInventario
         Me.cboPaisFabricacion.Name = "cboPaisFabricacion"
         Me.cboPaisFabricacion.Size = New System.Drawing.Size(121, 21)
         Me.cboPaisFabricacion.TabIndex = 11
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(342, 347)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 18)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Estado"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(335, 310)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(66, 18)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Contrato"
         '
         'Label7
         '
@@ -314,6 +337,22 @@ Partial Class FrmInventario
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Serie"
         '
+        'TxtEstado
+        '
+        Me.TxtEstado.Location = New System.Drawing.Point(403, 348)
+        Me.TxtEstado.Name = "TxtEstado"
+        Me.TxtEstado.Size = New System.Drawing.Size(100, 20)
+        Me.TxtEstado.TabIndex = 0
+        Me.TxtEstado.Text = "0"
+        '
+        'TxtContrato
+        '
+        Me.TxtContrato.Enabled = False
+        Me.TxtContrato.Location = New System.Drawing.Point(403, 311)
+        Me.TxtContrato.Name = "TxtContrato"
+        Me.TxtContrato.Size = New System.Drawing.Size(100, 20)
+        Me.TxtContrato.TabIndex = 0
+        '
         'txtSerie
         '
         Me.txtSerie.Location = New System.Drawing.Point(403, 87)
@@ -387,40 +426,16 @@ Partial Class FrmInventario
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'Label8
+        'PbxBuscar
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(335, 310)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(66, 18)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Contrato"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(342, 347)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 18)
-        Me.Label9.TabIndex = 10
-        Me.Label9.Text = "Estado"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(403, 311)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(403, 348)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 0
-        Me.TextBox2.Text = "0"
+        Me.PbxBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxBuscar.Image = CType(resources.GetObject("PbxBuscar.Image"), System.Drawing.Image)
+        Me.PbxBuscar.Location = New System.Drawing.Point(509, 309)
+        Me.PbxBuscar.Name = "PbxBuscar"
+        Me.PbxBuscar.Size = New System.Drawing.Size(27, 23)
+        Me.PbxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxBuscar.TabIndex = 60
+        Me.PbxBuscar.TabStop = False
         '
         'FrmInventario
         '
@@ -447,6 +462,7 @@ Partial Class FrmInventario
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -487,6 +503,7 @@ Partial Class FrmInventario
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtEstado As TextBox
+    Friend WithEvents TxtContrato As TextBox
+    Friend WithEvents PbxBuscar As PictureBox
 End Class

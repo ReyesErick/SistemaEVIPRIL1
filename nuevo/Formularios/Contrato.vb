@@ -262,4 +262,9 @@ Public Class FrmContrato
             e.Handled = True
         End If
     End Sub
+
+    Private Sub DgvContrato_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvContrato.CellDoubleClick
+        FrmInventario.TxtContrato.Text = DgvContrato.CurrentRow.Cells(0).Value.ToString()
+        Me.Close()
+    End Sub
 End Class
