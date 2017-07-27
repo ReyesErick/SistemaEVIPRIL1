@@ -39,7 +39,6 @@ Partial Class FrmInventario
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.cboPaisFabricacion = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CboTipoArma = New System.Windows.Forms.ComboBox()
@@ -49,7 +48,6 @@ Partial Class FrmInventario
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtEstado = New System.Windows.Forms.TextBox()
         Me.TxtContrato = New System.Windows.Forms.TextBox()
         Me.txtSerie = New System.Windows.Forms.TextBox()
         Me.MskCalibre = New System.Windows.Forms.MaskedTextBox()
@@ -61,10 +59,13 @@ Partial Class FrmInventario
         Me.ChModelo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTipoArma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChLugar = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ChIdContrato = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.RdbActivo = New System.Windows.Forms.RadioButton()
+        Me.RdbInactivo = New System.Windows.Forms.RadioButton()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -188,11 +189,13 @@ Partial Class FrmInventario
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.RdbActivo)
+        Me.TabPage2.Controls.Add(Me.RdbInactivo)
+        Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.PbxBuscar)
         Me.TabPage2.Controls.Add(Me.PictureBox3)
         Me.TabPage2.Controls.Add(Me.BtnGuardar)
         Me.TabPage2.Controls.Add(Me.cboPaisFabricacion)
-        Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.CboTipoArma)
@@ -202,7 +205,6 @@ Partial Class FrmInventario
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.Label2)
-        Me.TabPage2.Controls.Add(Me.TxtEstado)
         Me.TabPage2.Controls.Add(Me.TxtContrato)
         Me.TabPage2.Controls.Add(Me.txtSerie)
         Me.TabPage2.Controls.Add(Me.MskCalibre)
@@ -249,27 +251,18 @@ Partial Class FrmInventario
         '
         'cboPaisFabricacion
         '
+        Me.cboPaisFabricacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboPaisFabricacion.FormattingEnabled = True
         Me.cboPaisFabricacion.Location = New System.Drawing.Point(403, 274)
         Me.cboPaisFabricacion.Name = "cboPaisFabricacion"
         Me.cboPaisFabricacion.Size = New System.Drawing.Size(121, 21)
         Me.cboPaisFabricacion.TabIndex = 11
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(342, 347)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 18)
-        Me.Label9.TabIndex = 10
-        Me.Label9.Text = "Estado"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(335, 310)
+        Me.Label8.Location = New System.Drawing.Point(331, 310)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 18)
         Me.Label8.TabIndex = 10
@@ -278,15 +271,16 @@ Partial Class FrmInventario
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(263, 273)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(240, 273)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(138, 18)
+        Me.Label7.Size = New System.Drawing.Size(157, 18)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Pais de Fabricacion"
         '
         'CboTipoArma
         '
+        Me.CboTipoArma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoArma.FormattingEnabled = True
         Me.CboTipoArma.Location = New System.Drawing.Point(403, 225)
         Me.CboTipoArma.Name = "CboTipoArma"
@@ -296,15 +290,16 @@ Partial Class FrmInventario
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(301, 224)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(289, 224)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(96, 18)
+        Me.Label6.Size = New System.Drawing.Size(108, 18)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Tipo de Arma"
         '
         'cboModelo
         '
+        Me.cboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboModelo.FormattingEnabled = True
         Me.cboModelo.Location = New System.Drawing.Point(403, 176)
         Me.cboModelo.Name = "cboModelo"
@@ -314,10 +309,10 @@ Partial Class FrmInventario
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(343, 175)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(333, 175)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 18)
+        Me.Label5.Size = New System.Drawing.Size(64, 18)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Modelo"
         '
@@ -333,30 +328,22 @@ Partial Class FrmInventario
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(343, 128)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(336, 128)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 18)
+        Me.Label3.Size = New System.Drawing.Size(61, 18)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Calibre"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(355, 86)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(350, 86)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 18)
+        Me.Label2.Size = New System.Drawing.Size(47, 18)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Serie"
-        '
-        'TxtEstado
-        '
-        Me.TxtEstado.Location = New System.Drawing.Point(403, 348)
-        Me.TxtEstado.Name = "TxtEstado"
-        Me.TxtEstado.Size = New System.Drawing.Size(100, 20)
-        Me.TxtEstado.TabIndex = 0
-        Me.TxtEstado.Text = "0"
         '
         'TxtContrato
         '
@@ -427,6 +414,14 @@ Partial Class FrmInventario
         Me.ChLugar.Text = "LugarFabricacion"
         Me.ChLugar.Width = 111
         '
+        'ChIdContrato
+        '
+        Me.ChIdContrato.Text = "Id Contrato Cliente"
+        '
+        'ChEstado
+        '
+        Me.ChEstado.Text = "Estado"
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LawnGreen
@@ -439,13 +434,37 @@ Partial Class FrmInventario
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'ChIdContrato
+        'RdbActivo
         '
-        Me.ChIdContrato.Text = "Id Contrato Cliente"
+        Me.RdbActivo.AutoSize = True
+        Me.RdbActivo.Location = New System.Drawing.Point(423, 352)
+        Me.RdbActivo.Name = "RdbActivo"
+        Me.RdbActivo.Size = New System.Drawing.Size(55, 17)
+        Me.RdbActivo.TabIndex = 62
+        Me.RdbActivo.TabStop = True
+        Me.RdbActivo.Text = "Activo"
+        Me.RdbActivo.UseVisualStyleBackColor = True
         '
-        'ChEstado
+        'RdbInactivo
         '
-        Me.ChEstado.Text = "Estado"
+        Me.RdbInactivo.AutoSize = True
+        Me.RdbInactivo.Location = New System.Drawing.Point(423, 375)
+        Me.RdbInactivo.Name = "RdbInactivo"
+        Me.RdbInactivo.Size = New System.Drawing.Size(63, 17)
+        Me.RdbInactivo.TabIndex = 63
+        Me.RdbInactivo.TabStop = True
+        Me.RdbInactivo.Text = "Inactivo"
+        Me.RdbInactivo.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(292, 352)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(105, 18)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "Estado Arma"
         '
         'FrmInventario
         '
@@ -511,11 +530,12 @@ Partial Class FrmInventario
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TxtEstado As TextBox
     Friend WithEvents TxtContrato As TextBox
     Friend WithEvents PbxBuscar As PictureBox
     Friend WithEvents ChIdContrato As ColumnHeader
     Friend WithEvents ChEstado As ColumnHeader
+    Friend WithEvents RdbActivo As RadioButton
+    Friend WithEvents RdbInactivo As RadioButton
+    Friend WithEvents Label10 As Label
 End Class

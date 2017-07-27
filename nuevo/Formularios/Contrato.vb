@@ -267,4 +267,38 @@ Public Class FrmContrato
         FrmInventario.TxtContrato.Text = DgvContrato.CurrentRow.Cells(0).Value.ToString()
         Me.Close()
     End Sub
+
+    ' Cambiar el color de las Label
+    Private Sub LblAgregarContratoEmp_MouseMove(sender As Object, e As MouseEventArgs) Handles LblAgregarContratoEmp.MouseMove
+        LblAgregarContratoEmp.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblAgregarContratoEmp_MouseLeave(sender As Object, e As EventArgs) Handles LblAgregarContratoEmp.MouseLeave
+        LblAgregarContratoEmp.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblAgregarContratoClien_MouseMove(sender As Object, e As MouseEventArgs) Handles LblAgregarContratoClien.MouseMove
+        LblAgregarContratoClien.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblAgregarContratoClien_MouseLeave(sender As Object, e As EventArgs) Handles LblAgregarContratoClien.MouseLeave
+        LblAgregarContratoClien.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblVerContratoEmple_MouseMove(sender As Object, e As MouseEventArgs) Handles LblVerContratoEmple.MouseMove
+        LblVerContratoEmple.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblVerContratoEmple_MouseLeave(sender As Object, e As EventArgs) Handles LblVerContratoEmple.MouseLeave
+        LblVerContratoEmple.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblVerContratoClien_MouseMove(sender As Object, e As MouseEventArgs) Handles LblVerContratoClien.MouseMove
+        LblVerContratoClien.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblVerContratoClien_MouseLeave(sender As Object, e As EventArgs) Handles LblVerContratoClien.MouseLeave
+        LblVerContratoClien.ForeColor = Color.Black
+    End Sub
+
 End Class

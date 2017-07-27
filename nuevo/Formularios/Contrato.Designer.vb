@@ -148,10 +148,10 @@ Partial Class FrmContrato
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(288, 325)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(293, 324)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(131, 20)
+        Me.Label6.Size = New System.Drawing.Size(140, 18)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Tipo de Contrato:"
         '
@@ -166,10 +166,10 @@ Partial Class FrmContrato
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(278, 275)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(284, 277)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(141, 20)
+        Me.Label5.Size = New System.Drawing.Size(149, 18)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Tipo de Empleado:"
         '
@@ -183,30 +183,30 @@ Partial Class FrmContrato
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(315, 216)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(325, 217)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 20)
+        Me.Label4.Size = New System.Drawing.Size(108, 18)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Sueldo Base:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(301, 163)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(325, 162)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 20)
+        Me.Label3.Size = New System.Drawing.Size(108, 18)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Fecha de Final:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(301, 108)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(306, 107)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 20)
+        Me.Label2.Size = New System.Drawing.Size(127, 18)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fecha de Inicio:"
         '
@@ -279,10 +279,10 @@ Partial Class FrmContrato
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(292, 285)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(311, 286)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(101, 20)
+        Me.Label10.Size = New System.Drawing.Size(96, 18)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Observacion:"
         '
@@ -296,30 +296,30 @@ Partial Class FrmContrato
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(260, 230)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(267, 231)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(133, 20)
+        Me.Label7.Size = New System.Drawing.Size(140, 18)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "MontoEstipulado:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(275, 177)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(284, 176)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(118, 20)
+        Me.Label8.Size = New System.Drawing.Size(123, 18)
         Me.Label8.TabIndex = 9
         Me.Label8.Text = "Fecha de Final:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(275, 122)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(280, 121)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(121, 20)
+        Me.Label9.Size = New System.Drawing.Size(127, 18)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Fecha de Inicio:"
         '
@@ -375,15 +375,16 @@ Partial Class FrmContrato
         Me.Panel1.Controls.Add(Me.LblAgregarContratoClien)
         Me.Panel1.Controls.Add(Me.LblAgregarContratoEmp)
         Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Panel1.Location = New System.Drawing.Point(12, 66)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(231, 186)
+        Me.Panel1.Size = New System.Drawing.Size(242, 186)
         Me.Panel1.TabIndex = 1
         '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 20)
+        Me.PictureBox5.Location = New System.Drawing.Point(12, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -393,7 +394,7 @@ Partial Class FrmContrato
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(14, 159)
+        Me.PictureBox4.Location = New System.Drawing.Point(6, 159)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -403,7 +404,7 @@ Partial Class FrmContrato
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(14, 107)
+        Me.PictureBox2.Location = New System.Drawing.Point(6, 107)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -413,7 +414,7 @@ Partial Class FrmContrato
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(14, 133)
+        Me.PictureBox3.Location = New System.Drawing.Point(6, 133)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -423,7 +424,7 @@ Partial Class FrmContrato
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 82)
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 82)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -434,17 +435,18 @@ Partial Class FrmContrato
         '
         Me.LblVerContratoClien.AutoSize = True
         Me.LblVerContratoClien.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblVerContratoClien.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVerContratoClien.Location = New System.Drawing.Point(38, 159)
+        Me.LblVerContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVerContratoClien.Location = New System.Drawing.Point(30, 159)
         Me.LblVerContratoClien.Name = "LblVerContratoClien"
-        Me.LblVerContratoClien.Size = New System.Drawing.Size(115, 15)
+        Me.LblVerContratoClien.Size = New System.Drawing.Size(146, 16)
         Me.LblVerContratoClien.TabIndex = 10
         Me.LblVerContratoClien.Text = "Ver Contrato Cliente"
         '
         'BtnRegresarMenu
         '
         Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
-        Me.BtnRegresarMenu.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRegresarMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
         Me.BtnRegresarMenu.Name = "BtnRegresarMenu"
@@ -458,10 +460,10 @@ Partial Class FrmContrato
         '
         Me.LblVerContratoEmple.AutoSize = True
         Me.LblVerContratoEmple.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblVerContratoEmple.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVerContratoEmple.Location = New System.Drawing.Point(38, 133)
+        Me.LblVerContratoEmple.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVerContratoEmple.Location = New System.Drawing.Point(30, 133)
         Me.LblVerContratoEmple.Name = "LblVerContratoEmple"
-        Me.LblVerContratoEmple.Size = New System.Drawing.Size(135, 15)
+        Me.LblVerContratoEmple.Size = New System.Drawing.Size(173, 16)
         Me.LblVerContratoEmple.TabIndex = 9
         Me.LblVerContratoEmple.Text = "Ver Contrato Empleado "
         '
@@ -469,10 +471,10 @@ Partial Class FrmContrato
         '
         Me.LblAgregarContratoClien.AutoSize = True
         Me.LblAgregarContratoClien.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblAgregarContratoClien.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAgregarContratoClien.Location = New System.Drawing.Point(38, 107)
+        Me.LblAgregarContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAgregarContratoClien.Location = New System.Drawing.Point(30, 107)
         Me.LblAgregarContratoClien.Name = "LblAgregarContratoClien"
-        Me.LblAgregarContratoClien.Size = New System.Drawing.Size(138, 15)
+        Me.LblAgregarContratoClien.Size = New System.Drawing.Size(178, 16)
         Me.LblAgregarContratoClien.TabIndex = 8
         Me.LblAgregarContratoClien.Text = "Agregar Contrato Cliente"
         '
@@ -480,21 +482,21 @@ Partial Class FrmContrato
         '
         Me.LblAgregarContratoEmp.AutoSize = True
         Me.LblAgregarContratoEmp.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblAgregarContratoEmp.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAgregarContratoEmp.Location = New System.Drawing.Point(38, 82)
+        Me.LblAgregarContratoEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAgregarContratoEmp.Location = New System.Drawing.Point(30, 82)
         Me.LblAgregarContratoEmp.Name = "LblAgregarContratoEmp"
-        Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(154, 15)
+        Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(201, 16)
         Me.LblAgregarContratoEmp.TabIndex = 7
         Me.LblAgregarContratoEmp.Text = "Agregar Contrato Empleado"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.Label1.Location = New System.Drawing.Point(20, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 15)
+        Me.Label1.Size = New System.Drawing.Size(156, 16)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '

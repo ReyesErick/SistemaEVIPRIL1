@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmInventario
+    Dim op As Integer
     'Consulta para llenar la listview de inventario'
     Private Sub CargarArma()
         If cn.State = ConnectionState.Open Then
@@ -210,7 +211,13 @@ Public Class FrmInventario
                     .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CboTipoArma.SelectedValue
                     .Parameters.Add("@IdFabricacion", SqlDbType.Int).Value = cboPaisFabricacion.SelectedValue
                     .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = TxtContrato.Text
-                    .Parameters.Add("@Estado", SqlDbType.Bit).Value = Convert.ToByte(TxtEstado.Text)
+                    If RdbActivo.Checked = CheckState.Unchecked Then
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
+                        op = 0
+                    Else
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 1
+                        op = 1
+                    End If
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
                 End With

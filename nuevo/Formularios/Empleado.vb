@@ -5,6 +5,7 @@ Imports System.Windows.Forms
 Imports System.Drawing
 
 Public Class FrmEmpleado
+    Dim op As Integer
     Dim seleccion As Integer
     Dim cmd As New SqlCommand
     Dim dt As DataTable
@@ -17,17 +18,18 @@ Public Class FrmEmpleado
         Call CargarNacionalidad()
         Call CargarSexo()
         Call CargarMunicipio()
-            Call CargarContrato()
-            Call CargarEmpleado()
-            CboEstadoCivil.SelectedValue = -1
-            CboMunicipio.SelectedValue = -1
-            CboNacionalidad.SelectedValue = -1
-            CboProfesion.SelectedValue = -1
-            CboSexo.SelectedValue = -1
-            CboIdContratoEmpleado.Text = Nothing
-            TxtBeneficiario.Text = ""
-            TxtNumIdentidad.Enabled = False
-            TxtNombres.Enabled = False
+        Call CargarContrato()
+        Call CargarEmpleado()
+        Call CargarContratoCliente()
+        CboEstadoCivil.SelectedValue = -1
+        CboMunicipio.SelectedValue = -1
+        CboNacionalidad.SelectedValue = -1
+        CboProfesion.SelectedValue = -1
+        CboSexo.SelectedValue = -1
+        CboIdContratoEmpleado.Text = Nothing
+        TxtBeneficiario.Text = ""
+        TxtNumIdentidad.Enabled = False
+        TxtNombres.Enabled = False
         TxtApellidos.Enabled = False
     End Sub
 
@@ -109,8 +111,19 @@ Public Class FrmEmpleado
                     Else
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = foto
                     End If
+
+                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CInt(CboIdContratoCliente.Text)
+
+                    If RdbActivo.Checked = CheckState.Unchecked Then
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
+                        op = 0
+                    Else
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 1
+                        op = 1
+                    End If
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
+
                 End With
             End Using
         Catch ex As Exception
@@ -129,12 +142,12 @@ Public Class FrmEmpleado
             ErrorProvider1.SetError(TxtNumIdentidad, "")
         End If
         If TxtNombres.Text = Nothing Then
-                ErrorProvider1.SetError(TxtNombres, "Campo Obligatorio")
-                TxtNombres.Focus()
-                Return
-            Else
-                ErrorProvider1.SetError(TxtNombres, "")
-            End If
+            ErrorProvider1.SetError(TxtNombres, "Campo Obligatorio")
+            TxtNombres.Focus()
+            Return
+        Else
+            ErrorProvider1.SetError(TxtNombres, "")
+        End If
         If TxtApellidos.Text = Nothing Then
             ErrorProvider1.SetError(TxtApellidos, "Campo Obligatorio")
             TxtApellidos.Focus()
@@ -370,6 +383,32 @@ Public Class FrmEmpleado
         End Try
     End Sub
 
+    Private Sub CargarContratoCliente()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+
+        End If
+        cn.Open()
+        Try
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_MostrarContrato"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                End With
+                Dim da As New SqlDataAdapter(cmd)
+                Dim ds As New DataSet
+                da.Fill(ds, "IdContratoCliente")
+                CboIdContratoCliente.DataSource = ds.Tables(0)
+                CboIdContratoCliente.DisplayMember = ds.Tables(0).Columns("IdContratoCliente").ToString
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
     Private Sub BtnAgregarImagen_Click(sender As Object, e As EventArgs) Handles BtnAgregarImagen.Click
         'Codigo para agregar una foto al picturebox	
         AbrirFoto.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyPictures
@@ -436,6 +475,17 @@ Public Class FrmEmpleado
                     Else
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = foto
                     End If
+
+                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CInt(CboIdContratoCliente.Text)
+
+                    If RdbActivo.Checked = CheckState.Unchecked Then
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
+                        op = 0
+                    Else
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 1
+                        op = 1
+                    End If
+
                     .Parameters.Add("@NumIdentidad", SqlDbType.Char, 13).Value = TxtNumIdentidad.Text
                     .ExecuteNonQuery()
                     MessageBox.Show("Registro Modificado satisfactoriamente", "SeguridadLeon")
@@ -472,51 +522,61 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        seleccion = 1
-        If (sele = 2) Then
 
-        Else
-            TxtNumIdentidad.Enabled = False
-            TxtNombres.Enabled = False
-            TxtApellidos.Enabled = False
-            TxtNumIdentidad.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
-            TxtNombres.Text = DgvVerEmpleado.CurrentRow.Cells(1).Value
-            TxtApellidos.Text = DgvVerEmpleado.CurrentRow.Cells(2).Value
-            TxtDireccion.Text = DgvVerEmpleado.CurrentRow.Cells(3).Value
-            MskTelefono.Text = DgvVerEmpleado.CurrentRow.Cells(4).Value
-            TxtCorreo.Text = DgvVerEmpleado.CurrentRow.Cells(5).Value
-            CboProfesion.Text = DgvVerEmpleado.CurrentRow.Cells(6).Value
-            CboNacionalidad.Text = DgvVerEmpleado.CurrentRow.Cells(7).Value
-            CboMunicipio.Text = DgvVerEmpleado.CurrentRow.Cells(8).Value
-            txtIdBeneficiario.Text = DgvVerEmpleado.CurrentRow.Cells(9).Value
-            TxtBeneficiario.Text = DgvVerEmpleado.CurrentRow.Cells(10).Value
-            CboEstadoCivil.Text = DgvVerEmpleado.CurrentRow.Cells(11).Value
-            CboSexo.Text = DgvVerEmpleado.CurrentRow.Cells(12).Value
+        Try
+            If DgvVerEmpleado.CurrentRow.Cells(0).Value IsNot Nothing Then
+                seleccion = 1
+                If (sele = 2) Then
 
-            CboIdContratoEmpleado.Text = DgvVerEmpleado.CurrentRow.Cells(15).Value
+                Else
+                    TxtNumIdentidad.Enabled = False
+                    TxtNombres.Enabled = False
+                    TxtApellidos.Enabled = False
+                    TxtNumIdentidad.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
+                    TxtNombres.Text = DgvVerEmpleado.CurrentRow.Cells(1).Value
+                    TxtApellidos.Text = DgvVerEmpleado.CurrentRow.Cells(2).Value
+                    TxtDireccion.Text = DgvVerEmpleado.CurrentRow.Cells(3).Value
+                    MskTelefono.Text = DgvVerEmpleado.CurrentRow.Cells(4).Value
+                    TxtCorreo.Text = DgvVerEmpleado.CurrentRow.Cells(5).Value
+                    CboProfesion.Text = DgvVerEmpleado.CurrentRow.Cells(6).Value
+                    CboNacionalidad.Text = DgvVerEmpleado.CurrentRow.Cells(7).Value
+                    CboMunicipio.Text = DgvVerEmpleado.CurrentRow.Cells(8).Value
+                    txtIdBeneficiario.Text = DgvVerEmpleado.CurrentRow.Cells(9).Value
+                    TxtBeneficiario.Text = DgvVerEmpleado.CurrentRow.Cells(10).Value
+                    CboEstadoCivil.Text = DgvVerEmpleado.CurrentRow.Cells(11).Value
+                    CboSexo.Text = DgvVerEmpleado.CurrentRow.Cells(12).Value
 
-            Call MostrarImagen()
-            TcEmpleado.SelectedTab = TpAgregar
+                    CboIdContratoEmpleado.Text = DgvVerEmpleado.CurrentRow.Cells(15).Value
 
-            If DgvVerEmpleado.CurrentRow.Cells(13).Value IsNot Nothing Then
-                TxtRTN.Text = DgvVerEmpleado.CurrentRow.Cells(13).Value.ToString
-            Else
-                TxtRTN.Text = ""
+                    Call MostrarImagen()
+                    TcEmpleado.SelectedTab = TpAgregar
+
+                    If DgvVerEmpleado.CurrentRow.Cells(13).Value IsNot Nothing Then
+                        TxtRTN.Text = DgvVerEmpleado.CurrentRow.Cells(13).Value.ToString
+                    Else
+                        TxtRTN.Text = ""
+                    End If
+
+                    If DgvVerEmpleado.CurrentRow.Cells(14).Value IsNot Nothing Then
+                        TxtObservacion.Text = DgvVerEmpleado.CurrentRow.Cells(14).Value.ToString
+                    Else
+                        TxtObservacion.Text = ""
+                    End If
+
+                    If DgvVerEmpleado.CurrentRow.Cells(16).Value IsNot Nothing Then
+                        TxtNumSeguro.Text = DgvVerEmpleado.CurrentRow.Cells(16).Value.ToString
+                    Else
+                        TxtNumSeguro.Text = ""
+                    End If
+
+                    CboIdContratoCliente.Text = DgvVerEmpleado.CurrentRow.Cells(17).ToString
+
+                    TcEmpleado.SelectedTab = TpAgregar
+                End If
             End If
-
-            If DgvVerEmpleado.CurrentRow.Cells(14).Value IsNot Nothing Then
-                TxtObservacion.Text = DgvVerEmpleado.CurrentRow.Cells(14).Value.ToString
-            Else
-                TxtObservacion.Text = ""
-            End If
-
-            If DgvVerEmpleado.CurrentRow.Cells(16).Value IsNot Nothing Then
-                TxtNumSeguro.Text = DgvVerEmpleado.CurrentRow.Cells(16).Value.ToString
-            Else
-                TxtNumSeguro.Text = ""
-            End If
-            TcEmpleado.SelectedTab = TpAgregar
-        End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 
@@ -573,6 +633,7 @@ Public Class FrmEmpleado
         CboIdContratoEmpleado.Text = Nothing
         TxtBeneficiario.Clear()
         txtIdBeneficiario.Clear()
+        CboIdContratoCliente.Text = Nothing
     End Sub
 
     Private Sub DgvVerEmpleado_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvVerEmpleado.CellContentDoubleClick
