@@ -301,7 +301,7 @@ Partial Class FrmEmpleado
         Me.RdbInactivo.Location = New System.Drawing.Point(591, 386)
         Me.RdbInactivo.Name = "RdbInactivo"
         Me.RdbInactivo.Size = New System.Drawing.Size(63, 17)
-        Me.RdbInactivo.TabIndex = 92
+        Me.RdbInactivo.TabIndex = 19
         Me.RdbInactivo.TabStop = True
         Me.RdbInactivo.Text = "Inactivo"
         Me.RdbInactivo.UseVisualStyleBackColor = True
@@ -312,7 +312,7 @@ Partial Class FrmEmpleado
         Me.RdbActivo.Location = New System.Drawing.Point(592, 363)
         Me.RdbActivo.Name = "RdbActivo"
         Me.RdbActivo.Size = New System.Drawing.Size(55, 17)
-        Me.RdbActivo.TabIndex = 91
+        Me.RdbActivo.TabIndex = 18
         Me.RdbActivo.TabStop = True
         Me.RdbActivo.Text = "Activo"
         Me.RdbActivo.UseVisualStyleBackColor = True
@@ -335,7 +335,7 @@ Partial Class FrmEmpleado
         Me.CboIdContratoCliente.Location = New System.Drawing.Point(591, 138)
         Me.CboIdContratoCliente.Name = "CboIdContratoCliente"
         Me.CboIdContratoCliente.Size = New System.Drawing.Size(121, 23)
-        Me.CboIdContratoCliente.TabIndex = 89
+        Me.CboIdContratoCliente.TabIndex = 16
         '
         'txtIdBeneficiario
         '
@@ -373,7 +373,7 @@ Partial Class FrmEmpleado
         Me.MskTelefono.Mask = "9999-9999"
         Me.MskTelefono.Name = "MskTelefono"
         Me.MskTelefono.Size = New System.Drawing.Size(121, 21)
-        Me.MskTelefono.TabIndex = 85
+        Me.MskTelefono.TabIndex = 7
         Me.MskTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnBuscarBeneficiario
@@ -394,7 +394,7 @@ Partial Class FrmEmpleado
         Me.CboIdContratoEmpleado.Location = New System.Drawing.Point(591, 31)
         Me.CboIdContratoEmpleado.Name = "CboIdContratoEmpleado"
         Me.CboIdContratoEmpleado.Size = New System.Drawing.Size(121, 23)
-        Me.CboIdContratoEmpleado.TabIndex = 80
+        Me.CboIdContratoEmpleado.TabIndex = 14
         '
         'TxtBeneficiario
         '
@@ -413,7 +413,7 @@ Partial Class FrmEmpleado
         Me.CboSexo.Location = New System.Drawing.Point(175, 336)
         Me.CboSexo.Name = "CboSexo"
         Me.CboSexo.Size = New System.Drawing.Size(121, 23)
-        Me.CboSexo.TabIndex = 77
+        Me.CboSexo.TabIndex = 10
         '
         'CboEstadoCivil
         '
@@ -423,7 +423,7 @@ Partial Class FrmEmpleado
         Me.CboEstadoCivil.Location = New System.Drawing.Point(175, 300)
         Me.CboEstadoCivil.Name = "CboEstadoCivil"
         Me.CboEstadoCivil.Size = New System.Drawing.Size(121, 23)
-        Me.CboEstadoCivil.TabIndex = 76
+        Me.CboEstadoCivil.TabIndex = 9
         '
         'CboMunicipio
         '
@@ -433,7 +433,7 @@ Partial Class FrmEmpleado
         Me.CboMunicipio.Location = New System.Drawing.Point(175, 487)
         Me.CboMunicipio.Name = "CboMunicipio"
         Me.CboMunicipio.Size = New System.Drawing.Size(121, 23)
-        Me.CboMunicipio.TabIndex = 74
+        Me.CboMunicipio.TabIndex = 13
         '
         'CboNacionalidad
         '
@@ -443,7 +443,7 @@ Partial Class FrmEmpleado
         Me.CboNacionalidad.Location = New System.Drawing.Point(175, 449)
         Me.CboNacionalidad.Name = "CboNacionalidad"
         Me.CboNacionalidad.Size = New System.Drawing.Size(121, 23)
-        Me.CboNacionalidad.TabIndex = 72
+        Me.CboNacionalidad.TabIndex = 12
         '
         'CboProfesion
         '
@@ -453,7 +453,7 @@ Partial Class FrmEmpleado
         Me.CboProfesion.Location = New System.Drawing.Point(175, 410)
         Me.CboProfesion.Name = "CboProfesion"
         Me.CboProfesion.Size = New System.Drawing.Size(121, 23)
-        Me.CboProfesion.TabIndex = 70
+        Me.CboProfesion.TabIndex = 11
         '
         'TxtNumSeguro
         '
@@ -461,7 +461,7 @@ Partial Class FrmEmpleado
         Me.TxtNumSeguro.Location = New System.Drawing.Point(591, 180)
         Me.TxtNumSeguro.Name = "TxtNumSeguro"
         Me.TxtNumSeguro.Size = New System.Drawing.Size(188, 21)
-        Me.TxtNumSeguro.TabIndex = 68
+        Me.TxtNumSeguro.TabIndex = 17
         '
         'TxtObservacion
         '
@@ -470,7 +470,7 @@ Partial Class FrmEmpleado
         Me.TxtObservacion.Multiline = True
         Me.TxtObservacion.Name = "TxtObservacion"
         Me.TxtObservacion.Size = New System.Drawing.Size(259, 61)
-        Me.TxtObservacion.TabIndex = 67
+        Me.TxtObservacion.TabIndex = 15
         '
         'TxtCorreo
         '
@@ -478,7 +478,7 @@ Partial Class FrmEmpleado
         Me.TxtCorreo.Location = New System.Drawing.Point(175, 264)
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(188, 21)
-        Me.TxtCorreo.TabIndex = 66
+        Me.TxtCorreo.TabIndex = 8
         '
         'TxtDireccion
         '
@@ -487,7 +487,7 @@ Partial Class FrmEmpleado
         Me.TxtDireccion.Multiline = True
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(259, 59)
-        Me.TxtDireccion.TabIndex = 64
+        Me.TxtDireccion.TabIndex = 6
         '
         'TxtRTN
         '
@@ -495,7 +495,7 @@ Partial Class FrmEmpleado
         Me.TxtRTN.Location = New System.Drawing.Point(175, 121)
         Me.TxtRTN.Name = "TxtRTN"
         Me.TxtRTN.Size = New System.Drawing.Size(188, 21)
-        Me.TxtRTN.TabIndex = 63
+        Me.TxtRTN.TabIndex = 5
         '
         'TxtNombres
         '
@@ -503,7 +503,7 @@ Partial Class FrmEmpleado
         Me.TxtNombres.Location = New System.Drawing.Point(175, 61)
         Me.TxtNombres.Name = "TxtNombres"
         Me.TxtNombres.Size = New System.Drawing.Size(188, 21)
-        Me.TxtNombres.TabIndex = 62
+        Me.TxtNombres.TabIndex = 3
         '
         'TxtApellidos
         '
@@ -511,7 +511,7 @@ Partial Class FrmEmpleado
         Me.TxtApellidos.Location = New System.Drawing.Point(175, 91)
         Me.TxtApellidos.Name = "TxtApellidos"
         Me.TxtApellidos.Size = New System.Drawing.Size(188, 21)
-        Me.TxtApellidos.TabIndex = 61
+        Me.TxtApellidos.TabIndex = 4
         '
         'TxtNumIdentidad
         '
@@ -519,7 +519,7 @@ Partial Class FrmEmpleado
         Me.TxtNumIdentidad.Location = New System.Drawing.Point(175, 31)
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(188, 21)
-        Me.TxtNumIdentidad.TabIndex = 60
+        Me.TxtNumIdentidad.TabIndex = 2
         '
         'Label18
         '
@@ -719,7 +719,7 @@ Partial Class FrmEmpleado
         Me.BtnGuardar.Location = New System.Drawing.Point(692, 493)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnGuardar.TabIndex = 42
+        Me.BtnGuardar.TabIndex = 20
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -732,7 +732,7 @@ Partial Class FrmEmpleado
         Me.BtnModificar.Location = New System.Drawing.Point(526, 493)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnModificar.TabIndex = 41
+        Me.BtnModificar.TabIndex = 21
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = False
         '
