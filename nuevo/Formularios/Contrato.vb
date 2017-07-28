@@ -6,11 +6,13 @@ Public Class FrmContrato
 
     'Consulta en sql para llenar el datagridview de contrato empleado y cliente'
     Public Sub MostrarDatosContratoEmpleado()
-        da = New SqlDataAdapter("select c.IdContratoEmpleado,c.FechaInicio,c.FechaFinal,c.SueldoBase,t.TipoEmpleado,ti.TipoContrato
+        da = New SqlDataAdapter("select c.IdContratoEmpleado,c.FechaInicio,c.FechaFinal,c.SueldoBase,t.TipoEmpleado,ti.TipoContrato, c.NumIdentidad, e.Nombres + ' ' + e.Apellidos as 'Nombre Empleado'
                                  from ContratoEmpleado c inner join TipoEmpleado t
 							                                on c.IdTipoEmpleado = t.IdTipoEmpleado
 						                                 inner join TipoContrato ti
-							                                on c.IdTipoContrato = ti.IdTipoContrato", cn)
+							                                on c.IdTipoContrato = ti.IdTipoContrato
+                                                         inner join Empleado e
+                                                            on c.NumIdentidad = e.NumIdentidad", cn)
         dt = New DataTable
         da.Fill(dt)
         DgvContrato.DataSource = dt
@@ -149,6 +151,8 @@ Public Class FrmContrato
                     .Parameters.Add("@SueldoBase", SqlDbType.Money).Value = Convert.ToDecimal(txtsueldo.Text)
                     .Parameters.Add("@IdTipoEmpleado", SqlDbType.Int).Value = CboTipoEmpleado.SelectedValue
                     .Parameters.Add("@IdTipoContrato", SqlDbType.Int).Value = CboTipoContrato.SelectedValue
+                    .Parameters.Add("@NumIdentidad", SqlDbType.Char).Value = TxtNumIdentidad.Text
+
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
                 End With
@@ -170,6 +174,8 @@ Public Class FrmContrato
         TpContrato.Visible = False
         Call LlenarTipoContrato()
         Call LlenarTipoEmpleado()
+        Call CargarContratoCliente()
+        CboContratoCliente.SelectedIndex = 1
     End Sub
 
     Private Sub LblAgregarContratoEmp_Click(sender As Object, e As EventArgs) Handles LblAgregarContratoEmp.Click
@@ -301,4 +307,93 @@ Public Class FrmContrato
         LblVerContratoClien.ForeColor = Color.Black
     End Sub
 
+    Private Sub PbxBuscar_Click(sender As Object, e As EventArgs) Handles PbxBuscar.Click
+        FrmEmpleado.Show()
+        FrmEmpleado.TcEmpleado.Visible = True
+        FrmEmpleado.TcEmpleado.SelectedTab = FrmEmpleado.TpVer
+        sele = 5
+    End Sub
+
+    Private Sub AsignarGuardias()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        cn.Open()
+        Try
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_InsertarEEC"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+
+                    .Parameters.Add("@NumIdentidad", SqlDbType.Char).Value = TxtGuardias.Text
+                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CboContratoCliente.SelectedValue
+
+                    .ExecuteNonQuery()
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
+
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Call MostrarGuardias()
+        TxtGuardias.Clear()
+    End Sub
+
+    Public Sub CargarContratoCliente()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+
+        End If
+        cn.Open()
+        Try
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_MostrarContratoCliente"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                End With
+                Dim da As New SqlDataAdapter(cmd)
+                Dim ds As New DataSet
+                da.Fill(ds, "ContratoCliente")
+                CboContratoCliente.DataSource = ds.Tables(0)
+                CboContratoCliente.DisplayMember = ds.Tables(0).Columns("IdContratoCliente").ToString
+                CboContratoCliente.ValueMember = ds.Tables(0).Columns("IdContratoCliente").ToString
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
+    Private Sub PbxBuscarGuardia_Click_1(sender As Object, e As EventArgs) Handles PbxBuscarGuardia.Click
+        FrmEmpleado.Show()
+        FrmEmpleado.TcEmpleado.Visible = True
+        FrmEmpleado.TcEmpleado.SelectedTab = FrmEmpleado.TpVer
+        sele = 6
+    End Sub
+
+    Private Sub MostrarGuardias()
+        da = New SqlDataAdapter("exec Sp_MostrarGuardiasAsignados " + Convert.ToString(CboContratoCliente.SelectedValue), cn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvGuardias.DataSource = dt
+    End Sub
+
+    Private Sub CboContratoCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboContratoCliente.SelectedIndexChanged
+        If CboContratoCliente.DisplayMember IsNot "" Then
+            MostrarGuardias()
+        End If
+
+
+
+    End Sub
 End Class

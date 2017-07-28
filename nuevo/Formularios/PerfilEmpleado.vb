@@ -14,7 +14,7 @@ Public Class PerfilEmpleado
         cn.Open()
         cmd = New SqlCommand("Select c.FechaInicio,c.FechaFinal,c.SueldoBase,t.TipoEmpleado,ti.TipoContrato
 		From Empleado e inner join ContratoEmpleado c
-						on e.IdContratoEmpleado = c.IdContratoEmpleado
+						on e.NumIdentidad = c.NumIdentidad
 						inner join TipoEmpleado t
 						on c.IdTipoEmpleado = t.IdTipoEmpleado
 						inner join TipoContrato ti

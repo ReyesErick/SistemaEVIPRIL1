@@ -26,6 +26,9 @@ Partial Class FrmContrato
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContrato))
         Me.TpContrato = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PbxBuscar = New System.Windows.Forms.PictureBox()
+        Me.TxtNumIdentidad = New System.Windows.Forms.TextBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.CboTipoContrato = New System.Windows.Forms.ComboBox()
@@ -51,6 +54,14 @@ Partial Class FrmContrato
         Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.DgvContrato = New System.Windows.Forms.DataGridView()
+        Me.TpAsignacion = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.CboContratoCliente = New System.Windows.Forms.ComboBox()
+        Me.PbxBuscarGuardia = New System.Windows.Forms.PictureBox()
+        Me.TxtGuardias = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.LblGuardias = New System.Windows.Forms.Label()
+        Me.DgvGuardias = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -68,11 +79,15 @@ Partial Class FrmContrato
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TpContrato.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.DgvContrato, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TpAsignacion.SuspendLayout()
+        CType(Me.PbxBuscarGuardia, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvGuardias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +102,7 @@ Partial Class FrmContrato
         Me.TpContrato.Controls.Add(Me.TabPage1)
         Me.TpContrato.Controls.Add(Me.TabPage2)
         Me.TpContrato.Controls.Add(Me.TabPage3)
+        Me.TpContrato.Controls.Add(Me.TpAsignacion)
         Me.TpContrato.Location = New System.Drawing.Point(260, 66)
         Me.TpContrato.Name = "TpContrato"
         Me.TpContrato.SelectedIndex = 0
@@ -95,6 +111,9 @@ Partial Class FrmContrato
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.PbxBuscar)
+        Me.TabPage1.Controls.Add(Me.TxtNumIdentidad)
         Me.TabPage1.Controls.Add(Me.PictureBox6)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
         Me.TabPage1.Controls.Add(Me.CboTipoContrato)
@@ -114,6 +133,35 @@ Partial Class FrmContrato
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Contrato Empleado"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(313, 325)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(120, 18)
+        Me.Label11.TabIndex = 62
+        Me.Label11.Text = "Num Identidad:"
+        '
+        'PbxBuscar
+        '
+        Me.PbxBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxBuscar.Image = CType(resources.GetObject("PbxBuscar.Image"), System.Drawing.Image)
+        Me.PbxBuscar.Location = New System.Drawing.Point(600, 324)
+        Me.PbxBuscar.Name = "PbxBuscar"
+        Me.PbxBuscar.Size = New System.Drawing.Size(27, 23)
+        Me.PbxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxBuscar.TabIndex = 61
+        Me.PbxBuscar.TabStop = False
+        '
+        'TxtNumIdentidad
+        '
+        Me.TxtNumIdentidad.Enabled = False
+        Me.TxtNumIdentidad.Location = New System.Drawing.Point(439, 326)
+        Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
+        Me.TxtNumIdentidad.Size = New System.Drawing.Size(155, 20)
+        Me.TxtNumIdentidad.TabIndex = 47
         '
         'PictureBox6
         '
@@ -140,7 +188,7 @@ Partial Class FrmContrato
         'CboTipoContrato
         '
         Me.CboTipoContrato.FormattingEnabled = True
-        Me.CboTipoContrato.Location = New System.Drawing.Point(439, 324)
+        Me.CboTipoContrato.Location = New System.Drawing.Point(439, 278)
         Me.CboTipoContrato.Name = "CboTipoContrato"
         Me.CboTipoContrato.Size = New System.Drawing.Size(155, 21)
         Me.CboTipoContrato.TabIndex = 9
@@ -149,7 +197,7 @@ Partial Class FrmContrato
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(293, 324)
+        Me.Label6.Location = New System.Drawing.Point(293, 278)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(140, 18)
         Me.Label6.TabIndex = 8
@@ -158,7 +206,7 @@ Partial Class FrmContrato
         'CboTipoEmpleado
         '
         Me.CboTipoEmpleado.FormattingEnabled = True
-        Me.CboTipoEmpleado.Location = New System.Drawing.Point(439, 277)
+        Me.CboTipoEmpleado.Location = New System.Drawing.Point(439, 231)
         Me.CboTipoEmpleado.Name = "CboTipoEmpleado"
         Me.CboTipoEmpleado.Size = New System.Drawing.Size(155, 21)
         Me.CboTipoEmpleado.TabIndex = 7
@@ -167,7 +215,7 @@ Partial Class FrmContrato
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(284, 277)
+        Me.Label5.Location = New System.Drawing.Point(284, 231)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(149, 18)
         Me.Label5.TabIndex = 6
@@ -175,7 +223,7 @@ Partial Class FrmContrato
         '
         'txtsueldo
         '
-        Me.txtsueldo.Location = New System.Drawing.Point(439, 218)
+        Me.txtsueldo.Location = New System.Drawing.Point(439, 181)
         Me.txtsueldo.Name = "txtsueldo"
         Me.txtsueldo.Size = New System.Drawing.Size(115, 20)
         Me.txtsueldo.TabIndex = 5
@@ -184,7 +232,7 @@ Partial Class FrmContrato
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(325, 217)
+        Me.Label4.Location = New System.Drawing.Point(325, 180)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(108, 18)
         Me.Label4.TabIndex = 4
@@ -194,7 +242,7 @@ Partial Class FrmContrato
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(325, 162)
+        Me.Label3.Location = New System.Drawing.Point(325, 125)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(108, 18)
         Me.Label3.TabIndex = 3
@@ -204,7 +252,7 @@ Partial Class FrmContrato
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(306, 107)
+        Me.Label2.Location = New System.Drawing.Point(306, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(127, 18)
         Me.Label2.TabIndex = 2
@@ -213,7 +261,7 @@ Partial Class FrmContrato
         'dtpfinal
         '
         Me.dtpfinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpfinal.Location = New System.Drawing.Point(439, 162)
+        Me.dtpfinal.Location = New System.Drawing.Point(439, 125)
         Me.dtpfinal.Name = "dtpfinal"
         Me.dtpfinal.Size = New System.Drawing.Size(200, 20)
         Me.dtpfinal.TabIndex = 1
@@ -221,7 +269,7 @@ Partial Class FrmContrato
         'dtpInicio
         '
         Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpInicio.Location = New System.Drawing.Point(439, 107)
+        Me.dtpInicio.Location = New System.Drawing.Point(439, 70)
         Me.dtpInicio.Name = "dtpInicio"
         Me.dtpInicio.Size = New System.Drawing.Size(200, 20)
         Me.dtpInicio.TabIndex = 0
@@ -249,7 +297,7 @@ Partial Class FrmContrato
         'PictureBox7
         '
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(620, 391)
+        Me.PictureBox7.Location = New System.Drawing.Point(701, 492)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -261,7 +309,7 @@ Partial Class FrmContrato
         Me.Button1.BackColor = System.Drawing.Color.LawnGreen
         Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(603, 380)
+        Me.Button1.Location = New System.Drawing.Point(688, 483)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(156, 40)
         Me.Button1.TabIndex = 48
@@ -270,7 +318,7 @@ Partial Class FrmContrato
         '
         'txtObservacion
         '
-        Me.txtObservacion.Location = New System.Drawing.Point(413, 287)
+        Me.txtObservacion.Location = New System.Drawing.Point(238, 186)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(200, 67)
@@ -280,7 +328,7 @@ Partial Class FrmContrato
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(311, 286)
+        Me.Label10.Location = New System.Drawing.Point(136, 185)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(96, 18)
         Me.Label10.TabIndex = 12
@@ -288,7 +336,7 @@ Partial Class FrmContrato
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(413, 232)
+        Me.txtMonto.Location = New System.Drawing.Point(238, 131)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(115, 20)
         Me.txtMonto.TabIndex = 11
@@ -297,7 +345,7 @@ Partial Class FrmContrato
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(267, 231)
+        Me.Label7.Location = New System.Drawing.Point(92, 130)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(140, 18)
         Me.Label7.TabIndex = 10
@@ -307,7 +355,7 @@ Partial Class FrmContrato
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(284, 176)
+        Me.Label8.Location = New System.Drawing.Point(109, 75)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(123, 18)
         Me.Label8.TabIndex = 9
@@ -317,7 +365,7 @@ Partial Class FrmContrato
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(280, 121)
+        Me.Label9.Location = New System.Drawing.Point(105, 20)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(127, 18)
         Me.Label9.TabIndex = 8
@@ -326,7 +374,7 @@ Partial Class FrmContrato
         'dtpFechaFinal
         '
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(413, 176)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(238, 75)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 20)
         Me.dtpFechaFinal.TabIndex = 7
@@ -334,7 +382,7 @@ Partial Class FrmContrato
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(413, 121)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(238, 20)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
         Me.dtpFechaInicio.Size = New System.Drawing.Size(200, 20)
         Me.dtpFechaInicio.TabIndex = 6
@@ -360,6 +408,92 @@ Partial Class FrmContrato
         Me.DgvContrato.ReadOnly = True
         Me.DgvContrato.Size = New System.Drawing.Size(851, 536)
         Me.DgvContrato.TabIndex = 0
+        '
+        'TpAsignacion
+        '
+        Me.TpAsignacion.Controls.Add(Me.Label12)
+        Me.TpAsignacion.Controls.Add(Me.CboContratoCliente)
+        Me.TpAsignacion.Controls.Add(Me.PbxBuscarGuardia)
+        Me.TpAsignacion.Controls.Add(Me.TxtGuardias)
+        Me.TpAsignacion.Controls.Add(Me.Button2)
+        Me.TpAsignacion.Controls.Add(Me.LblGuardias)
+        Me.TpAsignacion.Controls.Add(Me.DgvGuardias)
+        Me.TpAsignacion.Location = New System.Drawing.Point(4, 22)
+        Me.TpAsignacion.Name = "TpAsignacion"
+        Me.TpAsignacion.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpAsignacion.Size = New System.Drawing.Size(863, 548)
+        Me.TpAsignacion.TabIndex = 3
+        Me.TpAsignacion.Text = "Asignacion de Guardias"
+        Me.TpAsignacion.UseVisualStyleBackColor = True
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(103, 35)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(88, 18)
+        Me.Label12.TabIndex = 69
+        Me.Label12.Text = "Contratos:"
+        '
+        'CboContratoCliente
+        '
+        Me.CboContratoCliente.FormattingEnabled = True
+        Me.CboContratoCliente.Location = New System.Drawing.Point(197, 36)
+        Me.CboContratoCliente.Name = "CboContratoCliente"
+        Me.CboContratoCliente.Size = New System.Drawing.Size(188, 21)
+        Me.CboContratoCliente.TabIndex = 68
+        '
+        'PbxBuscarGuardia
+        '
+        Me.PbxBuscarGuardia.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxBuscarGuardia.Image = CType(resources.GetObject("PbxBuscarGuardia.Image"), System.Drawing.Image)
+        Me.PbxBuscarGuardia.Location = New System.Drawing.Point(732, 33)
+        Me.PbxBuscarGuardia.Name = "PbxBuscarGuardia"
+        Me.PbxBuscarGuardia.Size = New System.Drawing.Size(27, 23)
+        Me.PbxBuscarGuardia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxBuscarGuardia.TabIndex = 67
+        Me.PbxBuscarGuardia.TabStop = False
+        '
+        'TxtGuardias
+        '
+        Me.TxtGuardias.Enabled = False
+        Me.TxtGuardias.Location = New System.Drawing.Point(556, 36)
+        Me.TxtGuardias.Name = "TxtGuardias"
+        Me.TxtGuardias.Size = New System.Drawing.Size(170, 20)
+        Me.TxtGuardias.TabIndex = 66
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button2.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Location = New System.Drawing.Point(618, 361)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(141, 32)
+        Me.Button2.TabIndex = 65
+        Me.Button2.Text = "Asignar Guardia"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'LblGuardias
+        '
+        Me.LblGuardias.AutoSize = True
+        Me.LblGuardias.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LblGuardias.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardias.Location = New System.Drawing.Point(469, 35)
+        Me.LblGuardias.Name = "LblGuardias"
+        Me.LblGuardias.Size = New System.Drawing.Size(81, 18)
+        Me.LblGuardias.TabIndex = 64
+        Me.LblGuardias.Text = "Guardias:"
+        '
+        'DgvGuardias
+        '
+        Me.DgvGuardias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvGuardias.Location = New System.Drawing.Point(106, 96)
+        Me.DgvGuardias.Name = "DgvGuardias"
+        Me.DgvGuardias.Size = New System.Drawing.Size(653, 226)
+        Me.DgvGuardias.TabIndex = 63
         '
         'Panel1
         '
@@ -537,12 +671,17 @@ Partial Class FrmContrato
         Me.TpContrato.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.DgvContrato, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TpAsignacion.ResumeLayout(False)
+        Me.TpAsignacion.PerformLayout()
+        CType(Me.PbxBuscarGuardia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvGuardias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -597,4 +736,15 @@ Partial Class FrmContrato
     Friend WithEvents Label9 As Label
     Friend WithEvents dtpFechaFinal As DateTimePicker
     Friend WithEvents dtpFechaInicio As DateTimePicker
+    Friend WithEvents TxtNumIdentidad As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PbxBuscar As PictureBox
+    Friend WithEvents TpAsignacion As TabPage
+    Friend WithEvents Label12 As Label
+    Friend WithEvents CboContratoCliente As ComboBox
+    Friend WithEvents PbxBuscarGuardia As PictureBox
+    Friend WithEvents TxtGuardias As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents LblGuardias As Label
+    Friend WithEvents DgvGuardias As DataGridView
 End Class

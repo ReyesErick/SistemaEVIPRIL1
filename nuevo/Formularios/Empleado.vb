@@ -18,15 +18,12 @@ Public Class FrmEmpleado
         Call CargarNacionalidad()
         Call CargarSexo()
         Call CargarMunicipio()
-        Call CargarContrato()
         Call CargarEmpleado()
-        Call CargarContratoCliente()
         CboEstadoCivil.SelectedValue = -1
         CboMunicipio.SelectedValue = -1
         CboNacionalidad.SelectedValue = -1
         CboProfesion.SelectedValue = -1
         CboSexo.SelectedValue = -1
-        CboIdContratoEmpleado.Text = Nothing
         TxtBeneficiario.Text = ""
         TxtNumIdentidad.Enabled = False
         TxtNombres.Enabled = False
@@ -103,7 +100,6 @@ Public Class FrmEmpleado
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CboSexo.SelectedValue
                     .Parameters.Add("@Rtn", SqlDbType.Char).Value = TxtRTN.Text
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar).Value = TxtObservacion.Text
-                    .Parameters.Add("@IdContratoEmpleado", SqlDbType.Int).Value = CInt(CboIdContratoEmpleado.Text)
                     .Parameters.Add("@NumSeguro", SqlDbType.Char).Value = TxtNumSeguro.Text
                     'esto es en los parametros
                     If foto Is Nothing Then
@@ -111,8 +107,6 @@ Public Class FrmEmpleado
                     Else
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = foto
                     End If
-
-                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CInt(CboIdContratoCliente.Text)
 
                     If RdbActivo.Checked = CheckState.Unchecked Then
                         .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
@@ -123,6 +117,7 @@ Public Class FrmEmpleado
                     End If
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
+
 
                 End With
             End Using
@@ -211,14 +206,9 @@ Public Class FrmEmpleado
         Else
             ErrorProvider1.SetError(CboMunicipio, "")
         End If
-        If CboIdContratoEmpleado.Text = Nothing Then
-            ErrorProvider1.SetError(CboIdContratoEmpleado, "Campo Obligatorio")
-            CboIdContratoEmpleado.Focus()
-            Return
-        Else
-            ErrorProvider1.SetError(CboIdContratoEmpleado, "")
-        End If
+
         Call AgregarEmpleado()
+        Call Limpiar()
     End Sub
 
     Private Sub CargarEstadoCivil()
@@ -226,8 +216,9 @@ Public Class FrmEmpleado
             cn.Close()
 
         End If
-        cn.Open()
+
         Try
+            cn.Open()
             Using cmd As New SqlCommand
                 With cmd
                     .CommandText = "Sp_MostrarEstadoCivil"
@@ -253,9 +244,10 @@ Public Class FrmEmpleado
             cn.Close()
 
         End If
-        cn.Open()
+
 
         Try
+            cn.Open()
             Using cmd As New SqlCommand
                 With cmd
                     .CommandText = "Sp_MostrarProfesion"
@@ -281,8 +273,9 @@ Public Class FrmEmpleado
             cn.Close()
 
         End If
-        cn.Open()
+
         Try
+            cn.Open()
             Using cmd As New SqlCommand
                 With cmd
                     .CommandText = "Sp_MostrarNacionalidad"
@@ -308,8 +301,9 @@ Public Class FrmEmpleado
             cn.Close()
 
         End If
-        cn.Open()
+
         Try
+            cn.Open()
             Using cmd As New SqlCommand
                 With cmd
                     .CommandText = "Sp_Mostrarsexo"
@@ -335,8 +329,9 @@ Public Class FrmEmpleado
             cn.Close()
 
         End If
-        cn.Open()
+
         Try
+            cn.Open()
             Using cmd As New SqlCommand
                 With cmd
                     .CommandText = "Sp_MostrarMunicipio"
@@ -357,57 +352,6 @@ Public Class FrmEmpleado
         End Try
     End Sub
 
-    Private Sub CargarContrato()
-        If cn.State = ConnectionState.Open Then
-            cn.Close()
-
-        End If
-        cn.Open()
-        Try
-            Using cmd As New SqlCommand
-                With cmd
-                    .CommandText = "Sp_MostrarContratoEmpleado"
-                    .CommandType = CommandType.StoredProcedure
-                    .Connection = cn
-                End With
-                Dim da As New SqlDataAdapter(cmd)
-                Dim ds As New DataSet
-                da.Fill(ds, "IdContratoEmpleado")
-                CboIdContratoEmpleado.DataSource = ds.Tables(0)
-                CboIdContratoEmpleado.DisplayMember = ds.Tables(0).Columns("IdContratoEmpleado").ToString
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            cn.Close()
-        End Try
-    End Sub
-
-    Private Sub CargarContratoCliente()
-        If cn.State = ConnectionState.Open Then
-            cn.Close()
-
-        End If
-        cn.Open()
-        Try
-            Using cmd As New SqlCommand
-                With cmd
-                    .CommandText = "Sp_MostrarContrato"
-                    .CommandType = CommandType.StoredProcedure
-                    .Connection = cn
-                End With
-                Dim da As New SqlDataAdapter(cmd)
-                Dim ds As New DataSet
-                da.Fill(ds, "IdContratoCliente")
-                CboIdContratoCliente.DataSource = ds.Tables(0)
-                CboIdContratoCliente.DisplayMember = ds.Tables(0).Columns("IdContratoCliente").ToString
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            cn.Close()
-        End Try
-    End Sub
 
     Private Sub BtnAgregarImagen_Click(sender As Object, e As EventArgs) Handles BtnAgregarImagen.Click
         'Codigo para agregar una foto al picturebox	
@@ -468,15 +412,12 @@ Public Class FrmEmpleado
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CboSexo.SelectedValue
                     .Parameters.Add("@Rtn", SqlDbType.Char, 14).Value = TxtRTN.Text
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar, 300).Value = TxtObservacion.Text
-                    .Parameters.Add("@IdContratoEmpleado", SqlDbType.Int).Value = CboIdContratoEmpleado.Text
                     .Parameters.Add("@NumSeguro", SqlDbType.Char, 14).Value = TxtNumSeguro.Text
                     If FotoAgregar Is Nothing Then
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = DBNull.Value
                     Else
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = foto
                     End If
-
-                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CInt(CboIdContratoCliente.Text)
 
                     If RdbActivo.Checked = CheckState.Unchecked Then
                         .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
@@ -498,7 +439,7 @@ Public Class FrmEmpleado
         End Try
     End Sub
 
-    'Lllenar el datagridview de datos'
+    'Llenar el datagridview de datos'
     Private Sub CargarEmpleado()
         da = New SqlDataAdapter("exec Sp_MostrarEmpleado", cn)
         dt = New DataTable
@@ -546,8 +487,6 @@ Public Class FrmEmpleado
                     CboEstadoCivil.Text = DgvVerEmpleado.CurrentRow.Cells(11).Value
                     CboSexo.Text = DgvVerEmpleado.CurrentRow.Cells(12).Value
 
-                    CboIdContratoEmpleado.Text = DgvVerEmpleado.CurrentRow.Cells(15).Value
-
                     Call MostrarImagen()
                     TcEmpleado.SelectedTab = TpAgregar
 
@@ -568,8 +507,6 @@ Public Class FrmEmpleado
                     Else
                         TxtNumSeguro.Text = ""
                     End If
-
-                    CboIdContratoCliente.Text = DgvVerEmpleado.CurrentRow.Cells(17).ToString
 
                     TcEmpleado.SelectedTab = TpAgregar
                 End If
@@ -630,10 +567,8 @@ Public Class FrmEmpleado
         CboNacionalidad.SelectedValue = -1
         CboProfesion.SelectedValue = -1
         CboSexo.SelectedValue = -1
-        CboIdContratoEmpleado.Text = Nothing
         TxtBeneficiario.Clear()
         txtIdBeneficiario.Clear()
-        CboIdContratoCliente.Text = Nothing
     End Sub
 
     Private Sub DgvVerEmpleado_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvVerEmpleado.CellContentDoubleClick
@@ -710,10 +645,17 @@ Public Class FrmEmpleado
         If sele = 2 Then
             FrmUsuario.txtEmpleado.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
             Me.Close()
-        Else
-
         End If
 
+        If sele = 5 Then
+            FrmContrato.TxtNumIdentidad.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
+            Me.Close()
+        End If
+
+        If sele = 6 Then
+            FrmContrato.TxtGuardias.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
+            Me.Close()
+        End If
     End Sub
 
     Private Sub VerPerfilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerPerfilToolStripMenuItem.Click
@@ -734,8 +676,7 @@ Public Class FrmEmpleado
             PerfilEmpleado.TxtBeneficiario.Text = DgvVerEmpleado.CurrentRow.Cells(10).Value
             PerfilEmpleado.txtEstadoCivil.Text = DgvVerEmpleado.CurrentRow.Cells(11).Value
             PerfilEmpleado.txtSexo.Text = DgvVerEmpleado.CurrentRow.Cells(12).Value
-            PerfilEmpleado.txtContratoEmpleado.Text = DgvVerEmpleado.CurrentRow.Cells(15).Value
-            PerfilEmpleado.Show()
+
             Call MostrarImagen()
 
             If DgvVerEmpleado.CurrentRow.Cells(13).Value IsNot Nothing Then
@@ -756,6 +697,8 @@ Public Class FrmEmpleado
                 PerfilEmpleado.TxtNumSeguro.Text = ""
             End If
         End If
+
+        PerfilEmpleado.Show()
     End Sub
 
 End Class

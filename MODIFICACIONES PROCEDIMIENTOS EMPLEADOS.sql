@@ -3,6 +3,7 @@
 Alter table Empleado
 add
 	Estado bit not null
+	Default 1
 
 	-- INSERTAR EMPLEADO
 
@@ -25,16 +26,14 @@ ALTER procedure [dbo].[Sp_InsertarEmpleado]
 	@IdSexo int,
 	@Rtn char(14),
 	@Observacion nvarchar(300),
-	@IdContratoEmpleado int,
 	@NumSeguro char(14),
 	@Fotografia image,
-	@IdContratoCliente int,
 	@Estado bit
 as
 	BEGIN
 		Set nocount on
 		Insert into Empleado
-		Values(@NumIdentidad, @Nombres, @Apellidos, @Direccion, @Telefono, @Correo, @IdProfesion, @IdNacionalidad, @IdMunicipio, @IdBeneficiario, @IdEstadoCivil, @IdSexo, @Rtn, @Observacion, @IdContratoEmpleado, @NumSeguro, @Fotografia, @IdContratoCliente, @Estado)
+		Values(@NumIdentidad, @Nombres, @Apellidos, @Direccion, @Telefono, @Correo, @IdProfesion, @IdNacionalidad, @IdMunicipio, @IdBeneficiario, @IdEstadoCivil, @IdSexo, @Rtn, @Observacion, @NumSeguro, @Fotografia, @Estado)
 	END
 
 	-- MODIFICAR EMPLEADO
@@ -60,10 +59,8 @@ ALTER procedure [dbo].[Sp_ModificarEmpleado]
 	@IdSexo int,
 	@Rtn char(14),
 	@Observacion nvarchar(300),
-	@IdContratoEmpleado int,
 	@NumSeguro char(14),
 	@Fotografia image,
-	@IdContratoCliente int,
 	@Estado bit,
 	@NumIdentidad char(13)
 as
@@ -83,10 +80,8 @@ as
 			IdSexo = @IdSexo,
 			Rtn = @Rtn,
 			Observacion = @Observacion,
-			IdContratoEmpleado = @IdContratoEmpleado,
 			NumSeguro = @NumSeguro,
 			Fotografia = @Fotografia,
-			IdContratoCliente = @IdContratoCliente,
 			Estado = @Estado
 		Where NumIdentidad = @NumIdentidad
 	END
@@ -104,7 +99,7 @@ ALTER procedure [dbo].[Sp_MostrarEmpleado]
 as
 	BEGIN
 		Set nocount on
-		Select e.NumIdentidad, e.Nombres,e.Apellidos, e.Direccion, e.Telefono, e.Correo, p.Profesion, n.Nacionalidad, m.Municipio,b.IdBeneficiario,b.Nombres +''+ b.Apellidos as 'NombreBeneficiario' , c.EstadoCivil, s.Sexo, Rtn, Observacion, e.IdContratoEmpleado, e.NumSeguro, e.Fotografia, e.IdContratoCliente, e.Estado
+		Select e.NumIdentidad, e.Nombres,e.Apellidos, e.Direccion, e.Telefono, e.Correo, p.Profesion, n.Nacionalidad, m.Municipio,b.IdBeneficiario,b.Nombres +''+ b.Apellidos as 'NombreBeneficiario' , c.EstadoCivil, s.Sexo, Rtn, Observacion, e.NumSeguro, e.Fotografia, e.Estado
 		From Empleado e inner join Profesion p
 						on e.IdProfesion = p.IdProfesion
 						inner join Nacionalidad n
@@ -133,7 +128,7 @@ ALTER procedure [dbo].[Sp_MostrarEmpleadoX]
 as
 	BEGIN
 		Set nocount on
-		Select e.NumIdentidad, e.Nombres, e.Apellidos, e.Direccion, e.Telefono, e.Correo, p.Profesion, n.Nacionalidad, m.Municipio, e.IdBeneficiario, c.EstadoCivil, s.Sexo, Rtn, Observacion, e.IdContratoEmpleado, e.NumSeguro, e.IdContratoCliente, e.Estado
+		Select e.NumIdentidad, e.Nombres, e.Apellidos, e.Direccion, e.Telefono, e.Correo, p.Profesion, n.Nacionalidad, m.Municipio, e.IdBeneficiario, c.EstadoCivil, s.Sexo, Rtn, Observacion, e.NumSeguro, e.Estado
 		From Empleado e inner join Profesion p
 						on e.IdProfesion = p.IdProfesion
 						inner join Nacionalidad n
@@ -146,3 +141,29 @@ as
 						on e.IdSexo = s.IdSexo
 		Where e.NumIdentidad = @NumIDentidad
 	END
+
+Create Procedure Sp_InsertarECC
+	@NumIdentidad char(13),
+	@IdContratoCliente INT
+AS
+	BEGIN
+		Set nocount on
+		Insert into EmpleadoXContratoCliente
+		VALUES(@NumIdentidad, @IdContratoCliente)
+	END
+
+Create Procedure Sp_ModificarECC
+	@NumIdentidad char(13),
+	@IdContratoCliente INT,
+	@NumIdentidadAct char(13),
+	@IdContratoClienteAct INT
+AS
+	BEGIN
+		Set nocount on
+		Update EmpleadoXContratoCliente
+		Set NumIdentidad = @NumIDentidad,
+			IdContratoCliente = @IdContratoCliente
+		Where NumIdentidad = @NumIdentidadAct and IdContratoCliente = @IdContratoClienteAct
+	END
+
+
