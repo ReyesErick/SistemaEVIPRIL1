@@ -151,7 +151,7 @@ Partial Class FrmClientes
         Me.LblVerCliente.Location = New System.Drawing.Point(38, 111)
         Me.LblVerCliente.Name = "LblVerCliente"
         Me.LblVerCliente.Size = New System.Drawing.Size(84, 16)
-        Me.LblVerCliente.TabIndex = 10
+        Me.LblVerCliente.TabIndex = 1
         Me.LblVerCliente.Text = "Ver Cliente"
         '
         'BtnRegresarMenu
@@ -175,7 +175,7 @@ Partial Class FrmClientes
         Me.LblAgregarCliente.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarCliente.Name = "LblAgregarCliente"
         Me.LblAgregarCliente.Size = New System.Drawing.Size(165, 16)
-        Me.LblAgregarCliente.TabIndex = 7
+        Me.LblAgregarCliente.TabIndex = 0
         Me.LblAgregarCliente.Text = "Agregar Nuevo Cliente"
         '
         'Label1
@@ -233,7 +233,7 @@ Partial Class FrmClientes
         Me.txtIdCliente.Location = New System.Drawing.Point(228, 46)
         Me.txtIdCliente.Name = "txtIdCliente"
         Me.txtIdCliente.Size = New System.Drawing.Size(67, 20)
-        Me.txtIdCliente.TabIndex = 83
+        Me.txtIdCliente.TabIndex = 0
         '
         'Label8
         '
@@ -252,7 +252,7 @@ Partial Class FrmClientes
         Me.CboTipoContrato.Location = New System.Drawing.Point(228, 252)
         Me.CboTipoContrato.Name = "CboTipoContrato"
         Me.CboTipoContrato.Size = New System.Drawing.Size(147, 21)
-        Me.CboTipoContrato.TabIndex = 81
+        Me.CboTipoContrato.TabIndex = 4
         '
         'Label7
         '
@@ -292,7 +292,7 @@ Partial Class FrmClientes
         Me.BtnGuardar.Location = New System.Drawing.Point(687, 449)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnGuardar.TabIndex = 38
+        Me.BtnGuardar.TabIndex = 6
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -303,7 +303,7 @@ Partial Class FrmClientes
         Me.MsktTelf1.Mask = "9999-9999"
         Me.MsktTelf1.Name = "MsktTelf1"
         Me.MsktTelf1.Size = New System.Drawing.Size(147, 22)
-        Me.MsktTelf1.TabIndex = 2
+        Me.MsktTelf1.TabIndex = 3
         Me.MsktTelf1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel4
@@ -322,7 +322,7 @@ Partial Class FrmClientes
         Me.RdbActibo.Location = New System.Drawing.Point(136, 19)
         Me.RdbActibo.Name = "RdbActibo"
         Me.RdbActibo.Size = New System.Drawing.Size(55, 17)
-        Me.RdbActibo.TabIndex = 10
+        Me.RdbActibo.TabIndex = 0
         Me.RdbActibo.TabStop = True
         Me.RdbActibo.Text = "Activo"
         Me.RdbActibo.UseVisualStyleBackColor = True
@@ -333,7 +333,7 @@ Partial Class FrmClientes
         Me.RdbInactivo.Location = New System.Drawing.Point(136, 42)
         Me.RdbInactivo.Name = "RdbInactivo"
         Me.RdbInactivo.Size = New System.Drawing.Size(63, 17)
-        Me.RdbInactivo.TabIndex = 11
+        Me.RdbInactivo.TabIndex = 1
         Me.RdbInactivo.TabStop = True
         Me.RdbInactivo.Text = "Inactivo"
         Me.RdbInactivo.UseVisualStyleBackColor = True
@@ -354,7 +354,7 @@ Partial Class FrmClientes
         Me.TxtDireccion.Multiline = True
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(385, 86)
-        Me.TxtDireccion.TabIndex = 3
+        Me.TxtDireccion.TabIndex = 5
         '
         'Label4
         '
@@ -371,7 +371,7 @@ Partial Class FrmClientes
         Me.TxtNombreContacto.Location = New System.Drawing.Point(228, 144)
         Me.TxtNombreContacto.Name = "TxtNombreContacto"
         Me.TxtNombreContacto.Size = New System.Drawing.Size(328, 20)
-        Me.TxtNombreContacto.TabIndex = 1
+        Me.TxtNombreContacto.TabIndex = 2
         '
         'Label5
         '
@@ -408,7 +408,7 @@ Partial Class FrmClientes
         Me.TxtNombreCompañia.Location = New System.Drawing.Point(228, 93)
         Me.TxtNombreCompañia.Name = "TxtNombreCompañia"
         Me.TxtNombreCompañia.Size = New System.Drawing.Size(328, 20)
-        Me.TxtNombreCompañia.TabIndex = 0
+        Me.TxtNombreCompañia.TabIndex = 1
         '
         'btnModificar
         '
@@ -418,7 +418,7 @@ Partial Class FrmClientes
         Me.btnModificar.Location = New System.Drawing.Point(510, 449)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(156, 40)
-        Me.btnModificar.TabIndex = 85
+        Me.btnModificar.TabIndex = 7
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '

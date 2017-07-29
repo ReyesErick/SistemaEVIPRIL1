@@ -161,7 +161,7 @@ Partial Class FrmContrato
         Me.TxtNumIdentidad.Location = New System.Drawing.Point(439, 326)
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(155, 20)
-        Me.TxtNumIdentidad.TabIndex = 47
+        Me.TxtNumIdentidad.TabIndex = 5
         '
         'PictureBox6
         '
@@ -181,17 +181,18 @@ Partial Class FrmContrato
         Me.BtnGuardar.Location = New System.Drawing.Point(630, 431)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnGuardar.TabIndex = 46
+        Me.BtnGuardar.TabIndex = 6
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
         'CboTipoContrato
         '
+        Me.CboTipoContrato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoContrato.FormattingEnabled = True
         Me.CboTipoContrato.Location = New System.Drawing.Point(439, 278)
         Me.CboTipoContrato.Name = "CboTipoContrato"
         Me.CboTipoContrato.Size = New System.Drawing.Size(155, 21)
-        Me.CboTipoContrato.TabIndex = 9
+        Me.CboTipoContrato.TabIndex = 4
         '
         'Label6
         '
@@ -205,11 +206,12 @@ Partial Class FrmContrato
         '
         'CboTipoEmpleado
         '
+        Me.CboTipoEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoEmpleado.FormattingEnabled = True
         Me.CboTipoEmpleado.Location = New System.Drawing.Point(439, 231)
         Me.CboTipoEmpleado.Name = "CboTipoEmpleado"
         Me.CboTipoEmpleado.Size = New System.Drawing.Size(155, 21)
-        Me.CboTipoEmpleado.TabIndex = 7
+        Me.CboTipoEmpleado.TabIndex = 3
         '
         'Label5
         '
@@ -226,7 +228,7 @@ Partial Class FrmContrato
         Me.txtsueldo.Location = New System.Drawing.Point(439, 181)
         Me.txtsueldo.Name = "txtsueldo"
         Me.txtsueldo.Size = New System.Drawing.Size(115, 20)
-        Me.txtsueldo.TabIndex = 5
+        Me.txtsueldo.TabIndex = 2
         '
         'Label4
         '
@@ -312,7 +314,7 @@ Partial Class FrmContrato
         Me.Button1.Location = New System.Drawing.Point(688, 483)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(156, 40)
-        Me.Button1.TabIndex = 48
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -322,7 +324,7 @@ Partial Class FrmContrato
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(200, 67)
-        Me.txtObservacion.TabIndex = 13
+        Me.txtObservacion.TabIndex = 3
         '
         'Label10
         '
@@ -339,7 +341,7 @@ Partial Class FrmContrato
         Me.txtMonto.Location = New System.Drawing.Point(238, 131)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(115, 20)
-        Me.txtMonto.TabIndex = 11
+        Me.txtMonto.TabIndex = 2
         '
         'Label7
         '
@@ -377,7 +379,7 @@ Partial Class FrmContrato
         Me.dtpFechaFinal.Location = New System.Drawing.Point(238, 75)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 20)
-        Me.dtpFechaFinal.TabIndex = 7
+        Me.dtpFechaFinal.TabIndex = 1
         '
         'dtpFechaInicio
         '
@@ -385,7 +387,7 @@ Partial Class FrmContrato
         Me.dtpFechaInicio.Location = New System.Drawing.Point(238, 20)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
         Me.dtpFechaInicio.Size = New System.Drawing.Size(200, 20)
-        Me.dtpFechaInicio.TabIndex = 6
+        Me.dtpFechaInicio.TabIndex = 0
         '
         'TabPage3
         '
@@ -439,11 +441,12 @@ Partial Class FrmContrato
         '
         'CboContratoCliente
         '
+        Me.CboContratoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboContratoCliente.FormattingEnabled = True
         Me.CboContratoCliente.Location = New System.Drawing.Point(197, 36)
         Me.CboContratoCliente.Name = "CboContratoCliente"
         Me.CboContratoCliente.Size = New System.Drawing.Size(188, 21)
-        Me.CboContratoCliente.TabIndex = 68
+        Me.CboContratoCliente.TabIndex = 0
         '
         'PbxBuscarGuardia
         '
@@ -462,7 +465,7 @@ Partial Class FrmContrato
         Me.TxtGuardias.Location = New System.Drawing.Point(556, 36)
         Me.TxtGuardias.Name = "TxtGuardias"
         Me.TxtGuardias.Size = New System.Drawing.Size(170, 20)
-        Me.TxtGuardias.TabIndex = 66
+        Me.TxtGuardias.TabIndex = 1
         '
         'Button2
         '
@@ -472,7 +475,7 @@ Partial Class FrmContrato
         Me.Button2.Location = New System.Drawing.Point(618, 361)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(141, 32)
-        Me.Button2.TabIndex = 65
+        Me.Button2.TabIndex = 2
         Me.Button2.Text = "Asignar Guardia"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -573,7 +576,7 @@ Partial Class FrmContrato
         Me.LblVerContratoClien.Location = New System.Drawing.Point(30, 159)
         Me.LblVerContratoClien.Name = "LblVerContratoClien"
         Me.LblVerContratoClien.Size = New System.Drawing.Size(146, 16)
-        Me.LblVerContratoClien.TabIndex = 10
+        Me.LblVerContratoClien.TabIndex = 3
         Me.LblVerContratoClien.Text = "Ver Contrato Cliente"
         '
         'BtnRegresarMenu
@@ -598,7 +601,7 @@ Partial Class FrmContrato
         Me.LblVerContratoEmple.Location = New System.Drawing.Point(30, 133)
         Me.LblVerContratoEmple.Name = "LblVerContratoEmple"
         Me.LblVerContratoEmple.Size = New System.Drawing.Size(173, 16)
-        Me.LblVerContratoEmple.TabIndex = 9
+        Me.LblVerContratoEmple.TabIndex = 2
         Me.LblVerContratoEmple.Text = "Ver Contrato Empleado "
         '
         'LblAgregarContratoClien
@@ -609,7 +612,7 @@ Partial Class FrmContrato
         Me.LblAgregarContratoClien.Location = New System.Drawing.Point(30, 107)
         Me.LblAgregarContratoClien.Name = "LblAgregarContratoClien"
         Me.LblAgregarContratoClien.Size = New System.Drawing.Size(178, 16)
-        Me.LblAgregarContratoClien.TabIndex = 8
+        Me.LblAgregarContratoClien.TabIndex = 1
         Me.LblAgregarContratoClien.Text = "Agregar Contrato Cliente"
         '
         'LblAgregarContratoEmp
@@ -620,7 +623,7 @@ Partial Class FrmContrato
         Me.LblAgregarContratoEmp.Location = New System.Drawing.Point(30, 82)
         Me.LblAgregarContratoEmp.Name = "LblAgregarContratoEmp"
         Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(201, 16)
-        Me.LblAgregarContratoEmp.TabIndex = 7
+        Me.LblAgregarContratoEmp.TabIndex = 0
         Me.LblAgregarContratoEmp.Text = "Agregar Contrato Empleado"
         '
         'Label1

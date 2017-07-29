@@ -150,11 +150,11 @@ Partial Class FrmPlanilla
         '
         Me.LblPlanillas.AutoSize = True
         Me.LblPlanillas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblPlanillas.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPlanillas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblPlanillas.Location = New System.Drawing.Point(38, 108)
         Me.LblPlanillas.Name = "LblPlanillas"
-        Me.LblPlanillas.Size = New System.Drawing.Size(78, 15)
-        Me.LblPlanillas.TabIndex = 10
+        Me.LblPlanillas.Size = New System.Drawing.Size(96, 16)
+        Me.LblPlanillas.TabIndex = 1
         Me.LblPlanillas.Text = "Ver Planillas"
         '
         'BtnRegresarMenu
@@ -174,11 +174,11 @@ Partial Class FrmPlanilla
         '
         Me.LblAgregarPlanilla.AutoSize = True
         Me.LblAgregarPlanilla.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblAgregarPlanilla.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAgregarPlanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblAgregarPlanilla.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarPlanilla.Name = "LblAgregarPlanilla"
-        Me.LblAgregarPlanilla.Size = New System.Drawing.Size(133, 15)
-        Me.LblAgregarPlanilla.TabIndex = 7
+        Me.LblAgregarPlanilla.Size = New System.Drawing.Size(169, 16)
+        Me.LblAgregarPlanilla.TabIndex = 0
         Me.LblAgregarPlanilla.Text = "Agregar Nueva Planilla"
         '
         'Label1
@@ -264,7 +264,7 @@ Partial Class FrmPlanilla
         Me.BtnCancelar.Location = New System.Drawing.Point(729, 40)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(105, 34)
-        Me.BtnCancelar.TabIndex = 58
+        Me.BtnCancelar.TabIndex = 15
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
@@ -278,7 +278,7 @@ Partial Class FrmPlanilla
         Me.BtnCalcular.Location = New System.Drawing.Point(618, 40)
         Me.BtnCalcular.Name = "BtnCalcular"
         Me.BtnCalcular.Size = New System.Drawing.Size(105, 34)
-        Me.BtnCalcular.TabIndex = 57
+        Me.BtnCalcular.TabIndex = 14
         Me.BtnCalcular.Text = "Calcular"
         Me.BtnCalcular.UseVisualStyleBackColor = False
         '
@@ -292,7 +292,7 @@ Partial Class FrmPlanilla
         Me.BtnGuardar.Location = New System.Drawing.Point(507, 40)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(105, 34)
-        Me.BtnGuardar.TabIndex = 56
+        Me.BtnGuardar.TabIndex = 13
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -302,7 +302,7 @@ Partial Class FrmPlanilla
         Me.TxtNetoPagar.Location = New System.Drawing.Point(361, 489)
         Me.TxtNetoPagar.Name = "TxtNetoPagar"
         Me.TxtNetoPagar.Size = New System.Drawing.Size(124, 20)
-        Me.TxtNetoPagar.TabIndex = 55
+        Me.TxtNetoPagar.TabIndex = 12
         Me.TxtNetoPagar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtTotalDeducciones
@@ -311,7 +311,7 @@ Partial Class FrmPlanilla
         Me.TxtTotalDeducciones.Location = New System.Drawing.Point(608, 419)
         Me.TxtTotalDeducciones.Name = "TxtTotalDeducciones"
         Me.TxtTotalDeducciones.Size = New System.Drawing.Size(124, 20)
-        Me.TxtTotalDeducciones.TabIndex = 54
+        Me.TxtTotalDeducciones.TabIndex = 11
         Me.TxtTotalDeducciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtOtrasDeduc
@@ -320,7 +320,7 @@ Partial Class FrmPlanilla
         Me.TxtOtrasDeduc.Location = New System.Drawing.Point(608, 359)
         Me.TxtOtrasDeduc.Name = "TxtOtrasDeduc"
         Me.TxtOtrasDeduc.Size = New System.Drawing.Size(124, 20)
-        Me.TxtOtrasDeduc.TabIndex = 53
+        Me.TxtOtrasDeduc.TabIndex = 10
         Me.TxtOtrasDeduc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtRap
@@ -329,7 +329,7 @@ Partial Class FrmPlanilla
         Me.TxtRap.Location = New System.Drawing.Point(608, 295)
         Me.TxtRap.Name = "TxtRap"
         Me.TxtRap.Size = New System.Drawing.Size(124, 20)
-        Me.TxtRap.TabIndex = 52
+        Me.TxtRap.TabIndex = 9
         Me.TxtRap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtUniforme
@@ -338,7 +338,7 @@ Partial Class FrmPlanilla
         Me.TxtUniforme.Location = New System.Drawing.Point(608, 228)
         Me.TxtUniforme.Name = "TxtUniforme"
         Me.TxtUniforme.Size = New System.Drawing.Size(124, 20)
-        Me.TxtUniforme.TabIndex = 51
+        Me.TxtUniforme.TabIndex = 8
         Me.TxtUniforme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtSeguro
@@ -347,7 +347,7 @@ Partial Class FrmPlanilla
         Me.TxtSeguro.Location = New System.Drawing.Point(608, 164)
         Me.TxtSeguro.Name = "TxtSeguro"
         Me.TxtSeguro.Size = New System.Drawing.Size(124, 20)
-        Me.TxtSeguro.TabIndex = 50
+        Me.TxtSeguro.TabIndex = 7
         Me.TxtSeguro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
@@ -416,7 +416,7 @@ Partial Class FrmPlanilla
         Me.TxtSubTotal.Location = New System.Drawing.Point(169, 419)
         Me.TxtSubTotal.Name = "TxtSubTotal"
         Me.TxtSubTotal.Size = New System.Drawing.Size(124, 20)
-        Me.TxtSubTotal.TabIndex = 43
+        Me.TxtSubTotal.TabIndex = 6
         Me.TxtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtComplemento
@@ -425,7 +425,7 @@ Partial Class FrmPlanilla
         Me.TxtComplemento.Location = New System.Drawing.Point(169, 359)
         Me.TxtComplemento.Name = "TxtComplemento"
         Me.TxtComplemento.Size = New System.Drawing.Size(124, 20)
-        Me.TxtComplemento.TabIndex = 42
+        Me.TxtComplemento.TabIndex = 5
         Me.TxtComplemento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtSueldoQuincenal
@@ -434,7 +434,7 @@ Partial Class FrmPlanilla
         Me.TxtSueldoQuincenal.Location = New System.Drawing.Point(169, 295)
         Me.TxtSueldoQuincenal.Name = "TxtSueldoQuincenal"
         Me.TxtSueldoQuincenal.Size = New System.Drawing.Size(124, 20)
-        Me.TxtSueldoQuincenal.TabIndex = 41
+        Me.TxtSueldoQuincenal.TabIndex = 4
         Me.TxtSueldoQuincenal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtDiasTrabajados
@@ -443,7 +443,7 @@ Partial Class FrmPlanilla
         Me.TxtDiasTrabajados.Location = New System.Drawing.Point(169, 228)
         Me.TxtDiasTrabajados.Name = "TxtDiasTrabajados"
         Me.TxtDiasTrabajados.Size = New System.Drawing.Size(124, 20)
-        Me.TxtDiasTrabajados.TabIndex = 40
+        Me.TxtDiasTrabajados.TabIndex = 3
         Me.TxtDiasTrabajados.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtSueldoDiario
@@ -452,7 +452,7 @@ Partial Class FrmPlanilla
         Me.TxtSueldoDiario.Location = New System.Drawing.Point(169, 164)
         Me.TxtSueldoDiario.Name = "TxtSueldoDiario"
         Me.TxtSueldoDiario.Size = New System.Drawing.Size(124, 20)
-        Me.TxtSueldoDiario.TabIndex = 39
+        Me.TxtSueldoDiario.TabIndex = 2
         Me.TxtSueldoDiario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtNombreEmpleado
@@ -461,7 +461,7 @@ Partial Class FrmPlanilla
         Me.TxtNombreEmpleado.Location = New System.Drawing.Point(169, 101)
         Me.TxtNombreEmpleado.Name = "TxtNombreEmpleado"
         Me.TxtNombreEmpleado.Size = New System.Drawing.Size(249, 20)
-        Me.TxtNombreEmpleado.TabIndex = 38
+        Me.TxtNombreEmpleado.TabIndex = 1
         '
         'TxtNumIdentidad
         '
@@ -469,7 +469,7 @@ Partial Class FrmPlanilla
         Me.TxtNumIdentidad.Location = New System.Drawing.Point(169, 42)
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(249, 20)
-        Me.TxtNumIdentidad.TabIndex = 37
+        Me.TxtNumIdentidad.TabIndex = 0
         '
         'Label8
         '

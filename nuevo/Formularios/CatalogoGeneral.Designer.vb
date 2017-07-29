@@ -26,12 +26,12 @@ Partial Class FrmCatalogoGeneral
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
-        Me.LsvCatoGeneral = New System.Windows.Forms.ListView()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.LsvCatoGeneral = New System.Windows.Forms.ListView()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,21 +66,6 @@ Partial Class FrmCatalogoGeneral
         Me.Panel3.Size = New System.Drawing.Size(396, 291)
         Me.Panel3.TabIndex = 3
         '
-        'TxtNombre
-        '
-        Me.TxtNombre.Location = New System.Drawing.Point(14, 32)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(171, 20)
-        Me.TxtNombre.TabIndex = 0
-        '
-        'LsvCatoGeneral
-        '
-        Me.LsvCatoGeneral.Location = New System.Drawing.Point(14, 84)
-        Me.LsvCatoGeneral.Name = "LsvCatoGeneral"
-        Me.LsvCatoGeneral.Size = New System.Drawing.Size(370, 188)
-        Me.LsvCatoGeneral.TabIndex = 2
-        Me.LsvCatoGeneral.UseCompatibleStateImageBehavior = False
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
@@ -91,6 +76,16 @@ Partial Class FrmCatalogoGeneral
         Me.PictureBox3.TabIndex = 40
         Me.PictureBox3.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(272, 23)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 39
+        Me.PictureBox2.TabStop = False
+        '
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
@@ -99,7 +94,7 @@ Partial Class FrmCatalogoGeneral
         Me.BtnGuardar.Location = New System.Drawing.Point(272, 47)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(112, 28)
-        Me.BtnGuardar.TabIndex = 42
+        Me.BtnGuardar.TabIndex = 1
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -112,19 +107,24 @@ Partial Class FrmCatalogoGeneral
         Me.BtnModificar.Location = New System.Drawing.Point(272, 12)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(112, 29)
-        Me.BtnModificar.TabIndex = 41
+        Me.BtnModificar.TabIndex = 2
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = False
         '
-        'PictureBox2
+        'LsvCatoGeneral
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(272, 23)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 39
-        Me.PictureBox2.TabStop = False
+        Me.LsvCatoGeneral.Location = New System.Drawing.Point(14, 84)
+        Me.LsvCatoGeneral.Name = "LsvCatoGeneral"
+        Me.LsvCatoGeneral.Size = New System.Drawing.Size(370, 188)
+        Me.LsvCatoGeneral.TabIndex = 2
+        Me.LsvCatoGeneral.UseCompatibleStateImageBehavior = False
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.Location = New System.Drawing.Point(14, 32)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(171, 20)
+        Me.TxtNombre.TabIndex = 0
         '
         'FrmCatalogoGeneral
         '

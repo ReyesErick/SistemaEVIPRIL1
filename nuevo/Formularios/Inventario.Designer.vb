@@ -35,6 +35,9 @@ Partial Class FrmInventario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TcArma = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.RdbActivo = New System.Windows.Forms.RadioButton()
+        Me.RdbInactivo = New System.Windows.Forms.RadioButton()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.PbxBuscar = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -63,9 +66,6 @@ Partial Class FrmInventario
         Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.RdbActivo = New System.Windows.Forms.RadioButton()
-        Me.RdbInactivo = New System.Windows.Forms.RadioButton()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,10 +135,10 @@ Partial Class FrmInventario
         '
         Me.LblVerArmas.AutoSize = True
         Me.LblVerArmas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblVerArmas.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVerArmas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblVerArmas.Location = New System.Drawing.Point(38, 110)
         Me.LblVerArmas.Name = "LblVerArmas"
-        Me.LblVerArmas.Size = New System.Drawing.Size(124, 15)
+        Me.LblVerArmas.Size = New System.Drawing.Size(152, 16)
         Me.LblVerArmas.TabIndex = 10
         Me.LblVerArmas.Text = "Ver Inventario Armas"
         '
@@ -159,10 +159,10 @@ Partial Class FrmInventario
         '
         Me.LblAgregarArma.AutoSize = True
         Me.LblAgregarArma.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblAgregarArma.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAgregarArma.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblAgregarArma.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarArma.Name = "LblAgregarArma"
-        Me.LblAgregarArma.Size = New System.Drawing.Size(120, 15)
+        Me.LblAgregarArma.Size = New System.Drawing.Size(153, 16)
         Me.LblAgregarArma.TabIndex = 7
         Me.LblAgregarArma.Text = "Agregar Nueva Arma"
         '
@@ -216,6 +216,38 @@ Partial Class FrmInventario
         Me.TabPage2.Text = "Agregar Arma"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'RdbActivo
+        '
+        Me.RdbActivo.AutoSize = True
+        Me.RdbActivo.Location = New System.Drawing.Point(423, 352)
+        Me.RdbActivo.Name = "RdbActivo"
+        Me.RdbActivo.Size = New System.Drawing.Size(55, 17)
+        Me.RdbActivo.TabIndex = 6
+        Me.RdbActivo.TabStop = True
+        Me.RdbActivo.Text = "Activo"
+        Me.RdbActivo.UseVisualStyleBackColor = True
+        '
+        'RdbInactivo
+        '
+        Me.RdbInactivo.AutoSize = True
+        Me.RdbInactivo.Location = New System.Drawing.Point(423, 375)
+        Me.RdbInactivo.Name = "RdbInactivo"
+        Me.RdbInactivo.Size = New System.Drawing.Size(63, 17)
+        Me.RdbInactivo.TabIndex = 7
+        Me.RdbInactivo.TabStop = True
+        Me.RdbInactivo.Text = "Inactivo"
+        Me.RdbInactivo.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(292, 352)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(105, 18)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "Estado Arma"
+        '
         'PbxBuscar
         '
         Me.PbxBuscar.Cursor = System.Windows.Forms.Cursors.Hand
@@ -245,7 +277,7 @@ Partial Class FrmInventario
         Me.BtnGuardar.Location = New System.Drawing.Point(646, 451)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnGuardar.TabIndex = 44
+        Me.BtnGuardar.TabIndex = 8
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -256,7 +288,7 @@ Partial Class FrmInventario
         Me.cboPaisFabricacion.Location = New System.Drawing.Point(403, 274)
         Me.cboPaisFabricacion.Name = "cboPaisFabricacion"
         Me.cboPaisFabricacion.Size = New System.Drawing.Size(121, 21)
-        Me.cboPaisFabricacion.TabIndex = 11
+        Me.cboPaisFabricacion.TabIndex = 4
         '
         'Label8
         '
@@ -285,7 +317,7 @@ Partial Class FrmInventario
         Me.CboTipoArma.Location = New System.Drawing.Point(403, 225)
         Me.CboTipoArma.Name = "CboTipoArma"
         Me.CboTipoArma.Size = New System.Drawing.Size(121, 21)
-        Me.CboTipoArma.TabIndex = 9
+        Me.CboTipoArma.TabIndex = 3
         '
         'Label6
         '
@@ -304,7 +336,7 @@ Partial Class FrmInventario
         Me.cboModelo.Location = New System.Drawing.Point(403, 176)
         Me.cboModelo.Name = "cboModelo"
         Me.cboModelo.Size = New System.Drawing.Size(121, 21)
-        Me.cboModelo.TabIndex = 7
+        Me.cboModelo.TabIndex = 2
         '
         'Label5
         '
@@ -351,7 +383,7 @@ Partial Class FrmInventario
         Me.TxtContrato.Location = New System.Drawing.Point(403, 311)
         Me.TxtContrato.Name = "TxtContrato"
         Me.TxtContrato.Size = New System.Drawing.Size(100, 20)
-        Me.TxtContrato.TabIndex = 0
+        Me.TxtContrato.TabIndex = 5
         '
         'txtSerie
         '
@@ -366,7 +398,7 @@ Partial Class FrmInventario
         Me.MskCalibre.Mask = "99"
         Me.MskCalibre.Name = "MskCalibre"
         Me.MskCalibre.Size = New System.Drawing.Size(53, 20)
-        Me.MskCalibre.TabIndex = 4
+        Me.MskCalibre.TabIndex = 1
         '
         'TabPage3
         '
@@ -433,38 +465,6 @@ Partial Class FrmInventario
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'RdbActivo
-        '
-        Me.RdbActivo.AutoSize = True
-        Me.RdbActivo.Location = New System.Drawing.Point(423, 352)
-        Me.RdbActivo.Name = "RdbActivo"
-        Me.RdbActivo.Size = New System.Drawing.Size(55, 17)
-        Me.RdbActivo.TabIndex = 62
-        Me.RdbActivo.TabStop = True
-        Me.RdbActivo.Text = "Activo"
-        Me.RdbActivo.UseVisualStyleBackColor = True
-        '
-        'RdbInactivo
-        '
-        Me.RdbInactivo.AutoSize = True
-        Me.RdbInactivo.Location = New System.Drawing.Point(423, 375)
-        Me.RdbInactivo.Name = "RdbInactivo"
-        Me.RdbInactivo.Size = New System.Drawing.Size(63, 17)
-        Me.RdbInactivo.TabIndex = 63
-        Me.RdbInactivo.TabStop = True
-        Me.RdbInactivo.Text = "Inactivo"
-        Me.RdbInactivo.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(292, 352)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(105, 18)
-        Me.Label10.TabIndex = 61
-        Me.Label10.Text = "Estado Arma"
         '
         'FrmInventario
         '

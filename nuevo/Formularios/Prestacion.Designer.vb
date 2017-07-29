@@ -255,7 +255,7 @@ Partial Class FrmPrestacion
         Me.LblPrestación.Location = New System.Drawing.Point(38, 82)
         Me.LblPrestación.Name = "LblPrestación"
         Me.LblPrestación.Size = New System.Drawing.Size(192, 16)
-        Me.LblPrestación.TabIndex = 7
+        Me.LblPrestación.TabIndex = 0
         Me.LblPrestación.Text = "Calcular Nuevo Prestación"
         '
         'Label1
@@ -1522,7 +1522,7 @@ Partial Class FrmPrestacion
         Me.txtNumIdentidadEmpleado.Location = New System.Drawing.Point(81, 34)
         Me.txtNumIdentidadEmpleado.Name = "txtNumIdentidadEmpleado"
         Me.txtNumIdentidadEmpleado.Size = New System.Drawing.Size(184, 20)
-        Me.txtNumIdentidadEmpleado.TabIndex = 11
+        Me.txtNumIdentidadEmpleado.TabIndex = 0
         '
         'LblCodigo
         '

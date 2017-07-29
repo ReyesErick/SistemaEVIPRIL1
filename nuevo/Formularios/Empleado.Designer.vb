@@ -455,6 +455,7 @@ Partial Class FrmEmpleado
         '
         Me.TxtRTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRTN.Location = New System.Drawing.Point(175, 140)
+        Me.TxtRTN.MaxLength = 14
         Me.TxtRTN.Name = "TxtRTN"
         Me.TxtRTN.Size = New System.Drawing.Size(188, 21)
         Me.TxtRTN.TabIndex = 5
@@ -479,6 +480,7 @@ Partial Class FrmEmpleado
         '
         Me.TxtNumIdentidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNumIdentidad.Location = New System.Drawing.Point(175, 31)
+        Me.TxtNumIdentidad.MaxLength = 13
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(188, 21)
         Me.TxtNumIdentidad.TabIndex = 2

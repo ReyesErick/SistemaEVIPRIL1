@@ -32,10 +32,10 @@ Partial Class FrmCatalogo_Depa
         Me.LsvCatalogo = New System.Windows.Forms.ListView()
         Me.ChIdDepartamento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChDepartamento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChPais = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ChPais = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,11 +57,13 @@ Partial Class FrmCatalogo_Depa
         '
         'CboCatalogo
         '
+        Me.CboCatalogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboCatalogo.FormattingEnabled = True
         Me.CboCatalogo.Location = New System.Drawing.Point(14, 47)
         Me.CboCatalogo.Name = "CboCatalogo"
         Me.CboCatalogo.Size = New System.Drawing.Size(175, 21)
-        Me.CboCatalogo.TabIndex = 44
+        Me.CboCatalogo.TabIndex = 1
         '
         'PictureBox3
         '
@@ -91,7 +93,7 @@ Partial Class FrmCatalogo_Depa
         Me.BtnGuardar.Location = New System.Drawing.Point(272, 47)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(112, 28)
-        Me.BtnGuardar.TabIndex = 42
+        Me.BtnGuardar.TabIndex = 2
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -104,7 +106,7 @@ Partial Class FrmCatalogo_Depa
         Me.BtnModificar.Location = New System.Drawing.Point(272, 12)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(112, 29)
-        Me.BtnModificar.TabIndex = 41
+        Me.BtnModificar.TabIndex = 3
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = False
         '
@@ -128,6 +130,10 @@ Partial Class FrmCatalogo_Depa
         Me.ChDepartamento.Text = "Departamento"
         Me.ChDepartamento.Width = 81
         '
+        'ChPais
+        '
+        Me.ChPais.Text = "Pais"
+        '
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(14, 17)
@@ -150,10 +156,6 @@ Partial Class FrmCatalogo_Depa
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(424, 36)
         Me.Panel1.TabIndex = 4
-        '
-        'ChPais
-        '
-        Me.ChPais.Text = "Pais"
         '
         'FrmCatalogo_Depa
         '

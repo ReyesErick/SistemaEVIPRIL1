@@ -140,7 +140,7 @@ Partial Class FrmUsuario
         Me.LblVerUsuarios.Location = New System.Drawing.Point(38, 111)
         Me.LblVerUsuarios.Name = "LblVerUsuarios"
         Me.LblVerUsuarios.Size = New System.Drawing.Size(98, 16)
-        Me.LblVerUsuarios.TabIndex = 10
+        Me.LblVerUsuarios.TabIndex = 1
         Me.LblVerUsuarios.Text = "Ver Usuarios"
         '
         'BtnRegresarMenu
@@ -164,7 +164,7 @@ Partial Class FrmUsuario
         Me.LblAgregarUsuario.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarUsuario.Name = "LblAgregarUsuario"
         Me.LblAgregarUsuario.Size = New System.Drawing.Size(171, 16)
-        Me.LblAgregarUsuario.TabIndex = 7
+        Me.LblAgregarUsuario.TabIndex = 0
         Me.LblAgregarUsuario.Text = "Agregar Nuevo Usuario"
         '
         'Label1
@@ -202,7 +202,7 @@ Partial Class FrmUsuario
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(863, 548)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Agregar Usuario"
@@ -229,7 +229,7 @@ Partial Class FrmUsuario
         Me.Pnl1.Controls.Add(Me.TxtUsuario)
         Me.Pnl1.Enabled = False
         Me.Pnl1.Location = New System.Drawing.Point(186, 46)
-        Me.Pnl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Pnl1.Margin = New System.Windows.Forms.Padding(2)
         Me.Pnl1.Name = "Pnl1"
         Me.Pnl1.Size = New System.Drawing.Size(358, 284)
         Me.Pnl1.TabIndex = 37
@@ -241,14 +241,14 @@ Partial Class FrmUsuario
         Me.cboEstado.Location = New System.Drawing.Point(40, 211)
         Me.cboEstado.Name = "cboEstado"
         Me.cboEstado.Size = New System.Drawing.Size(272, 21)
-        Me.cboEstado.TabIndex = 41
+        Me.cboEstado.TabIndex = 3
         '
         'txtEmpleado
         '
         Me.txtEmpleado.Location = New System.Drawing.Point(40, 173)
         Me.txtEmpleado.Name = "txtEmpleado"
         Me.txtEmpleado.Size = New System.Drawing.Size(272, 20)
-        Me.txtEmpleado.TabIndex = 40
+        Me.txtEmpleado.TabIndex = 4
         '
         'btnEmpleado
         '
@@ -262,7 +262,7 @@ Partial Class FrmUsuario
         Me.btnEmpleado.Location = New System.Drawing.Point(316, 173)
         Me.btnEmpleado.Name = "btnEmpleado"
         Me.btnEmpleado.Size = New System.Drawing.Size(26, 23)
-        Me.btnEmpleado.TabIndex = 39
+        Me.btnEmpleado.TabIndex = 2
         Me.btnEmpleado.UseVisualStyleBackColor = True
         '
         'LblIdNun
@@ -279,14 +279,14 @@ Partial Class FrmUsuario
         Me.TxtContraseña.Location = New System.Drawing.Point(40, 107)
         Me.TxtContraseña.Name = "TxtContraseña"
         Me.TxtContraseña.Size = New System.Drawing.Size(272, 20)
-        Me.TxtContraseña.TabIndex = 4
+        Me.TxtContraseña.TabIndex = 1
         '
         'TxtUsuario
         '
         Me.TxtUsuario.Location = New System.Drawing.Point(40, 47)
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(272, 20)
-        Me.TxtUsuario.TabIndex = 3
+        Me.TxtUsuario.TabIndex = 0
         '
         'Label5
         '
@@ -327,7 +327,7 @@ Partial Class FrmUsuario
         Me.BtnGuardar.Location = New System.Drawing.Point(643, 425)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnGuardar.TabIndex = 34
+        Me.BtnGuardar.TabIndex = 0
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -341,7 +341,7 @@ Partial Class FrmUsuario
         Me.BtnModificar.Location = New System.Drawing.Point(477, 425)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnModificar.TabIndex = 33
+        Me.BtnModificar.TabIndex = 1
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = False
         '
@@ -383,7 +383,7 @@ Partial Class FrmUsuario
         Me.TabPage3.Controls.Add(Me.LsvContratoCliente)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(863, 548)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Usuarios"

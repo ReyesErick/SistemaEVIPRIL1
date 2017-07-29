@@ -231,9 +231,10 @@ Partial Class FrmBeneficiario
         'TxtNumIdentidad
         '
         Me.TxtNumIdentidad.Location = New System.Drawing.Point(166, 176)
+        Me.TxtNumIdentidad.MaxLength = 13
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(189, 20)
-        Me.TxtNumIdentidad.TabIndex = 42
+        Me.TxtNumIdentidad.TabIndex = 2
         '
         'Label8
         '
@@ -252,7 +253,7 @@ Partial Class FrmBeneficiario
         Me.MskTel2.Mask = "9999-9999"
         Me.MskTel2.Name = "MskTel2"
         Me.MskTel2.Size = New System.Drawing.Size(147, 22)
-        Me.MskTel2.TabIndex = 39
+        Me.MskTel2.TabIndex = 5
         Me.MskTel2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
@@ -293,7 +294,7 @@ Partial Class FrmBeneficiario
         Me.BtnGuardar.Location = New System.Drawing.Point(687, 449)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
-        Me.BtnGuardar.TabIndex = 38
+        Me.BtnGuardar.TabIndex = 6
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
@@ -317,7 +318,7 @@ Partial Class FrmBeneficiario
         Me.MsktTelf1.Mask = "9999-9999"
         Me.MsktTelf1.Name = "MsktTelf1"
         Me.MsktTelf1.Size = New System.Drawing.Size(147, 22)
-        Me.MsktTelf1.TabIndex = 2
+        Me.MsktTelf1.TabIndex = 4
         Me.MsktTelf1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtDireccion
