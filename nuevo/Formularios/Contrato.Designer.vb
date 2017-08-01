@@ -42,6 +42,9 @@ Partial Class FrmContrato
         Me.dtpfinal = New System.Windows.Forms.DateTimePicker()
         Me.dtpInicio = New System.Windows.Forms.DateTimePicker()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.TxtCliente = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtObservacion = New System.Windows.Forms.TextBox()
@@ -63,6 +66,8 @@ Partial Class FrmContrato
         Me.LblGuardias = New System.Windows.Forms.Label()
         Me.DgvGuardias = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.LblAsignar = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -82,6 +87,7 @@ Partial Class FrmContrato
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.DgvContrato, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +95,7 @@ Partial Class FrmContrato
         CType(Me.PbxBuscarGuardia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvGuardias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -278,6 +285,9 @@ Partial Class FrmContrato
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.PictureBox8)
+        Me.TabPage2.Controls.Add(Me.TxtCliente)
+        Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.PictureBox7)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.txtObservacion)
@@ -295,6 +305,34 @@ Partial Class FrmContrato
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Contrato Cliente"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(416, 184)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(27, 23)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 62
+        Me.PictureBox8.TabStop = False
+        '
+        'TxtCliente
+        '
+        Me.TxtCliente.Location = New System.Drawing.Point(238, 186)
+        Me.TxtCliente.Name = "TxtCliente"
+        Me.TxtCliente.Size = New System.Drawing.Size(172, 20)
+        Me.TxtCliente.TabIndex = 3
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(167, 185)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(65, 18)
+        Me.Label13.TabIndex = 49
+        Me.Label13.Text = "Cliente:"
         '
         'PictureBox7
         '
@@ -320,17 +358,17 @@ Partial Class FrmContrato
         '
         'txtObservacion
         '
-        Me.txtObservacion.Location = New System.Drawing.Point(238, 186)
+        Me.txtObservacion.Location = New System.Drawing.Point(238, 246)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(200, 67)
-        Me.txtObservacion.TabIndex = 3
+        Me.txtObservacion.Size = New System.Drawing.Size(276, 114)
+        Me.txtObservacion.TabIndex = 4
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(136, 185)
+        Me.Label10.Location = New System.Drawing.Point(136, 245)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(96, 18)
         Me.Label10.TabIndex = 12
@@ -501,6 +539,8 @@ Partial Class FrmContrato
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.PictureBox9)
+        Me.Panel1.Controls.Add(Me.LblAsignar)
         Me.Panel1.Controls.Add(Me.PictureBox5)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox2)
@@ -515,8 +555,29 @@ Partial Class FrmContrato
         Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Panel1.Location = New System.Drawing.Point(12, 66)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(242, 186)
+        Me.Panel1.Size = New System.Drawing.Size(242, 225)
         Me.Panel1.TabIndex = 1
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(6, 185)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(21, 15)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 17
+        Me.PictureBox9.TabStop = False
+        '
+        'LblAsignar
+        '
+        Me.LblAsignar.AutoSize = True
+        Me.LblAsignar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LblAsignar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAsignar.Location = New System.Drawing.Point(30, 185)
+        Me.LblAsignar.Name = "LblAsignar"
+        Me.LblAsignar.Size = New System.Drawing.Size(128, 16)
+        Me.LblAsignar.TabIndex = 18
+        Me.LblAsignar.Text = "Asignar Guardias"
         '
         'PictureBox5
         '
@@ -678,6 +739,7 @@ Partial Class FrmContrato
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.DgvContrato, System.ComponentModel.ISupportInitialize).EndInit()
@@ -687,6 +749,7 @@ Partial Class FrmContrato
         CType(Me.DgvGuardias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -750,4 +813,9 @@ Partial Class FrmContrato
     Friend WithEvents Button2 As Button
     Friend WithEvents LblGuardias As Label
     Friend WithEvents DgvGuardias As DataGridView
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents TxtCliente As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents LblAsignar As Label
 End Class

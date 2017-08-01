@@ -66,6 +66,7 @@ Partial Class FrmInventario
         Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ChMarca = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -413,7 +414,7 @@ Partial Class FrmInventario
         '
         'LsvInventarioArma
         '
-        Me.LsvInventarioArma.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdArma, Me.ChSerie, Me.ChCalibre, Me.ChModelo, Me.ChTipoArma, Me.ChLugar, Me.ChIdContrato, Me.ChEstado})
+        Me.LsvInventarioArma.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdArma, Me.ChSerie, Me.ChCalibre, Me.ChMarca, Me.ChModelo, Me.ChTipoArma, Me.ChLugar, Me.ChIdContrato, Me.ChEstado})
         Me.LsvInventarioArma.Location = New System.Drawing.Point(6, 6)
         Me.LsvInventarioArma.Name = "LsvInventarioArma"
         Me.LsvInventarioArma.Size = New System.Drawing.Size(824, 509)
@@ -448,7 +449,8 @@ Partial Class FrmInventario
         '
         'ChIdContrato
         '
-        Me.ChIdContrato.Text = "Id Contrato Cliente"
+        Me.ChIdContrato.Text = "ContratoCliente"
+        Me.ChIdContrato.Width = 90
         '
         'ChEstado
         '
@@ -465,6 +467,10 @@ Partial Class FrmInventario
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'ChMarca
+        '
+        Me.ChMarca.Text = "Marca"
         '
         'FrmInventario
         '
@@ -538,4 +544,5 @@ Partial Class FrmInventario
     Friend WithEvents RdbActivo As RadioButton
     Friend WithEvents RdbInactivo As RadioButton
     Friend WithEvents Label10 As Label
+    Friend WithEvents ChMarca As ColumnHeader
 End Class

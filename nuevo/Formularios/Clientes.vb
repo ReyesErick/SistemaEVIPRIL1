@@ -1,5 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmClientes
+    Dim cmd As New SqlCommand
+    Dim dt As DataTable
+    Dim da As New SqlDataAdapter
 
     Dim op As Integer
     Private Sub LblAgregarCliente_MouseLeave(sender As Object, e As EventArgs) Handles LblAgregarCliente.MouseLeave
@@ -30,7 +33,6 @@ Public Class FrmClientes
                     .Parameters.Add("@NombreContacto", SqlDbType.NVarChar).Value = TxtNombreContacto.Text
                     .Parameters.Add("@Direccion", SqlDbType.NVarChar).Value = TxtDireccion.Text
                     .Parameters.Add("@Telefono", SqlDbType.Char).Value = MsktTelf1.Text
-                    .Parameters.Add("idContratoCliente", SqlDbType.Int).Value = CboTipoContrato.SelectedValue
                     If RdbActibo.Checked = CheckState.Unchecked Then
                         .Parameters.Add("@EstadoCliente", SqlDbType.Bit).Value = 0
                         op = 0
@@ -49,35 +51,10 @@ Public Class FrmClientes
         End Try
     End Sub
 
-
-    Private Sub CargarContrato()
-        cn.Open()
-        Try
-            Using cmd As New SqlCommand
-                With cmd
-                    .CommandText = "Sp_MostrarContrato"
-                    .CommandType = CommandType.StoredProcedure
-                    .Connection = cn
-                End With
-                Dim da As New SqlDataAdapter(cmd)
-                Dim ds As New DataSet
-                da.Fill(ds, "IdContratoCliente")
-                CboTipoContrato.DataSource = ds.Tables(0)
-                CboTipoContrato.DisplayMember = ds.Tables(0).Columns("IdContratoCliente").ToString
-
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            cn.Close()
-        End Try
-    End Sub
-
     Private Sub LblAgregarCliente_Click_1(sender As Object, e As EventArgs) Handles LblAgregarCliente.Click
         TcCliente.Visible = True
         Me.TcCliente.SelectedTab = TpAgregar
         btnModificar.Enabled = False
-        CboTipoContrato.Text = Nothing
     End Sub
 
     Private Sub LblVerCliente_Click_1(sender As Object, e As EventArgs) Handles LblVerCliente.Click
@@ -86,46 +63,19 @@ Public Class FrmClientes
         Call Cargar()
     End Sub
 
-    Private Sub FrmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call CargarContrato()
-        CboTipoContrato.Text = Nothing
-
-    End Sub
-
     Private Sub Cargar()
-        If cn.State = ConnectionState.Open Then
-            cn.Close()
-        End If
 
         Using cmd As New SqlCommand
 
             Try
-                cn.Open()
-
-                With cmd
-                    .CommandText = "Sp_MostrarCliente"
-                    .CommandType = CommandType.StoredProcedure
-                    .Connection = cn
-
-                End With
-
-                Dim MostrarEmpleado As SqlDataReader
-                MostrarEmpleado = cmd.ExecuteReader
-                LsvCliente.Items.Clear()
-
-                While MostrarEmpleado.Read = True
-                    With LsvCliente.Items.Add(MostrarEmpleado("IdCliente").ToString)
-                        .SubItems.Add(MostrarEmpleado("NombreCompañia").ToString)
-                        .SubItems.Add(MostrarEmpleado("NombreContacto").ToString)
-                        .SubItems.Add(MostrarEmpleado("Direccion").ToString)
-                        .SubItems.Add(MostrarEmpleado("Telefono").ToString)
-                        .SubItems.Add(MostrarEmpleado("IdContratoCliente").ToString)
-                        .SubItems.Add(MostrarEmpleado("EstadoCliente").ToString)
-                    End With
-                End While
+                da = New SqlDataAdapter("select *
+                                 from Cliente", cn)
+                dt = New DataTable
+                da.Fill(dt)
+                DgvCliente.DataSource = dt
 
             Catch ex As Exception
-                MessageBox.Show("Error al listar los empleados" + ex.Message)
+                MessageBox.Show("Error al listar los clientes" + ex.Message)
             Finally
                 cn.Close()
             End Try
@@ -156,13 +106,6 @@ Public Class FrmClientes
             ErrorProvider1.SetError(MsktTelf1, "")
         End If
 
-        If CboTipoContrato.Text = Nothing Then
-            ErrorProvider1.SetError(CboTipoContrato, "Campo Obligatorio")
-            CboTipoContrato.Focus()
-            Return
-        Else
-            ErrorProvider1.SetError(CboTipoContrato, "")
-        End If
         If TxtDireccion.Text = Nothing Then
             ErrorProvider1.SetError(TxtDireccion, "Campo Obligatorio")
             TxtDireccion.Focus()
@@ -188,17 +131,16 @@ Public Class FrmClientes
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        txtIdCliente.Text = LsvCliente.FocusedItem.SubItems(0).Text
-        TxtNombreCompañia.Text = LsvCliente.FocusedItem.SubItems(1).Text
-        TxtNombreContacto.Text = LsvCliente.FocusedItem.SubItems(2).Text
-        TxtDireccion.Text = LsvCliente.FocusedItem.SubItems(3).Text
-        MsktTelf1.Text = LsvCliente.FocusedItem.SubItems(4).Text
-        CboTipoContrato.Text = LsvCliente.FocusedItem.SubItems(5).Text
-        If (LsvCliente.FocusedItem.SubItems(6).Text = True) Then
+        txtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).ToString()
+        TxtNombreCompañia.Text = DgvCliente.CurrentRow.Cells(1).ToString()
+        TxtNombreContacto.Text = DgvCliente.CurrentRow.Cells(2).ToString()
+        TxtDireccion.Text = DgvCliente.CurrentRow.Cells(3).ToString()
+        MsktTelf1.Text = DgvCliente.CurrentRow.Cells(4).ToString()
+        If (DgvCliente.CurrentRow.Cells(5).ToString() = True) Then
             RdbActibo.Checked = CheckState.Checked
             op = 1
         Else
-            If (LsvCliente.FocusedItem.SubItems(6).Text = False) Then
+            If (DgvCliente.CurrentRow.Cells(5).ToString() = False) Then
                 RdbInactivo.Checked = CheckState.Checked
                 op = 0
             End If
@@ -226,7 +168,6 @@ Public Class FrmClientes
                     .Parameters.Add("@NombreContacto", SqlDbType.NVarChar, 100).Value = TxtNombreContacto.Text
                     .Parameters.Add("@Direccion", SqlDbType.NVarChar, 300).Value = TxtDireccion.Text
                     .Parameters.Add("@Telefono", SqlDbType.Char, 9).Value = MsktTelf1.Text
-                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CboTipoContrato.Text
                     If RdbActibo.Checked = CheckState.Unchecked Then
                         .Parameters.Add("@EstadoCliente", SqlDbType.Bit).Value = 0
                         op = 0
@@ -258,8 +199,11 @@ Public Class FrmClientes
         TxtNombreContacto.Clear()
         TxtDireccion.Clear()
         MsktTelf1.Clear()
-        CboTipoContrato.Text = Nothing
         RdbActibo.Checked = False
         RdbInactivo.Checked = False
+    End Sub
+
+    Private Sub LsvCliente_DoubleClick(sender As Object, e As EventArgs)
+        FrmContrato.TxtCliente.Text = DgvCliente.CurrentRow.Cells(0).ToString()
     End Sub
 End Class

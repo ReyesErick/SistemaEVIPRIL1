@@ -19,26 +19,27 @@ Public Class FrmInventario
 
                 End With
 
-                Dim MostrarEmpleado As SqlDataReader
-                MostrarEmpleado = cmd.ExecuteReader
+                Dim MostrarArmas As SqlDataReader
+                MostrarArmas = cmd.ExecuteReader
                 LsvInventarioArma.Items.Clear()
 
-                While MostrarEmpleado.Read = True
-                    With LsvInventarioArma.Items.Add(MostrarEmpleado("IdArma").ToString)
-                        .SubItems.Add(MostrarEmpleado("Serie").ToString)
-                        .SubItems.Add(MostrarEmpleado("Calibre").ToString)
-                        .SubItems.Add(MostrarEmpleado("Modelo").ToString)
-                        .SubItems.Add(MostrarEmpleado("TipoArma").ToString)
-                        .SubItems.Add(MostrarEmpleado("LugarFabricacion").ToString)
-                        .SubItems.Add(MostrarEmpleado("IdContratoCliente").ToString)
-                        .SubItems.Add(MostrarEmpleado("Estado").ToString)
+                While MostrarArmas.Read = True
+                    With LsvInventarioArma.Items.Add(MostrarArmas("IdArma").ToString)
+                        .SubItems.Add(MostrarArmas("Serie").ToString)
+                        .SubItems.Add(MostrarArmas("Calibre").ToString)
+                        .SubItems.Add(MostrarArmas("Marca").ToString)
+                        .SubItems.Add(MostrarArmas("Modelo").ToString)
+                        .SubItems.Add(MostrarArmas("TipoArma").ToString)
+                        .SubItems.Add(MostrarArmas("LugarFabricacion").ToString)
+                        .SubItems.Add(MostrarArmas("IdContratoCliente").ToString)
+                        .SubItems.Add(MostrarArmas("Estado").ToString)
 
 
                     End With
                 End While
 
             Catch ex As Exception
-                MessageBox.Show("Error al listar los empleados" + ex.Message)
+                MessageBox.Show("Error al listar las Armas" + ex.Message)
             Finally
                 cn.Close()
             End Try

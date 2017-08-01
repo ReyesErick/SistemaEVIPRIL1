@@ -38,8 +38,6 @@ Partial Class FrmClientes
         Me.TpAgregar = New System.Windows.Forms.TabPage()
         Me.txtIdCliente = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.CboTipoContrato = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -57,17 +55,10 @@ Partial Class FrmClientes
         Me.TxtNombreCompañia = New System.Windows.Forms.TextBox()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.TpVer = New System.Windows.Forms.TabPage()
-        Me.LsvCliente = New System.Windows.Forms.ListView()
-        Me.ChIdCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChNombreCompañia = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChNombreContacto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChTelefono = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChIdContratoCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChEstadoCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CsmCliente = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.DgvCliente = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,6 +71,7 @@ Partial Class FrmClientes
         Me.TpVer.SuspendLayout()
         Me.CsmCliente.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel3
@@ -204,8 +196,6 @@ Partial Class FrmClientes
         '
         Me.TpAgregar.Controls.Add(Me.txtIdCliente)
         Me.TpAgregar.Controls.Add(Me.Label8)
-        Me.TpAgregar.Controls.Add(Me.CboTipoContrato)
-        Me.TpAgregar.Controls.Add(Me.Label7)
         Me.TpAgregar.Controls.Add(Me.PictureBox3)
         Me.TpAgregar.Controls.Add(Me.PictureBox2)
         Me.TpAgregar.Controls.Add(Me.BtnGuardar)
@@ -244,25 +234,6 @@ Partial Class FrmClientes
         Me.Label8.Size = New System.Drawing.Size(76, 20)
         Me.Label8.TabIndex = 82
         Me.Label8.Text = "IdCliente:"
-        '
-        'CboTipoContrato
-        '
-        Me.CboTipoContrato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboTipoContrato.FormattingEnabled = True
-        Me.CboTipoContrato.Location = New System.Drawing.Point(228, 252)
-        Me.CboTipoContrato.Name = "CboTipoContrato"
-        Me.CboTipoContrato.Size = New System.Drawing.Size(147, 21)
-        Me.CboTipoContrato.TabIndex = 4
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(73, 252)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(138, 20)
-        Me.Label7.TabIndex = 39
-        Me.Label7.Text = "IdContratoCliente:"
         '
         'PictureBox3
         '
@@ -311,7 +282,7 @@ Partial Class FrmClientes
         Me.Panel4.Controls.Add(Me.RdbActibo)
         Me.Panel4.Controls.Add(Me.RdbInactivo)
         Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Location = New System.Drawing.Point(610, 89)
+        Me.Panel4.Location = New System.Drawing.Point(95, 351)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(233, 81)
         Me.Panel4.TabIndex = 4
@@ -350,7 +321,7 @@ Partial Class FrmClientes
         '
         'TxtDireccion
         '
-        Me.TxtDireccion.Location = New System.Drawing.Point(228, 305)
+        Me.TxtDireccion.Location = New System.Drawing.Point(228, 249)
         Me.TxtDireccion.Multiline = True
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(385, 86)
@@ -360,7 +331,7 @@ Partial Class FrmClientes
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(108, 305)
+        Me.Label4.Location = New System.Drawing.Point(108, 249)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 20)
         Me.Label4.TabIndex = 8
@@ -424,7 +395,7 @@ Partial Class FrmClientes
         '
         'TpVer
         '
-        Me.TpVer.Controls.Add(Me.LsvCliente)
+        Me.TpVer.Controls.Add(Me.DgvCliente)
         Me.TpVer.Location = New System.Drawing.Point(4, 22)
         Me.TpVer.Name = "TpVer"
         Me.TpVer.Padding = New System.Windows.Forms.Padding(3)
@@ -432,50 +403,6 @@ Partial Class FrmClientes
         Me.TpVer.TabIndex = 2
         Me.TpVer.Text = "Clientes"
         Me.TpVer.UseVisualStyleBackColor = True
-        '
-        'LsvCliente
-        '
-        Me.LsvCliente.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdCliente, Me.ChNombreCompañia, Me.ChNombreContacto, Me.ChDireccion, Me.ChTelefono, Me.ChIdContratoCliente, Me.ChEstadoCliente})
-        Me.LsvCliente.ContextMenuStrip = Me.CsmCliente
-        Me.LsvCliente.GridLines = True
-        Me.LsvCliente.Location = New System.Drawing.Point(19, 20)
-        Me.LsvCliente.Name = "LsvCliente"
-        Me.LsvCliente.Size = New System.Drawing.Size(824, 509)
-        Me.LsvCliente.TabIndex = 2
-        Me.LsvCliente.UseCompatibleStateImageBehavior = False
-        Me.LsvCliente.View = System.Windows.Forms.View.Details
-        '
-        'ChIdCliente
-        '
-        Me.ChIdCliente.Text = "IdCliente"
-        '
-        'ChNombreCompañia
-        '
-        Me.ChNombreCompañia.Text = "NombreCompañia"
-        Me.ChNombreCompañia.Width = 102
-        '
-        'ChNombreContacto
-        '
-        Me.ChNombreContacto.Text = "NombreContacto"
-        Me.ChNombreContacto.Width = 98
-        '
-        'ChDireccion
-        '
-        Me.ChDireccion.Text = "Direccion"
-        '
-        'ChTelefono
-        '
-        Me.ChTelefono.Text = "Telefono"
-        '
-        'ChIdContratoCliente
-        '
-        Me.ChIdContratoCliente.Text = "ContratoCliente"
-        Me.ChIdContratoCliente.Width = 94
-        '
-        'ChEstadoCliente
-        '
-        Me.ChEstadoCliente.Text = "EstadoCliente"
-        Me.ChEstadoCliente.Width = 88
         '
         'CsmCliente
         '
@@ -492,6 +419,14 @@ Partial Class FrmClientes
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'DgvCliente
+        '
+        Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCliente.Location = New System.Drawing.Point(17, 48)
+        Me.DgvCliente.Name = "DgvCliente"
+        Me.DgvCliente.Size = New System.Drawing.Size(828, 478)
+        Me.DgvCliente.TabIndex = 0
         '
         'FrmClientes
         '
@@ -522,6 +457,7 @@ Partial Class FrmClientes
         Me.TpVer.ResumeLayout(False)
         Me.CsmCliente.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -537,8 +473,6 @@ Partial Class FrmClientes
     Friend WithEvents Label1 As Label
     Friend WithEvents TcCliente As TabControl
     Friend WithEvents TpAgregar As TabPage
-    Friend WithEvents CboTipoContrato As ComboBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnGuardar As Button
@@ -555,18 +489,11 @@ Partial Class FrmClientes
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtNombreCompañia As TextBox
     Friend WithEvents TpVer As TabPage
-    Friend WithEvents LsvCliente As ListView
-    Friend WithEvents ChIdCliente As ColumnHeader
-    Friend WithEvents ChNombreCompañia As ColumnHeader
-    Friend WithEvents ChNombreContacto As ColumnHeader
-    Friend WithEvents ChDireccion As ColumnHeader
-    Friend WithEvents ChTelefono As ColumnHeader
-    Friend WithEvents ChIdContratoCliente As ColumnHeader
-    Friend WithEvents ChEstadoCliente As ColumnHeader
     Friend WithEvents CsmCliente As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents txtIdCliente As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents btnModificar As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents DgvCliente As DataGridView
 End Class

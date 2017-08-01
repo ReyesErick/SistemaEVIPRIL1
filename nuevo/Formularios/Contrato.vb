@@ -175,7 +175,7 @@ Public Class FrmContrato
         Call LlenarTipoContrato()
         Call LlenarTipoEmpleado()
         Call CargarContratoCliente()
-        CboContratoCliente.SelectedIndex = 1
+        'CboContratoCliente.SelectedIndex = 1
     End Sub
 
     Private Sub LblAgregarContratoEmp_Click(sender As Object, e As EventArgs) Handles LblAgregarContratoEmp.Click
@@ -228,6 +228,7 @@ Public Class FrmContrato
                     .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = dtpFechaInicio.Value
                     .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = dtpFechaFinal.Value
                     .Parameters.Add("@Monto", SqlDbType.Money).Value = Convert.ToDecimal(txtMonto.Text)
+                    .Parameters.Add("@IdCliente", SqlDbType.Int).Value = CInt(TxtCliente.Text)
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar).Value = txtObservacion.Text
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
@@ -307,6 +308,14 @@ Public Class FrmContrato
         LblVerContratoClien.ForeColor = Color.Black
     End Sub
 
+    Private Sub LblAsignar_MouseLeave(sender As Object, e As EventArgs) Handles LblAsignar.MouseLeave
+        LblAsignar.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblAsignar_MouseMove(sender As Object, e As MouseEventArgs) Handles LblAsignar.MouseMove
+        LblAsignar.ForeColor = Color.Green
+    End Sub
+
     Private Sub PbxBuscar_Click(sender As Object, e As EventArgs) Handles PbxBuscar.Click
         FrmEmpleado.Show()
         FrmEmpleado.TcEmpleado.Visible = True
@@ -323,12 +332,12 @@ Public Class FrmContrato
         Try
             Using cmd As New SqlCommand
                 With cmd
-                    .CommandText = "Sp_InsertarEEC"
+                    .CommandText = "Sp_InsertarECC"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cn
 
                     .Parameters.Add("@NumIdentidad", SqlDbType.Char).Value = TxtGuardias.Text
-                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CboContratoCliente.SelectedValue
+                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = CInt(CboContratoCliente.SelectedValue)
 
                     .ExecuteNonQuery()
                 End With
@@ -343,6 +352,7 @@ Public Class FrmContrato
 
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Call AsignarGuardias()
         Call MostrarGuardias()
         TxtGuardias.Clear()
     End Sub
@@ -395,5 +405,16 @@ Public Class FrmContrato
 
 
 
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        FrmClientes.Show()
+        FrmClientes.TcCliente.Visible = True
+        FrmClientes.TcCliente.SelectedTab = FrmClientes.TpVer
+    End Sub
+
+    Private Sub LblAsignar_Click(sender As Object, e As EventArgs) Handles LblAsignar.Click
+        TpContrato.Visible = True
+        TpContrato.SelectedTab = TpAsignacion
     End Sub
 End Class
