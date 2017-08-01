@@ -36,7 +36,6 @@ Partial Class FrmUsuario
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LblIdUsuario = New System.Windows.Forms.Label()
-        Me.Pnl1 = New System.Windows.Forms.Panel()
         Me.cboEstado = New System.Windows.Forms.ComboBox()
         Me.txtEmpleado = New System.Windows.Forms.TextBox()
         Me.btnEmpleado = New System.Windows.Forms.Button()
@@ -71,7 +70,6 @@ Partial Class FrmUsuario
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.Pnl1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -105,7 +103,7 @@ Partial Class FrmUsuario
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 20)
+        Me.PictureBox5.Location = New System.Drawing.Point(12, 17)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -190,9 +188,14 @@ Partial Class FrmUsuario
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.txtEmpleado)
+        Me.TabPage2.Controls.Add(Me.cboEstado)
+        Me.TabPage2.Controls.Add(Me.btnEmpleado)
         Me.TabPage2.Controls.Add(Me.LblIdUsuario)
-        Me.TabPage2.Controls.Add(Me.Pnl1)
+        Me.TabPage2.Controls.Add(Me.LblIdNun)
+        Me.TabPage2.Controls.Add(Me.TxtContraseña)
         Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.TxtUsuario)
         Me.TabPage2.Controls.Add(Me.PictureBox3)
         Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.Controls.Add(Me.BtnGuardar)
@@ -212,40 +215,25 @@ Partial Class FrmUsuario
         '
         Me.LblIdUsuario.AutoSize = True
         Me.LblIdUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIdUsuario.Location = New System.Drawing.Point(106, 56)
+        Me.LblIdUsuario.Location = New System.Drawing.Point(171, 103)
         Me.LblIdUsuario.Name = "LblIdUsuario"
         Me.LblIdUsuario.Size = New System.Drawing.Size(78, 20)
         Me.LblIdUsuario.TabIndex = 38
         Me.LblIdUsuario.Text = "IdUsuario"
         Me.LblIdUsuario.Visible = False
         '
-        'Pnl1
-        '
-        Me.Pnl1.Controls.Add(Me.cboEstado)
-        Me.Pnl1.Controls.Add(Me.txtEmpleado)
-        Me.Pnl1.Controls.Add(Me.btnEmpleado)
-        Me.Pnl1.Controls.Add(Me.LblIdNun)
-        Me.Pnl1.Controls.Add(Me.TxtContraseña)
-        Me.Pnl1.Controls.Add(Me.TxtUsuario)
-        Me.Pnl1.Enabled = False
-        Me.Pnl1.Location = New System.Drawing.Point(186, 46)
-        Me.Pnl1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Pnl1.Name = "Pnl1"
-        Me.Pnl1.Size = New System.Drawing.Size(358, 284)
-        Me.Pnl1.TabIndex = 37
-        '
         'cboEstado
         '
         Me.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Location = New System.Drawing.Point(40, 211)
+        Me.cboEstado.Location = New System.Drawing.Point(256, 356)
         Me.cboEstado.Name = "cboEstado"
         Me.cboEstado.Size = New System.Drawing.Size(272, 21)
         Me.cboEstado.TabIndex = 3
         '
         'txtEmpleado
         '
-        Me.txtEmpleado.Location = New System.Drawing.Point(40, 173)
+        Me.txtEmpleado.Location = New System.Drawing.Point(256, 287)
         Me.txtEmpleado.Name = "txtEmpleado"
         Me.txtEmpleado.Size = New System.Drawing.Size(272, 20)
         Me.txtEmpleado.TabIndex = 4
@@ -259,7 +247,7 @@ Partial Class FrmUsuario
         Me.btnEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmpleado.Location = New System.Drawing.Point(316, 173)
+        Me.btnEmpleado.Location = New System.Drawing.Point(532, 287)
         Me.btnEmpleado.Name = "btnEmpleado"
         Me.btnEmpleado.Size = New System.Drawing.Size(26, 23)
         Me.btnEmpleado.TabIndex = 2
@@ -268,7 +256,7 @@ Partial Class FrmUsuario
         'LblIdNun
         '
         Me.LblIdNun.AutoSize = True
-        Me.LblIdNun.Location = New System.Drawing.Point(38, 19)
+        Me.LblIdNun.Location = New System.Drawing.Point(254, 108)
         Me.LblIdNun.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblIdNun.Name = "LblIdNun"
         Me.LblIdNun.Size = New System.Drawing.Size(0, 13)
@@ -276,14 +264,14 @@ Partial Class FrmUsuario
         '
         'TxtContraseña
         '
-        Me.TxtContraseña.Location = New System.Drawing.Point(40, 107)
+        Me.TxtContraseña.Location = New System.Drawing.Point(256, 221)
         Me.TxtContraseña.Name = "TxtContraseña"
         Me.TxtContraseña.Size = New System.Drawing.Size(272, 20)
         Me.TxtContraseña.TabIndex = 1
         '
         'TxtUsuario
         '
-        Me.TxtUsuario.Location = New System.Drawing.Point(40, 47)
+        Me.TxtUsuario.Location = New System.Drawing.Point(256, 161)
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(272, 20)
         Me.TxtUsuario.TabIndex = 0
@@ -292,7 +280,7 @@ Partial Class FrmUsuario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(106, 254)
+        Me.Label5.Location = New System.Drawing.Point(189, 354)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(60, 20)
         Me.Label5.TabIndex = 36
@@ -349,7 +337,7 @@ Partial Class FrmUsuario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(37, 212)
+        Me.Label4.Location = New System.Drawing.Point(114, 285)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(136, 20)
         Me.Label4.TabIndex = 2
@@ -359,7 +347,7 @@ Partial Class FrmUsuario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(81, 144)
+        Me.Label3.Location = New System.Drawing.Point(158, 219)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 20)
         Me.Label3.TabIndex = 1
@@ -369,7 +357,7 @@ Partial Class FrmUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(109, 84)
+        Me.Label2.Location = New System.Drawing.Point(185, 159)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 20)
         Me.Label2.TabIndex = 0
@@ -491,8 +479,6 @@ Partial Class FrmUsuario
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.Pnl1.ResumeLayout(False)
-        Me.Pnl1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
@@ -534,7 +520,6 @@ Partial Class FrmUsuario
     Friend WithEvents chNombre As ColumnHeader
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents AbrirFoto As OpenFileDialog
-    Friend WithEvents Pnl1 As Panel
     Friend WithEvents btnEditar As Button
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents LblIdUsuario As Label

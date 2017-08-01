@@ -71,7 +71,7 @@ Partial Class FrmInicioSeción
         Me.LblCerrar.BackColor = System.Drawing.Color.Red
         Me.LblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCerrar.ForeColor = System.Drawing.Color.Black
-        Me.LblCerrar.Location = New System.Drawing.Point(726, 37)
+        Me.LblCerrar.Location = New System.Drawing.Point(768, 33)
         Me.LblCerrar.Name = "LblCerrar"
         Me.LblCerrar.Size = New System.Drawing.Size(20, 20)
         Me.LblCerrar.TabIndex = 5

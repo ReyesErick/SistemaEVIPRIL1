@@ -278,7 +278,7 @@ Partial Class FrmPlanilla
         Me.BtnCalcular.Location = New System.Drawing.Point(618, 40)
         Me.BtnCalcular.Name = "BtnCalcular"
         Me.BtnCalcular.Size = New System.Drawing.Size(105, 34)
-        Me.BtnCalcular.TabIndex = 14
+        Me.BtnCalcular.TabIndex = 13
         Me.BtnCalcular.Text = "Calcular"
         Me.BtnCalcular.UseVisualStyleBackColor = False
         '
@@ -292,7 +292,7 @@ Partial Class FrmPlanilla
         Me.BtnGuardar.Location = New System.Drawing.Point(507, 40)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(105, 34)
-        Me.BtnGuardar.TabIndex = 13
+        Me.BtnGuardar.TabIndex = 14
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
