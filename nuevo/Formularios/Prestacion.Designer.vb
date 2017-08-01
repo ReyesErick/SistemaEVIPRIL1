@@ -133,8 +133,10 @@ Partial Class FrmPrestacion
         Me.LblDiaanti = New System.Windows.Forms.Label()
         Me.LblTiempoAnti = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.DtpFTerminacion = New System.Windows.Forms.DateTimePicker()
         Me.LblFechaTermi = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.DtpFIngreso = New System.Windows.Forms.DateTimePicker()
         Me.LblFechaIngreso = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.LblNombre = New System.Windows.Forms.Label()
@@ -157,8 +159,6 @@ Partial Class FrmPrestacion
         Me.BtnCalcular = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.DtpFIngreso = New System.Windows.Forms.DateTimePicker()
-        Me.DtpFTerminacion = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -1274,6 +1274,15 @@ Partial Class FrmPrestacion
         Me.Panel5.Size = New System.Drawing.Size(274, 52)
         Me.Panel5.TabIndex = 18
         '
+        'DtpFTerminacion
+        '
+        Me.DtpFTerminacion.Enabled = False
+        Me.DtpFTerminacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFTerminacion.Location = New System.Drawing.Point(44, 17)
+        Me.DtpFTerminacion.Name = "DtpFTerminacion"
+        Me.DtpFTerminacion.Size = New System.Drawing.Size(142, 20)
+        Me.DtpFTerminacion.TabIndex = 2
+        '
         'LblFechaTermi
         '
         Me.LblFechaTermi.AutoSize = True
@@ -1294,6 +1303,15 @@ Partial Class FrmPrestacion
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(286, 52)
         Me.Panel4.TabIndex = 17
+        '
+        'DtpFIngreso
+        '
+        Me.DtpFIngreso.Enabled = False
+        Me.DtpFIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFIngreso.Location = New System.Drawing.Point(34, 17)
+        Me.DtpFIngreso.Name = "DtpFIngreso"
+        Me.DtpFIngreso.Size = New System.Drawing.Size(142, 20)
+        Me.DtpFIngreso.TabIndex = 1
         '
         'LblFechaIngreso
         '
@@ -1518,24 +1536,6 @@ Partial Class FrmPrestacion
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 32
         Me.PictureBox4.TabStop = False
-        '
-        'DtpFIngreso
-        '
-        Me.DtpFIngreso.Enabled = False
-        Me.DtpFIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFIngreso.Location = New System.Drawing.Point(34, 17)
-        Me.DtpFIngreso.Name = "DtpFIngreso"
-        Me.DtpFIngreso.Size = New System.Drawing.Size(142, 20)
-        Me.DtpFIngreso.TabIndex = 1
-        '
-        'DtpFTerminacion
-        '
-        Me.DtpFTerminacion.Enabled = False
-        Me.DtpFTerminacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFTerminacion.Location = New System.Drawing.Point(44, 17)
-        Me.DtpFTerminacion.Name = "DtpFTerminacion"
-        Me.DtpFTerminacion.Size = New System.Drawing.Size(142, 20)
-        Me.DtpFTerminacion.TabIndex = 2
         '
         'FrmPrestacion
         '

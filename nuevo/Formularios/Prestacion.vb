@@ -4,8 +4,6 @@
         Me.Dispose()
     End Sub
 
-
-
     Private Sub BtnCalcular_Click(sender As Object, e As EventArgs) Handles BtnCalcular.Click
         Dim FechaInicial As Date
         Dim FechaActual As Date
@@ -13,6 +11,8 @@
         Me.TxtSOD.Text = FormatCurrency(CDbl(Me.TxtSOM.Text) / 30, 2)
         Me.TxtSOPM.Text = FormatCurrency((CDbl(Me.TxtSOM.Text) * 14) / 12, 2)
         Me.TxtSOPD.Text = FormatCurrency(CDbl(TxtSOPM.Text) / 30, 2)
+        FechaInicial = DtpFIngreso.Text
+        FechaActual = DtpFTerminacion.Text
         Dim diaActual As Integer
         Dim mesActual As Integer
         Dim anioActual As Integer
@@ -212,4 +212,6 @@
 
 
     End Sub
+
+
 End Class
