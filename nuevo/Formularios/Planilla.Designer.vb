@@ -160,6 +160,7 @@ Partial Class FrmPlanilla
         'BtnRegresarMenu
         '
         Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRegresarMenu.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)

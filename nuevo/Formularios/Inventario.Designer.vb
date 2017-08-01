@@ -59,6 +59,7 @@ Partial Class FrmInventario
         Me.ChIdArma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChSerie = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCalibre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChMarca = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChModelo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTipoArma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChLugar = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -66,7 +67,6 @@ Partial Class FrmInventario
         Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ChMarca = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,6 +146,7 @@ Partial Class FrmInventario
         'BtnRegresarMenu
         '
         Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRegresarMenu.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
@@ -273,6 +274,7 @@ Partial Class FrmInventario
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnGuardar.Location = New System.Drawing.Point(646, 451)
@@ -434,6 +436,10 @@ Partial Class FrmInventario
         '
         Me.ChCalibre.Text = "Calibre"
         '
+        'ChMarca
+        '
+        Me.ChMarca.Text = "Marca"
+        '
         'ChModelo
         '
         Me.ChModelo.Text = "Modelo"
@@ -467,10 +473,6 @@ Partial Class FrmInventario
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'ChMarca
-        '
-        Me.ChMarca.Text = "Marca"
         '
         'FrmInventario
         '

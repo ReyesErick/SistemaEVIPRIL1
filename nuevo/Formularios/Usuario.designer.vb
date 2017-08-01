@@ -35,14 +35,14 @@ Partial Class FrmUsuario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.LblIdUsuario = New System.Windows.Forms.Label()
-        Me.cboEstado = New System.Windows.Forms.ComboBox()
         Me.txtEmpleado = New System.Windows.Forms.TextBox()
+        Me.cboEstado = New System.Windows.Forms.ComboBox()
         Me.btnEmpleado = New System.Windows.Forms.Button()
+        Me.LblIdUsuario = New System.Windows.Forms.Label()
         Me.LblIdNun = New System.Windows.Forms.Label()
         Me.TxtContraseña = New System.Windows.Forms.TextBox()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -144,6 +144,7 @@ Partial Class FrmUsuario
         'BtnRegresarMenu
         '
         Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRegresarMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
@@ -211,16 +212,12 @@ Partial Class FrmUsuario
         Me.TabPage2.Text = "Agregar Usuario"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'LblIdUsuario
+        'txtEmpleado
         '
-        Me.LblIdUsuario.AutoSize = True
-        Me.LblIdUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIdUsuario.Location = New System.Drawing.Point(171, 103)
-        Me.LblIdUsuario.Name = "LblIdUsuario"
-        Me.LblIdUsuario.Size = New System.Drawing.Size(78, 20)
-        Me.LblIdUsuario.TabIndex = 38
-        Me.LblIdUsuario.Text = "IdUsuario"
-        Me.LblIdUsuario.Visible = False
+        Me.txtEmpleado.Location = New System.Drawing.Point(256, 287)
+        Me.txtEmpleado.Name = "txtEmpleado"
+        Me.txtEmpleado.Size = New System.Drawing.Size(272, 20)
+        Me.txtEmpleado.TabIndex = 4
         '
         'cboEstado
         '
@@ -230,13 +227,6 @@ Partial Class FrmUsuario
         Me.cboEstado.Name = "cboEstado"
         Me.cboEstado.Size = New System.Drawing.Size(272, 21)
         Me.cboEstado.TabIndex = 3
-        '
-        'txtEmpleado
-        '
-        Me.txtEmpleado.Location = New System.Drawing.Point(256, 287)
-        Me.txtEmpleado.Name = "txtEmpleado"
-        Me.txtEmpleado.Size = New System.Drawing.Size(272, 20)
-        Me.txtEmpleado.TabIndex = 4
         '
         'btnEmpleado
         '
@@ -252,6 +242,17 @@ Partial Class FrmUsuario
         Me.btnEmpleado.Size = New System.Drawing.Size(26, 23)
         Me.btnEmpleado.TabIndex = 2
         Me.btnEmpleado.UseVisualStyleBackColor = True
+        '
+        'LblIdUsuario
+        '
+        Me.LblIdUsuario.AutoSize = True
+        Me.LblIdUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIdUsuario.Location = New System.Drawing.Point(171, 103)
+        Me.LblIdUsuario.Name = "LblIdUsuario"
+        Me.LblIdUsuario.Size = New System.Drawing.Size(78, 20)
+        Me.LblIdUsuario.TabIndex = 38
+        Me.LblIdUsuario.Text = "IdUsuario"
+        Me.LblIdUsuario.Visible = False
         '
         'LblIdNun
         '
@@ -269,13 +270,6 @@ Partial Class FrmUsuario
         Me.TxtContraseña.Size = New System.Drawing.Size(272, 20)
         Me.TxtContraseña.TabIndex = 1
         '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.Location = New System.Drawing.Point(256, 161)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(272, 20)
-        Me.TxtUsuario.TabIndex = 0
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -285,6 +279,13 @@ Partial Class FrmUsuario
         Me.Label5.Size = New System.Drawing.Size(60, 20)
         Me.Label5.TabIndex = 36
         Me.Label5.Text = "Estado"
+        '
+        'TxtUsuario
+        '
+        Me.TxtUsuario.Location = New System.Drawing.Point(256, 161)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(272, 20)
+        Me.TxtUsuario.TabIndex = 0
         '
         'PictureBox3
         '
@@ -309,6 +310,7 @@ Partial Class FrmUsuario
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnGuardar.Enabled = False
         Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -322,6 +324,7 @@ Partial Class FrmUsuario
         'BtnModificar
         '
         Me.BtnModificar.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnModificar.Enabled = False
         Me.BtnModificar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight

@@ -55,10 +55,10 @@ Partial Class FrmClientes
         Me.TxtNombreCompañia = New System.Windows.Forms.TextBox()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.TpVer = New System.Windows.Forms.TabPage()
+        Me.DgvCliente = New System.Windows.Forms.DataGridView()
         Me.CsmCliente = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.DgvCliente = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,9 +69,9 @@ Partial Class FrmClientes
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.TpVer.SuspendLayout()
+        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CsmCliente.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel3
@@ -149,6 +149,7 @@ Partial Class FrmClientes
         'BtnRegresarMenu
         '
         Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRegresarMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
@@ -258,6 +259,7 @@ Partial Class FrmClientes
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnGuardar.Location = New System.Drawing.Point(687, 449)
@@ -384,6 +386,7 @@ Partial Class FrmClientes
         'btnModificar
         '
         Me.btnModificar.BackColor = System.Drawing.Color.LawnGreen
+        Me.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnModificar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnModificar.Location = New System.Drawing.Point(510, 449)
@@ -404,6 +407,14 @@ Partial Class FrmClientes
         Me.TpVer.Text = "Clientes"
         Me.TpVer.UseVisualStyleBackColor = True
         '
+        'DgvCliente
+        '
+        Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCliente.Location = New System.Drawing.Point(17, 48)
+        Me.DgvCliente.Name = "DgvCliente"
+        Me.DgvCliente.Size = New System.Drawing.Size(828, 478)
+        Me.DgvCliente.TabIndex = 0
+        '
         'CsmCliente
         '
         Me.CsmCliente.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
@@ -419,14 +430,6 @@ Partial Class FrmClientes
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'DgvCliente
-        '
-        Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCliente.Location = New System.Drawing.Point(17, 48)
-        Me.DgvCliente.Name = "DgvCliente"
-        Me.DgvCliente.Size = New System.Drawing.Size(828, 478)
-        Me.DgvCliente.TabIndex = 0
         '
         'FrmClientes
         '
@@ -455,9 +458,9 @@ Partial Class FrmClientes
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.TpVer.ResumeLayout(False)
+        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CsmCliente.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

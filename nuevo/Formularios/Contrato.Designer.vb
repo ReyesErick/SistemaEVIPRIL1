@@ -183,6 +183,7 @@ Partial Class FrmContrato
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnGuardar.Location = New System.Drawing.Point(630, 431)
@@ -347,6 +348,7 @@ Partial Class FrmContrato
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(688, 483)
@@ -413,6 +415,7 @@ Partial Class FrmContrato
         '
         'dtpFechaFinal
         '
+        Me.dtpFechaFinal.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaFinal.Location = New System.Drawing.Point(238, 75)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
@@ -421,6 +424,7 @@ Partial Class FrmContrato
         '
         'dtpFechaInicio
         '
+        Me.dtpFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaInicio.Location = New System.Drawing.Point(238, 20)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
@@ -508,6 +512,7 @@ Partial Class FrmContrato
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Location = New System.Drawing.Point(618, 361)

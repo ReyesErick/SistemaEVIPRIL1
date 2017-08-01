@@ -78,6 +78,7 @@ Partial Class FrmConfiguracion
         '
         Me.btnTestConnection.BackColor = System.Drawing.Color.White
         Me.btnTestConnection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnTestConnection.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTestConnection.FlatAppearance.BorderSize = 0
         Me.btnTestConnection.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTestConnection.Location = New System.Drawing.Point(126, 168)

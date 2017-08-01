@@ -590,6 +590,7 @@ Partial Class PerfilEmpleado
         'BtnCalcular
         '
         Me.BtnCalcular.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnCalcular.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCalcular.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter

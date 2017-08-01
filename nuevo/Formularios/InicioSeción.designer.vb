@@ -48,6 +48,7 @@ Partial Class FrmInicioSeción
         'BtnInicioSesion
         '
         Me.BtnInicioSesion.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnInicioSesion.Font = New System.Drawing.Font("Modern No. 20", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInicioSesion.Location = New System.Drawing.Point(542, 271)
         Me.BtnInicioSesion.Name = "BtnInicioSesion"
