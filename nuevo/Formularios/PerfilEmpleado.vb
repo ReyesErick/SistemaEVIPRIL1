@@ -41,4 +41,16 @@ Public Class PerfilEmpleado
 
 
     End Sub
+
+    Private Sub BtnCalcular_Click(sender As Object, e As EventArgs) Handles BtnCalcular.Click
+
+        FrmPrestacion.txtNumIdentidadEmpleado.Text = TxtNumIdentidad.Text
+        FrmPrestacion.TxtNombre.Text = TxtNombres.Text + " " + TxtApellidos.Text
+        FrmPrestacion.TxtSOM.Text = txtSueldo.Text
+        FrmPrestacion.DtpFIngreso.Value = dtpFechaInicial.Value
+        FrmPrestacion.DtpFTerminacion.Value = dtpFechaFinal.Value
+        FrmPrestacion.Show()
+        Me.Close()
+
+    End Sub
 End Class

@@ -25,11 +25,8 @@ Partial Class FrmPrestacion
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrestacion))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.BtnRegresarMenu = New System.Windows.Forms.Button()
-        Me.LblPrestación = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel12 = New System.Windows.Forms.Panel()
@@ -136,24 +133,9 @@ Partial Class FrmPrestacion
         Me.LblDiaanti = New System.Windows.Forms.Label()
         Me.LblTiempoAnti = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.TxtAño1 = New System.Windows.Forms.TextBox()
-        Me.LblAño1 = New System.Windows.Forms.Label()
-        Me.TxtMes1 = New System.Windows.Forms.TextBox()
-        Me.LblMes1 = New System.Windows.Forms.Label()
         Me.LblFechaTermi = New System.Windows.Forms.Label()
-        Me.TxtDia1 = New System.Windows.Forms.TextBox()
-        Me.LblDia1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TxtAño = New System.Windows.Forms.TextBox()
-        Me.LblAño = New System.Windows.Forms.Label()
-        Me.TxtMes = New System.Windows.Forms.TextBox()
-        Me.LblMes = New System.Windows.Forms.Label()
-        Me.TxtDia = New System.Windows.Forms.TextBox()
-        Me.LblDia = New System.Windows.Forms.Label()
         Me.LblFechaIngreso = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.CboPreaviso = New System.Windows.Forms.ComboBox()
-        Me.LblPreaviso = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.txtNumIdentidadEmpleado = New System.Windows.Forms.TextBox()
@@ -175,8 +157,9 @@ Partial Class FrmPrestacion
         Me.BtnCalcular = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.DtpFIngreso = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFTerminacion = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel12.SuspendLayout()
@@ -187,7 +170,6 @@ Partial Class FrmPrestacion
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -204,30 +186,17 @@ Partial Class FrmPrestacion
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox5)
         Me.Panel1.Controls.Add(Me.BtnRegresarMenu)
-        Me.Panel1.Controls.Add(Me.LblPrestación)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(21, 71)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(231, 186)
+        Me.Panel1.Size = New System.Drawing.Size(231, 88)
         Me.Panel1.TabIndex = 6
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(17, 82)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 32
-        Me.PictureBox1.TabStop = False
         '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 20)
+        Me.PictureBox5.Location = New System.Drawing.Point(11, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -237,6 +206,7 @@ Partial Class FrmPrestacion
         'BtnRegresarMenu
         '
         Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRegresarMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
@@ -246,28 +216,6 @@ Partial Class FrmPrestacion
         Me.BtnRegresarMenu.Text = "Regresar Menú Principal "
         Me.BtnRegresarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnRegresarMenu.UseVisualStyleBackColor = False
-        '
-        'LblPrestación
-        '
-        Me.LblPrestación.AutoSize = True
-        Me.LblPrestación.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblPrestación.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrestación.Location = New System.Drawing.Point(38, 82)
-        Me.LblPrestación.Name = "LblPrestación"
-        Me.LblPrestación.Size = New System.Drawing.Size(192, 16)
-        Me.LblPrestación.TabIndex = 0
-        Me.LblPrestación.Text = "Calcular Nuevo Prestación"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Label1.Location = New System.Drawing.Point(20, 57)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 16)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "GESTION DE DATOS"
         '
         'Panel3
         '
@@ -288,9 +236,6 @@ Partial Class FrmPrestacion
         Me.GroupBox1.Controls.Add(Me.Panel6)
         Me.GroupBox1.Controls.Add(Me.Panel5)
         Me.GroupBox1.Controls.Add(Me.Panel4)
-        Me.GroupBox1.Controls.Add(Me.PictureBox2)
-        Me.GroupBox1.Controls.Add(Me.CboPreaviso)
-        Me.GroupBox1.Controls.Add(Me.LblPreaviso)
         Me.GroupBox1.Controls.Add(Me.TxtNombre)
         Me.GroupBox1.Controls.Add(Me.LblNombre)
         Me.GroupBox1.Controls.Add(Me.txtNumIdentidadEmpleado)
@@ -1322,49 +1267,12 @@ Partial Class FrmPrestacion
         'Panel5
         '
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.TxtAño1)
-        Me.Panel5.Controls.Add(Me.LblAño1)
-        Me.Panel5.Controls.Add(Me.TxtMes1)
-        Me.Panel5.Controls.Add(Me.LblMes1)
+        Me.Panel5.Controls.Add(Me.DtpFTerminacion)
         Me.Panel5.Controls.Add(Me.LblFechaTermi)
-        Me.Panel5.Controls.Add(Me.TxtDia1)
-        Me.Panel5.Controls.Add(Me.LblDia1)
         Me.Panel5.Location = New System.Drawing.Point(283, 112)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(274, 52)
         Me.Panel5.TabIndex = 18
-        '
-        'TxtAño1
-        '
-        Me.TxtAño1.Location = New System.Drawing.Point(177, 16)
-        Me.TxtAño1.Name = "TxtAño1"
-        Me.TxtAño1.Size = New System.Drawing.Size(80, 20)
-        Me.TxtAño1.TabIndex = 8
-        '
-        'LblAño1
-        '
-        Me.LblAño1.AutoSize = True
-        Me.LblAño1.Location = New System.Drawing.Point(145, 19)
-        Me.LblAño1.Name = "LblAño1"
-        Me.LblAño1.Size = New System.Drawing.Size(26, 13)
-        Me.LblAño1.TabIndex = 7
-        Me.LblAño1.Text = "Año"
-        '
-        'TxtMes1
-        '
-        Me.TxtMes1.Location = New System.Drawing.Point(106, 17)
-        Me.TxtMes1.Name = "TxtMes1"
-        Me.TxtMes1.Size = New System.Drawing.Size(33, 20)
-        Me.TxtMes1.TabIndex = 6
-        '
-        'LblMes1
-        '
-        Me.LblMes1.AutoSize = True
-        Me.LblMes1.Location = New System.Drawing.Point(73, 20)
-        Me.LblMes1.Name = "LblMes1"
-        Me.LblMes1.Size = New System.Drawing.Size(27, 13)
-        Me.LblMes1.TabIndex = 5
-        Me.LblMes1.Text = "Mes"
         '
         'LblFechaTermi
         '
@@ -1377,87 +1285,15 @@ Partial Class FrmPrestacion
         Me.LblFechaTermi.TabIndex = 4
         Me.LblFechaTermi.Text = "Fecha de Terminacion"
         '
-        'TxtDia1
-        '
-        Me.TxtDia1.Location = New System.Drawing.Point(34, 17)
-        Me.TxtDia1.Name = "TxtDia1"
-        Me.TxtDia1.Size = New System.Drawing.Size(33, 20)
-        Me.TxtDia1.TabIndex = 3
-        '
-        'LblDia1
-        '
-        Me.LblDia1.AutoSize = True
-        Me.LblDia1.Location = New System.Drawing.Point(5, 19)
-        Me.LblDia1.Name = "LblDia1"
-        Me.LblDia1.Size = New System.Drawing.Size(23, 13)
-        Me.LblDia1.TabIndex = 2
-        Me.LblDia1.Text = "Dia"
-        '
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.TxtAño)
-        Me.Panel4.Controls.Add(Me.LblAño)
-        Me.Panel4.Controls.Add(Me.TxtMes)
-        Me.Panel4.Controls.Add(Me.LblMes)
-        Me.Panel4.Controls.Add(Me.TxtDia)
-        Me.Panel4.Controls.Add(Me.LblDia)
+        Me.Panel4.Controls.Add(Me.DtpFIngreso)
         Me.Panel4.Controls.Add(Me.LblFechaIngreso)
         Me.Panel4.Location = New System.Drawing.Point(0, 112)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(286, 52)
         Me.Panel4.TabIndex = 17
-        '
-        'TxtAño
-        '
-        Me.TxtAño.Enabled = False
-        Me.TxtAño.Location = New System.Drawing.Point(178, 16)
-        Me.TxtAño.Name = "TxtAño"
-        Me.TxtAño.Size = New System.Drawing.Size(69, 20)
-        Me.TxtAño.TabIndex = 6
-        '
-        'LblAño
-        '
-        Me.LblAño.AutoSize = True
-        Me.LblAño.Location = New System.Drawing.Point(146, 20)
-        Me.LblAño.Name = "LblAño"
-        Me.LblAño.Size = New System.Drawing.Size(26, 13)
-        Me.LblAño.TabIndex = 5
-        Me.LblAño.Text = "Año"
-        '
-        'TxtMes
-        '
-        Me.TxtMes.Enabled = False
-        Me.TxtMes.Location = New System.Drawing.Point(107, 17)
-        Me.TxtMes.Name = "TxtMes"
-        Me.TxtMes.Size = New System.Drawing.Size(33, 20)
-        Me.TxtMes.TabIndex = 4
-        '
-        'LblMes
-        '
-        Me.LblMes.AutoSize = True
-        Me.LblMes.Location = New System.Drawing.Point(74, 20)
-        Me.LblMes.Name = "LblMes"
-        Me.LblMes.Size = New System.Drawing.Size(27, 13)
-        Me.LblMes.TabIndex = 3
-        Me.LblMes.Text = "Mes"
-        '
-        'TxtDia
-        '
-        Me.TxtDia.Enabled = False
-        Me.TxtDia.Location = New System.Drawing.Point(34, 17)
-        Me.TxtDia.Name = "TxtDia"
-        Me.TxtDia.Size = New System.Drawing.Size(33, 20)
-        Me.TxtDia.TabIndex = 2
-        '
-        'LblDia
-        '
-        Me.LblDia.AutoSize = True
-        Me.LblDia.Location = New System.Drawing.Point(4, 19)
-        Me.LblDia.Name = "LblDia"
-        Me.LblDia.Size = New System.Drawing.Size(23, 13)
-        Me.LblDia.TabIndex = 1
-        Me.LblDia.Text = "Dia"
         '
         'LblFechaIngreso
         '
@@ -1469,33 +1305,6 @@ Partial Class FrmPrestacion
         Me.LblFechaIngreso.Size = New System.Drawing.Size(105, 13)
         Me.LblFechaIngreso.TabIndex = 0
         Me.LblFechaIngreso.Text = "Fecha de ingreso"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(271, 34)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(27, 20)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 16
-        Me.PictureBox2.TabStop = False
-        '
-        'CboPreaviso
-        '
-        Me.CboPreaviso.FormattingEnabled = True
-        Me.CboPreaviso.Location = New System.Drawing.Point(895, 36)
-        Me.CboPreaviso.Name = "CboPreaviso"
-        Me.CboPreaviso.Size = New System.Drawing.Size(45, 21)
-        Me.CboPreaviso.TabIndex = 15
-        '
-        'LblPreaviso
-        '
-        Me.LblPreaviso.AutoSize = True
-        Me.LblPreaviso.Location = New System.Drawing.Point(782, 41)
-        Me.LblPreaviso.Name = "LblPreaviso"
-        Me.LblPreaviso.Size = New System.Drawing.Size(90, 13)
-        Me.LblPreaviso.TabIndex = 14
-        Me.LblPreaviso.Text = "Preaviso Tomado"
         '
         'TxtNombre
         '
@@ -1519,6 +1328,7 @@ Partial Class FrmPrestacion
         '
         'txtNumIdentidadEmpleado
         '
+        Me.txtNumIdentidadEmpleado.Enabled = False
         Me.txtNumIdentidadEmpleado.Location = New System.Drawing.Point(81, 34)
         Me.txtNumIdentidadEmpleado.Name = "txtNumIdentidadEmpleado"
         Me.txtNumIdentidadEmpleado.Size = New System.Drawing.Size(184, 20)
@@ -1647,6 +1457,7 @@ Partial Class FrmPrestacion
         '
         'TxtSOM
         '
+        Me.TxtSOM.Enabled = False
         Me.TxtSOM.Location = New System.Drawing.Point(137, 2)
         Me.TxtSOM.Name = "TxtSOM"
         Me.TxtSOM.Size = New System.Drawing.Size(136, 20)
@@ -1664,6 +1475,7 @@ Partial Class FrmPrestacion
         'BtnImprimir
         '
         Me.BtnImprimir.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnImprimir.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnImprimir.Location = New System.Drawing.Point(1073, 572)
@@ -1676,6 +1488,7 @@ Partial Class FrmPrestacion
         'BtnCalcular
         '
         Me.BtnCalcular.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnCalcular.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCalcular.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1706,6 +1519,24 @@ Partial Class FrmPrestacion
         Me.PictureBox4.TabIndex = 32
         Me.PictureBox4.TabStop = False
         '
+        'DtpFIngreso
+        '
+        Me.DtpFIngreso.Enabled = False
+        Me.DtpFIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFIngreso.Location = New System.Drawing.Point(34, 17)
+        Me.DtpFIngreso.Name = "DtpFIngreso"
+        Me.DtpFIngreso.Size = New System.Drawing.Size(142, 20)
+        Me.DtpFIngreso.TabIndex = 1
+        '
+        'DtpFTerminacion
+        '
+        Me.DtpFTerminacion.Enabled = False
+        Me.DtpFTerminacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFTerminacion.Location = New System.Drawing.Point(44, 17)
+        Me.DtpFTerminacion.Name = "DtpFTerminacion"
+        Me.DtpFTerminacion.Size = New System.Drawing.Size(142, 20)
+        Me.DtpFTerminacion.TabIndex = 2
+        '
         'FrmPrestacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1726,8 +1557,6 @@ Partial Class FrmPrestacion
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Prestacion"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -1747,7 +1576,6 @@ Partial Class FrmPrestacion
         Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1760,8 +1588,6 @@ Partial Class FrmPrestacion
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents BtnRegresarMenu As Button
-    Friend WithEvents LblPrestación As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel12 As Panel
@@ -1868,24 +1694,9 @@ Partial Class FrmPrestacion
     Friend WithEvents LblDiaanti As Label
     Friend WithEvents LblTiempoAnti As Label
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents TxtAño1 As TextBox
-    Friend WithEvents LblAño1 As Label
-    Friend WithEvents TxtMes1 As TextBox
-    Friend WithEvents LblMes1 As Label
     Friend WithEvents LblFechaTermi As Label
-    Friend WithEvents TxtDia1 As TextBox
-    Friend WithEvents LblDia1 As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents TxtAño As TextBox
-    Friend WithEvents LblAño As Label
-    Friend WithEvents TxtMes As TextBox
-    Friend WithEvents LblMes As Label
-    Friend WithEvents TxtDia As TextBox
-    Friend WithEvents LblDia As Label
     Friend WithEvents LblFechaIngreso As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents CboPreaviso As ComboBox
-    Friend WithEvents LblPreaviso As Label
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents LblNombre As Label
     Friend WithEvents txtNumIdentidadEmpleado As TextBox
@@ -1907,5 +1718,6 @@ Partial Class FrmPrestacion
     Friend WithEvents BtnCalcular As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DtpFTerminacion As DateTimePicker
+    Friend WithEvents DtpFIngreso As DateTimePicker
 End Class

@@ -52,8 +52,18 @@ Partial Class PerfilEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtSexo = New System.Windows.Forms.TextBox()
+        Me.txtEstadoCivil = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFechaInicial = New System.Windows.Forms.DateTimePicker()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtTipoContrato = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtTipoEmpleado = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.txtContratoEmpleado = New System.Windows.Forms.TextBox()
         Me.txtMunicipio = New System.Windows.Forms.TextBox()
         Me.txtNacionalidad = New System.Windows.Forms.TextBox()
@@ -63,16 +73,7 @@ Partial Class PerfilEmpleado
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.txtTipoContrato = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.txtTipoEmpleado = New System.Windows.Forms.TextBox()
-        Me.dtpFechaInicial = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
-        Me.txtSexo = New System.Windows.Forms.TextBox()
-        Me.txtEstadoCivil = New System.Windows.Forms.TextBox()
+        Me.BtnCalcular = New System.Windows.Forms.Button()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -373,6 +374,24 @@ Partial Class PerfilEmpleado
         Me.Panel1.Size = New System.Drawing.Size(450, 624)
         Me.Panel1.TabIndex = 125
         '
+        'txtSexo
+        '
+        Me.txtSexo.Enabled = False
+        Me.txtSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSexo.Location = New System.Drawing.Point(166, 545)
+        Me.txtSexo.Name = "txtSexo"
+        Me.txtSexo.Size = New System.Drawing.Size(127, 21)
+        Me.txtSexo.TabIndex = 134
+        '
+        'txtEstadoCivil
+        '
+        Me.txtEstadoCivil.Enabled = False
+        Me.txtEstadoCivil.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEstadoCivil.Location = New System.Drawing.Point(166, 499)
+        Me.txtEstadoCivil.Name = "txtEstadoCivil"
+        Me.txtEstadoCivil.Size = New System.Drawing.Size(127, 21)
+        Me.txtEstadoCivil.TabIndex = 133
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -407,10 +426,86 @@ Partial Class PerfilEmpleado
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.TxtNumSeguro)
-        Me.Panel2.Location = New System.Drawing.Point(534, 55)
+        Me.Panel2.Location = New System.Drawing.Point(534, 33)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(411, 601)
+        Me.Panel2.Size = New System.Drawing.Size(411, 578)
         Me.Panel2.TabIndex = 127
+        '
+        'dtpFechaFinal
+        '
+        Me.dtpFechaFinal.Enabled = False
+        Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(171, 462)
+        Me.dtpFechaFinal.Name = "dtpFechaFinal"
+        Me.dtpFechaFinal.Size = New System.Drawing.Size(188, 20)
+        Me.dtpFechaFinal.TabIndex = 147
+        '
+        'dtpFechaInicial
+        '
+        Me.dtpFechaInicial.Enabled = False
+        Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaInicial.Location = New System.Drawing.Point(171, 425)
+        Me.dtpFechaInicial.Name = "dtpFechaInicial"
+        Me.dtpFechaInicial.Size = New System.Drawing.Size(188, 20)
+        Me.dtpFechaInicial.TabIndex = 146
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(52, 547)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(108, 16)
+        Me.Label23.TabIndex = 142
+        Me.Label23.Text = "Tipo de Contrato"
+        '
+        'txtTipoContrato
+        '
+        Me.txtTipoContrato.Enabled = False
+        Me.txtTipoContrato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipoContrato.Location = New System.Drawing.Point(171, 544)
+        Me.txtTipoContrato.Name = "txtTipoContrato"
+        Me.txtTipoContrato.Size = New System.Drawing.Size(188, 21)
+        Me.txtTipoContrato.TabIndex = 143
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(37, 509)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(124, 16)
+        Me.Label24.TabIndex = 140
+        Me.Label24.Text = "Tipo de Empleado:"
+        '
+        'txtTipoEmpleado
+        '
+        Me.txtTipoEmpleado.Enabled = False
+        Me.txtTipoEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipoEmpleado.Location = New System.Drawing.Point(171, 506)
+        Me.txtTipoEmpleado.Name = "txtTipoEmpleado"
+        Me.txtTipoEmpleado.Size = New System.Drawing.Size(188, 21)
+        Me.txtTipoEmpleado.TabIndex = 141
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(64, 466)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(84, 16)
+        Me.Label22.TabIndex = 138
+        Me.Label22.Text = "Fecha Final :"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(64, 425)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(89, 16)
+        Me.Label21.TabIndex = 136
+        Me.Label21.Text = "Fecha Inicial :"
         '
         'txtContratoEmpleado
         '
@@ -470,7 +565,7 @@ Partial Class PerfilEmpleado
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(556, 48)
+        Me.Label19.Location = New System.Drawing.Point(549, 25)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(84, 13)
         Me.Label19.TabIndex = 128
@@ -492,105 +587,25 @@ Partial Class PerfilEmpleado
         Me.Panel4.Size = New System.Drawing.Size(957, 10)
         Me.Panel4.TabIndex = 129
         '
-        'Label21
+        'BtnCalcular
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(64, 425)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(89, 16)
-        Me.Label21.TabIndex = 136
-        Me.Label21.Text = "Fecha Inicial :"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(64, 466)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(84, 16)
-        Me.Label22.TabIndex = 138
-        Me.Label22.Text = "Fecha Final :"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(52, 547)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(108, 16)
-        Me.Label23.TabIndex = 142
-        Me.Label23.Text = "Tipo de Contrato"
-        '
-        'txtTipoContrato
-        '
-        Me.txtTipoContrato.Enabled = False
-        Me.txtTipoContrato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoContrato.Location = New System.Drawing.Point(171, 544)
-        Me.txtTipoContrato.Name = "txtTipoContrato"
-        Me.txtTipoContrato.Size = New System.Drawing.Size(188, 21)
-        Me.txtTipoContrato.TabIndex = 143
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(37, 509)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(124, 16)
-        Me.Label24.TabIndex = 140
-        Me.Label24.Text = "Tipo de Empleado:"
-        '
-        'txtTipoEmpleado
-        '
-        Me.txtTipoEmpleado.Enabled = False
-        Me.txtTipoEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoEmpleado.Location = New System.Drawing.Point(171, 506)
-        Me.txtTipoEmpleado.Name = "txtTipoEmpleado"
-        Me.txtTipoEmpleado.Size = New System.Drawing.Size(188, 21)
-        Me.txtTipoEmpleado.TabIndex = 141
-        '
-        'dtpFechaInicial
-        '
-        Me.dtpFechaInicial.Enabled = False
-        Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicial.Location = New System.Drawing.Point(171, 425)
-        Me.dtpFechaInicial.Name = "dtpFechaInicial"
-        Me.dtpFechaInicial.Size = New System.Drawing.Size(188, 20)
-        Me.dtpFechaInicial.TabIndex = 146
-        '
-        'dtpFechaFinal
-        '
-        Me.dtpFechaFinal.Enabled = False
-        Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(171, 462)
-        Me.dtpFechaFinal.Name = "dtpFechaFinal"
-        Me.dtpFechaFinal.Size = New System.Drawing.Size(188, 20)
-        Me.dtpFechaFinal.TabIndex = 147
-        '
-        'txtSexo
-        '
-        Me.txtSexo.Enabled = False
-        Me.txtSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSexo.Location = New System.Drawing.Point(166, 545)
-        Me.txtSexo.Name = "txtSexo"
-        Me.txtSexo.Size = New System.Drawing.Size(127, 21)
-        Me.txtSexo.TabIndex = 134
-        '
-        'txtEstadoCivil
-        '
-        Me.txtEstadoCivil.Enabled = False
-        Me.txtEstadoCivil.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEstadoCivil.Location = New System.Drawing.Point(166, 499)
-        Me.txtEstadoCivil.Name = "txtEstadoCivil"
-        Me.txtEstadoCivil.Size = New System.Drawing.Size(127, 21)
-        Me.txtEstadoCivil.TabIndex = 133
+        Me.BtnCalcular.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnCalcular.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnCalcular.Location = New System.Drawing.Point(642, 617)
+        Me.BtnCalcular.Name = "BtnCalcular"
+        Me.BtnCalcular.Size = New System.Drawing.Size(184, 40)
+        Me.BtnCalcular.TabIndex = 131
+        Me.BtnCalcular.Text = "Calcular Prestaciones"
+        Me.BtnCalcular.UseVisualStyleBackColor = False
         '
         'PerfilEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(957, 672)
+        Me.Controls.Add(Me.BtnCalcular)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel4)
@@ -682,4 +697,5 @@ Partial Class PerfilEmpleado
     Friend WithEvents dtpFechaFinal As DateTimePicker
     Friend WithEvents txtSexo As TextBox
     Friend WithEvents txtEstadoCivil As TextBox
+    Friend WithEvents BtnCalcular As Button
 End Class

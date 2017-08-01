@@ -1,11 +1,4 @@
 ﻿Public Class FrmPrestacion
-    Private Sub LblPrestación_MouseLeave(sender As Object, e As EventArgs) Handles LblPrestación.MouseLeave
-        LblPrestación.ForeColor = Color.Black
-    End Sub
-
-    Private Sub LblPrestación_MouseMove(sender As Object, e As MouseEventArgs) Handles LblPrestación.MouseMove
-        LblPrestación.ForeColor = Color.Green
-    End Sub
 
     Private Sub BtnRegresarMenu_Click(sender As Object, e As EventArgs) Handles BtnRegresarMenu.Click
         Me.Dispose()
@@ -20,8 +13,6 @@
         Me.TxtSOD.Text = FormatCurrency(CDbl(Me.TxtSOM.Text) / 30, 2)
         Me.TxtSOPM.Text = FormatCurrency((CDbl(Me.TxtSOM.Text) * 14) / 12, 2)
         Me.TxtSOPD.Text = FormatCurrency(CDbl(TxtSOPM.Text) / 30, 2)
-        FechaInicial = CDate(String.Format("{0}-{1}-{2}", TxtAño.Text, TxtMes.Text, TxtDia.Text))
-        FechaActual = CDate(String.Format("{0}-{1}-{2}", TxtAño1.Text, TxtMes1.Text, TxtDia1.Text))
         Dim diaActual As Integer
         Dim mesActual As Integer
         Dim anioActual As Integer
