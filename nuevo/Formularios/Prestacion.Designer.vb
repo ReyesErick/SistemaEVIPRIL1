@@ -755,7 +755,7 @@ Partial Class FrmPrestacion
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(117, 13)
         Me.Label30.TabIndex = 21
-        Me.Label30.Text = "Decimo Tercer Mes"
+        Me.Label30.Text = "Decimo Cuarto Mes"
         '
         'TextBox19
         '

@@ -99,7 +99,6 @@ Public Class FrmUsuario
 
     Private Sub LblAgregarUsuario_Click(sender As Object, e As EventArgs) Handles LblAgregarUsuario.Click
         LblAgregarUsuario.Enabled = False
-        Pnl1.Enabled = True
         BtnGuardar.Enabled = True
         TabControl1.SelectedIndex = 0
     End Sub
@@ -107,20 +106,19 @@ Public Class FrmUsuario
         btnEditar.Enabled = True
     End Sub
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Pnl1.Enabled = True
         LblAgregarUsuario.Enabled = False
         BtnModificar.Enabled = True
         LblIdUsuario.Visible = True
         LblIdNun.Text = lsvMostrar.FocusedItem.SubItems(0).Text
-            TxtUsuario.Text = lsvMostrar.FocusedItem.SubItems(1).Text
-            txtEmpleado.Text = lsvMostrar.FocusedItem.SubItems(5).Text
-            Dim var As String = lsvMostrar.FocusedItem.SubItems(3).Text
-            If var = "True" Then
-                cboEstado.SelectedValue = 0
-            Else
-                cboEstado.SelectedValue = 1
-            End If
-            TabControl1.SelectedIndex = 0
+        TxtUsuario.Text = lsvMostrar.FocusedItem.SubItems(1).Text
+        txtEmpleado.Text = lsvMostrar.FocusedItem.SubItems(5).Text
+        Dim var As String = lsvMostrar.FocusedItem.SubItems(3).Text
+        If var = "True" Then
+            cboEstado.SelectedValue = 0
+        Else
+            cboEstado.SelectedValue = 1
+        End If
+        TabControl1.SelectedIndex = 0
         btnEditar.Enabled = False
     End Sub
 
@@ -152,7 +150,6 @@ Public Class FrmUsuario
         txtEmpleado.Clear()
         BtnGuardar.Enabled = False
         BtnModificar.Enabled = False
-        Pnl1.Enabled = False
         LblIdNun.Visible = False
         LblIdUsuario.Visible = False
         LblAgregarUsuario.Enabled = True
