@@ -100,6 +100,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Evipril.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Evipril.vb">
+      <DependentUpon>Evipril.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Beneficiario.Designer.vb">
       <DependentUpon>Beneficiario.vb</DependentUpon>
     </Compile>
@@ -213,6 +216,12 @@
     <Compile Include="Reportes\ReporteContratoCliente.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\ReporteContratoEmpleado.Designer.vb">
+      <DependentUpon>ReporteContratoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteContratoEmpleado.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\ReporteEmpleado.Designer.vb">
       <DependentUpon>ReporteEmpleado.vb</DependentUpon>
     </Compile>
@@ -275,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteContratoCliente.resx">
       <DependentUpon>ReporteContratoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteContratoEmpleado.resx">
+      <DependentUpon>ReporteContratoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteEmpleado.resx">
       <DependentUpon>ReporteEmpleado.vb</DependentUpon>

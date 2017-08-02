@@ -32,6 +32,7 @@ Public Class FrmContrato
         Call MostrarDatosContratoEmpleado()
         TpContrato.Visible = True
         TpContrato.SelectedTab = TabPage3
+        sele = 1
     End Sub
 
     Private Sub LblVerContratoClien_Click(sender As Object, e As EventArgs) Handles LblVerContratoClien.Click
@@ -423,7 +424,9 @@ Public Class FrmContrato
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If sele = 1 Then
-
+            Dim reporte As New ReporteContratoEmpleado()
+            Dim viewer As New ReportPrintTool(reporte)
+            viewer.ShowPreview()
         Else
             If sele = 2 Then
                 Dim reporte As New ReporteContratoCliente()
