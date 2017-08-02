@@ -3,6 +3,7 @@ Imports System.IO
 Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
+Imports DevExpress.XtraReports.UI
 
 Public Class FrmEmpleado
     Dim op As Integer
@@ -509,6 +510,7 @@ Public Class FrmEmpleado
                     End If
 
                     TcEmpleado.SelectedTab = TpAgregar
+                    BtnModificar.Enabled = True
                 End If
             End If
         Catch ex As Exception
@@ -701,4 +703,17 @@ Public Class FrmEmpleado
         PerfilEmpleado.Show()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reporte As New ReporteEmpleado()
+        Dim viewer As New ReportPrintTool(reporte)
+        viewer.ShowPreview()
+    End Sub
+
+
+    Private Sub DgvVerEmpleado_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles DgvVerEmpleado.DefaultValuesNeeded
+        Dim id As Stream = DgvVerEmpleado.CurrentRow.Cells(0).Value
+        Dim rpt As New Evipril()
+        Dim printTool As New ReportPrintTool(rpt)
+        printTool.ShowRibbonPreview()
+    End Sub
 End Class

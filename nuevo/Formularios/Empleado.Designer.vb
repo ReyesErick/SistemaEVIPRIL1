@@ -79,6 +79,7 @@ Partial Class FrmEmpleado
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.TpVer = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.DgvVerEmpleado = New System.Windows.Forms.DataGridView()
         Me.CmsEditar = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -695,6 +696,7 @@ Partial Class FrmEmpleado
         '
         'TpVer
         '
+        Me.TpVer.Controls.Add(Me.Button1)
         Me.TpVer.Controls.Add(Me.DgvVerEmpleado)
         Me.TpVer.Controls.Add(Me.PtbBuscar)
         Me.TpVer.Controls.Add(Me.TxtBuscar)
@@ -708,6 +710,19 @@ Partial Class FrmEmpleado
         Me.TpVer.Text = "Empleados"
         Me.TpVer.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(669, 481)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 87
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'DgvVerEmpleado
         '
         Me.DgvVerEmpleado.AllowUserToAddRows = False
@@ -719,7 +734,7 @@ Partial Class FrmEmpleado
         Me.DgvVerEmpleado.ReadOnly = True
         Me.DgvVerEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvVerEmpleado.ShowCellErrors = False
-        Me.DgvVerEmpleado.Size = New System.Drawing.Size(801, 378)
+        Me.DgvVerEmpleado.Size = New System.Drawing.Size(795, 336)
         Me.DgvVerEmpleado.StandardTab = True
         Me.DgvVerEmpleado.TabIndex = 86
         '
@@ -727,18 +742,18 @@ Partial Class FrmEmpleado
         '
         Me.CmsEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerPerfilToolStripMenuItem})
         Me.CmsEditar.Name = "CmsEditar"
-        Me.CmsEditar.Size = New System.Drawing.Size(121, 48)
+        Me.CmsEditar.Size = New System.Drawing.Size(153, 70)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'VerPerfilToolStripMenuItem
         '
         Me.VerPerfilToolStripMenuItem.Name = "VerPerfilToolStripMenuItem"
-        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.VerPerfilToolStripMenuItem.Text = "Ver Perfil"
         '
         'PtbBuscar
@@ -886,4 +901,5 @@ Partial Class FrmEmpleado
     Friend WithEvents Label21 As Label
     Friend WithEvents RdbInactivo As RadioButton
     Friend WithEvents RdbActivo As RadioButton
+    Friend WithEvents Button1 As Button
 End Class
