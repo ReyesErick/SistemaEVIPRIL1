@@ -59,6 +59,7 @@ Partial Class FrmClientes
         Me.CsmCliente = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +143,7 @@ Partial Class FrmClientes
         Me.LblVerCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerCliente.Location = New System.Drawing.Point(38, 111)
         Me.LblVerCliente.Name = "LblVerCliente"
-        Me.LblVerCliente.Size = New System.Drawing.Size(84, 16)
+        Me.LblVerCliente.Size = New System.Drawing.Size(88, 16)
         Me.LblVerCliente.TabIndex = 1
         Me.LblVerCliente.Text = "Ver Cliente"
         '
@@ -167,7 +168,7 @@ Partial Class FrmClientes
         Me.LblAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarCliente.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarCliente.Name = "LblAgregarCliente"
-        Me.LblAgregarCliente.Size = New System.Drawing.Size(165, 16)
+        Me.LblAgregarCliente.Size = New System.Drawing.Size(171, 16)
         Me.LblAgregarCliente.TabIndex = 0
         Me.LblAgregarCliente.Text = "Agregar Nuevo Cliente"
         '
@@ -178,7 +179,7 @@ Partial Class FrmClientes
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.Label1.Location = New System.Drawing.Point(20, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 16)
+        Me.Label1.Size = New System.Drawing.Size(170, 16)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '
@@ -398,6 +399,7 @@ Partial Class FrmClientes
         '
         'TpVer
         '
+        Me.TpVer.Controls.Add(Me.Button1)
         Me.TpVer.Controls.Add(Me.DgvCliente)
         Me.TpVer.Location = New System.Drawing.Point(4, 22)
         Me.TpVer.Name = "TpVer"
@@ -412,7 +414,7 @@ Partial Class FrmClientes
         Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCliente.Location = New System.Drawing.Point(17, 48)
         Me.DgvCliente.Name = "DgvCliente"
-        Me.DgvCliente.Size = New System.Drawing.Size(828, 478)
+        Me.DgvCliente.Size = New System.Drawing.Size(828, 425)
         Me.DgvCliente.TabIndex = 0
         '
         'CsmCliente
@@ -430,6 +432,19 @@ Partial Class FrmClientes
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(689, 488)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 88
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmClientes
         '
@@ -499,4 +514,5 @@ Partial Class FrmClientes
     Friend WithEvents btnModificar As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents DgvCliente As DataGridView
+    Friend WithEvents Button1 As Button
 End Class

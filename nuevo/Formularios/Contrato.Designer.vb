@@ -82,6 +82,7 @@ Partial Class FrmContrato
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TpContrato.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -433,6 +434,7 @@ Partial Class FrmContrato
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Button3)
         Me.TabPage3.Controls.Add(Me.DgvContrato)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -450,7 +452,7 @@ Partial Class FrmContrato
         Me.DgvContrato.Location = New System.Drawing.Point(6, 6)
         Me.DgvContrato.Name = "DgvContrato"
         Me.DgvContrato.ReadOnly = True
-        Me.DgvContrato.Size = New System.Drawing.Size(851, 536)
+        Me.DgvContrato.Size = New System.Drawing.Size(851, 464)
         Me.DgvContrato.TabIndex = 0
         '
         'TpAsignacion
@@ -580,7 +582,7 @@ Partial Class FrmContrato
         Me.LblAsignar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAsignar.Location = New System.Drawing.Point(30, 185)
         Me.LblAsignar.Name = "LblAsignar"
-        Me.LblAsignar.Size = New System.Drawing.Size(128, 16)
+        Me.LblAsignar.Size = New System.Drawing.Size(131, 16)
         Me.LblAsignar.TabIndex = 18
         Me.LblAsignar.Text = "Asignar Guardias"
         '
@@ -641,7 +643,7 @@ Partial Class FrmContrato
         Me.LblVerContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerContratoClien.Location = New System.Drawing.Point(30, 159)
         Me.LblVerContratoClien.Name = "LblVerContratoClien"
-        Me.LblVerContratoClien.Size = New System.Drawing.Size(146, 16)
+        Me.LblVerContratoClien.Size = New System.Drawing.Size(153, 16)
         Me.LblVerContratoClien.TabIndex = 3
         Me.LblVerContratoClien.Text = "Ver Contrato Cliente"
         '
@@ -666,7 +668,7 @@ Partial Class FrmContrato
         Me.LblVerContratoEmple.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerContratoEmple.Location = New System.Drawing.Point(30, 133)
         Me.LblVerContratoEmple.Name = "LblVerContratoEmple"
-        Me.LblVerContratoEmple.Size = New System.Drawing.Size(173, 16)
+        Me.LblVerContratoEmple.Size = New System.Drawing.Size(180, 16)
         Me.LblVerContratoEmple.TabIndex = 2
         Me.LblVerContratoEmple.Text = "Ver Contrato Empleado "
         '
@@ -677,7 +679,7 @@ Partial Class FrmContrato
         Me.LblAgregarContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarContratoClien.Location = New System.Drawing.Point(30, 107)
         Me.LblAgregarContratoClien.Name = "LblAgregarContratoClien"
-        Me.LblAgregarContratoClien.Size = New System.Drawing.Size(178, 16)
+        Me.LblAgregarContratoClien.Size = New System.Drawing.Size(185, 16)
         Me.LblAgregarContratoClien.TabIndex = 1
         Me.LblAgregarContratoClien.Text = "Agregar Contrato Cliente"
         '
@@ -688,7 +690,7 @@ Partial Class FrmContrato
         Me.LblAgregarContratoEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarContratoEmp.Location = New System.Drawing.Point(30, 82)
         Me.LblAgregarContratoEmp.Name = "LblAgregarContratoEmp"
-        Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(201, 16)
+        Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(207, 16)
         Me.LblAgregarContratoEmp.TabIndex = 0
         Me.LblAgregarContratoEmp.Text = "Agregar Contrato Empleado"
         '
@@ -699,7 +701,7 @@ Partial Class FrmContrato
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.Label1.Location = New System.Drawing.Point(20, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 16)
+        Me.Label1.Size = New System.Drawing.Size(170, 16)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '
@@ -722,6 +724,19 @@ Partial Class FrmContrato
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(704, 489)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(156, 40)
+        Me.Button3.TabIndex = 89
+        Me.Button3.Text = "Imprimir Reporte"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'FrmContrato
         '
@@ -823,4 +838,5 @@ Partial Class FrmContrato
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents LblAsignar As Label
+    Friend WithEvents Button3 As Button
 End Class

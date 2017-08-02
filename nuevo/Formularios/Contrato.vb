@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports DevExpress.XtraReports.UI
 Public Class FrmContrato
     Dim cmd As New SqlCommand
     Dim dt As DataTable
@@ -37,6 +38,7 @@ Public Class FrmContrato
         Call MostrarDatosContratoCliente()
         TpContrato.Visible = True
         TpContrato.SelectedTab = TabPage3
+        sele = 2
     End Sub
 
     Private Sub BtnRegresarMenu_Click(sender As Object, e As EventArgs) Handles BtnRegresarMenu.Click
@@ -175,7 +177,8 @@ Public Class FrmContrato
         Call LlenarTipoContrato()
         Call LlenarTipoEmpleado()
         Call CargarContratoCliente()
-        'CboContratoCliente.SelectedIndex = 1
+        CboTipoContrato.SelectedValue = -1
+        CboTipoEmpleado.SelectedValue = -1
     End Sub
 
     Private Sub LblAgregarContratoEmp_Click(sender As Object, e As EventArgs) Handles LblAgregarContratoEmp.Click
@@ -416,5 +419,17 @@ Public Class FrmContrato
     Private Sub LblAsignar_Click(sender As Object, e As EventArgs) Handles LblAsignar.Click
         TpContrato.Visible = True
         TpContrato.SelectedTab = TpAsignacion
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If sele = 1 Then
+
+        Else
+            If sele = 2 Then
+                Dim reporte As New ReporteContratoCliente()
+                Dim viewer As New ReportPrintTool(reporte)
+                viewer.ShowPreview()
+            End If
+        End If
     End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports DevExpress.XtraReports.UI
 Public Class FrmClientes
     Dim cmd As New SqlCommand
     Dim dt As DataTable
@@ -123,6 +124,7 @@ Public Class FrmClientes
             ErrorProvider1.SetError(RdbInactivo, "")
         End If
         Call AgregarCliente()
+        Call Limpiar()
     End Sub
 
     Private Sub BtnRegresarMenu_Click(sender As Object, e As EventArgs) Handles BtnRegresarMenu.Click
@@ -205,5 +207,11 @@ Public Class FrmClientes
 
     Private Sub LsvCliente_DoubleClick(sender As Object, e As EventArgs)
         FrmContrato.TxtCliente.Text = DgvCliente.CurrentRow.Cells(0).ToString()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reporte As New ReporteClientes()
+        Dim viewer As New ReportPrintTool(reporte)
+        viewer.ShowPreview()
     End Sub
 End Class
