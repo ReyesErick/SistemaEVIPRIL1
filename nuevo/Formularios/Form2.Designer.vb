@@ -39,19 +39,19 @@ Partial Class FrmPantallaPrincipal
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PbxClientes = New System.Windows.Forms.PictureBox()
-        Me.LblBienvenido = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LblCerrar = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PbxEmpleado = New System.Windows.Forms.PictureBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxUsuario = New System.Windows.Forms.PictureBox()
+        Me.LblCerrar = New System.Windows.Forms.Label()
+        Me.LblBienvenido = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.PbxContrato, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxPrestaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,13 +62,13 @@ Partial Class FrmPantallaPrincipal
         Me.Panel9.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.PbxClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.PbxEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.PbxUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -247,76 +247,6 @@ Partial Class FrmPantallaPrincipal
         Me.PbxClientes.TabIndex = 63
         Me.PbxClientes.TabStop = False
         '
-        'LblBienvenido
-        '
-        Me.LblBienvenido.AutoSize = True
-        Me.LblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBienvenido.ForeColor = System.Drawing.Color.Black
-        Me.LblBienvenido.Location = New System.Drawing.Point(138, 23)
-        Me.LblBienvenido.Name = "LblBienvenido"
-        Me.LblBienvenido.Size = New System.Drawing.Size(0, 24)
-        Me.LblBienvenido.TabIndex = 69
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1223, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(57, 52)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 70
-        Me.PictureBox1.TabStop = False
-        '
-        'LblCerrar
-        '
-        Me.LblCerrar.AutoSize = True
-        Me.LblCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCerrar.ForeColor = System.Drawing.Color.Black
-        Me.LblCerrar.Location = New System.Drawing.Point(1220, 58)
-        Me.LblCerrar.Name = "LblCerrar"
-        Me.LblCerrar.Size = New System.Drawing.Size(83, 13)
-        Me.LblCerrar.TabIndex = 71
-        Me.LblCerrar.Text = "Cerrar Sesión"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.LblBienvenido)
-        Me.Panel2.Controls.Add(Me.LblCerrar)
-        Me.Panel2.Location = New System.Drawing.Point(1, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1362, 71)
-        Me.Panel2.TabIndex = 74
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(1312, 58)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 13)
-        Me.Label6.TabIndex = 75
-        Me.Label6.Text = "Salir"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1305, 2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(44, 53)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 71
-        Me.PictureBox2.TabStop = False
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -383,6 +313,62 @@ Partial Class FrmPantallaPrincipal
         Me.PbxUsuario.TabIndex = 52
         Me.PbxUsuario.TabStop = False
         '
+        'LblCerrar
+        '
+        Me.LblCerrar.AutoSize = True
+        Me.LblCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCerrar.ForeColor = System.Drawing.Color.Black
+        Me.LblCerrar.Location = New System.Drawing.Point(1220, 58)
+        Me.LblCerrar.Name = "LblCerrar"
+        Me.LblCerrar.Size = New System.Drawing.Size(83, 13)
+        Me.LblCerrar.TabIndex = 71
+        Me.LblCerrar.Text = "Cerrar Sesión"
+        '
+        'LblBienvenido
+        '
+        Me.LblBienvenido.AutoSize = True
+        Me.LblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBienvenido.ForeColor = System.Drawing.Color.Black
+        Me.LblBienvenido.Location = New System.Drawing.Point(138, 23)
+        Me.LblBienvenido.Name = "LblBienvenido"
+        Me.LblBienvenido.Size = New System.Drawing.Size(0, 24)
+        Me.LblBienvenido.TabIndex = 69
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(1223, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(57, 52)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 70
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(1305, 2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(44, 53)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 71
+        Me.PictureBox2.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(1312, 58)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.TabIndex = 75
+        Me.Label6.Text = "Salir"
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -393,6 +379,20 @@ Partial Class FrmPantallaPrincipal
         Me.Label10.Size = New System.Drawing.Size(121, 24)
         Me.Label10.TabIndex = 76
         Me.Label10.Text = "Bienvenido,"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.PictureBox2)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.LblBienvenido)
+        Me.Panel2.Controls.Add(Me.LblCerrar)
+        Me.Panel2.Location = New System.Drawing.Point(1, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1362, 71)
+        Me.Panel2.TabIndex = 74
         '
         'FrmPantallaPrincipal
         '
@@ -410,6 +410,7 @@ Partial Class FrmPantallaPrincipal
         Me.Controls.Add(Me.Panel12)
         Me.Controls.Add(Me.Panel11)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.HelpButton = True
         Me.IsMdiContainer = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -432,16 +433,16 @@ Partial Class FrmPantallaPrincipal
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PbxClientes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PbxEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PbxUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -460,18 +461,18 @@ Partial Class FrmPantallaPrincipal
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents PbxClientes As PictureBox
-    Friend WithEvents LblBienvenido As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents LblCerrar As Label
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents PbxEmpleado As PictureBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents PbxUsuario As PictureBox
+    Friend WithEvents LblCerrar As Label
+    Friend WithEvents LblBienvenido As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents Panel2 As Panel
 End Class
