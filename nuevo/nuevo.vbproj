@@ -287,6 +287,12 @@
     <Compile Include="Reportes\ReporteInventario.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\ReportePrestaciones.Designer.vb">
+      <DependentUpon>ReportePrestaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePrestaciones.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\ReportesPlanilla.Designer.vb">
       <DependentUpon>ReportesPlanilla.vb</DependentUpon>
     </Compile>
