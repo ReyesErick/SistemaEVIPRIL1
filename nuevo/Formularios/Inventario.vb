@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmInventario
     Dim op As Integer
+    Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
     'Consulta para llenar la listview de inventario'
     Private Sub CargarArma()
         If cn.State = ConnectionState.Open Then
@@ -108,6 +109,7 @@ Public Class FrmInventario
         End If
 
         Call AgregarArma()
+        Call AudiLogInsert()
         Call Limpiar()
     End Sub
 
@@ -257,5 +259,23 @@ Public Class FrmInventario
 
     Private Sub PbxBuscar_Click(sender As Object, e As EventArgs) Handles PbxBuscar.Click
         FrmContrato.Show()
+    End Sub
+
+    Private Sub AudiLogInsert()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto el Arma con Serie: " + txtSerie.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
     End Sub
 End Class

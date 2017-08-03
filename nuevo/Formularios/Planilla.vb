@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmPlanilla
-
+    Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
     ' LABEL PARA MOSTRAR TODAS LAS PLANILLAS
     Private Sub LblPlanillas_Click(sender As Object, e As EventArgs) Handles LblPlanillas.Click
         Call CargarPlanilla()
@@ -213,6 +213,7 @@ Public Class FrmPlanilla
     ' BOTON GUARDAR
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Call GuardarPlanilla()
+        Call AudiLogInsert()
         Call Limpiar()
     End Sub
 
@@ -313,7 +314,21 @@ Public Class FrmPlanilla
         End If
     End Sub
 
-    Private Sub FrmPlanilla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub AudiLogInsert()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto una planilla para el empleado: " + TxtNombreEmpleado.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
 
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
     End Sub
 End Class

@@ -4,6 +4,7 @@ Public Class FrmContrato
     Dim cmd As New SqlCommand
     Dim dt As DataTable
     Dim da As New SqlDataAdapter
+    Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
 
     'Consulta en sql para llenar el datagridview de contrato empleado y cliente'
     Public Sub MostrarDatosContratoEmpleado()
@@ -77,6 +78,7 @@ Public Class FrmContrato
             ErrorProvider1.SetError(CboTipoContrato, "")
         End If
         Call Agregarcontrato()
+        Call AudiLogInsertEmpleado()
         Call Limpiar()
 
     End Sub
@@ -211,6 +213,7 @@ Public Class FrmContrato
         End If
 
         Call AgregarcontratoCiente()
+        Call AudiLogInsertCliente()
         Call LimpiarCliente()
 
     End Sub
@@ -435,4 +438,41 @@ Public Class FrmContrato
             End If
         End If
     End Sub
+
+    Private Sub AudiLogInsertEmpleado()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto Contrato para empleado con ID: " + TxtNumIdentidad.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub AudiLogInsertCliente()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto Contrato para cliente con ID: " + TxtCliente.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
 End Class

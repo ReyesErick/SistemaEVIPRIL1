@@ -3,6 +3,7 @@ Public Class FrmBeneficiario
     Dim cmd As New SqlCommand
     Dim dt As DataTable
     Dim da As New SqlDataAdapter
+    Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtNumIdentidad.TextChanged
 
     End Sub
@@ -94,6 +95,7 @@ Public Class FrmBeneficiario
             ErrorProvider1.SetError(MsktTelf1, "")
         End If
         Call AgregarBeneficiario()
+        Call AudiLogInsert()
         Call Limpiar()
     End Sub
 
@@ -135,6 +137,7 @@ Public Class FrmBeneficiario
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         Call EditarBeneficiario()
+        Call AudiLogUpdate()
         Call Limpiar()
     End Sub
 
@@ -185,5 +188,41 @@ Public Class FrmBeneficiario
         Else
 
         End If
+    End Sub
+
+    Private Sub AudiLogInsert()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto el Beneficiario con Nombre: " + TxtNombreBeneficiario.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub AudiLogUpdate()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se Modificó el Beneficiario con Nombre: " + TxtNombreBeneficiario.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
     End Sub
 End Class

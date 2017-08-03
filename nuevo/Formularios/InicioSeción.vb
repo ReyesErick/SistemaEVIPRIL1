@@ -59,6 +59,8 @@ Public Class FrmInicioSeción
                 MsgBox(ex.Message)
             End Try
 
+            FrmPantallaPrincipal.LblBienvenido.Text = TxtUser.Text
+
         End If
     End Sub
     Function Validar(Control As Control, Mensaje As String) As Boolean

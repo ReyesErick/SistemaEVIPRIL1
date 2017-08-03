@@ -11,6 +11,7 @@ Public Class FrmEmpleado
     Dim cmd As New SqlCommand
     Dim dt As DataTable
     Dim da As New SqlDataAdapter
+    Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
 
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -209,6 +210,7 @@ Public Class FrmEmpleado
         End If
 
         Call AgregarEmpleado()
+        Call AudiLogInsert()
         Call Limpiar()
     End Sub
 
@@ -452,6 +454,7 @@ Public Class FrmEmpleado
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         Call ModificarEmpleado()
+        Call AudiLogUpdate()
         Call Limpiar()
         Call CargarEmpleado()
         TcEmpleado.SelectedTab = TpVer
@@ -715,5 +718,41 @@ Public Class FrmEmpleado
         Dim rpt As New Evipril()
         Dim printTool As New ReportPrintTool(rpt)
         printTool.ShowRibbonPreview()
+    End Sub
+
+    Private Sub AudiLogInsert()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto el empleado con ID: " + TxtNumIdentidad.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub AudiLogUpdate()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se Modificó el empleado con ID: " + TxtNumIdentidad.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
     End Sub
 End Class
