@@ -82,6 +82,7 @@ Partial Class FrmPlanilla
         Me.ChNumIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -544,6 +545,7 @@ Partial Class FrmPlanilla
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Button1)
         Me.TabPage3.Controls.Add(Me.LsvPlanilla)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -558,7 +560,7 @@ Partial Class FrmPlanilla
         Me.LsvPlanilla.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdPlanilla, Me.ChSueldoDiario, Me.ChDiasTrabajados, Me.ChSueldoQuincenal, Me.ChComplementos, Me.ChSubTotal, Me.ChDeduccionSeguro, Me.ChDeduccionUniforme, Me.ChRap, Me.ChOtrasDeducciones, Me.ChTotalDeducciones, Me.ChNetoPagar, Me.ChNumIdentidad})
         Me.LsvPlanilla.Location = New System.Drawing.Point(21, 24)
         Me.LsvPlanilla.Name = "LsvPlanilla"
-        Me.LsvPlanilla.Size = New System.Drawing.Size(824, 509)
+        Me.LsvPlanilla.Size = New System.Drawing.Size(823, 472)
         Me.LsvPlanilla.TabIndex = 2
         Me.LsvPlanilla.UseCompatibleStateImageBehavior = False
         Me.LsvPlanilla.View = System.Windows.Forms.View.Details
@@ -637,6 +639,19 @@ Partial Class FrmPlanilla
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(688, 502)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 89
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmPlanilla
         '
@@ -725,4 +740,5 @@ Partial Class FrmPlanilla
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents Button1 As Button
 End Class

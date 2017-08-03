@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports DevExpress.XtraReports.UI
 Public Class FrmPlanilla
 
     ' LABEL PARA MOSTRAR TODAS LAS PLANILLAS
@@ -315,5 +316,11 @@ Public Class FrmPlanilla
 
     Private Sub FrmPlanilla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reporte As New ReportesPlanilla()
+        Dim viewer As New ReportPrintTool(reporte)
+        viewer.ShowPreview()
     End Sub
 End Class

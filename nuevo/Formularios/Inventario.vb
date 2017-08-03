@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports DevExpress.XtraReports.UI
 Public Class FrmInventario
     Dim op As Integer
     'Consulta para llenar la listview de inventario'
@@ -257,5 +258,11 @@ Public Class FrmInventario
 
     Private Sub PbxBuscar_Click(sender As Object, e As EventArgs) Handles PbxBuscar.Click
         FrmContrato.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reporte As New ReporteInventario()
+        Dim viewer As New ReportPrintTool(reporte)
+        viewer.ShowPreview()
     End Sub
 End Class

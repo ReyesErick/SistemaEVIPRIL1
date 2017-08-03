@@ -67,6 +67,7 @@ Partial Class FrmInventario
         Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -405,6 +406,7 @@ Partial Class FrmInventario
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Button1)
         Me.TabPage3.Controls.Add(Me.LsvInventarioArma)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -419,7 +421,7 @@ Partial Class FrmInventario
         Me.LsvInventarioArma.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdArma, Me.ChSerie, Me.ChCalibre, Me.ChMarca, Me.ChModelo, Me.ChTipoArma, Me.ChLugar, Me.ChIdContrato, Me.ChEstado})
         Me.LsvInventarioArma.Location = New System.Drawing.Point(6, 6)
         Me.LsvInventarioArma.Name = "LsvInventarioArma"
-        Me.LsvInventarioArma.Size = New System.Drawing.Size(824, 509)
+        Me.LsvInventarioArma.Size = New System.Drawing.Size(829, 479)
         Me.LsvInventarioArma.TabIndex = 2
         Me.LsvInventarioArma.UseCompatibleStateImageBehavior = False
         Me.LsvInventarioArma.View = System.Windows.Forms.View.Details
@@ -473,6 +475,19 @@ Partial Class FrmInventario
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(679, 496)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 89
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmInventario
         '
@@ -547,4 +562,5 @@ Partial Class FrmInventario
     Friend WithEvents RdbInactivo As RadioButton
     Friend WithEvents Label10 As Label
     Friend WithEvents ChMarca As ColumnHeader
+    Friend WithEvents Button1 As Button
 End Class

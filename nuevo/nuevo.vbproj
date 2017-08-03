@@ -234,6 +234,18 @@
     <Compile Include="Reportes\ReporteEmpleado.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\ReporteInventario.Designer.vb">
+      <DependentUpon>ReporteInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteInventario.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportesPlanilla.Designer.vb">
+      <DependentUpon>ReportesPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportesPlanilla.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Formularios\AudiLog.resx">
@@ -299,6 +311,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteEmpleado.resx">
       <DependentUpon>ReporteEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteInventario.resx">
+      <DependentUpon>ReporteInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportesPlanilla.resx">
+      <DependentUpon>ReportesPlanilla.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
