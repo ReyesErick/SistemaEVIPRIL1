@@ -20,7 +20,7 @@ Public Class FrmInicioSeción
         If Conexion() = False Then
             Me.Hide()
             Dim frm As New FrmConfiguracion()
-            FrmConfiguracion.Show()
+            FrmConfiguracion.ShowDialog()
         End If
     End Sub
 

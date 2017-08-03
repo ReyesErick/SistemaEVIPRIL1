@@ -46,7 +46,6 @@ Partial Class PerfilEmpleado
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -64,7 +63,6 @@ Partial Class PerfilEmpleado
         Me.txtTipoEmpleado = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.txtContratoEmpleado = New System.Windows.Forms.TextBox()
         Me.txtMunicipio = New System.Windows.Forms.TextBox()
         Me.txtNacionalidad = New System.Windows.Forms.TextBox()
         Me.txtProfesion = New System.Windows.Forms.TextBox()
@@ -122,7 +120,7 @@ Partial Class PerfilEmpleado
         '
         Me.TxtNumSeguro.Enabled = False
         Me.TxtNumSeguro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNumSeguro.Location = New System.Drawing.Point(171, 323)
+        Me.TxtNumSeguro.Location = New System.Drawing.Point(171, 282)
         Me.TxtNumSeguro.Name = "TxtNumSeguro"
         Me.TxtNumSeguro.Size = New System.Drawing.Size(188, 21)
         Me.TxtNumSeguro.TabIndex = 113
@@ -312,21 +310,11 @@ Partial Class PerfilEmpleado
         Me.Label7.TabIndex = 94
         Me.Label7.Text = "Sexo:"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(34, 279)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(135, 16)
-        Me.Label6.TabIndex = 93
-        Me.Label6.Text = "IdContratoEmpleado:"
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(55, 327)
+        Me.Label5.Location = New System.Drawing.Point(55, 286)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 16)
         Me.Label5.TabIndex = 92
@@ -412,7 +400,6 @@ Partial Class PerfilEmpleado
         Me.Panel2.Controls.Add(Me.txtTipoEmpleado)
         Me.Panel2.Controls.Add(Me.Label22)
         Me.Panel2.Controls.Add(Me.Label21)
-        Me.Panel2.Controls.Add(Me.txtContratoEmpleado)
         Me.Panel2.Controls.Add(Me.txtMunicipio)
         Me.Panel2.Controls.Add(Me.txtNacionalidad)
         Me.Panel2.Controls.Add(Me.txtProfesion)
@@ -421,7 +408,6 @@ Partial Class PerfilEmpleado
         Me.Panel2.Controls.Add(Me.TxtObservacion)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label13)
@@ -435,7 +421,7 @@ Partial Class PerfilEmpleado
         '
         Me.dtpFechaFinal.Enabled = False
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(171, 462)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(171, 430)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(188, 20)
         Me.dtpFechaFinal.TabIndex = 147
@@ -444,7 +430,7 @@ Partial Class PerfilEmpleado
         '
         Me.dtpFechaInicial.Enabled = False
         Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicial.Location = New System.Drawing.Point(171, 425)
+        Me.dtpFechaInicial.Location = New System.Drawing.Point(171, 384)
         Me.dtpFechaInicial.Name = "dtpFechaInicial"
         Me.dtpFechaInicial.Size = New System.Drawing.Size(188, 20)
         Me.dtpFechaInicial.TabIndex = 146
@@ -453,7 +439,7 @@ Partial Class PerfilEmpleado
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(52, 547)
+        Me.Label23.Location = New System.Drawing.Point(52, 527)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(108, 16)
         Me.Label23.TabIndex = 142
@@ -463,7 +449,7 @@ Partial Class PerfilEmpleado
         '
         Me.txtTipoContrato.Enabled = False
         Me.txtTipoContrato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoContrato.Location = New System.Drawing.Point(171, 544)
+        Me.txtTipoContrato.Location = New System.Drawing.Point(171, 524)
         Me.txtTipoContrato.Name = "txtTipoContrato"
         Me.txtTipoContrato.Size = New System.Drawing.Size(188, 21)
         Me.txtTipoContrato.TabIndex = 143
@@ -472,7 +458,7 @@ Partial Class PerfilEmpleado
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(37, 509)
+        Me.Label24.Location = New System.Drawing.Point(37, 477)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(124, 16)
         Me.Label24.TabIndex = 140
@@ -482,7 +468,7 @@ Partial Class PerfilEmpleado
         '
         Me.txtTipoEmpleado.Enabled = False
         Me.txtTipoEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoEmpleado.Location = New System.Drawing.Point(171, 506)
+        Me.txtTipoEmpleado.Location = New System.Drawing.Point(171, 474)
         Me.txtTipoEmpleado.Name = "txtTipoEmpleado"
         Me.txtTipoEmpleado.Size = New System.Drawing.Size(188, 21)
         Me.txtTipoEmpleado.TabIndex = 141
@@ -491,7 +477,7 @@ Partial Class PerfilEmpleado
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(64, 466)
+        Me.Label22.Location = New System.Drawing.Point(64, 434)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(84, 16)
         Me.Label22.TabIndex = 138
@@ -501,20 +487,11 @@ Partial Class PerfilEmpleado
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(64, 425)
+        Me.Label21.Location = New System.Drawing.Point(64, 384)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(89, 16)
         Me.Label21.TabIndex = 136
         Me.Label21.Text = "Fecha Inicial :"
-        '
-        'txtContratoEmpleado
-        '
-        Me.txtContratoEmpleado.Enabled = False
-        Me.txtContratoEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContratoEmpleado.Location = New System.Drawing.Point(165, 279)
-        Me.txtContratoEmpleado.Name = "txtContratoEmpleado"
-        Me.txtContratoEmpleado.Size = New System.Drawing.Size(127, 21)
-        Me.txtContratoEmpleado.TabIndex = 135
         '
         'txtMunicipio
         '
@@ -547,7 +524,7 @@ Partial Class PerfilEmpleado
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(64, 380)
+        Me.Label20.Location = New System.Drawing.Point(64, 339)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(86, 16)
         Me.Label20.TabIndex = 121
@@ -557,7 +534,7 @@ Partial Class PerfilEmpleado
         '
         Me.txtSueldo.Enabled = False
         Me.txtSueldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSueldo.Location = New System.Drawing.Point(171, 377)
+        Me.txtSueldo.Location = New System.Drawing.Point(171, 336)
         Me.txtSueldo.Name = "txtSueldo"
         Me.txtSueldo.Size = New System.Drawing.Size(188, 21)
         Me.txtSueldo.TabIndex = 122
@@ -672,7 +649,6 @@ Partial Class PerfilEmpleado
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -685,7 +661,6 @@ Partial Class PerfilEmpleado
     Friend WithEvents Label19 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents txtContratoEmpleado As TextBox
     Friend WithEvents txtMunicipio As TextBox
     Friend WithEvents txtNacionalidad As TextBox
     Friend WithEvents txtProfesion As TextBox
