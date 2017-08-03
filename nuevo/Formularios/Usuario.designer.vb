@@ -214,16 +214,17 @@ Partial Class FrmUsuario
         '
         'txtEmpleado
         '
-        Me.txtEmpleado.Location = New System.Drawing.Point(256, 287)
+        Me.txtEmpleado.Location = New System.Drawing.Point(326, 252)
+        Me.txtEmpleado.Multiline = True
         Me.txtEmpleado.Name = "txtEmpleado"
-        Me.txtEmpleado.Size = New System.Drawing.Size(272, 20)
+        Me.txtEmpleado.Size = New System.Drawing.Size(272, 22)
         Me.txtEmpleado.TabIndex = 4
         '
         'cboEstado
         '
         Me.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Location = New System.Drawing.Point(256, 356)
+        Me.cboEstado.Location = New System.Drawing.Point(326, 323)
         Me.cboEstado.Name = "cboEstado"
         Me.cboEstado.Size = New System.Drawing.Size(272, 21)
         Me.cboEstado.TabIndex = 3
@@ -237,7 +238,7 @@ Partial Class FrmUsuario
         Me.btnEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmpleado.Location = New System.Drawing.Point(532, 287)
+        Me.btnEmpleado.Location = New System.Drawing.Point(615, 252)
         Me.btnEmpleado.Name = "btnEmpleado"
         Me.btnEmpleado.Size = New System.Drawing.Size(26, 23)
         Me.btnEmpleado.TabIndex = 2
@@ -247,7 +248,7 @@ Partial Class FrmUsuario
         '
         Me.LblIdUsuario.AutoSize = True
         Me.LblIdUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIdUsuario.Location = New System.Drawing.Point(171, 103)
+        Me.LblIdUsuario.Location = New System.Drawing.Point(241, 70)
         Me.LblIdUsuario.Name = "LblIdUsuario"
         Me.LblIdUsuario.Size = New System.Drawing.Size(78, 20)
         Me.LblIdUsuario.TabIndex = 38
@@ -257,7 +258,7 @@ Partial Class FrmUsuario
         'LblIdNun
         '
         Me.LblIdNun.AutoSize = True
-        Me.LblIdNun.Location = New System.Drawing.Point(254, 108)
+        Me.LblIdNun.Location = New System.Drawing.Point(324, 75)
         Me.LblIdNun.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblIdNun.Name = "LblIdNun"
         Me.LblIdNun.Size = New System.Drawing.Size(0, 13)
@@ -265,7 +266,8 @@ Partial Class FrmUsuario
         '
         'TxtContraseña
         '
-        Me.TxtContraseña.Location = New System.Drawing.Point(256, 221)
+        Me.TxtContraseña.Location = New System.Drawing.Point(326, 186)
+        Me.TxtContraseña.Multiline = True
         Me.TxtContraseña.Name = "TxtContraseña"
         Me.TxtContraseña.Size = New System.Drawing.Size(272, 20)
         Me.TxtContraseña.TabIndex = 1
@@ -274,7 +276,7 @@ Partial Class FrmUsuario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(189, 354)
+        Me.Label5.Location = New System.Drawing.Point(259, 321)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(60, 20)
         Me.Label5.TabIndex = 36
@@ -282,7 +284,8 @@ Partial Class FrmUsuario
         '
         'TxtUsuario
         '
-        Me.TxtUsuario.Location = New System.Drawing.Point(256, 161)
+        Me.TxtUsuario.Location = New System.Drawing.Point(326, 126)
+        Me.TxtUsuario.Multiline = True
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(272, 20)
         Me.TxtUsuario.TabIndex = 0
@@ -340,7 +343,7 @@ Partial Class FrmUsuario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(114, 285)
+        Me.Label4.Location = New System.Drawing.Point(184, 252)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(136, 20)
         Me.Label4.TabIndex = 2
@@ -350,7 +353,7 @@ Partial Class FrmUsuario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(158, 219)
+        Me.Label3.Location = New System.Drawing.Point(228, 186)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 20)
         Me.Label3.TabIndex = 1
@@ -360,7 +363,7 @@ Partial Class FrmUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(185, 159)
+        Me.Label2.Location = New System.Drawing.Point(255, 126)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 20)
         Me.Label2.TabIndex = 0

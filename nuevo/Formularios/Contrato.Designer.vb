@@ -56,6 +56,7 @@ Partial Class FrmContrato
         Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
         Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.DgvContrato = New System.Windows.Forms.DataGridView()
         Me.TpAsignacion = New System.Windows.Forms.TabPage()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -82,7 +83,6 @@ Partial Class FrmContrato
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.TpContrato.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -312,7 +312,7 @@ Partial Class FrmContrato
         '
         Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(416, 184)
+        Me.PictureBox8.Location = New System.Drawing.Point(559, 221)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(27, 23)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -321,7 +321,7 @@ Partial Class FrmContrato
         '
         'TxtCliente
         '
-        Me.TxtCliente.Location = New System.Drawing.Point(238, 186)
+        Me.TxtCliente.Location = New System.Drawing.Point(370, 224)
         Me.TxtCliente.Name = "TxtCliente"
         Me.TxtCliente.Size = New System.Drawing.Size(172, 20)
         Me.TxtCliente.TabIndex = 3
@@ -330,7 +330,7 @@ Partial Class FrmContrato
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(167, 185)
+        Me.Label13.Location = New System.Drawing.Point(299, 223)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(65, 18)
         Me.Label13.TabIndex = 49
@@ -339,7 +339,7 @@ Partial Class FrmContrato
         'PictureBox7
         '
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(701, 492)
+        Me.PictureBox7.Location = New System.Drawing.Point(685, 492)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -352,7 +352,7 @@ Partial Class FrmContrato
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(688, 483)
+        Me.Button1.Location = New System.Drawing.Point(667, 481)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(156, 40)
         Me.Button1.TabIndex = 4
@@ -361,7 +361,7 @@ Partial Class FrmContrato
         '
         'txtObservacion
         '
-        Me.txtObservacion.Location = New System.Drawing.Point(238, 246)
+        Me.txtObservacion.Location = New System.Drawing.Point(370, 284)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(276, 114)
@@ -371,7 +371,7 @@ Partial Class FrmContrato
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(136, 245)
+        Me.Label10.Location = New System.Drawing.Point(268, 283)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(96, 18)
         Me.Label10.TabIndex = 12
@@ -379,7 +379,7 @@ Partial Class FrmContrato
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(238, 131)
+        Me.txtMonto.Location = New System.Drawing.Point(370, 169)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(115, 20)
         Me.txtMonto.TabIndex = 2
@@ -388,7 +388,7 @@ Partial Class FrmContrato
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(92, 130)
+        Me.Label7.Location = New System.Drawing.Point(224, 168)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(140, 18)
         Me.Label7.TabIndex = 10
@@ -398,7 +398,7 @@ Partial Class FrmContrato
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(109, 75)
+        Me.Label8.Location = New System.Drawing.Point(241, 113)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(123, 18)
         Me.Label8.TabIndex = 9
@@ -408,7 +408,7 @@ Partial Class FrmContrato
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(105, 20)
+        Me.Label9.Location = New System.Drawing.Point(237, 58)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(127, 18)
         Me.Label9.TabIndex = 8
@@ -418,7 +418,7 @@ Partial Class FrmContrato
         '
         Me.dtpFechaFinal.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(238, 75)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(370, 113)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 20)
         Me.dtpFechaFinal.TabIndex = 1
@@ -427,7 +427,7 @@ Partial Class FrmContrato
         '
         Me.dtpFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(238, 20)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(370, 58)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
         Me.dtpFechaInicio.Size = New System.Drawing.Size(200, 20)
         Me.dtpFechaInicio.TabIndex = 0
@@ -444,10 +444,25 @@ Partial Class FrmContrato
         Me.TabPage3.Text = "Contratos"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(704, 489)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(156, 40)
+        Me.Button3.TabIndex = 89
+        Me.Button3.Text = "Imprimir Reporte"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'DgvContrato
         '
         Me.DgvContrato.AllowUserToAddRows = False
         Me.DgvContrato.AllowUserToDeleteRows = False
+        Me.DgvContrato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvContrato.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvContrato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvContrato.Location = New System.Drawing.Point(6, 6)
         Me.DgvContrato.Name = "DgvContrato"
@@ -517,7 +532,7 @@ Partial Class FrmContrato
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(618, 361)
+        Me.Button2.Location = New System.Drawing.Point(618, 431)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(141, 32)
         Me.Button2.TabIndex = 2
@@ -537,10 +552,12 @@ Partial Class FrmContrato
         '
         'DgvGuardias
         '
+        Me.DgvGuardias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvGuardias.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvGuardias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvGuardias.Location = New System.Drawing.Point(106, 96)
         Me.DgvGuardias.Name = "DgvGuardias"
-        Me.DgvGuardias.Size = New System.Drawing.Size(653, 226)
+        Me.DgvGuardias.Size = New System.Drawing.Size(653, 298)
         Me.DgvGuardias.TabIndex = 63
         '
         'Panel1
@@ -582,7 +599,7 @@ Partial Class FrmContrato
         Me.LblAsignar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAsignar.Location = New System.Drawing.Point(30, 185)
         Me.LblAsignar.Name = "LblAsignar"
-        Me.LblAsignar.Size = New System.Drawing.Size(131, 16)
+        Me.LblAsignar.Size = New System.Drawing.Size(128, 16)
         Me.LblAsignar.TabIndex = 18
         Me.LblAsignar.Text = "Asignar Guardias"
         '
@@ -643,7 +660,7 @@ Partial Class FrmContrato
         Me.LblVerContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerContratoClien.Location = New System.Drawing.Point(30, 159)
         Me.LblVerContratoClien.Name = "LblVerContratoClien"
-        Me.LblVerContratoClien.Size = New System.Drawing.Size(153, 16)
+        Me.LblVerContratoClien.Size = New System.Drawing.Size(146, 16)
         Me.LblVerContratoClien.TabIndex = 3
         Me.LblVerContratoClien.Text = "Ver Contrato Cliente"
         '
@@ -668,7 +685,7 @@ Partial Class FrmContrato
         Me.LblVerContratoEmple.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerContratoEmple.Location = New System.Drawing.Point(30, 133)
         Me.LblVerContratoEmple.Name = "LblVerContratoEmple"
-        Me.LblVerContratoEmple.Size = New System.Drawing.Size(180, 16)
+        Me.LblVerContratoEmple.Size = New System.Drawing.Size(173, 16)
         Me.LblVerContratoEmple.TabIndex = 2
         Me.LblVerContratoEmple.Text = "Ver Contrato Empleado "
         '
@@ -679,7 +696,7 @@ Partial Class FrmContrato
         Me.LblAgregarContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarContratoClien.Location = New System.Drawing.Point(30, 107)
         Me.LblAgregarContratoClien.Name = "LblAgregarContratoClien"
-        Me.LblAgregarContratoClien.Size = New System.Drawing.Size(185, 16)
+        Me.LblAgregarContratoClien.Size = New System.Drawing.Size(178, 16)
         Me.LblAgregarContratoClien.TabIndex = 1
         Me.LblAgregarContratoClien.Text = "Agregar Contrato Cliente"
         '
@@ -690,7 +707,7 @@ Partial Class FrmContrato
         Me.LblAgregarContratoEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarContratoEmp.Location = New System.Drawing.Point(30, 82)
         Me.LblAgregarContratoEmp.Name = "LblAgregarContratoEmp"
-        Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(207, 16)
+        Me.LblAgregarContratoEmp.Size = New System.Drawing.Size(201, 16)
         Me.LblAgregarContratoEmp.TabIndex = 0
         Me.LblAgregarContratoEmp.Text = "Agregar Contrato Empleado"
         '
@@ -701,7 +718,7 @@ Partial Class FrmContrato
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.Label1.Location = New System.Drawing.Point(20, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(170, 16)
+        Me.Label1.Size = New System.Drawing.Size(156, 16)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '
@@ -724,19 +741,6 @@ Partial Class FrmContrato
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(704, 489)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(156, 40)
-        Me.Button3.TabIndex = 89
-        Me.Button3.Text = "Imprimir Reporte"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'FrmContrato
         '

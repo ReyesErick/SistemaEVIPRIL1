@@ -79,6 +79,8 @@ Partial Class AudiLog
         '
         'DgvAudiLog
         '
+        Me.DgvAudiLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvAudiLog.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvAudiLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvAudiLog.Location = New System.Drawing.Point(268, 142)
         Me.DgvAudiLog.Name = "DgvAudiLog"
@@ -113,7 +115,10 @@ Partial Class AudiLog
         Me.Controls.Add(Me.DgvAudiLog)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "AudiLog"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AudiLog"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()

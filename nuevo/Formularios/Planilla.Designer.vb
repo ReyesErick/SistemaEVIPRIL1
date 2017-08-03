@@ -66,6 +66,7 @@ Partial Class FrmPlanilla
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LsvPlanilla = New System.Windows.Forms.ListView()
         Me.ChIdPlanilla = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChSueldoDiario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -82,7 +83,9 @@ Partial Class FrmPlanilla
         Me.ChNumIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,6 +95,9 @@ Partial Class FrmPlanilla
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -207,6 +213,9 @@ Partial Class FrmPlanilla
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.PictureBox6)
+        Me.TabPage2.Controls.Add(Me.PictureBox2)
+        Me.TabPage2.Controls.Add(Me.PictureBox3)
         Me.TabPage2.Controls.Add(Me.PbxBuscar)
         Me.TabPage2.Controls.Add(Me.BtnCancelar)
         Me.TabPage2.Controls.Add(Me.BtnCalcular)
@@ -263,9 +272,9 @@ Partial Class FrmPlanilla
         Me.BtnCancelar.Enabled = False
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.Color.White
-        Me.BtnCancelar.Location = New System.Drawing.Point(729, 40)
+        Me.BtnCancelar.Location = New System.Drawing.Point(733, 35)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(105, 34)
+        Me.BtnCancelar.Size = New System.Drawing.Size(127, 39)
         Me.BtnCancelar.TabIndex = 15
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = False
@@ -277,9 +286,9 @@ Partial Class FrmPlanilla
         Me.BtnCalcular.Enabled = False
         Me.BtnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCalcular.ForeColor = System.Drawing.Color.White
-        Me.BtnCalcular.Location = New System.Drawing.Point(618, 40)
+        Me.BtnCalcular.Location = New System.Drawing.Point(602, 36)
         Me.BtnCalcular.Name = "BtnCalcular"
-        Me.BtnCalcular.Size = New System.Drawing.Size(105, 34)
+        Me.BtnCalcular.Size = New System.Drawing.Size(127, 39)
         Me.BtnCalcular.TabIndex = 13
         Me.BtnCalcular.Text = "Calcular"
         Me.BtnCalcular.UseVisualStyleBackColor = False
@@ -291,9 +300,9 @@ Partial Class FrmPlanilla
         Me.BtnGuardar.Enabled = False
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.Color.White
-        Me.BtnGuardar.Location = New System.Drawing.Point(507, 40)
+        Me.BtnGuardar.Location = New System.Drawing.Point(469, 36)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(105, 34)
+        Me.BtnGuardar.Size = New System.Drawing.Size(127, 39)
         Me.BtnGuardar.TabIndex = 14
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = False
@@ -555,6 +564,19 @@ Partial Class FrmPlanilla
         Me.TabPage3.Text = "Planillas"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(688, 502)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 89
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'LsvPlanilla
         '
         Me.LsvPlanilla.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdPlanilla, Me.ChSueldoDiario, Me.ChDiasTrabajados, Me.ChSueldoQuincenal, Me.ChComplementos, Me.ChSubTotal, Me.ChDeduccionSeguro, Me.ChDeduccionUniforme, Me.ChRap, Me.ChOtrasDeducciones, Me.ChTotalDeducciones, Me.ChNetoPagar, Me.ChNumIdentidad})
@@ -640,18 +662,36 @@ Partial Class FrmPlanilla
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'Button1
+        'PictureBox3
         '
-        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(688, 502)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 40)
-        Me.Button1.TabIndex = 89
-        Me.Button1.Text = "Imprimir Reporte"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(479, 46)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 60
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(608, 46)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 61
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(735, 46)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(22, 19)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 71
+        Me.PictureBox6.TabStop = False
         '
         'FrmPlanilla
         '
@@ -678,6 +718,9 @@ Partial Class FrmPlanilla
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -741,4 +784,7 @@ Partial Class FrmPlanilla
     Friend WithEvents Label2 As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class

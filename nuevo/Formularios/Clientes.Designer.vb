@@ -55,11 +55,11 @@ Partial Class FrmClientes
         Me.TxtNombreCompañia = New System.Windows.Forms.TextBox()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.TpVer = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.DgvCliente = New System.Windows.Forms.DataGridView()
         Me.CsmCliente = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,7 +143,7 @@ Partial Class FrmClientes
         Me.LblVerCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerCliente.Location = New System.Drawing.Point(38, 111)
         Me.LblVerCliente.Name = "LblVerCliente"
-        Me.LblVerCliente.Size = New System.Drawing.Size(88, 16)
+        Me.LblVerCliente.Size = New System.Drawing.Size(84, 16)
         Me.LblVerCliente.TabIndex = 1
         Me.LblVerCliente.Text = "Ver Cliente"
         '
@@ -168,7 +168,7 @@ Partial Class FrmClientes
         Me.LblAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarCliente.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarCliente.Name = "LblAgregarCliente"
-        Me.LblAgregarCliente.Size = New System.Drawing.Size(171, 16)
+        Me.LblAgregarCliente.Size = New System.Drawing.Size(165, 16)
         Me.LblAgregarCliente.TabIndex = 0
         Me.LblAgregarCliente.Text = "Agregar Nuevo Cliente"
         '
@@ -179,7 +179,7 @@ Partial Class FrmClientes
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.Label1.Location = New System.Drawing.Point(20, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(170, 16)
+        Me.Label1.Size = New System.Drawing.Size(156, 16)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '
@@ -222,7 +222,7 @@ Partial Class FrmClientes
         'txtIdCliente
         '
         Me.txtIdCliente.Enabled = False
-        Me.txtIdCliente.Location = New System.Drawing.Point(228, 46)
+        Me.txtIdCliente.Location = New System.Drawing.Point(212, 46)
         Me.txtIdCliente.Name = "txtIdCliente"
         Me.txtIdCliente.Size = New System.Drawing.Size(67, 20)
         Me.txtIdCliente.TabIndex = 0
@@ -231,7 +231,7 @@ Partial Class FrmClientes
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(125, 46)
+        Me.Label8.Location = New System.Drawing.Point(109, 46)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 20)
         Me.Label8.TabIndex = 82
@@ -273,7 +273,7 @@ Partial Class FrmClientes
         'MsktTelf1
         '
         Me.MsktTelf1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MsktTelf1.Location = New System.Drawing.Point(228, 196)
+        Me.MsktTelf1.Location = New System.Drawing.Point(212, 196)
         Me.MsktTelf1.Mask = "9999-9999"
         Me.MsktTelf1.Name = "MsktTelf1"
         Me.MsktTelf1.Size = New System.Drawing.Size(147, 22)
@@ -285,7 +285,7 @@ Partial Class FrmClientes
         Me.Panel4.Controls.Add(Me.RdbActibo)
         Me.Panel4.Controls.Add(Me.RdbInactivo)
         Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Location = New System.Drawing.Point(95, 351)
+        Me.Panel4.Location = New System.Drawing.Point(610, 46)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(233, 81)
         Me.Panel4.TabIndex = 4
@@ -316,7 +316,7 @@ Partial Class FrmClientes
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(8, 30)
+        Me.Label6.Location = New System.Drawing.Point(3, 24)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(117, 20)
         Me.Label6.TabIndex = 5
@@ -324,7 +324,7 @@ Partial Class FrmClientes
         '
         'TxtDireccion
         '
-        Me.TxtDireccion.Location = New System.Drawing.Point(228, 249)
+        Me.TxtDireccion.Location = New System.Drawing.Point(212, 249)
         Me.TxtDireccion.Multiline = True
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(385, 86)
@@ -334,7 +334,7 @@ Partial Class FrmClientes
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(108, 249)
+        Me.Label4.Location = New System.Drawing.Point(92, 249)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 20)
         Me.Label4.TabIndex = 8
@@ -342,7 +342,7 @@ Partial Class FrmClientes
         '
         'TxtNombreContacto
         '
-        Me.TxtNombreContacto.Location = New System.Drawing.Point(228, 144)
+        Me.TxtNombreContacto.Location = New System.Drawing.Point(212, 144)
         Me.TxtNombreContacto.Name = "TxtNombreContacto"
         Me.TxtNombreContacto.Size = New System.Drawing.Size(328, 20)
         Me.TxtNombreContacto.TabIndex = 2
@@ -351,7 +351,7 @@ Partial Class FrmClientes
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(129, 198)
+        Me.Label5.Location = New System.Drawing.Point(113, 198)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 20)
         Me.Label5.TabIndex = 4
@@ -361,7 +361,7 @@ Partial Class FrmClientes
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(66, 144)
+        Me.Label3.Location = New System.Drawing.Point(50, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(138, 20)
         Me.Label3.TabIndex = 2
@@ -371,7 +371,7 @@ Partial Class FrmClientes
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(59, 89)
+        Me.Label2.Location = New System.Drawing.Point(43, 89)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(145, 20)
         Me.Label2.TabIndex = 1
@@ -379,7 +379,7 @@ Partial Class FrmClientes
         '
         'TxtNombreCompañia
         '
-        Me.TxtNombreCompañia.Location = New System.Drawing.Point(228, 93)
+        Me.TxtNombreCompañia.Location = New System.Drawing.Point(212, 93)
         Me.TxtNombreCompañia.Name = "TxtNombreCompañia"
         Me.TxtNombreCompañia.Size = New System.Drawing.Size(328, 20)
         Me.TxtNombreCompañia.TabIndex = 1
@@ -409,10 +409,25 @@ Partial Class FrmClientes
         Me.TpVer.Text = "Clientes"
         Me.TpVer.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(689, 488)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 88
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'DgvCliente
         '
+        Me.DgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvCliente.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCliente.Location = New System.Drawing.Point(17, 48)
+        Me.DgvCliente.Location = New System.Drawing.Point(17, 19)
         Me.DgvCliente.Name = "DgvCliente"
         Me.DgvCliente.Size = New System.Drawing.Size(828, 425)
         Me.DgvCliente.TabIndex = 0
@@ -432,19 +447,6 @@ Partial Class FrmClientes
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(689, 488)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 40)
-        Me.Button1.TabIndex = 88
-        Me.Button1.Text = "Imprimir Reporte"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmClientes
         '

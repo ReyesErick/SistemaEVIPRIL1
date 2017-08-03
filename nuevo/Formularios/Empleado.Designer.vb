@@ -315,7 +315,7 @@ Partial Class FrmEmpleado
         '
         Me.txtIdBeneficiario.Enabled = False
         Me.txtIdBeneficiario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdBeneficiario.Location = New System.Drawing.Point(591, 61)
+        Me.txtIdBeneficiario.Location = New System.Drawing.Point(593, 29)
         Me.txtIdBeneficiario.Name = "txtIdBeneficiario"
         Me.txtIdBeneficiario.Size = New System.Drawing.Size(20, 21)
         Me.txtIdBeneficiario.TabIndex = 88
@@ -323,7 +323,7 @@ Partial Class FrmEmpleado
         'BtnAgregarImagen
         '
         Me.BtnAgregarImagen.Image = CType(resources.GetObject("BtnAgregarImagen.Image"), System.Drawing.Image)
-        Me.BtnAgregarImagen.Location = New System.Drawing.Point(717, 328)
+        Me.BtnAgregarImagen.Location = New System.Drawing.Point(757, 309)
         Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
         Me.BtnAgregarImagen.Size = New System.Drawing.Size(24, 19)
         Me.BtnAgregarImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -333,9 +333,9 @@ Partial Class FrmEmpleado
         'FotoAgregar
         '
         Me.FotoAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FotoAgregar.Location = New System.Drawing.Point(591, 224)
+        Me.FotoAgregar.Location = New System.Drawing.Point(593, 186)
         Me.FotoAgregar.Name = "FotoAgregar"
-        Me.FotoAgregar.Size = New System.Drawing.Size(121, 123)
+        Me.FotoAgregar.Size = New System.Drawing.Size(158, 142)
         Me.FotoAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.FotoAgregar.TabIndex = 86
         Me.FotoAgregar.TabStop = False
@@ -353,7 +353,7 @@ Partial Class FrmEmpleado
         'BtnBuscarBeneficiario
         '
         Me.BtnBuscarBeneficiario.Image = CType(resources.GetObject("BtnBuscarBeneficiario.Image"), System.Drawing.Image)
-        Me.BtnBuscarBeneficiario.Location = New System.Drawing.Point(753, 63)
+        Me.BtnBuscarBeneficiario.Location = New System.Drawing.Point(755, 31)
         Me.BtnBuscarBeneficiario.Name = "BtnBuscarBeneficiario"
         Me.BtnBuscarBeneficiario.Size = New System.Drawing.Size(24, 19)
         Me.BtnBuscarBeneficiario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -364,7 +364,7 @@ Partial Class FrmEmpleado
         '
         Me.TxtBeneficiario.Enabled = False
         Me.TxtBeneficiario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBeneficiario.Location = New System.Drawing.Point(617, 61)
+        Me.TxtBeneficiario.Location = New System.Drawing.Point(619, 29)
         Me.TxtBeneficiario.Name = "TxtBeneficiario"
         Me.TxtBeneficiario.Size = New System.Drawing.Size(127, 21)
         Me.TxtBeneficiario.TabIndex = 78
@@ -422,7 +422,7 @@ Partial Class FrmEmpleado
         'TxtNumSeguro
         '
         Me.TxtNumSeguro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNumSeguro.Location = New System.Drawing.Point(591, 181)
+        Me.TxtNumSeguro.Location = New System.Drawing.Point(593, 143)
         Me.TxtNumSeguro.Name = "TxtNumSeguro"
         Me.TxtNumSeguro.Size = New System.Drawing.Size(188, 21)
         Me.TxtNumSeguro.TabIndex = 17
@@ -430,7 +430,7 @@ Partial Class FrmEmpleado
         'TxtObservacion
         '
         Me.TxtObservacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObservacion.Location = New System.Drawing.Point(591, 100)
+        Me.TxtObservacion.Location = New System.Drawing.Point(593, 70)
         Me.TxtObservacion.Multiline = True
         Me.TxtObservacion.Name = "TxtObservacion"
         Me.TxtObservacion.Size = New System.Drawing.Size(259, 61)
@@ -541,7 +541,7 @@ Partial Class FrmEmpleado
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(497, 103)
+        Me.Label13.Location = New System.Drawing.Point(495, 73)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(88, 16)
         Me.Label13.TabIndex = 54
@@ -551,7 +551,7 @@ Partial Class FrmEmpleado
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(494, 64)
+        Me.Label12.Location = New System.Drawing.Point(496, 32)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(91, 16)
         Me.Label12.TabIndex = 53
@@ -611,7 +611,7 @@ Partial Class FrmEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(479, 184)
+        Me.Label5.Location = New System.Drawing.Point(481, 146)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 16)
         Me.Label5.TabIndex = 46
@@ -727,9 +727,11 @@ Partial Class FrmEmpleado
         '
         Me.DgvVerEmpleado.AllowUserToAddRows = False
         Me.DgvVerEmpleado.AllowUserToDeleteRows = False
+        Me.DgvVerEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvVerEmpleado.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvVerEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvVerEmpleado.ContextMenuStrip = Me.CmsEditar
-        Me.DgvVerEmpleado.Location = New System.Drawing.Point(30, 139)
+        Me.DgvVerEmpleado.Location = New System.Drawing.Point(30, 122)
         Me.DgvVerEmpleado.Name = "DgvVerEmpleado"
         Me.DgvVerEmpleado.ReadOnly = True
         Me.DgvVerEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -742,18 +744,18 @@ Partial Class FrmEmpleado
         '
         Me.CmsEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerPerfilToolStripMenuItem})
         Me.CmsEditar.Name = "CmsEditar"
-        Me.CmsEditar.Size = New System.Drawing.Size(153, 70)
+        Me.CmsEditar.Size = New System.Drawing.Size(121, 48)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'VerPerfilToolStripMenuItem
         '
         Me.VerPerfilToolStripMenuItem.Name = "VerPerfilToolStripMenuItem"
-        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.VerPerfilToolStripMenuItem.Text = "Ver Perfil"
         '
         'PtbBuscar

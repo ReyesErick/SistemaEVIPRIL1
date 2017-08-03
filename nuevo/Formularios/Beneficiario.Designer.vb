@@ -215,7 +215,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(31, 15)
+        Me.Label6.Location = New System.Drawing.Point(66, 54)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(106, 20)
         Me.Label6.TabIndex = 46
@@ -224,14 +224,14 @@ Partial Class FrmBeneficiario
         'txtIdBeneficiario
         '
         Me.txtIdBeneficiario.Enabled = False
-        Me.txtIdBeneficiario.Location = New System.Drawing.Point(166, 17)
+        Me.txtIdBeneficiario.Location = New System.Drawing.Point(190, 53)
         Me.txtIdBeneficiario.Name = "txtIdBeneficiario"
         Me.txtIdBeneficiario.Size = New System.Drawing.Size(64, 20)
         Me.txtIdBeneficiario.TabIndex = 45
         '
         'TxtNumIdentidad
         '
-        Me.TxtNumIdentidad.Location = New System.Drawing.Point(166, 176)
+        Me.TxtNumIdentidad.Location = New System.Drawing.Point(190, 212)
         Me.TxtNumIdentidad.MaxLength = 13
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(189, 20)
@@ -241,7 +241,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(12, 175)
+        Me.Label8.Location = New System.Drawing.Point(36, 211)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(136, 20)
         Me.Label8.TabIndex = 41
@@ -250,7 +250,7 @@ Partial Class FrmBeneficiario
         'MskTel2
         '
         Me.MskTel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MskTel2.Location = New System.Drawing.Point(704, 113)
+        Me.MskTel2.Location = New System.Drawing.Point(696, 97)
         Me.MskTel2.Mask = "9999-9999"
         Me.MskTel2.Name = "MskTel2"
         Me.MskTel2.Size = New System.Drawing.Size(147, 22)
@@ -261,7 +261,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(552, 113)
+        Me.Label7.Location = New System.Drawing.Point(552, 97)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(125, 20)
         Me.Label7.TabIndex = 40
@@ -317,7 +317,7 @@ Partial Class FrmBeneficiario
         'MsktTelf1
         '
         Me.MsktTelf1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MsktTelf1.Location = New System.Drawing.Point(704, 54)
+        Me.MsktTelf1.Location = New System.Drawing.Point(696, 51)
         Me.MsktTelf1.Mask = "9999-9999"
         Me.MsktTelf1.Name = "MsktTelf1"
         Me.MsktTelf1.Size = New System.Drawing.Size(147, 22)
@@ -326,7 +326,7 @@ Partial Class FrmBeneficiario
         '
         'TxtDireccion
         '
-        Me.TxtDireccion.Location = New System.Drawing.Point(166, 252)
+        Me.TxtDireccion.Location = New System.Drawing.Point(190, 270)
         Me.TxtDireccion.Multiline = True
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(385, 86)
@@ -336,7 +336,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(73, 250)
+        Me.Label4.Location = New System.Drawing.Point(97, 268)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 20)
         Me.Label4.TabIndex = 8
@@ -344,7 +344,7 @@ Partial Class FrmBeneficiario
         '
         'TxtApellidosBeneficiario
         '
-        Me.TxtApellidosBeneficiario.Location = New System.Drawing.Point(166, 115)
+        Me.TxtApellidosBeneficiario.Location = New System.Drawing.Point(190, 151)
         Me.TxtApellidosBeneficiario.Name = "TxtApellidosBeneficiario"
         Me.TxtApellidosBeneficiario.Size = New System.Drawing.Size(328, 20)
         Me.TxtApellidosBeneficiario.TabIndex = 1
@@ -353,7 +353,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(606, 54)
+        Me.Label5.Location = New System.Drawing.Point(598, 51)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 20)
         Me.Label5.TabIndex = 4
@@ -363,7 +363,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(63, 115)
+        Me.Label3.Location = New System.Drawing.Point(99, 151)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 20)
         Me.Label3.TabIndex = 2
@@ -373,7 +373,7 @@ Partial Class FrmBeneficiario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(63, 60)
+        Me.Label2.Location = New System.Drawing.Point(99, 95)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 1
@@ -381,7 +381,7 @@ Partial Class FrmBeneficiario
         '
         'TxtNombreBeneficiario
         '
-        Me.TxtNombreBeneficiario.Location = New System.Drawing.Point(166, 61)
+        Me.TxtNombreBeneficiario.Location = New System.Drawing.Point(190, 97)
         Me.TxtNombreBeneficiario.Name = "TxtNombreBeneficiario"
         Me.TxtNombreBeneficiario.Size = New System.Drawing.Size(328, 20)
         Me.TxtNombreBeneficiario.TabIndex = 0
@@ -399,6 +399,8 @@ Partial Class FrmBeneficiario
         '
         'DgvBeneficiario
         '
+        Me.DgvBeneficiario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvBeneficiario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvBeneficiario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvBeneficiario.ContextMenuStrip = Me.CmsBeneficiario
         Me.DgvBeneficiario.Location = New System.Drawing.Point(17, 14)
