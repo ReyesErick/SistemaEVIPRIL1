@@ -7,6 +7,12 @@ Public Class PerfilEmpleado
     Dim datos As New DataSet
 
     Private Sub PerfilEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+
+        Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        Me.HelpProvider1.SetHelpKeyword(Me, "V.PERF.E")
+
         If cn.State = ConnectionState.Open Then
             cn.Close()
 

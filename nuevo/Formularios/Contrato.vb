@@ -30,6 +30,8 @@ Public Class FrmContrato
 
     'llamamiento de la funcion para llenar el datagridview'
     Private Sub LblVerContratoEmple_Click(sender As Object, e As EventArgs) Handles LblVerContratoEmple.Click
+        sele = 3
+        verificarHelp()
         Call MostrarDatosContratoEmpleado()
         TpContrato.Visible = True
         TpContrato.SelectedTab = TabPage3
@@ -176,6 +178,10 @@ Public Class FrmContrato
     End Sub
 
     Private Sub FrmContrato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+        sele = 0
+        verificarHelp()
         TpContrato.Visible = False
         Call LlenarTipoContrato()
         Call LlenarTipoEmpleado()
@@ -184,7 +190,29 @@ Public Class FrmContrato
         CboTipoEmpleado.SelectedValue = -1
     End Sub
 
+    Private Sub verificarHelp()
+        If sele = 1 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.CONTRATO.EMPLEADO.AG")
+        ElseIf sele = 2 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.CONTRATO.CLIENTE.AG")
+        ElseIf sele = 3 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.CONTRATO.EMPLEADO.VER")
+        ElseIf sele = 4 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.ASIGNACION.GUARDIA")
+        Else
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.CONTRATO.PRI")
+
+        End If
+    End Sub
+
     Private Sub LblAgregarContratoEmp_Click(sender As Object, e As EventArgs) Handles LblAgregarContratoEmp.Click
+        sele = 1
+        verificarHelp()
         TpContrato.Visible = True
         TpContrato.SelectedTab = TabPage1
         CboTipoContrato.Text = ""
@@ -192,6 +220,8 @@ Public Class FrmContrato
     End Sub
 
     Private Sub LblAgregarContratoClien_Click(sender As Object, e As EventArgs) Handles LblAgregarContratoClien.Click
+        sele = 2
+        verificarHelp()
         TpContrato.Visible = True
         TpContrato.SelectedTab = TabPage2
 
@@ -421,6 +451,8 @@ Public Class FrmContrato
     End Sub
 
     Private Sub LblAsignar_Click(sender As Object, e As EventArgs) Handles LblAsignar.Click
+        sele = 4
+        verificarHelp()
         TpContrato.Visible = True
         TpContrato.SelectedTab = TpAsignacion
     End Sub

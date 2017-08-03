@@ -4,6 +4,8 @@ Public Class FrmPlanilla
     Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
     ' LABEL PARA MOSTRAR TODAS LAS PLANILLAS
     Private Sub LblPlanillas_Click(sender As Object, e As EventArgs) Handles LblPlanillas.Click
+        sele = 2
+        verificarHelp()
         Call CargarPlanilla()
         TpPlanilla.Visible = True
         TpPlanilla.SelectedTab = TabPage3
@@ -75,7 +77,8 @@ Public Class FrmPlanilla
 
     ' LABEL PARA AGREGAR UNA NUEVA PLANILLA
     Private Sub LblAgregarPlanilla_Click(sender As Object, e As EventArgs) Handles LblAgregarPlanilla.Click
-
+        sele = 1
+        verificarHelp()
         TpPlanilla.Visible = True
         Me.TpPlanilla.SelectedTab = TabPage2
         TxtSueldoDiario.Enabled = True
@@ -341,5 +344,24 @@ Public Class FrmPlanilla
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
+    End Sub
+
+    Private Sub FrmPlanilla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+
+        sele = 0
+        verificarHelp()
+    End Sub
+
+    Private Sub verificarHelp()
+        If sele = 1 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.PLANILLA.PRI")
+        Else
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.PLANILLA.AG")
+
+        End If
     End Sub
 End Class

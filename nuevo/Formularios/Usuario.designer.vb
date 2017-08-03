@@ -64,6 +64,7 @@ Partial Class FrmUsuario
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.AbrirFoto = New System.Windows.Forms.OpenFileDialog()
         Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -473,8 +474,10 @@ Partial Class FrmUsuario
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.MaximizeBox = False
         Me.Name = "FrmUsuario"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuario"
         Me.Panel1.ResumeLayout(False)
@@ -535,4 +538,5 @@ Partial Class FrmUsuario
     Friend WithEvents ErrorProvider2 As ErrorProvider
     Friend WithEvents txtEmpleado As TextBox
     Friend WithEvents cboEstado As ComboBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

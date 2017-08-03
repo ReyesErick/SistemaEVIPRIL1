@@ -30,6 +30,7 @@ Partial Class AudiLog
         Me.DgvAudiLog = New System.Windows.Forms.DataGridView()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvAudiLog, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,8 +117,10 @@ Partial Class AudiLog
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.MaximizeBox = False
         Me.Name = "AudiLog"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AudiLog"
         Me.Panel1.ResumeLayout(False)
@@ -135,4 +138,5 @@ Partial Class AudiLog
     Friend WithEvents DgvAudiLog As DataGridView
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

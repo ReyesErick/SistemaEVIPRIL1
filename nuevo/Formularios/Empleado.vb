@@ -14,6 +14,11 @@ Public Class FrmEmpleado
     Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
 
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+        sele = 0
+        verificarHelp()
+
 
         Call CargarEstadoCivil()
         Call CargarProfesion()
@@ -49,6 +54,8 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub LblAgregarEmpleado_Click(sender As Object, e As EventArgs) Handles LblAgregarEmpleado.Click
+        sele = 1
+        Call verificarHelp()
         TcEmpleado.Visible = True
         Me.TcEmpleado.SelectedTab = TpAgregar
         BtnModificar.Enabled = False
@@ -58,6 +65,8 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub LblVerContratoClien_Click(sender As Object, e As EventArgs) Handles LblVerContratoClien.Click
+        sele = 2
+        verificarHelp()
         TcEmpleado.Visible = True
         Me.TcEmpleado.SelectedTab = TpVer
         Call CargarEmpleado()
@@ -662,7 +671,18 @@ Public Class FrmEmpleado
             Me.Close()
         End If
     End Sub
-
+    Private Sub verificarHelp()
+        If sele = 1 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.EMPLEADO.AG")
+        ElseIf sele = 2 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.VER.EMPLEADOS")
+        Else
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.EMPLEADO.P")
+        End If
+    End Sub
     Private Sub VerPerfilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerPerfilToolStripMenuItem.Click
         seleccion = 2
         If (sele = 2) Then
@@ -755,4 +775,6 @@ Public Class FrmEmpleado
             End Try
         End Using
     End Sub
+
+
 End Class

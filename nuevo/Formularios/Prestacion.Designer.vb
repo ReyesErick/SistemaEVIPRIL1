@@ -159,6 +159,7 @@ Partial Class FrmPrestacion
         Me.BtnCalcular = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -1552,8 +1553,10 @@ Partial Class FrmPrestacion
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.MaximizeBox = False
         Me.Name = "FrmPrestacion"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Prestacion"
         Me.Panel1.ResumeLayout(False)
@@ -1720,4 +1723,5 @@ Partial Class FrmPrestacion
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents DtpFTerminacion As DateTimePicker
     Friend WithEvents DtpFIngreso As DateTimePicker
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

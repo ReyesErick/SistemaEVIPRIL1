@@ -83,6 +83,7 @@ Partial Class FrmContrato
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TpContrato.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -752,8 +753,10 @@ Partial Class FrmContrato
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TpContrato)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.MaximizeBox = False
         Me.Name = "FrmContrato"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Contrato"
         Me.TpContrato.ResumeLayout(False)
@@ -843,4 +846,5 @@ Partial Class FrmContrato
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents LblAsignar As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

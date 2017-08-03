@@ -55,6 +55,7 @@ Partial Class FrmInventario
         Me.txtSerie = New System.Windows.Forms.TextBox()
         Me.MskCalibre = New System.Windows.Forms.MaskedTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LsvInventarioArma = New System.Windows.Forms.ListView()
         Me.ChIdArma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChSerie = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -67,7 +68,7 @@ Partial Class FrmInventario
         Me.ChEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,8 +164,10 @@ Partial Class FrmInventario
         Me.LblAgregarArma.AutoSize = True
         Me.LblAgregarArma.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblAgregarArma.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.HelpProvider1.SetHelpNavigator(Me.LblAgregarArma, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.LblAgregarArma.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarArma.Name = "LblAgregarArma"
+        Me.HelpProvider1.SetShowHelp(Me.LblAgregarArma, True)
         Me.LblAgregarArma.Size = New System.Drawing.Size(153, 16)
         Me.LblAgregarArma.TabIndex = 7
         Me.LblAgregarArma.Text = "Agregar Nueva Arma"
@@ -416,6 +419,19 @@ Partial Class FrmInventario
         Me.TabPage3.Text = "Inventario Armas"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(679, 496)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.TabIndex = 89
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'LsvInventarioArma
         '
         Me.LsvInventarioArma.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdArma, Me.ChSerie, Me.ChCalibre, Me.ChMarca, Me.ChModelo, Me.ChTipoArma, Me.ChLugar, Me.ChIdContrato, Me.ChEstado})
@@ -475,19 +491,6 @@ Partial Class FrmInventario
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(679, 496)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 40)
-        Me.Button1.TabIndex = 89
-        Me.Button1.Text = "Imprimir Reporte"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmInventario
         '
@@ -563,4 +566,5 @@ Partial Class FrmInventario
     Friend WithEvents Label10 As Label
     Friend WithEvents ChMarca As ColumnHeader
     Friend WithEvents Button1 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

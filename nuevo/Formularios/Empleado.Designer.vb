@@ -90,6 +90,7 @@ Partial Class FrmEmpleado
         Me.LsvEmpleado = New System.Windows.Forms.ListView()
         Me.AbrirFoto = New System.Windows.Forms.OpenFileDialog()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -812,8 +813,10 @@ Partial Class FrmEmpleado
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TcEmpleado)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.MaximizeBox = False
         Me.Name = "FrmEmpleado"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Empleado"
         Me.Panel1.ResumeLayout(False)
@@ -904,4 +907,5 @@ Partial Class FrmEmpleado
     Friend WithEvents RdbInactivo As RadioButton
     Friend WithEvents RdbActivo As RadioButton
     Friend WithEvents Button1 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

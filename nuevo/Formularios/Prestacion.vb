@@ -226,4 +226,12 @@ Public Class FrmPrestacion
         viewer.ShowPreview()
 
     End Sub
+
+    Private Sub FrmPrestacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+
+        Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        Me.HelpProvider1.SetHelpKeyword(Me, "V.PRESTACIONES")
+    End Sub
 End Class

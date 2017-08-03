@@ -54,12 +54,16 @@ Public Class FrmClientes
     End Sub
 
     Private Sub LblAgregarCliente_Click_1(sender As Object, e As EventArgs) Handles LblAgregarCliente.Click
+        sele = 1
+        verificarHelp()
         TcCliente.Visible = True
         Me.TcCliente.SelectedTab = TpAgregar
         btnModificar.Enabled = False
     End Sub
 
     Private Sub LblVerCliente_Click_1(sender As Object, e As EventArgs) Handles LblVerCliente.Click
+        sele = 2
+        verificarHelp()
         TcCliente.Visible = True
         Me.TcCliente.SelectedTab = TpVer
         Call Cargar()
@@ -252,5 +256,24 @@ Public Class FrmClientes
                 cn.Close()
             End Try
         End Using
+    End Sub
+
+    Private Sub FrmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+        sele = 0
+        verificarHelp()
+    End Sub
+
+    Private Sub verificarHelp()
+        If sele = 1 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.CLIENTE.AG")
+        ElseIf sele = 2 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.CLIENTE.VER")
+        Else
+
+        End If
     End Sub
 End Class

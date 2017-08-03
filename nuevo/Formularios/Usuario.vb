@@ -23,11 +23,16 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub FrmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
 
+        Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        Me.HelpProvider1.SetHelpKeyword(Me, "V.USUARIO.AG")
         LLenarComboEstado()
         MostrarUsuario()
 
     End Sub
+
     Private Sub MostrarUsuario()
         If cn.State = ConnectionState.Open Then
             cn.Close()

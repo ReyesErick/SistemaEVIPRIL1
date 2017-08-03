@@ -72,6 +72,7 @@ Partial Class PerfilEmpleado
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.BtnCalcular = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -610,9 +611,11 @@ Partial Class PerfilEmpleado
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "PerfilEmpleado"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PerfilEmpleado"
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -675,4 +678,5 @@ Partial Class PerfilEmpleado
     Friend WithEvents txtSexo As TextBox
     Friend WithEvents txtEstadoCivil As TextBox
     Friend WithEvents BtnCalcular As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

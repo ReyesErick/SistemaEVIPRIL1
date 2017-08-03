@@ -49,6 +49,8 @@ Public Class FrmInventario
     End Sub
 
     Private Sub LblVerArmas_Click(sender As Object, e As EventArgs) Handles LblVerArmas.Click
+        sele = 2
+        verificarHelp()
         Call CargarArma()
         TcArma.Visible = True
         TcArma.SelectedTab = TabPage3
@@ -234,10 +236,25 @@ Public Class FrmInventario
     End Sub
 
     Private Sub FrmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
+        HelpProvider1.HelpNamespace = chmFilePath
+        sele = 0
+        verificarHelp()
         TcArma.Visible = False
+    End Sub
+    Private Sub verificarHelp()
+        If sele = 1 Then
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+            Me.HelpProvider1.SetHelpKeyword(Me, "V.INVENTARIO.AG")
+        Else
+            Me.HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        Me.HelpProvider1.SetHelpKeyword(Me, "V.INVENTARIO.PRI")
+        End If
     End Sub
 
     Private Sub LblAgregarArma_Click(sender As Object, e As EventArgs) Handles LblAgregarArma.Click
+        sele = 1
+        verificarHelp()
         TcArma.Visible = True
         TcArma.SelectedTab = TabPage2
         Call LlenarModelo()
