@@ -42,6 +42,7 @@ Partial Public Class ReportesPlanilla
         Me.Sp_MostrarArmasTableAdapter = New nuevo.EviprilTableAdapters.Sp_MostrarArmasTableAdapter()
         Me.Sp_MostrarPlanillaReportesTableAdapter1 = New nuevo.EviprilTableAdapters.Sp_MostrarPlanillaReportesTableAdapter()
         Me.PageHeaderBand1 = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.XrLine2 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow3 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -81,7 +82,6 @@ Partial Public Class ReportesPlanilla
         Me.FieldCaption = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.PageInfo = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.DataField = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.XrLine2 = New DevExpress.XtraReports.UI.XRLine()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,7 +116,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell8.Name = "XrTableCell8"
         Me.XrTableCell8.StyleName = "DataField"
         Me.XrTableCell8.Text = "XrTableCell8"
-        Me.XrTableCell8.Weight = 9.1057489897453046R
+        Me.XrTableCell8.Weight = 12.183438213962415R
         '
         'XrTableCell10
         '
@@ -125,7 +125,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell10.Name = "XrTableCell10"
         Me.XrTableCell10.StyleName = "DataField"
         Me.XrTableCell10.Text = "XrTableCell10"
-        Me.XrTableCell10.Weight = 10.013514752764333R
+        Me.XrTableCell10.Weight = 8.09425260811615R
         '
         'XrTableCell12
         '
@@ -134,7 +134,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell12.Name = "XrTableCell12"
         Me.XrTableCell12.StyleName = "DataField"
         Me.XrTableCell12.Text = "XrTableCell12"
-        Me.XrTableCell12.Weight = 9.37876191235086R
+        Me.XrTableCell12.Weight = 11.298027300935695R
         '
         'XrTableCell14
         '
@@ -143,7 +143,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell14.Name = "XrTableCell14"
         Me.XrTableCell14.StyleName = "DataField"
         Me.XrTableCell14.Text = "XrTableCell14"
-        Me.XrTableCell14.Weight = 10.694598886119497R
+        Me.XrTableCell14.Weight = 10.724096002099806R
         '
         'XrTableCell16
         '
@@ -152,7 +152,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell16.Name = "XrTableCell16"
         Me.XrTableCell16.StyleName = "DataField"
         Me.XrTableCell16.Text = "XrTableCell16"
-        Me.XrTableCell16.Weight = 11.091888373937945R
+        Me.XrTableCell16.Weight = 11.091910540838404R
         '
         'XrTableCell18
         '
@@ -161,7 +161,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell18.Name = "XrTableCell18"
         Me.XrTableCell18.StyleName = "DataField"
         Me.XrTableCell18.Text = "XrTableCell18"
-        Me.XrTableCell18.Weight = 12.003084057814125R
+        Me.XrTableCell18.Weight = 10.054300467660736R
         '
         'XrTableCell20
         '
@@ -170,7 +170,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell20.Name = "XrTableCell20"
         Me.XrTableCell20.StyleName = "DataField"
         Me.XrTableCell20.Text = "XrTableCell20"
-        Me.XrTableCell20.Weight = 11.745173186025037R
+        Me.XrTableCell20.Weight = 11.745191568332732R
         '
         'XrTableCell22
         '
@@ -179,7 +179,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell22.Name = "XrTableCell22"
         Me.XrTableCell22.StyleName = "DataField"
         Me.XrTableCell22.Text = "XrTableCell22"
-        Me.XrTableCell22.Weight = 7.7818576960708237R
+        Me.XrTableCell22.Weight = 10.344755799795777R
         '
         'XrTableCell24
         '
@@ -188,7 +188,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell24.Name = "XrTableCell24"
         Me.XrTableCell24.StyleName = "DataField"
         Me.XrTableCell24.Text = "XrTableCell24"
-        Me.XrTableCell24.Weight = 15.108508600837142R
+        Me.XrTableCell24.Weight = 14.317221621089553R
         '
         'XrTableCell26
         '
@@ -197,7 +197,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell26.Name = "XrTableCell26"
         Me.XrTableCell26.StyleName = "DataField"
         Me.XrTableCell26.Text = "XrTableCell26"
-        Me.XrTableCell26.Weight = 14.3783605507324R
+        Me.XrTableCell26.Weight = 12.606741857569514R
         '
         'XrTableCell28
         '
@@ -215,7 +215,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell30.Name = "XrTableCell30"
         Me.XrTableCell30.StyleName = "DataField"
         Me.XrTableCell30.Text = "XrTableCell30"
-        Me.XrTableCell30.Weight = 13.402717161357236R
+        Me.XrTableCell30.Weight = 13.402709592171714R
         '
         'XrTableCell32
         '
@@ -224,7 +224,7 @@ Partial Public Class ReportesPlanilla
         Me.XrTableCell32.Name = "XrTableCell32"
         Me.XrTableCell32.StyleName = "DataField"
         Me.XrTableCell32.Text = "XrTableCell32"
-        Me.XrTableCell32.Weight = 11.563132744587749R
+        Me.XrTableCell32.Weight = 10.404701339769952R
         '
         'XrLabel2
         '
@@ -264,6 +264,12 @@ Partial Public Class ReportesPlanilla
         Me.PageHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLine2, Me.XrLine1, Me.XrTable1})
         Me.PageHeaderBand1.HeightF = 63.41666!
         Me.PageHeaderBand1.Name = "PageHeaderBand1"
+        '
+        'XrLine2
+        '
+        Me.XrLine2.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 46.13044!)
+        Me.XrLine2.Name = "XrLine2"
+        Me.XrLine2.SizeF = New System.Drawing.SizeF(1039.799!, 9.249992!)
         '
         'XrLine1
         '
@@ -707,12 +713,6 @@ Partial Public Class ReportesPlanilla
         Me.DataField.ForeColor = System.Drawing.Color.Black
         Me.DataField.Name = "DataField"
         Me.DataField.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        '
-        'XrLine2
-        '
-        Me.XrLine2.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 46.13044!)
-        Me.XrLine2.Name = "XrLine2"
-        Me.XrLine2.SizeF = New System.Drawing.SizeF(1039.799!, 9.249992!)
         '
         'ReportesPlanilla
         '

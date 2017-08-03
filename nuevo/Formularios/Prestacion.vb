@@ -216,7 +216,14 @@ Public Class FrmPrestacion
 
     Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
         Dim reporte As New ReportePrestaciones()
+        reporte.NumIdentidadEmpleado.Text = txtNumIdentidadEmpleado.Text.ToString()
+        reporte.Nombre.Text = TxtNombre.Text.ToString()
+        reporte.SalarioMensual.Text = TxtSOM.Text.ToString()
+        reporte.SalarioDiario.Text = TxtSOD.Text.ToString()
+        reporte.SubTotal.Text = TxtTotalD.Text.ToString()
+        reporte.TotalDeducciones.Text = TxtTotalP.Text.ToString()
         Dim viewer As New ReportPrintTool(reporte)
         viewer.ShowPreview()
+
     End Sub
 End Class
