@@ -2,6 +2,7 @@
 Imports DevExpress.XtraReports.UI
 Public Class FrmInventario
     Dim op As Integer
+    Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
     'Consulta para llenar la listview de inventario'
     Private Sub CargarArma()
         If cn.State = ConnectionState.Open Then
@@ -109,6 +110,7 @@ Public Class FrmInventario
         End If
 
         Call AgregarArma()
+        Call AudiLogInsert()
         Call Limpiar()
     End Sub
 
@@ -260,9 +262,28 @@ Public Class FrmInventario
         FrmContrato.Show()
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim reporte As New ReporteInventario()
         Dim viewer As New ReportPrintTool(reporte)
         viewer.ShowPreview()
+=======
+    Private Sub AudiLogInsert()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se inserto el Arma con Serie: " + txtSerie.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+>>>>>>> 388c3ecf6a2d9e75dd8fb73825107bd7cbd4182d
     End Sub
 End Class

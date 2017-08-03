@@ -51,6 +51,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxUsuario = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.PbxContrato, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxPrestaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,11 +252,10 @@ Partial Class FrmPantallaPrincipal
         Me.LblBienvenido.AutoSize = True
         Me.LblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblBienvenido.ForeColor = System.Drawing.Color.Black
-        Me.LblBienvenido.Location = New System.Drawing.Point(11, 21)
+        Me.LblBienvenido.Location = New System.Drawing.Point(138, 23)
         Me.LblBienvenido.Name = "LblBienvenido"
-        Me.LblBienvenido.Size = New System.Drawing.Size(121, 24)
+        Me.LblBienvenido.Size = New System.Drawing.Size(0, 24)
         Me.LblBienvenido.TabIndex = 69
-        Me.LblBienvenido.Text = "Bienvenido,"
         '
         'PictureBox1
         '
@@ -283,6 +283,7 @@ Partial Class FrmPantallaPrincipal
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.PictureBox1)
@@ -382,6 +383,17 @@ Partial Class FrmPantallaPrincipal
         Me.PbxUsuario.TabIndex = 52
         Me.PbxUsuario.TabStop = False
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(11, 23)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(121, 24)
+        Me.Label10.TabIndex = 76
+        Me.Label10.Text = "Bienvenido,"
+        '
         'FrmPantallaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -461,4 +473,5 @@ Partial Class FrmPantallaPrincipal
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents PbxUsuario As PictureBox
+    Friend WithEvents Label10 As Label
 End Class
