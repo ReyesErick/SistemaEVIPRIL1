@@ -368,6 +368,9 @@
     <EmbeddedResource Include="Reportes\ReporteInventario.resx">
       <DependentUpon>ReporteInventario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePrestaciones.resx">
+      <DependentUpon>ReportePrestaciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportesPlanilla.resx">
       <DependentUpon>ReportesPlanilla.vb</DependentUpon>
     </EmbeddedResource>

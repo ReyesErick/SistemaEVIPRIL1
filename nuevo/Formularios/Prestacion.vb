@@ -1,4 +1,5 @@
-﻿Public Class FrmPrestacion
+﻿Imports DevExpress.XtraReports.UI
+Public Class FrmPrestacion
 
     Private Sub BtnRegresarMenu_Click(sender As Object, e As EventArgs) Handles BtnRegresarMenu.Click
         Me.Dispose()
@@ -213,5 +214,9 @@
 
     End Sub
 
-
+    Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
+        Dim reporte As New ReportePrestaciones()
+        Dim viewer As New ReportPrintTool(reporte)
+        viewer.ShowPreview()
+    End Sub
 End Class
