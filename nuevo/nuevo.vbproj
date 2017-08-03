@@ -95,10 +95,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AudiLog.Designer.vb">
+    <Compile Include="Formularios\AudiLog.Designer.vb">
       <DependentUpon>AudiLog.vb</DependentUpon>
     </Compile>
-    <Compile Include="AudiLog.vb">
+    <Compile Include="Formularios\AudiLog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Evipril.Designer.vb">
@@ -236,7 +236,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AudiLog.resx">
+    <EmbeddedResource Include="Formularios\AudiLog.resx">
       <DependentUpon>AudiLog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Beneficiario.resx">
