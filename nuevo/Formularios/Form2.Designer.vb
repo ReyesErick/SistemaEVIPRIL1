@@ -86,9 +86,9 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxContrato.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxContrato.Image = CType(resources.GetObject("PbxContrato.Image"), System.Drawing.Image)
-        Me.PbxContrato.Location = New System.Drawing.Point(51, 23)
+        Me.PbxContrato.Location = New System.Drawing.Point(47, 23)
         Me.PbxContrato.Name = "PbxContrato"
-        Me.PbxContrato.Size = New System.Drawing.Size(187, 160)
+        Me.PbxContrato.Size = New System.Drawing.Size(194, 177)
         Me.PbxContrato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxContrato.TabIndex = 61
         Me.PbxContrato.TabStop = False
@@ -98,7 +98,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label9.AutoSize = True
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(94, 215)
+        Me.Label9.Location = New System.Drawing.Point(103, 215)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 20)
         Me.Label9.TabIndex = 70
@@ -129,9 +129,9 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxPrestaciones.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxPrestaciones.Image = CType(resources.GetObject("PbxPrestaciones.Image"), System.Drawing.Image)
-        Me.PbxPrestaciones.Location = New System.Drawing.Point(31, 27)
+        Me.PbxPrestaciones.Location = New System.Drawing.Point(40, 25)
         Me.PbxPrestaciones.Name = "PbxPrestaciones"
-        Me.PbxPrestaciones.Size = New System.Drawing.Size(218, 173)
+        Me.PbxPrestaciones.Size = New System.Drawing.Size(208, 185)
         Me.PbxPrestaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxPrestaciones.TabIndex = 66
         Me.PbxPrestaciones.TabStop = False
@@ -164,7 +164,7 @@ Partial Class FrmPantallaPrincipal
         Me.PbxPlanilla.Image = CType(resources.GetObject("PbxPlanilla.Image"), System.Drawing.Image)
         Me.PbxPlanilla.Location = New System.Drawing.Point(46, 23)
         Me.PbxPlanilla.Name = "PbxPlanilla"
-        Me.PbxPlanilla.Size = New System.Drawing.Size(193, 161)
+        Me.PbxPlanilla.Size = New System.Drawing.Size(193, 173)
         Me.PbxPlanilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxPlanilla.TabIndex = 62
         Me.PbxPlanilla.TabStop = False
@@ -240,9 +240,9 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxClientes.Image = CType(resources.GetObject("PbxClientes.Image"), System.Drawing.Image)
-        Me.PbxClientes.Location = New System.Drawing.Point(46, 27)
+        Me.PbxClientes.Location = New System.Drawing.Point(53, 27)
         Me.PbxClientes.Name = "PbxClientes"
-        Me.PbxClientes.Size = New System.Drawing.Size(224, 185)
+        Me.PbxClientes.Size = New System.Drawing.Size(217, 183)
         Me.PbxClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxClientes.TabIndex = 63
         Me.PbxClientes.TabStop = False
