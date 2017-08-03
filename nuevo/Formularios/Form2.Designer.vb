@@ -99,9 +99,9 @@ Partial Class FrmPantallaPrincipal
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(94, 215)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(113, 20)
+        Me.Label9.Size = New System.Drawing.Size(75, 20)
         Me.Label9.TabIndex = 70
-        Me.Label9.Text = "Prestaciones"
+        Me.Label9.Text = "AudiLog"
         '
         'Label8
         '

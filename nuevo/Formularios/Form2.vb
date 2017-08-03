@@ -35,7 +35,7 @@
     End Sub
 
     Private Sub PbxPrestaciones_Click(sender As Object, e As EventArgs) Handles PbxPrestaciones.Click
-        FrmPrestacion.Show()
+        AudiLog.Show()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
