@@ -69,7 +69,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ERICK_REYES_PC;Initial Catalog=EVIPRIL;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=RONALD\AMED;Initial Catalog=EVIPRIL;Integrated Security=True")>  _
         Public ReadOnly Property Conexion() As String
             Get
                 Return CType(Me("Conexion"),String)
@@ -79,7 +79,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ERICK_REYES_PC;Initial Catalog=EVIPRIL;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=RONALD\AMED;Initial Catalog=EVIPRIL;Integrated Security=True")>  _
         Public ReadOnly Property EVIPRILConnectionString() As String
             Get
                 Return CType(Me("EVIPRILConnectionString"),String)
