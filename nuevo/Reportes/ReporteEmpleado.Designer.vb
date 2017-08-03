@@ -19,6 +19,7 @@ Partial Public Class ReporteEmpleado
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteEmpleado))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
@@ -53,14 +54,16 @@ Partial Public Class ReporteEmpleado
         Me.XrLabel31 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel32 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrCheckBox1 = New DevExpress.XtraReports.UI.XRCheckBox()
+        Me.Evipril1 = New nuevo.Evipril()
         Me.XrPictureBox1 = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
-        Me.Evipril1 = New nuevo.Evipril()
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrPageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.XrPageInfo2 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.ReportHeaderBand1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel34 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel33 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Title = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.FieldCaption = New DevExpress.XtraReports.UI.XRControlStyle()
@@ -70,8 +73,8 @@ Partial Public Class ReporteEmpleado
         Me.Evipril3 = New nuevo.Evipril()
         Me.Sp_MostrarArmasTableAdapter = New nuevo.EviprilTableAdapters.Sp_MostrarArmasTableAdapter()
         Me.Sp_MostrarEmpleadoTableAdapter1 = New nuevo.EviprilTableAdapters.Sp_MostrarEmpleadoTableAdapter()
-        Me.XrLabel34 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.XrPictureBox3 = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.Evipril1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -396,6 +399,11 @@ Partial Public Class ReporteEmpleado
         Me.XrCheckBox1.SizeF = New System.Drawing.SizeF(210.3847!, 23.0!)
         Me.XrCheckBox1.StyleName = "DataField"
         '
+        'Evipril1
+        '
+        Me.Evipril1.DataSetName = "Evipril"
+        Me.Evipril1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'XrPictureBox1
         '
         Me.XrPictureBox1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Image", Nothing, "Sp_MostrarEmpleado.Fotografia")})
@@ -410,11 +418,6 @@ Partial Public Class ReporteEmpleado
         Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 3.000008!)
         Me.XrLine1.Name = "XrLine1"
         Me.XrLine1.SizeF = New System.Drawing.SizeF(650.0!, 5.999994!)
-        '
-        'Evipril1
-        '
-        Me.Evipril1.DataSetName = "Evipril"
-        Me.Evipril1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TopMarginBand1
         '
@@ -448,9 +451,31 @@ Partial Public Class ReporteEmpleado
         '
         'ReportHeaderBand1
         '
-        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel35, Me.XrLabel34, Me.XrLabel33})
+        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox3, Me.XrPictureBox2, Me.XrLabel35, Me.XrLabel34, Me.XrLabel33})
         Me.ReportHeaderBand1.HeightF = 131.2083!
         Me.ReportHeaderBand1.Name = "ReportHeaderBand1"
+        '
+        'XrLabel35
+        '
+        Me.XrLabel35.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel35.LocationFloat = New DevExpress.Utils.PointFloat(276.5417!, 82.20831!)
+        Me.XrLabel35.Name = "XrLabel35"
+        Me.XrLabel35.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel35.SizeF = New System.Drawing.SizeF(108.0834!, 39.00001!)
+        Me.XrLabel35.StyleName = "Title"
+        Me.XrLabel35.StylePriority.UseFont = False
+        Me.XrLabel35.Text = """EVIPRIL"""
+        '
+        'XrLabel34
+        '
+        Me.XrLabel34.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel34.LocationFloat = New DevExpress.Utils.PointFloat(210.9166!, 49.00001!)
+        Me.XrLabel34.Name = "XrLabel34"
+        Me.XrLabel34.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel34.SizeF = New System.Drawing.SizeF(253.625!, 39.00001!)
+        Me.XrLabel34.StyleName = "Title"
+        Me.XrLabel34.StylePriority.UseFont = False
+        Me.XrLabel34.Text = "Empresa de Seguridad Leon"
         '
         'XrLabel33
         '
@@ -520,27 +545,21 @@ Partial Public Class ReporteEmpleado
         '
         Me.Sp_MostrarEmpleadoTableAdapter1.ClearBeforeFill = True
         '
-        'XrLabel34
+        'XrPictureBox2
         '
-        Me.XrLabel34.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel34.LocationFloat = New DevExpress.Utils.PointFloat(210.9166!, 49.00001!)
-        Me.XrLabel34.Name = "XrLabel34"
-        Me.XrLabel34.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel34.SizeF = New System.Drawing.SizeF(253.625!, 39.00001!)
-        Me.XrLabel34.StyleName = "Title"
-        Me.XrLabel34.StylePriority.UseFont = False
-        Me.XrLabel34.Text = "Empresa de Seguridad Leon"
+        Me.XrPictureBox2.Image = CType(resources.GetObject("XrPictureBox2.Image"), System.Drawing.Image)
+        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(512.5!, 43.79168!)
+        Me.XrPictureBox2.Name = "XrPictureBox2"
+        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(127.5!, 77.41664!)
+        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
-        'XrLabel35
+        'XrPictureBox3
         '
-        Me.XrLabel35.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel35.LocationFloat = New DevExpress.Utils.PointFloat(276.5417!, 82.20831!)
-        Me.XrLabel35.Name = "XrLabel35"
-        Me.XrLabel35.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel35.SizeF = New System.Drawing.SizeF(108.0834!, 39.00001!)
-        Me.XrLabel35.StyleName = "Title"
-        Me.XrLabel35.StylePriority.UseFont = False
-        Me.XrLabel35.Text = """EVIPRIL"""
+        Me.XrPictureBox3.Image = CType(resources.GetObject("XrPictureBox3.Image"), System.Drawing.Image)
+        Me.XrPictureBox3.LocationFloat = New DevExpress.Utils.PointFloat(37.65475!, 49.00001!)
+        Me.XrPictureBox3.Name = "XrPictureBox3"
+        Me.XrPictureBox3.SizeF = New System.Drawing.SizeF(111.3452!, 72.20831!)
+        Me.XrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'ReporteEmpleado
         '
@@ -611,4 +630,6 @@ Partial Public Class ReporteEmpleado
     Friend WithEvents Sp_MostrarEmpleadoTableAdapter1 As EviprilTableAdapters.Sp_MostrarEmpleadoTableAdapter
     Friend WithEvents XrLabel35 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel34 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrPictureBox2 As DevExpress.XtraReports.UI.XRPictureBox
+    Friend WithEvents XrPictureBox3 As DevExpress.XtraReports.UI.XRPictureBox
 End Class

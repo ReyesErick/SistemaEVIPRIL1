@@ -21,12 +21,27 @@ Partial Public Class ReportePrestaciones
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportePrestaciones))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.WinControlContainer6 = New DevExpress.XtraReports.UI.WinControlContainer()
+        Me.TotalDeducciones = New System.Windows.Forms.TextBox()
+        Me.WinControlContainer5 = New DevExpress.XtraReports.UI.WinControlContainer()
+        Me.SubTotal = New System.Windows.Forms.TextBox()
+        Me.WinControlContainer4 = New DevExpress.XtraReports.UI.WinControlContainer()
+        Me.SalarioDiario = New System.Windows.Forms.TextBox()
+        Me.WinControlContainer3 = New DevExpress.XtraReports.UI.WinControlContainer()
+        Me.SalarioMensual = New System.Windows.Forms.TextBox()
+        Me.WinControlContainer2 = New DevExpress.XtraReports.UI.WinControlContainer()
+        Me.Nombre = New System.Windows.Forms.TextBox()
+        Me.WinControlContainer1 = New DevExpress.XtraReports.UI.WinControlContainer()
+        Me.NumIdentidadEmpleado = New System.Windows.Forms.TextBox()
         Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrPageInfo2 = New DevExpress.XtraReports.UI.XRPageInfo()
@@ -38,21 +53,7 @@ Partial Public Class ReportePrestaciones
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel34 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.NumIdentidadEmpleado = New System.Windows.Forms.TextBox()
-        Me.WinControlContainer1 = New DevExpress.XtraReports.UI.WinControlContainer()
-        Me.Nombre = New System.Windows.Forms.TextBox()
-        Me.WinControlContainer2 = New DevExpress.XtraReports.UI.WinControlContainer()
-        Me.SalarioMensual = New System.Windows.Forms.TextBox()
-        Me.WinControlContainer3 = New DevExpress.XtraReports.UI.WinControlContainer()
-        Me.SalarioDiario = New System.Windows.Forms.TextBox()
-        Me.WinControlContainer4 = New DevExpress.XtraReports.UI.WinControlContainer()
-        Me.SubTotal = New System.Windows.Forms.TextBox()
-        Me.WinControlContainer5 = New DevExpress.XtraReports.UI.WinControlContainer()
-        Me.TotalDeducciones = New System.Windows.Forms.TextBox()
-        Me.WinControlContainer6 = New DevExpress.XtraReports.UI.WinControlContainer()
-        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
-        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -62,6 +63,128 @@ Partial Public Class ReportePrestaciones
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel10
+        '
+        Me.XrLabel10.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(275.1937!, 758.2466!)
+        Me.XrLabel10.Name = "XrLabel10"
+        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel10.SizeF = New System.Drawing.SizeF(212.5!, 23.0!)
+        Me.XrLabel10.StylePriority.UseFont = False
+        Me.XrLabel10.Text = "Nelson Humberto Paz Muñoz"
+        '
+        'XrLabel11
+        '
+        Me.XrLabel11.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(257.2045!, 781.2468!)
+        Me.XrLabel11.Name = "XrLabel11"
+        Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel11.SizeF = New System.Drawing.SizeF(245.821!, 22.99994!)
+        Me.XrLabel11.StylePriority.UseFont = False
+        Me.XrLabel11.Text = "Gerente Propietario de EVIPRIL"
+        '
+        'WinControlContainer6
+        '
+        Me.WinControlContainer6.LocationFloat = New DevExpress.Utils.PointFloat(611.0282!, 48.91667!)
+        Me.WinControlContainer6.Name = "WinControlContainer6"
+        Me.WinControlContainer6.SizeF = New System.Drawing.SizeF(104.3468!, 23.0!)
+        Me.WinControlContainer6.WinControl = Me.TotalDeducciones
+        '
+        'TotalDeducciones
+        '
+        Me.TotalDeducciones.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TotalDeducciones.Enabled = False
+        Me.TotalDeducciones.Location = New System.Drawing.Point(81, 34)
+        Me.TotalDeducciones.Multiline = True
+        Me.TotalDeducciones.Name = "TotalDeducciones"
+        Me.TotalDeducciones.Size = New System.Drawing.Size(100, 22)
+        Me.TotalDeducciones.TabIndex = 0
+        '
+        'WinControlContainer5
+        '
+        Me.WinControlContainer5.LocationFloat = New DevExpress.Utils.PointFloat(524.1531!, 48.91667!)
+        Me.WinControlContainer5.Name = "WinControlContainer5"
+        Me.WinControlContainer5.SizeF = New System.Drawing.SizeF(72.45197!, 23.0!)
+        Me.WinControlContainer5.WinControl = Me.SubTotal
+        '
+        'SubTotal
+        '
+        Me.SubTotal.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SubTotal.Enabled = False
+        Me.SubTotal.Location = New System.Drawing.Point(81, 34)
+        Me.SubTotal.Multiline = True
+        Me.SubTotal.Name = "SubTotal"
+        Me.SubTotal.Size = New System.Drawing.Size(70, 22)
+        Me.SubTotal.TabIndex = 0
+        '
+        'WinControlContainer4
+        '
+        Me.WinControlContainer4.LocationFloat = New DevExpress.Utils.PointFloat(380.8972!, 48.91667!)
+        Me.WinControlContainer4.Name = "WinControlContainer4"
+        Me.WinControlContainer4.SizeF = New System.Drawing.SizeF(132.4386!, 23.0!)
+        Me.WinControlContainer4.WinControl = Me.SalarioDiario
+        '
+        'SalarioDiario
+        '
+        Me.SalarioDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SalarioDiario.Enabled = False
+        Me.SalarioDiario.Location = New System.Drawing.Point(81, 34)
+        Me.SalarioDiario.Multiline = True
+        Me.SalarioDiario.Name = "SalarioDiario"
+        Me.SalarioDiario.Size = New System.Drawing.Size(127, 22)
+        Me.SalarioDiario.TabIndex = 0
+        '
+        'WinControlContainer3
+        '
+        Me.WinControlContainer3.LocationFloat = New DevExpress.Utils.PointFloat(229.6949!, 48.91667!)
+        Me.WinControlContainer3.Name = "WinControlContainer3"
+        Me.WinControlContainer3.SizeF = New System.Drawing.SizeF(139.183!, 23.0!)
+        Me.WinControlContainer3.WinControl = Me.SalarioMensual
+        '
+        'SalarioMensual
+        '
+        Me.SalarioMensual.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SalarioMensual.Enabled = False
+        Me.SalarioMensual.Location = New System.Drawing.Point(81, 34)
+        Me.SalarioMensual.Multiline = True
+        Me.SalarioMensual.Name = "SalarioMensual"
+        Me.SalarioMensual.Size = New System.Drawing.Size(134, 22)
+        Me.SalarioMensual.TabIndex = 0
+        '
+        'WinControlContainer2
+        '
+        Me.WinControlContainer2.LocationFloat = New DevExpress.Utils.PointFloat(131.5795!, 48.91667!)
+        Me.WinControlContainer2.Name = "WinControlContainer2"
+        Me.WinControlContainer2.SizeF = New System.Drawing.SizeF(86.09618!, 23.0!)
+        Me.WinControlContainer2.WinControl = Me.Nombre
+        '
+        'Nombre
+        '
+        Me.Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Nombre.Enabled = False
+        Me.Nombre.Location = New System.Drawing.Point(81, 34)
+        Me.Nombre.Multiline = True
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.Size = New System.Drawing.Size(83, 22)
+        Me.Nombre.TabIndex = 0
+        '
+        'WinControlContainer1
+        '
+        Me.WinControlContainer1.LocationFloat = New DevExpress.Utils.PointFloat(27.70835!, 48.91667!)
+        Me.WinControlContainer1.Name = "WinControlContainer1"
+        Me.WinControlContainer1.SizeF = New System.Drawing.SizeF(103.8711!, 23.0!)
+        Me.WinControlContainer1.WinControl = Me.NumIdentidadEmpleado
+        '
+        'NumIdentidadEmpleado
+        '
+        Me.NumIdentidadEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.NumIdentidadEmpleado.Enabled = False
+        Me.NumIdentidadEmpleado.Location = New System.Drawing.Point(81, 34)
+        Me.NumIdentidadEmpleado.Multiline = True
+        Me.NumIdentidadEmpleado.Name = "NumIdentidadEmpleado"
+        Me.NumIdentidadEmpleado.Size = New System.Drawing.Size(100, 22)
+        Me.NumIdentidadEmpleado.TabIndex = 0
         '
         'XrLabel7
         '
@@ -149,6 +272,12 @@ Partial Public Class ReportePrestaciones
         Me.XrLabel2.StylePriority.UseBorders = False
         Me.XrLabel2.Text = "Codigo"
         '
+        'XrLine1
+        '
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(27.70835!, 32.99999!)
+        Me.XrLine1.Name = "XrLine1"
+        Me.XrLine1.SizeF = New System.Drawing.SizeF(687.6667!, 12.58331!)
+        '
         'TopMargin
         '
         Me.TopMargin.HeightF = 60.33654!
@@ -215,7 +344,7 @@ Partial Public Class ReportePrestaciones
         '
         'PageHeader
         '
-        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox1, Me.XrLabel1, Me.XrLabel35, Me.XrLabel34})
+        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox2, Me.XrPictureBox1, Me.XrLabel1, Me.XrLabel35, Me.XrLabel34})
         Me.PageHeader.HeightF = 132.2917!
         Me.PageHeader.Name = "PageHeader"
         '
@@ -263,133 +392,13 @@ Partial Public Class ReportePrestaciones
         Me.XrLabel34.StylePriority.UseFont = False
         Me.XrLabel34.Text = "EMPRESA DE VIGILANCIA PRIVADA LEON S. DE R. L."
         '
-        'NumIdentidadEmpleado
+        'XrPictureBox2
         '
-        Me.NumIdentidadEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.NumIdentidadEmpleado.Enabled = False
-        Me.NumIdentidadEmpleado.Location = New System.Drawing.Point(81, 34)
-        Me.NumIdentidadEmpleado.Multiline = True
-        Me.NumIdentidadEmpleado.Name = "NumIdentidadEmpleado"
-        Me.NumIdentidadEmpleado.Size = New System.Drawing.Size(100, 22)
-        Me.NumIdentidadEmpleado.TabIndex = 0
-        '
-        'WinControlContainer1
-        '
-        Me.WinControlContainer1.LocationFloat = New DevExpress.Utils.PointFloat(27.70835!, 48.91667!)
-        Me.WinControlContainer1.Name = "WinControlContainer1"
-        Me.WinControlContainer1.SizeF = New System.Drawing.SizeF(103.8711!, 23.0!)
-        Me.WinControlContainer1.WinControl = Me.NumIdentidadEmpleado
-        '
-        'Nombre
-        '
-        Me.Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Nombre.Enabled = False
-        Me.Nombre.Location = New System.Drawing.Point(81, 34)
-        Me.Nombre.Multiline = True
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.Size = New System.Drawing.Size(83, 22)
-        Me.Nombre.TabIndex = 0
-        '
-        'WinControlContainer2
-        '
-        Me.WinControlContainer2.LocationFloat = New DevExpress.Utils.PointFloat(131.5795!, 48.91667!)
-        Me.WinControlContainer2.Name = "WinControlContainer2"
-        Me.WinControlContainer2.SizeF = New System.Drawing.SizeF(86.09618!, 23.0!)
-        Me.WinControlContainer2.WinControl = Me.Nombre
-        '
-        'SalarioMensual
-        '
-        Me.SalarioMensual.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SalarioMensual.Enabled = False
-        Me.SalarioMensual.Location = New System.Drawing.Point(81, 34)
-        Me.SalarioMensual.Multiline = True
-        Me.SalarioMensual.Name = "SalarioMensual"
-        Me.SalarioMensual.Size = New System.Drawing.Size(134, 22)
-        Me.SalarioMensual.TabIndex = 0
-        '
-        'WinControlContainer3
-        '
-        Me.WinControlContainer3.LocationFloat = New DevExpress.Utils.PointFloat(229.6949!, 48.91667!)
-        Me.WinControlContainer3.Name = "WinControlContainer3"
-        Me.WinControlContainer3.SizeF = New System.Drawing.SizeF(139.183!, 23.0!)
-        Me.WinControlContainer3.WinControl = Me.SalarioMensual
-        '
-        'SalarioDiario
-        '
-        Me.SalarioDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SalarioDiario.Enabled = False
-        Me.SalarioDiario.Location = New System.Drawing.Point(81, 34)
-        Me.SalarioDiario.Multiline = True
-        Me.SalarioDiario.Name = "SalarioDiario"
-        Me.SalarioDiario.Size = New System.Drawing.Size(127, 22)
-        Me.SalarioDiario.TabIndex = 0
-        '
-        'WinControlContainer4
-        '
-        Me.WinControlContainer4.LocationFloat = New DevExpress.Utils.PointFloat(380.8972!, 48.91667!)
-        Me.WinControlContainer4.Name = "WinControlContainer4"
-        Me.WinControlContainer4.SizeF = New System.Drawing.SizeF(132.4386!, 23.0!)
-        Me.WinControlContainer4.WinControl = Me.SalarioDiario
-        '
-        'SubTotal
-        '
-        Me.SubTotal.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SubTotal.Enabled = False
-        Me.SubTotal.Location = New System.Drawing.Point(81, 34)
-        Me.SubTotal.Multiline = True
-        Me.SubTotal.Name = "SubTotal"
-        Me.SubTotal.Size = New System.Drawing.Size(70, 22)
-        Me.SubTotal.TabIndex = 0
-        '
-        'WinControlContainer5
-        '
-        Me.WinControlContainer5.LocationFloat = New DevExpress.Utils.PointFloat(524.1531!, 48.91667!)
-        Me.WinControlContainer5.Name = "WinControlContainer5"
-        Me.WinControlContainer5.SizeF = New System.Drawing.SizeF(72.45197!, 23.0!)
-        Me.WinControlContainer5.WinControl = Me.SubTotal
-        '
-        'TotalDeducciones
-        '
-        Me.TotalDeducciones.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TotalDeducciones.Enabled = False
-        Me.TotalDeducciones.Location = New System.Drawing.Point(81, 34)
-        Me.TotalDeducciones.Multiline = True
-        Me.TotalDeducciones.Name = "TotalDeducciones"
-        Me.TotalDeducciones.Size = New System.Drawing.Size(100, 22)
-        Me.TotalDeducciones.TabIndex = 0
-        '
-        'WinControlContainer6
-        '
-        Me.WinControlContainer6.LocationFloat = New DevExpress.Utils.PointFloat(611.0282!, 48.91667!)
-        Me.WinControlContainer6.Name = "WinControlContainer6"
-        Me.WinControlContainer6.SizeF = New System.Drawing.SizeF(104.3468!, 23.0!)
-        Me.WinControlContainer6.WinControl = Me.TotalDeducciones
-        '
-        'XrLine1
-        '
-        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(27.70835!, 32.99999!)
-        Me.XrLine1.Name = "XrLine1"
-        Me.XrLine1.SizeF = New System.Drawing.SizeF(687.6667!, 12.58331!)
-        '
-        'XrLabel10
-        '
-        Me.XrLabel10.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(275.1937!, 758.2466!)
-        Me.XrLabel10.Name = "XrLabel10"
-        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel10.SizeF = New System.Drawing.SizeF(212.5!, 23.0!)
-        Me.XrLabel10.StylePriority.UseFont = False
-        Me.XrLabel10.Text = "Nelson Humberto Paz Muñoz"
-        '
-        'XrLabel11
-        '
-        Me.XrLabel11.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(257.2045!, 781.2468!)
-        Me.XrLabel11.Name = "XrLabel11"
-        Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel11.SizeF = New System.Drawing.SizeF(245.821!, 22.99994!)
-        Me.XrLabel11.StylePriority.UseFont = False
-        Me.XrLabel11.Text = "Gerente Propietario de EVIPRIL"
+        Me.XrPictureBox2.Image = CType(resources.GetObject("XrPictureBox2.Image"), System.Drawing.Image)
+        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(27.70834!, 54.87502!)
+        Me.XrPictureBox2.Name = "XrPictureBox2"
+        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(115.693!, 77.41665!)
+        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'ReportePrestaciones
         '
@@ -432,4 +441,5 @@ Partial Public Class ReportePrestaciones
     Friend WithEvents XrLine1 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents XrLabel10 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel11 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrPictureBox2 As DevExpress.XtraReports.UI.XRPictureBox
 End Class

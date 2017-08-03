@@ -21,6 +21,8 @@ Partial Public Class ReporteContratoEmpleado
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteContratoEmpleado))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLine8 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow6 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -69,21 +71,21 @@ Partial Public Class ReporteContratoEmpleado
         Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.XrPageInfo2 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.ReportHeaderBand1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.Title = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.FieldCaption = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.PageInfo = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.DataField = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.XrLabel34 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPictureBox1 = New DevExpress.XtraReports.UI.XRPictureBox()
-        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Title = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.FieldCaption = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.PageInfo = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.DataField = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.XrPictureBox3 = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,11 +96,31 @@ Partial Public Class ReporteContratoEmpleado
         '
         'Detail
         '
-        Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel2, Me.XrLabel3, Me.XrLine8, Me.XrTable2})
+        Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox2, Me.XrLabel2, Me.XrLabel3, Me.XrLine8, Me.XrTable2})
         Me.Detail.HeightF = 769.2083!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(267.2118!, 723.2084!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(230.4891!, 23.0!)
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.Text = "Nelson Humberto Paz Muñoz"
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(257.9742!, 746.2083!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(245.821!, 22.99994!)
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.Text = "Gerente Propietario de EVIPRIL"
         '
         'XrLine8
         '
@@ -502,6 +524,38 @@ Partial Public Class ReporteContratoEmpleado
         Me.BottomMarginBand1.HeightF = 75.7084!
         Me.BottomMarginBand1.Name = "BottomMarginBand1"
         '
+        'XrLabel5
+        '
+        Me.XrLabel5.BackColor = System.Drawing.Color.Silver
+        Me.XrLabel5.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(257.9742!, 32.5834!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(245.821!, 22.99999!)
+        Me.XrLabel5.StylePriority.UseBackColor = False
+        Me.XrLabel5.StylePriority.UseBorders = False
+        Me.XrLabel5.StylePriority.UseFont = False
+        Me.XrLabel5.Text = "Tel. 2782-6490 Choluteca, Honduras C.A."
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.BackColor = System.Drawing.Color.Silver
+        Me.XrLabel4.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(147.9742!, 10.00001!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(446.591!, 23.0!)
+        Me.XrLabel4.StylePriority.UseBackColor = False
+        Me.XrLabel4.StylePriority.UseBorders = False
+        Me.XrLabel4.StylePriority.UseFont = False
+        Me.XrLabel4.Text = "Barrio La Libertad, 1½  al Norte de Survivienda de Asociación San José Obrero  "
+        '
         'XrPageInfo1
         '
         Me.XrPageInfo1.LocationFloat = New DevExpress.Utils.PointFloat(10.00004!, 42.7084!)
@@ -523,50 +577,9 @@ Partial Public Class ReporteContratoEmpleado
         '
         'ReportHeaderBand1
         '
-        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel34, Me.XrLabel35, Me.XrLabel1, Me.XrPictureBox1})
+        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox3, Me.XrLabel34, Me.XrLabel35, Me.XrLabel1, Me.XrPictureBox1})
         Me.ReportHeaderBand1.HeightF = 117.6667!
         Me.ReportHeaderBand1.Name = "ReportHeaderBand1"
-        '
-        'Title
-        '
-        Me.Title.BackColor = System.Drawing.Color.Transparent
-        Me.Title.BorderColor = System.Drawing.Color.Black
-        Me.Title.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.Title.BorderWidth = 1.0!
-        Me.Title.Font = New System.Drawing.Font("Times New Roman", 24.0!)
-        Me.Title.ForeColor = System.Drawing.Color.Black
-        Me.Title.Name = "Title"
-        '
-        'FieldCaption
-        '
-        Me.FieldCaption.BackColor = System.Drawing.Color.Transparent
-        Me.FieldCaption.BorderColor = System.Drawing.Color.Black
-        Me.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.FieldCaption.BorderWidth = 1.0!
-        Me.FieldCaption.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.FieldCaption.ForeColor = System.Drawing.Color.Black
-        Me.FieldCaption.Name = "FieldCaption"
-        '
-        'PageInfo
-        '
-        Me.PageInfo.BackColor = System.Drawing.Color.Transparent
-        Me.PageInfo.BorderColor = System.Drawing.Color.Black
-        Me.PageInfo.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.PageInfo.BorderWidth = 1.0!
-        Me.PageInfo.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-        Me.PageInfo.ForeColor = System.Drawing.Color.Black
-        Me.PageInfo.Name = "PageInfo"
-        '
-        'DataField
-        '
-        Me.DataField.BackColor = System.Drawing.Color.Transparent
-        Me.DataField.BorderColor = System.Drawing.Color.Black
-        Me.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.DataField.BorderWidth = 1.0!
-        Me.DataField.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-        Me.DataField.ForeColor = System.Drawing.Color.Black
-        Me.DataField.Name = "DataField"
-        Me.DataField.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         '
         'XrLabel34
         '
@@ -615,57 +628,62 @@ Partial Public Class ReporteContratoEmpleado
         Me.XrPictureBox1.SizeF = New System.Drawing.SizeF(136.875!, 78.87497!)
         Me.XrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
-        'XrLabel5
+        'Title
         '
-        Me.XrLabel5.BackColor = System.Drawing.Color.Silver
-        Me.XrLabel5.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(257.9742!, 32.5834!)
-        Me.XrLabel5.Name = "XrLabel5"
-        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel5.SizeF = New System.Drawing.SizeF(245.821!, 22.99999!)
-        Me.XrLabel5.StylePriority.UseBackColor = False
-        Me.XrLabel5.StylePriority.UseBorders = False
-        Me.XrLabel5.StylePriority.UseFont = False
-        Me.XrLabel5.Text = "Tel. 2782-6490 Choluteca, Honduras C.A."
+        Me.Title.BackColor = System.Drawing.Color.Transparent
+        Me.Title.BorderColor = System.Drawing.Color.Black
+        Me.Title.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.Title.BorderWidth = 1.0!
+        Me.Title.Font = New System.Drawing.Font("Times New Roman", 24.0!)
+        Me.Title.ForeColor = System.Drawing.Color.Black
+        Me.Title.Name = "Title"
         '
-        'XrLabel4
+        'FieldCaption
         '
-        Me.XrLabel4.BackColor = System.Drawing.Color.Silver
-        Me.XrLabel4.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrLabel4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(147.9742!, 10.00001!)
-        Me.XrLabel4.Name = "XrLabel4"
-        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel4.SizeF = New System.Drawing.SizeF(446.591!, 23.0!)
-        Me.XrLabel4.StylePriority.UseBackColor = False
-        Me.XrLabel4.StylePriority.UseBorders = False
-        Me.XrLabel4.StylePriority.UseFont = False
-        Me.XrLabel4.Text = "Barrio La Libertad, 1½  al Norte de Survivienda de Asociación San José Obrero  "
+        Me.FieldCaption.BackColor = System.Drawing.Color.Transparent
+        Me.FieldCaption.BorderColor = System.Drawing.Color.Black
+        Me.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.FieldCaption.BorderWidth = 1.0!
+        Me.FieldCaption.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.FieldCaption.ForeColor = System.Drawing.Color.Black
+        Me.FieldCaption.Name = "FieldCaption"
         '
-        'XrLabel2
+        'PageInfo
         '
-        Me.XrLabel2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(267.2118!, 723.2084!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(230.4891!, 23.0!)
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.Text = "Nelson Humberto Paz Muñoz"
+        Me.PageInfo.BackColor = System.Drawing.Color.Transparent
+        Me.PageInfo.BorderColor = System.Drawing.Color.Black
+        Me.PageInfo.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.PageInfo.BorderWidth = 1.0!
+        Me.PageInfo.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+        Me.PageInfo.ForeColor = System.Drawing.Color.Black
+        Me.PageInfo.Name = "PageInfo"
         '
-        'XrLabel3
+        'DataField
         '
-        Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(257.9742!, 746.2083!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(245.821!, 22.99994!)
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.Text = "Gerente Propietario de EVIPRIL"
+        Me.DataField.BackColor = System.Drawing.Color.Transparent
+        Me.DataField.BorderColor = System.Drawing.Color.Black
+        Me.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.DataField.BorderWidth = 1.0!
+        Me.DataField.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+        Me.DataField.ForeColor = System.Drawing.Color.Black
+        Me.DataField.Name = "DataField"
+        Me.DataField.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        '
+        'XrPictureBox2
+        '
+        Me.XrPictureBox2.Image = CType(resources.GetObject("XrPictureBox2.Image"), System.Drawing.Image)
+        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(321.2993!, 352.8958!)
+        Me.XrPictureBox2.Name = "XrPictureBox2"
+        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(83.40136!, 63.41664!)
+        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
+        'XrPictureBox3
+        '
+        Me.XrPictureBox3.Image = CType(resources.GetObject("XrPictureBox3.Image"), System.Drawing.Image)
+        Me.XrPictureBox3.LocationFloat = New DevExpress.Utils.PointFloat(22.341!, 32.12503!)
+        Me.XrPictureBox3.Name = "XrPictureBox3"
+        Me.XrPictureBox3.SizeF = New System.Drawing.SizeF(104.7998!, 78.87497!)
+        Me.XrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'ReporteContratoEmpleado
         '
@@ -750,4 +768,6 @@ Partial Public Class ReporteContratoEmpleado
     Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrPictureBox2 As DevExpress.XtraReports.UI.XRPictureBox
+    Friend WithEvents XrPictureBox3 As DevExpress.XtraReports.UI.XRPictureBox
 End Class

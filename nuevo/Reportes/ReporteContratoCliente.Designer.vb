@@ -73,6 +73,7 @@ Partial Public Class ReporteContratoCliente
         Me.Evipril4 = New nuevo.Evipril()
         Me.Sp_MostrarContratoEmpleadoTableAdapter1 = New nuevo.EviprilTableAdapters.Sp_MostrarContratoEmpleadoTableAdapter()
         Me.Sp_MostrarContratoClienteTableAdapter3 = New nuevo.EviprilTableAdapters.Sp_MostrarContratoClienteTableAdapter()
+        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Evipril2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -440,7 +441,7 @@ Partial Public Class ReporteContratoCliente
         '
         'ReportHeaderBand1
         '
-        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox1, Me.XrLabel34, Me.XrLabel35, Me.XrLabel1})
+        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox2, Me.XrPictureBox1, Me.XrLabel34, Me.XrLabel35, Me.XrLabel1})
         Me.ReportHeaderBand1.HeightF = 106.2083!
         Me.ReportHeaderBand1.Name = "ReportHeaderBand1"
         '
@@ -543,6 +544,14 @@ Partial Public Class ReporteContratoCliente
         '
         Me.Sp_MostrarContratoClienteTableAdapter3.ClearBeforeFill = True
         '
+        'XrPictureBox2
+        '
+        Me.XrPictureBox2.Image = CType(resources.GetObject("XrPictureBox2.Image"), System.Drawing.Image)
+        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(0!, 30.04169!)
+        Me.XrPictureBox2.Name = "XrPictureBox2"
+        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(83.40136!, 63.41664!)
+        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
         'ReporteContratoCliente
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.PageHeaderBand1, Me.TopMarginBand1, Me.BottomMarginBand1, Me.ReportHeaderBand1})
@@ -615,4 +624,5 @@ Partial Public Class ReporteContratoCliente
     Friend WithEvents Evipril4 As Evipril
     Friend WithEvents Sp_MostrarContratoEmpleadoTableAdapter1 As EviprilTableAdapters.Sp_MostrarContratoEmpleadoTableAdapter
     Friend WithEvents Sp_MostrarContratoClienteTableAdapter3 As EviprilTableAdapters.Sp_MostrarContratoClienteTableAdapter
+    Friend WithEvents XrPictureBox2 As DevExpress.XtraReports.UI.XRPictureBox
 End Class
