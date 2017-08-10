@@ -59,6 +59,7 @@ Public Class FrmEmpleado
         TcEmpleado.Visible = True
         Me.TcEmpleado.SelectedTab = TpAgregar
         BtnModificar.Enabled = False
+        BtnGuardar.Enabled = True
         TxtNumIdentidad.Enabled = True
         TxtNombres.Enabled = True
         TxtApellidos.Enabled = True
@@ -425,7 +426,7 @@ Public Class FrmEmpleado
                     .Parameters.Add("@Rtn", SqlDbType.Char, 14).Value = TxtRTN.Text
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar, 300).Value = TxtObservacion.Text
                     .Parameters.Add("@NumSeguro", SqlDbType.Char, 14).Value = TxtNumSeguro.Text
-                    If FotoAgregar Is Nothing Then
+                    If foto Is Nothing Then
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = DBNull.Value
                     Else
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = foto
@@ -480,9 +481,7 @@ Public Class FrmEmpleado
         Try
             If DgvVerEmpleado.CurrentRow.Cells(0).Value IsNot Nothing Then
                 seleccion = 1
-                If (sele = 2) Then
-
-                Else
+                If (seleccion = 1) Then
                     TxtNumIdentidad.Enabled = False
                     TxtNombres.Enabled = False
                     TxtApellidos.Enabled = False
@@ -523,6 +522,8 @@ Public Class FrmEmpleado
 
                     TcEmpleado.SelectedTab = TpAgregar
                     BtnModificar.Enabled = True
+                    BtnGuardar.Enabled = False
+
                 End If
             End If
         Catch ex As Exception
@@ -685,9 +686,7 @@ Public Class FrmEmpleado
     End Sub
     Private Sub VerPerfilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerPerfilToolStripMenuItem.Click
         seleccion = 2
-        If (sele = 2) Then
-
-        Else
+        If (seleccion = 2) Then
             PerfilEmpleado.TxtNumIdentidad.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
             PerfilEmpleado.TxtNombres.Text = DgvVerEmpleado.CurrentRow.Cells(1).Value
             PerfilEmpleado.TxtApellidos.Text = DgvVerEmpleado.CurrentRow.Cells(2).Value
@@ -721,6 +720,7 @@ Public Class FrmEmpleado
             Else
                 PerfilEmpleado.TxtNumSeguro.Text = ""
             End If
+
         End If
 
         PerfilEmpleado.Show()

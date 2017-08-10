@@ -12,10 +12,22 @@ Public Class AudiLog
     End Sub
 
     Private Sub CargarAudiLog()
-        da = New SqlDataAdapter("exec Sp_MostrarAudiLog", cn)
-        dt = New DataTable
-        da.Fill(dt)
-        DgvAudiLog.DataSource = dt
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+
+        End If
+        Try
+            cn.Open()
+            da = New SqlDataAdapter("exec Sp_MostrarAudiLog", cn)
+            dt = New DataTable
+            da.Fill(dt)
+            DgvAudiLog.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+
     End Sub
 
     Private Sub BtnRegresarMenu_Click(sender As Object, e As EventArgs) Handles BtnRegresarMenu.Click

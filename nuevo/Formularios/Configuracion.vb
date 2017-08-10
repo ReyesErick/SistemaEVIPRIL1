@@ -40,6 +40,7 @@ Public Class FrmConfiguracion
             Dim connectionStringsSection As ConnectionStringsSection = DirectCast(config.GetSection("connectionStrings"), ConnectionStringsSection)
 
             connectionStringsSection.ConnectionStrings("nuevo.My.MySettings.Conexion").ConnectionString = nuevaCadenaConexion
+            connectionStringsSection.ConnectionStrings("nuevo.My.MySettings.EVIPRILConnectionString").ConnectionString = nuevaCadenaConexion
 
             config.Save(ConfigurationSaveMode.Modified, False)
 

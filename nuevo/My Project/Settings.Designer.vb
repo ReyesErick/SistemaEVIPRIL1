@@ -69,8 +69,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-C10BVBB;Initial Catalog=EVIPRIL;Persist Security Info=True;Us"& _ 
-            "er ID=userEvipril;Password=1234")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=EVDF;Initial Catalog=EVIPRIL;Persist Security Info=True;User ID=userE"& _ 
+            "vipril;Password=1234")>  _
         Public ReadOnly Property Conexion() As String
             Get
                 Return CType(Me("Conexion"),String)

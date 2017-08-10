@@ -353,6 +353,7 @@ Partial Class FrmEmpleado
         '
         'BtnBuscarBeneficiario
         '
+        Me.BtnBuscarBeneficiario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnBuscarBeneficiario.Image = CType(resources.GetObject("BtnBuscarBeneficiario.Image"), System.Drawing.Image)
         Me.BtnBuscarBeneficiario.Location = New System.Drawing.Point(755, 31)
         Me.BtnBuscarBeneficiario.Name = "BtnBuscarBeneficiario"
