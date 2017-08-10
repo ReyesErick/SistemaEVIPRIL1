@@ -209,8 +209,13 @@ Public Class FrmPrestacion
         If TxtDL4.Text Is Nothing Then
             TxtDL4.Text = 0
         End If
-        TxtTotalP.Text = FormatCurrency(TotalPrestaciones - (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text)))
+        TxtTotalP.Text = FormatCurrency(TotalPrestaciones - (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text) + CDbl(TextBox19.Text)))
 
+        Dim Tiempo As String
+        Tiempo = Today.DayOfYear
+
+        TextBox14.Text = Tiempo
+        TextBox19.Text = FormatCurrency(Convert.ToDouble((Tiempo / 360) * TxtSOM.Text))
 
     End Sub
 
