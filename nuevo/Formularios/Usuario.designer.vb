@@ -43,8 +43,6 @@ Partial Class FrmUsuario
         Me.TxtContraseña = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtUsuario = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -71,8 +69,6 @@ Partial Class FrmUsuario
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,8 +194,6 @@ Partial Class FrmUsuario
         Me.TabPage2.Controls.Add(Me.TxtContraseña)
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.TxtUsuario)
-        Me.TabPage2.Controls.Add(Me.PictureBox3)
-        Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.Controls.Add(Me.BtnGuardar)
         Me.TabPage2.Controls.Add(Me.BtnModificar)
         Me.TabPage2.Controls.Add(Me.Label4)
@@ -291,33 +285,13 @@ Partial Class FrmUsuario
         Me.TxtUsuario.Size = New System.Drawing.Size(272, 20)
         Me.TxtUsuario.TabIndex = 0
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(660, 436)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 31
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(494, 436)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 30
-        Me.PictureBox2.TabStop = False
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnGuardar.Enabled = False
-        Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Location = New System.Drawing.Point(643, 425)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
@@ -330,8 +304,8 @@ Partial Class FrmUsuario
         Me.BtnModificar.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnModificar.Enabled = False
-        Me.BtnModificar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnModificar.Location = New System.Drawing.Point(477, 425)
         Me.BtnModificar.Name = "BtnModificar"
@@ -488,8 +462,6 @@ Partial Class FrmUsuario
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -516,8 +488,6 @@ Partial Class FrmUsuario
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtContraseña As TextBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents Label5 As Label

@@ -176,12 +176,12 @@
     <Compile Include="Formularios\AudiLog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Evipril.Designer.vb">
+    <Compile Include="Modulos\Evipril.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Evipril.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Evipril.vb">
+    <Compile Include="Modulos\Evipril.vb">
       <DependentUpon>Evipril.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Beneficiario.Designer.vb">
@@ -190,22 +190,22 @@
     <Compile Include="Formularios\Beneficiario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Catalogo Depa.Designer.vb">
-      <DependentUpon>Catalogo Depa.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Catalogo Depa.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\CatalogoGeneral.Designer.vb">
-      <DependentUpon>CatalogoGeneral.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\CatalogoGeneral.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ContratosExpirar.Designer.vb">
+      <DependentUpon>ContratosExpirar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ContratosExpirar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\DetallePlanilla.Designer.vb">
+      <DependentUpon>DetallePlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DetallePlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\PerfilEmpleado.Designer.vb">
@@ -286,6 +286,11 @@
     <Compile Include="Formularios\Usuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulos\Planillas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Planillas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteClientes.Designer.vb">
       <DependentUpon>ReporteClientes.vb</DependentUpon>
     </Compile>
@@ -336,12 +341,6 @@
     <EmbeddedResource Include="Formularios\Beneficiario.resx">
       <DependentUpon>Beneficiario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Catalogo Depa.resx">
-      <DependentUpon>Catalogo Depa.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\CatalogoGeneral.resx">
-      <DependentUpon>CatalogoGeneral.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +349,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Contrato.resx">
       <DependentUpon>Contrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ContratosExpirar.resx">
+      <DependentUpon>ContratosExpirar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\DetallePlanilla.resx">
+      <DependentUpon>DetallePlanilla.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleado.resx">
       <DependentUpon>Empleado.vb</DependentUpon>
@@ -408,15 +413,15 @@
     <Content Include="ayuda.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Evipril.xsc">
+    <None Include="Modulos\Evipril.xsc">
       <DependentUpon>Evipril.xsd</DependentUpon>
     </None>
-    <None Include="Evipril.xsd">
+    <None Include="Modulos\Evipril.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Evipril.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Evipril.xss">
+    <None Include="Modulos\Evipril.xss">
       <DependentUpon>Evipril.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
@@ -430,6 +435,17 @@
     </None>
     <None Include="App.config" />
     <None Include="nuevo_TemporaryKey.pfx" />
+    <None Include="Modulos\Planillas.xsc">
+      <DependentUpon>Planillas.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\Planillas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Planillas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Modulos\Planillas.xss">
+      <DependentUpon>Planillas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

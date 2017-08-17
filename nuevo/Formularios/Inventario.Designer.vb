@@ -39,7 +39,6 @@ Partial Class FrmInventario
         Me.RdbInactivo = New System.Windows.Forms.RadioButton()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PbxBuscar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.cboPaisFabricacion = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -76,7 +75,6 @@ Partial Class FrmInventario
         Me.TcArma.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -107,7 +105,7 @@ Partial Class FrmInventario
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 20)
+        Me.PictureBox5.Location = New System.Drawing.Point(12, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -199,7 +197,6 @@ Partial Class FrmInventario
         Me.TabPage2.Controls.Add(Me.RdbInactivo)
         Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.PbxBuscar)
-        Me.TabPage2.Controls.Add(Me.PictureBox3)
         Me.TabPage2.Controls.Add(Me.BtnGuardar)
         Me.TabPage2.Controls.Add(Me.cboPaisFabricacion)
         Me.TabPage2.Controls.Add(Me.Label8)
@@ -265,22 +262,12 @@ Partial Class FrmInventario
         Me.PbxBuscar.TabIndex = 60
         Me.PbxBuscar.TabStop = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(663, 462)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 42
-        Me.PictureBox3.TabStop = False
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Location = New System.Drawing.Point(646, 451)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
@@ -423,11 +410,11 @@ Partial Class FrmInventario
         '
         Me.Button1.BackColor = System.Drawing.Color.LawnGreen
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(679, 496)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button1.Location = New System.Drawing.Point(657, 496)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.Size = New System.Drawing.Size(178, 40)
         Me.Button1.TabIndex = 89
         Me.Button1.Text = "Imprimir Reporte"
         Me.Button1.UseVisualStyleBackColor = False
@@ -515,7 +502,6 @@ Partial Class FrmInventario
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -553,7 +539,6 @@ Partial Class FrmInventario
     Friend WithEvents cboModelo As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents Label8 As Label

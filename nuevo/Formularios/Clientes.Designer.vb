@@ -38,8 +38,6 @@ Partial Class FrmClientes
         Me.TpAgregar = New System.Windows.Forms.TabPage()
         Me.txtIdCliente = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.MsktTelf1 = New System.Windows.Forms.MaskedTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -67,8 +65,6 @@ Partial Class FrmClientes
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TcCliente.SuspendLayout()
         Me.TpAgregar.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.TpVer.SuspendLayout()
         CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +106,7 @@ Partial Class FrmClientes
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 20)
+        Me.PictureBox5.Location = New System.Drawing.Point(12, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -199,8 +195,6 @@ Partial Class FrmClientes
         '
         Me.TpAgregar.Controls.Add(Me.txtIdCliente)
         Me.TpAgregar.Controls.Add(Me.Label8)
-        Me.TpAgregar.Controls.Add(Me.PictureBox3)
-        Me.TpAgregar.Controls.Add(Me.PictureBox2)
         Me.TpAgregar.Controls.Add(Me.BtnGuardar)
         Me.TpAgregar.Controls.Add(Me.MsktTelf1)
         Me.TpAgregar.Controls.Add(Me.Panel4)
@@ -212,6 +206,7 @@ Partial Class FrmClientes
         Me.TpAgregar.Controls.Add(Me.Label2)
         Me.TpAgregar.Controls.Add(Me.TxtNombreCompañia)
         Me.TpAgregar.Controls.Add(Me.btnModificar)
+        Me.TpAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TpAgregar.Location = New System.Drawing.Point(4, 22)
         Me.TpAgregar.Name = "TpAgregar"
         Me.TpAgregar.Padding = New System.Windows.Forms.Padding(3)
@@ -225,7 +220,7 @@ Partial Class FrmClientes
         Me.txtIdCliente.Enabled = False
         Me.txtIdCliente.Location = New System.Drawing.Point(212, 46)
         Me.txtIdCliente.Name = "txtIdCliente"
-        Me.txtIdCliente.Size = New System.Drawing.Size(67, 20)
+        Me.txtIdCliente.Size = New System.Drawing.Size(67, 24)
         Me.txtIdCliente.TabIndex = 0
         '
         'Label8
@@ -238,32 +233,12 @@ Partial Class FrmClientes
         Me.Label8.TabIndex = 82
         Me.Label8.Text = "IdCliente:"
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(704, 460)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 36
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(529, 460)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 35
-        Me.PictureBox2.TabStop = False
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Location = New System.Drawing.Point(687, 449)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
@@ -296,7 +271,7 @@ Partial Class FrmClientes
         Me.RdbActibo.AutoSize = True
         Me.RdbActibo.Location = New System.Drawing.Point(136, 19)
         Me.RdbActibo.Name = "RdbActibo"
-        Me.RdbActibo.Size = New System.Drawing.Size(55, 17)
+        Me.RdbActibo.Size = New System.Drawing.Size(72, 22)
         Me.RdbActibo.TabIndex = 0
         Me.RdbActibo.TabStop = True
         Me.RdbActibo.Text = "Activo"
@@ -307,7 +282,7 @@ Partial Class FrmClientes
         Me.RdbInactivo.AutoSize = True
         Me.RdbInactivo.Location = New System.Drawing.Point(136, 42)
         Me.RdbInactivo.Name = "RdbInactivo"
-        Me.RdbInactivo.Size = New System.Drawing.Size(63, 17)
+        Me.RdbInactivo.Size = New System.Drawing.Size(84, 22)
         Me.RdbInactivo.TabIndex = 1
         Me.RdbInactivo.TabStop = True
         Me.RdbInactivo.Text = "Inactivo"
@@ -316,10 +291,10 @@ Partial Class FrmClientes
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(3, 24)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(117, 20)
+        Me.Label6.Size = New System.Drawing.Size(123, 18)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Estado Cliente:"
         '
@@ -334,10 +309,10 @@ Partial Class FrmClientes
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(92, 249)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(95, 249)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 20)
+        Me.Label4.Size = New System.Drawing.Size(90, 18)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Derección:"
         '
@@ -345,36 +320,36 @@ Partial Class FrmClientes
         '
         Me.TxtNombreContacto.Location = New System.Drawing.Point(212, 144)
         Me.TxtNombreContacto.Name = "TxtNombreContacto"
-        Me.TxtNombreContacto.Size = New System.Drawing.Size(328, 20)
+        Me.TxtNombreContacto.Size = New System.Drawing.Size(328, 24)
         Me.TxtNombreContacto.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(113, 198)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(106, 200)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 20)
+        Me.Label5.Size = New System.Drawing.Size(79, 18)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Teléfono:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(50, 144)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(38, 150)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 20)
+        Me.Label3.Size = New System.Drawing.Size(147, 18)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Nombre Contacto:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 89)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(31, 96)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(145, 20)
+        Me.Label2.Size = New System.Drawing.Size(154, 18)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nombre Compañia:"
         '
@@ -382,15 +357,15 @@ Partial Class FrmClientes
         '
         Me.TxtNombreCompañia.Location = New System.Drawing.Point(212, 93)
         Me.TxtNombreCompañia.Name = "TxtNombreCompañia"
-        Me.TxtNombreCompañia.Size = New System.Drawing.Size(328, 20)
+        Me.TxtNombreCompañia.Size = New System.Drawing.Size(328, 24)
         Me.TxtNombreCompañia.TabIndex = 1
         '
         'btnModificar
         '
         Me.btnModificar.BackColor = System.Drawing.Color.LawnGreen
         Me.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnModificar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnModificar.Location = New System.Drawing.Point(510, 449)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(156, 40)
@@ -473,8 +448,6 @@ Partial Class FrmClientes
         Me.TcCliente.ResumeLayout(False)
         Me.TpAgregar.ResumeLayout(False)
         Me.TpAgregar.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.TpVer.ResumeLayout(False)
@@ -496,8 +469,6 @@ Partial Class FrmClientes
     Friend WithEvents Label1 As Label
     Friend WithEvents TcCliente As TabControl
     Friend WithEvents TpAgregar As TabPage
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents MsktTelf1 As MaskedTextBox
     Friend WithEvents Panel4 As Panel

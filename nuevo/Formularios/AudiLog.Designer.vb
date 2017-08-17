@@ -28,8 +28,6 @@ Partial Class AudiLog
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.BtnRegresarMenu = New System.Windows.Forms.Button()
         Me.DgvAudiLog = New System.Windows.Forms.DataGridView()
-        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,36 +81,16 @@ Partial Class AudiLog
         Me.DgvAudiLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvAudiLog.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvAudiLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAudiLog.Location = New System.Drawing.Point(268, 142)
+        Me.DgvAudiLog.Location = New System.Drawing.Point(268, 85)
         Me.DgvAudiLog.Name = "DgvAudiLog"
-        Me.DgvAudiLog.Size = New System.Drawing.Size(847, 495)
+        Me.DgvAudiLog.Size = New System.Drawing.Size(847, 552)
         Me.DgvAudiLog.TabIndex = 10
-        '
-        'TxtBusqueda
-        '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(549, 94)
-        Me.TxtBusqueda.Multiline = True
-        Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(331, 25)
-        Me.TxtBusqueda.TabIndex = 11
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(480, 94)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 20)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Buscar:"
         '
         'AudiLog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1143, 672)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.DgvAudiLog)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
@@ -127,7 +105,6 @@ Partial Class AudiLog
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvAudiLog, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -136,7 +113,5 @@ Partial Class AudiLog
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents BtnRegresarMenu As Button
     Friend WithEvents DgvAudiLog As DataGridView
-    Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents HelpProvider1 As HelpProvider
 End Class

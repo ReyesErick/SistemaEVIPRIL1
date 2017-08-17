@@ -12,8 +12,8 @@ Public Class FrmPrestacion
         Me.TxtSOD.Text = FormatCurrency(CDbl(Me.TxtSOM.Text) / 30, 2)
         Me.TxtSOPM.Text = FormatCurrency((CDbl(Me.TxtSOM.Text) * 14) / 12, 2)
         Me.TxtSOPD.Text = FormatCurrency(CDbl(TxtSOPM.Text) / 30, 2)
-        FechaInicial = DtpFIngreso.Text
-        FechaActual = DtpFTerminacion.Text
+        FechaInicial = DtpFIngreso.Value
+        FechaActual = DtpFTerminacion.Value
         Dim diaActual As Integer
         Dim mesActual As Integer
         Dim anioActual As Integer
@@ -197,19 +197,6 @@ Public Class FrmPrestacion
         Me.TxtCPL.Text = FormatCurrency((Duracion_Meses / 12) * CDbl(Me.TxtSOPD.Text))
         TotalPrestaciones += Me.TxtCPL.Text
         TxtTotalD.Text = FormatCurrency(TotalPrestaciones)
-        Dim Tiempo As String
-        Dim FechaAnt As New Date(Now.Year, 6, 1)
-        If (Today < FechaAnt) Then
-            FechaAnt = New Date(Now.Year - 1, 6, 1)
-        End If
-
-
-
-        Tiempo = Today.DayOfYear
-        TextBox14.Text = Tiempo
-        TextBox19.Text = FormatCurrency(Convert.ToDouble((Tiempo / 360) * TxtSOM.Text))
-        TextBox24.Text = DateDiff(DateInterval.DayOfYear, FechaAnt, Today)
-        TextBox25.Text = FormatCurrency(Convert.ToDouble((TextBox24.Text / 360) * TxtSOM.Text))
         If TxtDL1.Text Is Nothing Then
             TxtDL1.Text = 0
         End If
@@ -222,7 +209,15 @@ Public Class FrmPrestacion
         If TxtDL4.Text Is Nothing Then
             TxtDL4.Text = 0
         End If
-        TxtTotalP.Text = FormatCurrency(TotalPrestaciones - (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text) + CDbl(TextBox19.Text) + CDbl(TextBox25.Text)))
+
+        Dim tiempo As String
+
+        tiempo = Today.DayOfYear
+        TextBox14.Text = tiempo
+        TextBox19.Text = FormatCurrency(CDbl((tiempo / 360) * TxtSOM.Text))
+
+        TxtTotalP.Text = FormatCurrency(TotalPrestaciones - (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text)))
+
 
 
 

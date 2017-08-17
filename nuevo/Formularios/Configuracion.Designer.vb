@@ -76,14 +76,14 @@ Partial Class FrmConfiguracion
         '
         'btnTestConnection
         '
-        Me.btnTestConnection.BackColor = System.Drawing.Color.White
+        Me.btnTestConnection.BackColor = System.Drawing.Color.LawnGreen
         Me.btnTestConnection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnTestConnection.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTestConnection.FlatAppearance.BorderSize = 0
-        Me.btnTestConnection.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTestConnection.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTestConnection.Location = New System.Drawing.Point(126, 168)
         Me.btnTestConnection.Name = "btnTestConnection"
-        Me.btnTestConnection.Size = New System.Drawing.Size(129, 33)
+        Me.btnTestConnection.Size = New System.Drawing.Size(151, 33)
         Me.btnTestConnection.TabIndex = 4
         Me.btnTestConnection.Text = "&Probar conexión"
         Me.btnTestConnection.UseVisualStyleBackColor = False
@@ -134,40 +134,40 @@ Partial Class FrmConfiguracion
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(58, 130)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(45, 132)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 19)
+        Me.Label4.Size = New System.Drawing.Size(87, 16)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Contraseña"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(80, 99)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(67, 99)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 19)
+        Me.Label3.Size = New System.Drawing.Size(62, 16)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(38, 61)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(23, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 19)
+        Me.Label2.Size = New System.Drawing.Size(109, 16)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Base de datos"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(72, 28)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(65, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 19)
+        Me.Label1.Size = New System.Drawing.Size(67, 16)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Servidor"
         '

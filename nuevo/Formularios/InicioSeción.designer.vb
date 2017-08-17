@@ -49,10 +49,10 @@ Partial Class FrmInicioSeción
         '
         Me.BtnInicioSesion.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnInicioSesion.Font = New System.Drawing.Font("Modern No. 20", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnInicioSesion.Location = New System.Drawing.Point(542, 271)
+        Me.BtnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInicioSesion.Location = New System.Drawing.Point(580, 239)
         Me.BtnInicioSesion.Name = "BtnInicioSesion"
-        Me.BtnInicioSesion.Size = New System.Drawing.Size(134, 39)
+        Me.BtnInicioSesion.Size = New System.Drawing.Size(188, 42)
         Me.BtnInicioSesion.TabIndex = 2
         Me.BtnInicioSesion.Text = "INICIAR  SESIÓN"
         Me.BtnInicioSesion.UseVisualStyleBackColor = False
@@ -60,7 +60,7 @@ Partial Class FrmInicioSeción
         'TxtUser
         '
         Me.TxtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtUser.Location = New System.Drawing.Point(589, 130)
+        Me.TxtUser.Location = New System.Drawing.Point(589, 127)
         Me.TxtUser.Multiline = True
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(173, 21)
@@ -87,11 +87,11 @@ Partial Class FrmInicioSeción
         Me.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPassword.ForeColor = System.Drawing.Color.Black
-        Me.TxtPassword.Location = New System.Drawing.Point(589, 184)
+        Me.TxtPassword.Location = New System.Drawing.Point(589, 180)
         Me.TxtPassword.Multiline = True
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(173, 20)
+        Me.TxtPassword.Size = New System.Drawing.Size(179, 20)
         Me.TxtPassword.TabIndex = 1
         '
         'AbrirFoto

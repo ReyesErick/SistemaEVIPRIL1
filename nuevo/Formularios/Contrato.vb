@@ -154,7 +154,14 @@ Public Class FrmContrato
                     .Connection = cn
 
                     .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = dtpInicio.Value
-                    .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = dtpfinal.Value
+
+                    If CboTipoContrato.Text = "Temporal" Then
+                        .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = dtpfinal.Value
+                    Else
+                        .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = DBNull.Value
+                    End If
+
+
                     .Parameters.Add("@SueldoBase", SqlDbType.Money).Value = Convert.ToDecimal(txtsueldo.Text)
                     .Parameters.Add("@IdTipoEmpleado", SqlDbType.Int).Value = CboTipoEmpleado.SelectedValue
                     .Parameters.Add("@IdTipoContrato", SqlDbType.Int).Value = CboTipoContrato.SelectedValue
@@ -171,7 +178,37 @@ Public Class FrmContrato
         End Try
     End Sub
 
+    Private Sub Modificarcontrato()
+
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        cn.Open()
+        Try
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_ModificarContratoEmpleado"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+
+                    .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = dtpfinal.Value
+
+                    .Parameters.Add("@IdContratoEmpleado", SqlDbType.Int).Value = DgvContrato.CurrentRow.Cells(0).Value
+
+                    .ExecuteNonQuery()
+                    MsgBox("Registro modificado con éxito")
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
     Private Sub Limpiar()
+        TxtNumIdentidad.Clear()
         txtsueldo.Clear()
         CboTipoContrato.Text = ""
         CboTipoEmpleado.Text = ""
@@ -217,6 +254,12 @@ Public Class FrmContrato
         TpContrato.SelectedTab = TabPage1
         CboTipoContrato.Text = ""
         CboTipoEmpleado.Text = ""
+        dtpFechaInicio.Enabled = True
+        txtsueldo.Enabled = True
+        CboTipoEmpleado.Enabled = True
+        CboTipoContrato.Enabled = True
+        BtnGuardar.Enabled = True
+        BtnModificar.Enabled = False
     End Sub
 
     Private Sub LblAgregarContratoClien_Click(sender As Object, e As EventArgs) Handles LblAgregarContratoClien.Click
@@ -507,4 +550,60 @@ Public Class FrmContrato
         End Using
     End Sub
 
+    Private Sub AudiLogModificarEmpleado()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = "Se modificó Contrato para empleado con ID: " + TxtNumIdentidad.Text
+            da.InsertCommand.Parameters.Add("@Usuario", SqlDbType.NVarChar).Value = User
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        Call Modificarcontrato()
+        Call AudiLogModificarEmpleado()
+        Call Limpiar()
+        Call MostrarDatosContratoEmpleado()
+        TpContrato.SelectedTab = TabPage3
+    End Sub
+
+    Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem.Click
+        dtpFechaInicio.Enabled = False
+        txtsueldo.Enabled = False
+        CboTipoEmpleado.Enabled = False
+        CboTipoContrato.Enabled = False
+        BtnModificar.Enabled = True
+        BtnGuardar.Enabled = False
+        dtpFechaInicio.Value = CDate(DgvContrato.CurrentRow.Cells(1).Value)
+        txtsueldo.Text = DgvContrato.CurrentRow.Cells(3).Value
+        CboTipoEmpleado.Text = DgvContrato.CurrentRow.Cells(4).Value
+        CboTipoContrato.Text = DgvContrato.CurrentRow.Cells(5).Value
+        TxtNumIdentidad.Text = DgvContrato.CurrentRow.Cells(6).Value
+
+
+
+        TpContrato.SelectedTab = TabPage1
+
+    End Sub
+
+    Private Sub Label14_MouseMove(sender As Object, e As MouseEventArgs) Handles Label14.MouseMove
+        Label14.ForeColor = Color.Green
+    End Sub
+
+    Private Sub Label14_MouseLeave(sender As Object, e As EventArgs) Handles Label14.MouseLeave
+        Label14.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+        ContratosExpirar.ShowDialog()
+    End Sub
 End Class

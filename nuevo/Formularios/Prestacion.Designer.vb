@@ -157,8 +157,6 @@ Partial Class FrmPrestacion
         Me.LblOrdinario = New System.Windows.Forms.Label()
         Me.BtnImprimir = New System.Windows.Forms.Button()
         Me.BtnCalcular = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,8 +170,6 @@ Partial Class FrmPrestacion
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel7.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -1495,8 +1491,8 @@ Partial Class FrmPrestacion
         '
         Me.BtnImprimir.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnImprimir.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnImprimir.Location = New System.Drawing.Point(1073, 572)
         Me.BtnImprimir.Name = "BtnImprimir"
         Me.BtnImprimir.Size = New System.Drawing.Size(156, 40)
@@ -1508,8 +1504,8 @@ Partial Class FrmPrestacion
         '
         Me.BtnCalcular.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnCalcular.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnCalcular.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnCalcular.Location = New System.Drawing.Point(907, 572)
         Me.BtnCalcular.Name = "BtnCalcular"
@@ -1518,33 +1514,11 @@ Partial Class FrmPrestacion
         Me.BtnCalcular.Text = "Calcular"
         Me.BtnCalcular.UseVisualStyleBackColor = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(924, 583)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 31
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(1094, 583)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 32
-        Me.PictureBox4.TabStop = False
-        '
         'FrmPrestacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1241, 672)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.BtnCalcular)
         Me.Controls.Add(Me.Panel7)
@@ -1581,8 +1555,6 @@ Partial Class FrmPrestacion
         Me.Panel4.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1719,8 +1691,6 @@ Partial Class FrmPrestacion
     Friend WithEvents LblOrdinario As Label
     Friend WithEvents BtnImprimir As Button
     Friend WithEvents BtnCalcular As Button
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents DtpFTerminacion As DateTimePicker
     Friend WithEvents DtpFIngreso As DateTimePicker
     Friend WithEvents HelpProvider1 As HelpProvider

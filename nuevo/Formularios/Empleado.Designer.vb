@@ -74,8 +74,6 @@ Partial Class FrmEmpleado
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.TpVer = New System.Windows.Forms.TabPage()
@@ -100,8 +98,6 @@ Partial Class FrmEmpleado
         CType(Me.BtnAgregarImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnBuscarBeneficiario, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpVer.SuspendLayout()
         CType(Me.DgvVerEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsEditar.SuspendLayout()
@@ -268,8 +264,6 @@ Partial Class FrmEmpleado
         Me.TpAgregar.Controls.Add(Me.Label4)
         Me.TpAgregar.Controls.Add(Me.Label3)
         Me.TpAgregar.Controls.Add(Me.Label2)
-        Me.TpAgregar.Controls.Add(Me.PictureBox3)
-        Me.TpAgregar.Controls.Add(Me.PictureBox2)
         Me.TpAgregar.Controls.Add(Me.BtnGuardar)
         Me.TpAgregar.Controls.Add(Me.BtnModificar)
         Me.TpAgregar.Location = New System.Drawing.Point(4, 22)
@@ -649,32 +643,12 @@ Partial Class FrmEmpleado
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "Numero de Identidad:"
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(709, 504)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 40
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(543, 504)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 39
-        Me.PictureBox2.TabStop = False
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnGuardar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Location = New System.Drawing.Point(692, 493)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(156, 40)
@@ -686,8 +660,8 @@ Partial Class FrmEmpleado
         '
         Me.BtnModificar.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnModificar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnModificar.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnModificar.Location = New System.Drawing.Point(526, 493)
         Me.BtnModificar.Name = "BtnModificar"
@@ -716,11 +690,11 @@ Partial Class FrmEmpleado
         '
         Me.Button1.BackColor = System.Drawing.Color.LawnGreen
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(669, 481)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button1.Location = New System.Drawing.Point(641, 481)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 40)
+        Me.Button1.Size = New System.Drawing.Size(184, 40)
         Me.Button1.TabIndex = 87
         Me.Button1.Text = "Imprimir Reporte"
         Me.Button1.UseVisualStyleBackColor = False
@@ -831,8 +805,6 @@ Partial Class FrmEmpleado
         CType(Me.BtnAgregarImagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnBuscarBeneficiario, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpVer.ResumeLayout(False)
         Me.TpVer.PerformLayout()
         CType(Me.DgvVerEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
@@ -888,8 +860,6 @@ Partial Class FrmEmpleado
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents TpVer As TabPage

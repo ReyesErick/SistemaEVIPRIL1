@@ -18,7 +18,7 @@ Public Class PerfilEmpleado
 
         End If
         cn.Open()
-        cmd = New SqlCommand("Select c.FechaInicio,c.FechaFinal,c.SueldoBase,t.TipoEmpleado,ti.TipoContrato
+        cmd = New SqlCommand("Select c.FechaInicio, c.FechaFinal, c.SueldoBase,t.TipoEmpleado,ti.TipoContrato
 		From Empleado e inner join ContratoEmpleado c
 						on e.NumIdentidad = c.NumIdentidad
 						inner join TipoEmpleado t
@@ -31,7 +31,7 @@ Public Class PerfilEmpleado
             da = cmd.ExecuteReader()
             da.Read()
             dtpFechaInicial.Value = da("FechaInicio")
-            dtpFechaFinal.Value = da("FechaFinal")
+            TxtFechaFinal.Text = da("FechaFinal")
             txtSueldo.Text = da("SueldoBase").ToString()
             txtTipoEmpleado.Text = da("TipoEmpleado").ToString()
             txtTipoContrato.Text = da("TipoContrato").ToString()
@@ -54,7 +54,7 @@ Public Class PerfilEmpleado
         FrmPrestacion.TxtNombre.Text = TxtNombres.Text + " " + TxtApellidos.Text
         FrmPrestacion.TxtSOM.Text = txtSueldo.Text
         FrmPrestacion.DtpFIngreso.Value = dtpFechaInicial.Value
-        FrmPrestacion.DtpFTerminacion.Value = dtpFechaFinal.Value
+        FrmPrestacion.DtpFTerminacion.Value = TxtFechaFinal.Text
         FrmPrestacion.Show()
         Me.Close()
 

@@ -55,7 +55,7 @@ Partial Class PerfilEmpleado
         Me.txtEstadoCivil = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
+        Me.TxtFechaFinal = New System.Windows.Forms.TextBox()
         Me.dtpFechaInicial = New System.Windows.Forms.DateTimePicker()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txtTipoContrato = New System.Windows.Forms.TextBox()
@@ -393,7 +393,7 @@ Partial Class PerfilEmpleado
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.dtpFechaFinal)
+        Me.Panel2.Controls.Add(Me.TxtFechaFinal)
         Me.Panel2.Controls.Add(Me.dtpFechaInicial)
         Me.Panel2.Controls.Add(Me.Label23)
         Me.Panel2.Controls.Add(Me.txtTipoContrato)
@@ -418,14 +418,14 @@ Partial Class PerfilEmpleado
         Me.Panel2.Size = New System.Drawing.Size(411, 578)
         Me.Panel2.TabIndex = 127
         '
-        'dtpFechaFinal
+        'TxtFechaFinal
         '
-        Me.dtpFechaFinal.Enabled = False
-        Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(171, 430)
-        Me.dtpFechaFinal.Name = "dtpFechaFinal"
-        Me.dtpFechaFinal.Size = New System.Drawing.Size(188, 20)
-        Me.dtpFechaFinal.TabIndex = 147
+        Me.TxtFechaFinal.Enabled = False
+        Me.TxtFechaFinal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFechaFinal.Location = New System.Drawing.Point(171, 431)
+        Me.TxtFechaFinal.Name = "TxtFechaFinal"
+        Me.TxtFechaFinal.Size = New System.Drawing.Size(188, 21)
+        Me.TxtFechaFinal.TabIndex = 147
         '
         'dtpFechaInicial
         '
@@ -569,12 +569,12 @@ Partial Class PerfilEmpleado
         '
         Me.BtnCalcular.BackColor = System.Drawing.Color.LawnGreen
         Me.BtnCalcular.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnCalcular.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCalcular.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCalcular.Location = New System.Drawing.Point(642, 617)
+        Me.BtnCalcular.Location = New System.Drawing.Point(715, 620)
         Me.BtnCalcular.Name = "BtnCalcular"
-        Me.BtnCalcular.Size = New System.Drawing.Size(184, 40)
+        Me.BtnCalcular.Size = New System.Drawing.Size(230, 40)
         Me.BtnCalcular.TabIndex = 131
         Me.BtnCalcular.Text = "Calcular Prestaciones"
         Me.BtnCalcular.UseVisualStyleBackColor = False
@@ -674,9 +674,9 @@ Partial Class PerfilEmpleado
     Friend WithEvents Label22 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents dtpFechaInicial As DateTimePicker
-    Friend WithEvents dtpFechaFinal As DateTimePicker
     Friend WithEvents txtSexo As TextBox
     Friend WithEvents txtEstadoCivil As TextBox
     Friend WithEvents BtnCalcular As Button
     Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents TxtFechaFinal As TextBox
 End Class
