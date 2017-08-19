@@ -408,6 +408,67 @@ SELECT IdContratoEmpleado, FechaInicio, FechaFinal, SueldoBase, IdTipoEmpleado, 
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ia.IdArma, ia.Serie, ia.Calibre, ma.Marca, m.Modelo, t.TipoArma, f.LugarFabricacion, ia.IdContratoCliente, ia.Estado, ia.FechaPermiso
+FROM            InventarioArmas AS ia INNER JOIN
+                         Modelo AS m ON ia.IdModelo = m.IdModelo INNER JOIN
+                         Marca AS ma ON m.IdMarca = ma.IdMarca INNER JOIN
+                         TipoArma AS t ON ia.IdTipoArma = t.IdTipoArma INNER JOIN
+                         Fabricacion AS f ON ia.IdFabricacion = f.IdFabricacion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdArma" DataSetColumn="IdArma" />
+              <Mapping SourceColumn="Serie" DataSetColumn="Serie" />
+              <Mapping SourceColumn="Calibre" DataSetColumn="Calibre" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="TipoArma" DataSetColumn="TipoArma" />
+              <Mapping SourceColumn="LugarFabricacion" DataSetColumn="LugarFabricacion" />
+              <Mapping SourceColumn="IdContratoCliente" DataSetColumn="IdContratoCliente" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="FechaPermiso" DataSetColumn="FechaPermiso" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InventarioArmasTableAdapter" GeneratorDataComponentClassName="InventarioArmasTableAdapter" Name="InventarioArmas" UserDataComponentName="InventarioArmasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillFechaPermiso" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataFechaPermiso" GeneratorSourceName="FillFechaPermiso" GetMethodModifier="Public" GetMethodName="GetDataFechaPermiso" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataFechaPermiso" UserSourceName="FillFechaPermiso">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ia.IdArma, ia.Serie, ia.Calibre, ma.Marca, m.Modelo, t.TipoArma, f.LugarFabricacion, ia.IdContratoCliente, ia.Estado, ia.FechaPermiso
+FROM            InventarioArmas AS ia INNER JOIN
+                         Modelo AS m ON ia.IdModelo = m.IdModelo INNER JOIN
+                         Marca AS ma ON m.IdMarca = ma.IdMarca INNER JOIN
+                         TipoArma AS t ON ia.IdTipoArma = t.IdTipoArma INNER JOIN
+                         Fabricacion AS f ON ia.IdFabricacion = f.IdFabricacion
+WHERE        (DATEDIFF(day, GETDATE(), ia.FechaPermiso) &lt;= 30)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdArma" DataSetColumn="IdArma" />
+              <Mapping SourceColumn="Serie" DataSetColumn="Serie" />
+              <Mapping SourceColumn="Calibre" DataSetColumn="Calibre" />
+              <Mapping SourceColumn="IdContratoCliente" DataSetColumn="IdContratoCliente" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="FechaPermiso" DataSetColumn="FechaPermiso" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="TipoArma" DataSetColumn="TipoArma" />
+              <Mapping SourceColumn="LugarFabricacion" DataSetColumn="LugarFabricacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -548,6 +609,98 @@ SELECT IdContratoEmpleado, FechaInicio, FechaFinal, SueldoBase, IdTipoEmpleado, 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdArma" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdArma" msprop:Generator_ColumnPropNameInRow="IdArma" msprop:Generator_ColumnPropNameInTable="IdArmaColumn" msprop:Generator_UserColumnName="IdArma" type="xs:int" />
+              <xs:element name="Serie" msprop:Generator_ColumnVarNameInTable="columnSerie" msprop:Generator_ColumnPropNameInRow="Serie" msprop:Generator_ColumnPropNameInTable="SerieColumn" msprop:Generator_UserColumnName="Serie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Calibre" msprop:Generator_ColumnVarNameInTable="columnCalibre" msprop:Generator_ColumnPropNameInRow="Calibre" msprop:Generator_ColumnPropNameInTable="CalibreColumn" msprop:Generator_UserColumnName="Calibre" type="xs:int" />
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoArma" msprop:Generator_ColumnVarNameInTable="columnTipoArma" msprop:Generator_ColumnPropNameInRow="TipoArma" msprop:Generator_ColumnPropNameInTable="TipoArmaColumn" msprop:Generator_UserColumnName="TipoArma">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LugarFabricacion" msprop:Generator_ColumnVarNameInTable="columnLugarFabricacion" msprop:Generator_ColumnPropNameInRow="LugarFabricacion" msprop:Generator_ColumnPropNameInTable="LugarFabricacionColumn" msprop:Generator_UserColumnName="LugarFabricacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdContratoCliente" msprop:Generator_ColumnVarNameInTable="columnIdContratoCliente" msprop:Generator_ColumnPropNameInRow="IdContratoCliente" msprop:Generator_ColumnPropNameInTable="IdContratoClienteColumn" msprop:Generator_UserColumnName="IdContratoCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" type="xs:boolean" />
+              <xs:element name="FechaPermiso" msprop:Generator_ColumnVarNameInTable="columnFechaPermiso" msprop:Generator_ColumnPropNameInRow="FechaPermiso" msprop:Generator_ColumnPropNameInTable="FechaPermisoColumn" msprop:Generator_UserColumnName="FechaPermiso" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InventarioArmas" msprop:Generator_TableClassName="InventarioArmasDataTable" msprop:Generator_TableVarName="tableInventarioArmas" msprop:Generator_RowChangedName="InventarioArmasRowChanged" msprop:Generator_TablePropName="InventarioArmas" msprop:Generator_RowDeletingName="InventarioArmasRowDeleting" msprop:Generator_RowChangingName="InventarioArmasRowChanging" msprop:Generator_RowEvHandlerName="InventarioArmasRowChangeEventHandler" msprop:Generator_RowDeletedName="InventarioArmasRowDeleted" msprop:Generator_RowClassName="InventarioArmasRow" msprop:Generator_UserTableName="InventarioArmas" msprop:Generator_RowEvArgName="InventarioArmasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdArma" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdArma" msprop:Generator_ColumnPropNameInRow="IdArma" msprop:Generator_ColumnPropNameInTable="IdArmaColumn" msprop:Generator_UserColumnName="IdArma" type="xs:int" />
+              <xs:element name="Serie" msprop:Generator_ColumnVarNameInTable="columnSerie" msprop:Generator_ColumnPropNameInRow="Serie" msprop:Generator_ColumnPropNameInTable="SerieColumn" msprop:Generator_UserColumnName="Serie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Calibre" msprop:Generator_ColumnVarNameInTable="columnCalibre" msprop:Generator_ColumnPropNameInRow="Calibre" msprop:Generator_ColumnPropNameInTable="CalibreColumn" msprop:Generator_UserColumnName="Calibre" type="xs:int" />
+              <xs:element name="IdContratoCliente" msprop:Generator_ColumnVarNameInTable="columnIdContratoCliente" msprop:Generator_ColumnPropNameInRow="IdContratoCliente" msprop:Generator_ColumnPropNameInTable="IdContratoClienteColumn" msprop:Generator_UserColumnName="IdContratoCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" type="xs:boolean" />
+              <xs:element name="FechaPermiso" msprop:Generator_ColumnVarNameInTable="columnFechaPermiso" msprop:Generator_ColumnPropNameInRow="FechaPermiso" msprop:Generator_ColumnPropNameInTable="FechaPermisoColumn" msprop:Generator_UserColumnName="FechaPermiso" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoArma" msprop:Generator_ColumnVarNameInTable="columnTipoArma" msprop:Generator_ColumnPropNameInRow="TipoArma" msprop:Generator_ColumnPropNameInTable="TipoArmaColumn" msprop:Generator_UserColumnName="TipoArma">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LugarFabricacion" msprop:Generator_ColumnVarNameInTable="columnLugarFabricacion" msprop:Generator_ColumnPropNameInRow="LugarFabricacion" msprop:Generator_ColumnPropNameInTable="LugarFabricacionColumn" msprop:Generator_UserColumnName="LugarFabricacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -566,6 +719,14 @@ SELECT IdContratoEmpleado, FechaInicio, FechaFinal, SueldoBase, IdTipoEmpleado, 
     <xs:unique name="ContratoEmpleado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ContratoEmpleado" />
       <xs:field xpath="mstns:IdContratoEmpleado" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:IdArma" />
+    </xs:unique>
+    <xs:unique name="InventarioArmas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:InventarioArmas" />
+      <xs:field xpath="mstns:IdArma" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

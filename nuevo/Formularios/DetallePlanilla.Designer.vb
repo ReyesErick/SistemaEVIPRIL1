@@ -39,6 +39,14 @@ Partial Class FrmDetallePlanilla
         Me.DetallePlanillaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Planillas = New nuevo.Planillas()
         Me.DetallePlanillaDataGridView = New System.Windows.Forms.DataGridView()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DetallePlanillaTableAdapter = New nuevo.PlanillasTableAdapters.DetallePlanillaTableAdapter()
+        Me.TableAdapterManager = New nuevo.PlanillasTableAdapters.TableAdapterManager()
+        Me.EmpleadoTableAdapter = New nuevo.PlanillasTableAdapters.EmpleadoTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Guardar = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,14 +60,6 @@ Partial Class FrmDetallePlanilla
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DetallePlanillaTableAdapter = New nuevo.PlanillasTableAdapters.DetallePlanillaTableAdapter()
-        Me.TableAdapterManager = New nuevo.PlanillasTableAdapters.TableAdapterManager()
-        Me.EmpleadoTableAdapter = New nuevo.PlanillasTableAdapters.EmpleadoTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Guardar = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         CType(Me.DetallePlanillaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Planillas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DetallePlanillaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +90,70 @@ Partial Class FrmDetallePlanilla
         Me.DetallePlanillaDataGridView.Size = New System.Drawing.Size(1138, 366)
         Me.DetallePlanillaDataGridView.TabIndex = 1
         '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.Planillas
+        '
+        'DetallePlanillaTableAdapter
+        '
+        Me.DetallePlanillaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ContratoEmpleadoTableAdapter = Nothing
+        Me.TableAdapterManager.DetallePlanillaTableAdapter = Me.DetallePlanillaTableAdapter
+        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
+        Me.TableAdapterManager.PlanillasTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button1.Location = New System.Drawing.Point(939, 446)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(183, 49)
+        Me.Button1.TabIndex = 90
+        Me.Button1.Text = "Imprimir Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Guardar
+        '
+        Me.Guardar.BackColor = System.Drawing.Color.LawnGreen
+        Me.Guardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guardar.Location = New System.Drawing.Point(777, 446)
+        Me.Guardar.Name = "Guardar"
+        Me.Guardar.Size = New System.Drawing.Size(156, 49)
+        Me.Guardar.TabIndex = 91
+        Me.Guardar.Text = "Guardar"
+        Me.Guardar.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.LawnGreen
+        Me.Panel2.Location = New System.Drawing.Point(2, -3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1159, 38)
+        Me.Panel2.TabIndex = 92
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.LawnGreen
+        Me.Panel3.Location = New System.Drawing.Point(2, 501)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1159, 12)
+        Me.Panel3.TabIndex = 93
+        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdPlanilla"
@@ -113,8 +177,7 @@ Partial Class FrmDetallePlanilla
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "DiasTrabajados"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
         DataGridViewCellStyle3.NullValue = Nothing
         Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn3.HeaderText = "DiasTrabajados"
@@ -223,76 +286,12 @@ Partial Class FrmDetallePlanilla
         Me.DataGridViewTextBoxColumn13.DataSource = Me.EmpleadoBindingSource
         Me.DataGridViewTextBoxColumn13.DisplayMember = "Nombres"
         Me.DataGridViewTextBoxColumn13.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
-        Me.DataGridViewTextBoxColumn13.HeaderText = "NumIdentidad"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "NombreEmpleado"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
         Me.DataGridViewTextBoxColumn13.ReadOnly = True
         Me.DataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.DataGridViewTextBoxColumn13.ValueMember = "NumIdentidad"
-        '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "Empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.Planillas
-        '
-        'DetallePlanillaTableAdapter
-        '
-        Me.DetallePlanillaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ContratoEmpleadoTableAdapter = Nothing
-        Me.TableAdapterManager.DetallePlanillaTableAdapter = Me.DetallePlanillaTableAdapter
-        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
-        Me.TableAdapterManager.PlanillasTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'EmpleadoTableAdapter
-        '
-        Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button1.Location = New System.Drawing.Point(939, 446)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(183, 49)
-        Me.Button1.TabIndex = 90
-        Me.Button1.Text = "Imprimir Reporte"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Guardar
-        '
-        Me.Guardar.BackColor = System.Drawing.Color.LawnGreen
-        Me.Guardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Guardar.Location = New System.Drawing.Point(777, 446)
-        Me.Guardar.Name = "Guardar"
-        Me.Guardar.Size = New System.Drawing.Size(156, 49)
-        Me.Guardar.TabIndex = 91
-        Me.Guardar.Text = "Guardar"
-        Me.Guardar.UseVisualStyleBackColor = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.LawnGreen
-        Me.Panel2.Location = New System.Drawing.Point(2, -3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1159, 38)
-        Me.Panel2.TabIndex = 92
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.LawnGreen
-        Me.Panel3.Location = New System.Drawing.Point(2, 501)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1159, 12)
-        Me.Panel3.TabIndex = 93
         '
         'FrmDetallePlanilla
         '
@@ -326,6 +325,8 @@ Partial Class FrmDetallePlanilla
     Friend WithEvents EmpleadoTableAdapter As PlanillasTableAdapters.EmpleadoTableAdapter
     Friend WithEvents Button1 As Button
     Friend WithEvents Guardar As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -339,6 +340,4 @@ Partial Class FrmDetallePlanilla
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewComboBoxColumn
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
 End Class

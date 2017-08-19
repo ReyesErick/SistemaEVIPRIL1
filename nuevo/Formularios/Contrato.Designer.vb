@@ -286,7 +286,6 @@ Partial Class FrmContrato
         '
         'dtpInicio
         '
-        Me.dtpInicio.Enabled = False
         Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpInicio.Location = New System.Drawing.Point(439, 70)
         Me.dtpInicio.Name = "dtpInicio"

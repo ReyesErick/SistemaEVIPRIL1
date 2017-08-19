@@ -4,54 +4,11 @@ Public Class FrmInventario
     Dim op As Integer
     Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
     'Consulta para llenar la listview de inventario'
-    Private Sub CargarArma()
-        If cn.State = ConnectionState.Open Then
-            cn.Close()
-        End If
-
-        Using cmd As New SqlCommand
-
-            Try
-                cn.Open()
-
-                With cmd
-                    .CommandText = "Sp_MostrarArmas"
-                    .CommandType = CommandType.StoredProcedure
-                    .Connection = cn
-
-                End With
-
-                Dim MostrarArmas As SqlDataReader
-                MostrarArmas = cmd.ExecuteReader
-                LsvInventarioArma.Items.Clear()
-
-                While MostrarArmas.Read = True
-                    With LsvInventarioArma.Items.Add(MostrarArmas("IdArma").ToString)
-                        .SubItems.Add(MostrarArmas("Serie").ToString)
-                        .SubItems.Add(MostrarArmas("Calibre").ToString)
-                        .SubItems.Add(MostrarArmas("Marca").ToString)
-                        .SubItems.Add(MostrarArmas("Modelo").ToString)
-                        .SubItems.Add(MostrarArmas("TipoArma").ToString)
-                        .SubItems.Add(MostrarArmas("LugarFabricacion").ToString)
-                        .SubItems.Add(MostrarArmas("IdContratoCliente").ToString)
-                        .SubItems.Add(MostrarArmas("Estado").ToString)
-
-
-                    End With
-                End While
-
-            Catch ex As Exception
-                MessageBox.Show("Error al listar las Armas" + ex.Message)
-            Finally
-                cn.Close()
-            End Try
-        End Using
-    End Sub
 
     Private Sub LblVerArmas_Click(sender As Object, e As EventArgs) Handles LblVerArmas.Click
         sele = 2
         verificarHelp()
-        Call CargarArma()
+        Me.DataTable1TableAdapter.Fill(Me.Planillas.DataTable1)
         TcArma.Visible = True
         TcArma.SelectedTab = TabPage3
     End Sub
@@ -101,14 +58,6 @@ Public Class FrmInventario
             Return
         Else
             ErrorProvider1.SetError(cboPaisFabricacion, "")
-        End If
-
-        If TxtContrato.Text = Nothing Then
-            ErrorProvider1.SetError(TxtContrato, "Campo Obligatorio")
-            TxtContrato.Focus()
-            Return
-        Else
-            ErrorProvider1.SetError(TxtContrato, "")
         End If
 
         Call AgregarArma()
@@ -216,7 +165,12 @@ Public Class FrmInventario
                     .Parameters.Add("@IdModelo", SqlDbType.Int).Value = cboModelo.SelectedValue
                     .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CboTipoArma.SelectedValue
                     .Parameters.Add("@IdFabricacion", SqlDbType.Int).Value = cboPaisFabricacion.SelectedValue
-                    .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = TxtContrato.Text
+                    If TxtContrato.Text = Nothing Then
+                        .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = DBNull.Value
+                    Else
+                        .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = TxtContrato.Text
+                    End If
+
                     If RdbActivo.Checked = CheckState.Unchecked Then
                         .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
                         op = 0
@@ -224,6 +178,48 @@ Public Class FrmInventario
                         .Parameters.Add("@Estado", SqlDbType.Bit).Value = 1
                         op = 1
                     End If
+                    .Parameters.Add("@FechaPermiso", SqlDbType.Date).Value = DtpPermiso.Value
+                    .ExecuteNonQuery()
+                    MsgBox("Guardado con éxito")
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
+    Private Sub ModificarArma()
+
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        cn.Open()
+        Try
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_ModificarArma"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+
+                    If TxtContrato.Text = Nothing Then
+                        .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = DBNull.Value
+                    Else
+                        .Parameters.Add("@IdContratoCliente", SqlDbType.Int).Value = TxtContrato.Text
+                    End If
+
+                    If RdbActivo.Checked = CheckState.Unchecked Then
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 0
+                        op = 0
+                    Else
+                        .Parameters.Add("@Estado", SqlDbType.Bit).Value = 1
+                        op = 1
+                    End If
+                    .Parameters.Add("@FechaPermiso", SqlDbType.Date).Value = DtpPermiso.Value
+                    .Parameters.Add("@IdArma", SqlDbType.Int).Value = CInt(DgvArmas.CurrentRow.Cells(0).Value)
+
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
                 End With
@@ -236,6 +232,8 @@ Public Class FrmInventario
     End Sub
 
     Private Sub FrmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'Planillas.DataTable1' Puede moverla o quitarla según sea necesario.
+        Me.DataTable1TableAdapter.Fill(Me.Planillas.DataTable1)
         Dim chmFilePath As String = HTMLHelpClass.GetLocalHelpFileName("Ayuda.chm")
         HelpProvider1.HelpNamespace = chmFilePath
         sele = 0
@@ -263,6 +261,11 @@ Public Class FrmInventario
         cboModelo.SelectedValue = -1
         CboTipoArma.SelectedValue = -1
         cboPaisFabricacion.SelectedValue = -1
+        txtSerie.Enabled = True
+        MskCalibre.Enabled = True
+        cboModelo.Enabled = True
+        CboTipoArma.Enabled = True
+        cboPaisFabricacion.Enabled = True
 
     End Sub
 
@@ -273,6 +276,7 @@ Public Class FrmInventario
         cboModelo.Text = ""
         cboPaisFabricacion.Text = ""
         CboTipoArma.Text = ""
+        TxtContrato.Clear()
     End Sub
 
     Private Sub PbxBuscar_Click(sender As Object, e As EventArgs) Handles PbxBuscar.Click
@@ -302,5 +306,70 @@ Public Class FrmInventario
                 cn.Close()
             End Try
         End Using
+    End Sub
+
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        Call ModificarArma()
+        Call Limpiar()
+        Me.DataTable1TableAdapter.Fill(Me.Planillas.DataTable1)
+        TcArma.SelectedTab = TabPage3
+    End Sub
+
+    Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem.Click
+        txtSerie.Text = DgvArmas.CurrentRow.Cells(1).Value
+        MskCalibre.Text = DgvArmas.CurrentRow.Cells(2).Value
+        cboModelo.Text = DgvArmas.CurrentRow.Cells(4).Value
+        CboTipoArma.Text = DgvArmas.CurrentRow.Cells(5).Value
+        cboPaisFabricacion.Text = DgvArmas.CurrentRow.Cells(6).Value
+
+        If DgvArmas.CurrentRow.Cells(7).Value Is DBNull.Value Then
+            TxtContrato.Text = Nothing
+        Else
+            TxtContrato.Text = DgvArmas.CurrentRow.Cells(7).Value
+        End If
+
+        DtpPermiso.Value = DgvArmas.CurrentRow.Cells(9).Value
+
+        If DgvArmas.CurrentRow.Cells(8).Value = True Then
+            RdbActivo.Checked = True
+        Else
+            RdbInactivo.Checked = True
+        End If
+
+        txtSerie.Enabled = False
+        MskCalibre.Enabled = False
+        cboModelo.Enabled = False
+        CboTipoArma.Enabled = False
+        cboPaisFabricacion.Enabled = False
+        TcArma.SelectedTab = TabPage2
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+        FrmPermisosArmas.ShowDialog()
+    End Sub
+
+    Private Sub Label11_MouseMove(sender As Object, e As MouseEventArgs) Handles Label11.MouseMove
+        Label11.ForeColor = Color.Green
+    End Sub
+
+    Private Sub Label11_MouseLeave(sender As Object, e As EventArgs) Handles Label11.MouseLeave
+        Label11.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblVerArmas_MouseMove(sender As Object, e As MouseEventArgs) Handles LblVerArmas.MouseMove
+        LblVerArmas.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblVerArmas_MouseLeave(sender As Object, e As EventArgs) Handles LblVerArmas.MouseLeave
+        LblVerArmas.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblAgregarArma_MouseMove(sender As Object, e As MouseEventArgs) Handles LblAgregarArma.MouseMove
+        LblAgregarArma.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblAgregarArma_MouseLeave(sender As Object, e As EventArgs) Handles LblAgregarArma.MouseLeave
+        LblAgregarArma.ForeColor = Color.Black
     End Sub
 End Class

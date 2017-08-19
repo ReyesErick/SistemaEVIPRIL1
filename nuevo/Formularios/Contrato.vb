@@ -80,6 +80,7 @@ Public Class FrmContrato
             ErrorProvider1.SetError(CboTipoContrato, "")
         End If
         Call Agregarcontrato()
+        Call InsertarSalario()
         Call AudiLogInsertEmpleado()
         Call Limpiar()
 
@@ -605,5 +606,24 @@ Public Class FrmContrato
 
     Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
         ContratosExpirar.ShowDialog()
+    End Sub
+
+    Private Sub InsertarSalario()
+        Using da As New SqlDataAdapter
+            da.InsertCommand = New SqlCommand("insert into Salarios (Salario, NumIdentidad, Descripcion) Values(@Salario, @NumIdentidad, @Descripcion)", cn)
+            da.InsertCommand.Parameters.Add("@Salario", SqlDbType.Money).Value = CDbl(txtsueldo.Text)
+            da.InsertCommand.Parameters.Add("@NumIdentidad", SqlDbType.Char, 13).Value = TxtNumIdentidad.Text
+            da.InsertCommand.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 300).Value = "Salario Inicial"
+
+            Try
+                cn.Open()
+                da.InsertCommand.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
     End Sub
 End Class
