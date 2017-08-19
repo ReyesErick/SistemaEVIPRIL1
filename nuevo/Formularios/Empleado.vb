@@ -425,7 +425,13 @@ Public Class FrmEmpleado
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CboSexo.SelectedValue
                     .Parameters.Add("@Rtn", SqlDbType.Char, 14).Value = TxtRTN.Text
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar, 300).Value = TxtObservacion.Text
-                    .Parameters.Add("@NumSeguro", SqlDbType.Char, 14).Value = TxtNumSeguro.Text
+
+                    If TxtNumSeguro.Text = Nothing Then
+                        .Parameters.Add("@NumSeguro", SqlDbType.Char, 14).Value = DBNull.Value
+                    Else
+                        .Parameters.Add("@NumSeguro", SqlDbType.Char, 14).Value = TxtNumSeguro.Text
+                    End If
+
                     If foto Is Nothing Then
                         .Parameters.Add("@Fotografia", SqlDbType.Image).Value = DBNull.Value
                     Else
@@ -514,18 +520,25 @@ Public Class FrmEmpleado
                         TxtObservacion.Text = ""
                     End If
 
-                    If DgvVerEmpleado.CurrentRow.Cells(16).Value IsNot Nothing Then
-                        TxtNumSeguro.Text = DgvVerEmpleado.CurrentRow.Cells(16).Value.ToString
+                    If DgvVerEmpleado.CurrentRow.Cells(15).Value IsNot Nothing Then
+                        TxtNumSeguro.Text = DgvVerEmpleado.CurrentRow.Cells(15).Value.ToString
                     Else
                         TxtNumSeguro.Text = ""
                     End If
 
-                    TcEmpleado.SelectedTab = TpAgregar
-                    BtnModificar.Enabled = True
-                    BtnGuardar.Enabled = False
+                    If DgvVerEmpleado.CurrentRow.Cells(16).Value = False Then
+                        RdbInactivo.Checked = True
+                    Else
+                        RdbActivo.Checked = True
+                    End If
 
+
+                    TcEmpleado.SelectedTab = TpAgregar
+                        BtnModificar.Enabled = True
+                        BtnGuardar.Enabled = False
+
+                    End If
                 End If
-            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
