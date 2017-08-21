@@ -789,5 +789,7 @@ Public Class FrmEmpleado
         End Using
     End Sub
 
+    Private Sub Calcular13voToolStripMenuItem_Click(sender As Object, e As EventArgs) 
 
+    End Sub
 End Class

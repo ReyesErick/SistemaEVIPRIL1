@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class ReporteEmpleado
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Public Class RptPlanillas
     Inherits DevExpress.XtraReports.UI.XtraReport
 
     'XtraReport overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,26 +17,33 @@ Partial Public Class ReporteEmpleado
     'NOTE: The following procedure is required by the Designer
     'It can be modified using the Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteEmpleado))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RptPlanillas))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
-        Me.Evipril1 = New nuevo.Evipril()
-        Me.FieldCaption = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.DataField = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.Evipril2 = New nuevo.Evipril()
-        Me.Evipril3 = New nuevo.Evipril()
-        Me.Sp_MostrarArmasTableAdapter = New nuevo.EviprilTableAdapters.Sp_MostrarArmasTableAdapter()
-        Me.Sp_MostrarEmpleadoTableAdapter1 = New nuevo.EviprilTableAdapters.Sp_MostrarEmpleadoTableAdapter()
+        Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
+        Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell13 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell14 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell15 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell17 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell18 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell20 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.Planillas1 = New nuevo.Planillas()
         Me.PlanillasTableAdapter = New nuevo.PlanillasTableAdapters.PlanillasTableAdapter()
-        Me.EmpleadoTableAdapter1 = New nuevo.PlanillasTableAdapters.EmpleadoTableAdapter()
+        Me.DetallePlanillaTableAdapter1 = New nuevo.PlanillasTableAdapters.DetallePlanillaTableAdapter()
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.XrPageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.XrPageInfo2 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.ReportHeaderBand1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrPictureBox3 = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.GroupHeaderBand1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
+        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrPanel1 = New DevExpress.XtraReports.UI.XRPanel()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -49,86 +56,131 @@ Partial Public Class ReporteEmpleado
         Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell8 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
-        Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell13 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell14 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell15 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell17 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell18 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell20 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.Title = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.DetailCaption3 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.DetailData3 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.DetailData3_Odd = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.DetailCaptionBackground3 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.PageInfo = New DevExpress.XtraReports.UI.XRControlStyle()
-        Me.XrPictureBox3 = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.DetallePlanillaTableAdapter2 = New nuevo.PlanillasTableAdapters.DetallePlanillaTableAdapter()
         Me.XrLabel34 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
-        CType(Me.Evipril1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Evipril2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Evipril3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Planillas1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable2})
-        Me.Detail.HeightF = 25.0!
+        Me.Detail.HeightF = 28.125!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
-        'Evipril1
+        'XrTable2
         '
-        Me.Evipril1.DataSetName = "Evipril"
-        Me.Evipril1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
+        Me.XrTable2.Name = "XrTable2"
+        Me.XrTable2.OddStyleName = "DetailData3_Odd"
+        Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow2})
+        Me.XrTable2.SizeF = New System.Drawing.SizeF(652.0!, 25.0!)
         '
-        'FieldCaption
+        'XrTableRow2
         '
-        Me.FieldCaption.BackColor = System.Drawing.Color.Transparent
-        Me.FieldCaption.BorderColor = System.Drawing.Color.Black
-        Me.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.FieldCaption.BorderWidth = 1.0!
-        Me.FieldCaption.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.FieldCaption.ForeColor = System.Drawing.Color.Black
-        Me.FieldCaption.Name = "FieldCaption"
+        Me.XrTableRow2.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell11, Me.XrTableCell12, Me.XrTableCell13, Me.XrTableCell14, Me.XrTableCell15, Me.XrTableCell16, Me.XrTableCell17, Me.XrTableCell18, Me.XrTableCell20})
+        Me.XrTableRow2.Name = "XrTableRow2"
+        Me.XrTableRow2.Weight = 11.5R
         '
-        'DataField
+        'XrTableCell11
         '
-        Me.DataField.BackColor = System.Drawing.Color.Transparent
-        Me.DataField.BorderColor = System.Drawing.Color.Black
-        Me.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.DataField.BorderWidth = 1.0!
-        Me.DataField.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-        Me.DataField.ForeColor = System.Drawing.Color.Black
-        Me.DataField.Name = "DataField"
-        Me.DataField.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrTableCell11.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.IdPlanilla")})
+        Me.XrTableCell11.Name = "XrTableCell11"
+        Me.XrTableCell11.StyleName = "DetailData3"
+        Me.XrTableCell11.StylePriority.UseTextAlignment = False
+        Me.XrTableCell11.Text = "XrTableCell11"
+        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrTableCell11.Weight = 0.06044590838523578R
         '
-        'Evipril2
+        'XrTableCell12
         '
-        Me.Evipril2.DataSetName = "Evipril"
-        Me.Evipril2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.XrTableCell12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.SueldoDiario", "{0:c2}")})
+        Me.XrTableCell12.Name = "XrTableCell12"
+        Me.XrTableCell12.StyleName = "DetailData3"
+        Me.XrTableCell12.StylePriority.UseTextAlignment = False
+        Me.XrTableCell12.Text = "XrTableCell12"
+        Me.XrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell12.Weight = 0.11046192482454839R
         '
-        'Evipril3
+        'XrTableCell13
         '
-        Me.Evipril3.DataSetName = "Evipril"
-        Me.Evipril3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.XrTableCell13.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.DiasTrabajados")})
+        Me.XrTableCell13.Name = "XrTableCell13"
+        Me.XrTableCell13.StyleName = "DetailData3"
+        Me.XrTableCell13.StylePriority.UseTextAlignment = False
+        Me.XrTableCell13.Text = "XrTableCell13"
+        Me.XrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell13.Weight = 0.093359820541903088R
         '
-        'Sp_MostrarArmasTableAdapter
+        'XrTableCell14
         '
-        Me.Sp_MostrarArmasTableAdapter.ClearBeforeFill = True
+        Me.XrTableCell14.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.SueldoQuincenal", "{0:c2}")})
+        Me.XrTableCell14.Name = "XrTableCell14"
+        Me.XrTableCell14.StyleName = "DetailData3"
+        Me.XrTableCell14.StylePriority.UseTextAlignment = False
+        Me.XrTableCell14.Text = "XrTableCell14"
+        Me.XrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell14.Weight = 0.13868661759193407R
         '
-        'Sp_MostrarEmpleadoTableAdapter1
+        'XrTableCell15
         '
-        Me.Sp_MostrarEmpleadoTableAdapter1.ClearBeforeFill = True
+        Me.XrTableCell15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.Complemento", "{0:c2}")})
+        Me.XrTableCell15.Name = "XrTableCell15"
+        Me.XrTableCell15.StyleName = "DetailData3"
+        Me.XrTableCell15.StylePriority.UseTextAlignment = False
+        Me.XrTableCell15.Text = "XrTableCell15"
+        Me.XrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell15.Weight = 0.10627643296426839R
+        '
+        'XrTableCell16
+        '
+        Me.XrTableCell16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.SubTotal", "{0:c2}")})
+        Me.XrTableCell16.Name = "XrTableCell16"
+        Me.XrTableCell16.StyleName = "DetailData3"
+        Me.XrTableCell16.StylePriority.UseTextAlignment = False
+        Me.XrTableCell16.Text = "XrTableCell16"
+        Me.XrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell16.Weight = 0.1336048313891853R
+        '
+        'XrTableCell17
+        '
+        Me.XrTableCell17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.TotalDeducciones", "{0:c2}")})
+        Me.XrTableCell17.Name = "XrTableCell17"
+        Me.XrTableCell17.StyleName = "DetailData3"
+        Me.XrTableCell17.StylePriority.UseTextAlignment = False
+        Me.XrTableCell17.Text = "XrTableCell17"
+        Me.XrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell17.Weight = 0.092730248463830142R
+        '
+        'XrTableCell18
+        '
+        Me.XrTableCell18.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.NetoPagar", "{0:c2}")})
+        Me.XrTableCell18.Name = "XrTableCell18"
+        Me.XrTableCell18.StyleName = "DetailData3"
+        Me.XrTableCell18.StylePriority.UseTextAlignment = False
+        Me.XrTableCell18.Text = "XrTableCell18"
+        Me.XrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell18.Weight = 0.12025911838060366R
+        '
+        'XrTableCell20
+        '
+        Me.XrTableCell20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "DetallePlanilla.Nombre")})
+        Me.XrTableCell20.Name = "XrTableCell20"
+        Me.XrTableCell20.StyleName = "DetailData3"
+        Me.XrTableCell20.StylePriority.UseTextAlignment = False
+        Me.XrTableCell20.Text = "XrTableCell20"
+        Me.XrTableCell20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrTableCell20.Weight = 0.14725204042353682R
         '
         'Planillas1
         '
@@ -139,13 +191,13 @@ Partial Public Class ReporteEmpleado
         '
         Me.PlanillasTableAdapter.ClearBeforeFill = True
         '
-        'EmpleadoTableAdapter1
+        'DetallePlanillaTableAdapter1
         '
-        Me.EmpleadoTableAdapter1.ClearBeforeFill = True
+        Me.DetallePlanillaTableAdapter1.ClearBeforeFill = True
         '
         'TopMarginBand1
         '
-        Me.TopMarginBand1.HeightF = 65.625!
+        Me.TopMarginBand1.HeightF = 40.0!
         Me.TopMarginBand1.Name = "TopMarginBand1"
         '
         'BottomMarginBand1
@@ -158,7 +210,7 @@ Partial Public Class ReporteEmpleado
         '
         Me.XrPageInfo1.LocationFloat = New DevExpress.Utils.PointFloat(6.0!, 6.0!)
         Me.XrPageInfo1.Name = "XrPageInfo1"
-        Me.XrPageInfo1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrPageInfo1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime
         Me.XrPageInfo1.SizeF = New System.Drawing.SizeF(313.0!, 23.0!)
         Me.XrPageInfo1.StyleName = "PageInfo"
@@ -168,23 +220,48 @@ Partial Public Class ReporteEmpleado
         Me.XrPageInfo2.Format = "Página {0} de {1}"
         Me.XrPageInfo2.LocationFloat = New DevExpress.Utils.PointFloat(331.0!, 6.0!)
         Me.XrPageInfo2.Name = "XrPageInfo2"
-        Me.XrPageInfo2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrPageInfo2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrPageInfo2.SizeF = New System.Drawing.SizeF(313.0!, 23.0!)
         Me.XrPageInfo2.StyleName = "PageInfo"
         Me.XrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'ReportHeaderBand1
         '
-        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox3, Me.XrLabel34, Me.XrLabel35, Me.XrLabel1})
-        Me.ReportHeaderBand1.HeightF = 104.3333!
+        Me.ReportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel34, Me.XrLabel35, Me.XrPictureBox3, Me.XrLabel1})
+        Me.ReportHeaderBand1.HeightF = 99.29161!
         Me.ReportHeaderBand1.Name = "ReportHeaderBand1"
+        '
+        'XrPictureBox3
+        '
+        Me.XrPictureBox3.Image = CType(resources.GetObject("XrPictureBox3.Image"), System.Drawing.Image)
+        Me.XrPictureBox3.LocationFloat = New DevExpress.Utils.PointFloat(69.49818!, 32.29167!)
+        Me.XrPictureBox3.Name = "XrPictureBox3"
+        Me.XrPictureBox3.SizeF = New System.Drawing.SizeF(72.86156!, 66.99995!)
+        Me.XrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
+        'XrLabel1
+        '
+        Me.XrLabel1.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(200.149!, 59.87501!)
+        Me.XrLabel1.Name = "XrLabel1"
+        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel1.SizeF = New System.Drawing.SizeF(249.4584!, 26.0!)
+        Me.XrLabel1.StyleName = "Title"
+        Me.XrLabel1.StylePriority.UseFont = False
+        Me.XrLabel1.Text = "PLANILLA DE PAGO"
         '
         'GroupHeaderBand1
         '
-        Me.GroupHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPanel1})
+        Me.GroupHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLine1, Me.XrPanel1})
         Me.GroupHeaderBand1.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail
-        Me.GroupHeaderBand1.HeightF = 48.0!
+        Me.GroupHeaderBand1.HeightF = 53.20835!
         Me.GroupHeaderBand1.Name = "GroupHeaderBand1"
+        '
+        'XrLine1
+        '
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 51.12502!)
+        Me.XrLine1.Name = "XrLine1"
+        Me.XrLine1.SizeF = New System.Drawing.SizeF(650.0!, 2.083332!)
         '
         'XrPanel1
         '
@@ -196,7 +273,7 @@ Partial Public Class ReporteEmpleado
         '
         'XrTable1
         '
-        Me.XrTable1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 20.0!)
+        Me.XrTable1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 20.00001!)
         Me.XrTable1.Name = "XrTable1"
         Me.XrTable1.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow1})
         Me.XrTable1.SizeF = New System.Drawing.SizeF(650.0!, 28.0!)
@@ -212,185 +289,65 @@ Partial Public Class ReporteEmpleado
         Me.XrTableCell1.Name = "XrTableCell1"
         Me.XrTableCell1.StyleName = "DetailCaption3"
         Me.XrTableCell1.StylePriority.UseTextAlignment = False
-        Me.XrTableCell1.Text = "Num Identidad"
-        Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell1.Weight = 0.13976945143479566R
+        Me.XrTableCell1.Text = "Planilla"
+        Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.XrTableCell1.Weight = 0.086471551324029727R
         '
         'XrTableCell2
         '
         Me.XrTableCell2.Name = "XrTableCell2"
         Me.XrTableCell2.StyleName = "DetailCaption3"
-        Me.XrTableCell2.StylePriority.UseTextAlignment = False
-        Me.XrTableCell2.Text = "Nombre"
-        Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell2.Weight = 0.11321402476430316R
+        Me.XrTableCell2.Text = "Sueldo Diario"
+        Me.XrTableCell2.Weight = 0.0844362823857783R
         '
         'XrTableCell3
         '
         Me.XrTableCell3.Name = "XrTableCell3"
         Me.XrTableCell3.StyleName = "DetailCaption3"
-        Me.XrTableCell3.StylePriority.UseTextAlignment = False
-        Me.XrTableCell3.Text = "Apellidos"
-        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell3.Weight = 0.11000887979222197R
+        Me.XrTableCell3.Text = "Dias Trabajados"
+        Me.XrTableCell3.Weight = 0.11778288034292503R
         '
         'XrTableCell4
         '
         Me.XrTableCell4.Name = "XrTableCell4"
         Me.XrTableCell4.StyleName = "DetailCaption3"
-        Me.XrTableCell4.StylePriority.UseTextAlignment = False
-        Me.XrTableCell4.Text = "Direccion"
-        Me.XrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell4.Weight = 0.10487784184550023R
+        Me.XrTableCell4.Text = "Sueldo Quincenal"
+        Me.XrTableCell4.Weight = 0.10503278975400426R
         '
         'XrTableCell5
         '
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.StyleName = "DetailCaption3"
-        Me.XrTableCell5.StylePriority.UseTextAlignment = False
-        Me.XrTableCell5.Text = "Tel."
-        Me.XrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell5.Weight = 0.083088478542207425R
+        Me.XrTableCell5.Text = "Complemento"
+        Me.XrTableCell5.Weight = 0.14399019496140761R
         '
         'XrTableCell6
         '
         Me.XrTableCell6.Name = "XrTableCell6"
         Me.XrTableCell6.StyleName = "DetailCaption3"
-        Me.XrTableCell6.StylePriority.UseTextAlignment = False
-        Me.XrTableCell6.Text = "Profesion"
-        Me.XrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell6.Weight = 0.10709942699574217R
+        Me.XrTableCell6.Text = "Sub Total"
+        Me.XrTableCell6.Weight = 0.078262889420341444R
         '
         'XrTableCell7
         '
         Me.XrTableCell7.Name = "XrTableCell7"
         Me.XrTableCell7.StyleName = "DetailCaption3"
-        Me.XrTableCell7.StylePriority.UseTextAlignment = False
-        Me.XrTableCell7.Text = "Nacionalidad"
-        Me.XrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell7.Weight = 0.13958956861793753R
+        Me.XrTableCell7.Text = "Total Deducciones"
+        Me.XrTableCell7.Weight = 0.14881994613454752R
         '
         'XrTableCell8
         '
         Me.XrTableCell8.Name = "XrTableCell8"
         Me.XrTableCell8.StyleName = "DetailCaption3"
-        Me.XrTableCell8.StylePriority.UseTextAlignment = False
-        Me.XrTableCell8.Text = "Rtn"
-        Me.XrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell8.Weight = 0.12577111601226204R
+        Me.XrTableCell8.Text = "Neto Pagar"
+        Me.XrTableCell8.Weight = 0.081797573605449009R
         '
         'XrTableCell10
         '
         Me.XrTableCell10.Name = "XrTableCell10"
         Me.XrTableCell10.StyleName = "DetailCaption3"
-        Me.XrTableCell10.StylePriority.UseTextAlignment = False
-        Me.XrTableCell10.Text = "Estado"
-        Me.XrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell10.Weight = 0.076581277410363885R
-        '
-        'XrTable2
-        '
-        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
-        Me.XrTable2.Name = "XrTable2"
-        Me.XrTable2.OddStyleName = "DetailData3_Odd"
-        Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow2})
-        Me.XrTable2.SizeF = New System.Drawing.SizeF(650.0!, 25.0!)
-        '
-        'XrTableRow2
-        '
-        Me.XrTableRow2.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell11, Me.XrTableCell12, Me.XrTableCell13, Me.XrTableCell14, Me.XrTableCell15, Me.XrTableCell16, Me.XrTableCell17, Me.XrTableCell18, Me.XrTableCell20})
-        Me.XrTableRow2.Name = "XrTableRow2"
-        Me.XrTableRow2.Weight = 11.5R
-        '
-        'XrTableCell11
-        '
-        Me.XrTableCell11.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.NumIdentidad")})
-        Me.XrTableCell11.Name = "XrTableCell11"
-        Me.XrTableCell11.StyleName = "DetailData3"
-        Me.XrTableCell11.StylePriority.UseTextAlignment = False
-        Me.XrTableCell11.Text = "XrTableCell11"
-        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell11.Weight = 0.13976945143479566R
-        '
-        'XrTableCell12
-        '
-        Me.XrTableCell12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.Nombres")})
-        Me.XrTableCell12.Name = "XrTableCell12"
-        Me.XrTableCell12.StyleName = "DetailData3"
-        Me.XrTableCell12.StylePriority.UseTextAlignment = False
-        Me.XrTableCell12.Text = "XrTableCell12"
-        Me.XrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell12.Weight = 0.1132139938782897R
-        '
-        'XrTableCell13
-        '
-        Me.XrTableCell13.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.Apellidos")})
-        Me.XrTableCell13.Name = "XrTableCell13"
-        Me.XrTableCell13.StyleName = "DetailData3"
-        Me.XrTableCell13.StylePriority.UseTextAlignment = False
-        Me.XrTableCell13.Text = "XrTableCell13"
-        Me.XrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell13.Weight = 0.11000887350882935R
-        '
-        'XrTableCell14
-        '
-        Me.XrTableCell14.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.Direccion")})
-        Me.XrTableCell14.Name = "XrTableCell14"
-        Me.XrTableCell14.StyleName = "DetailData3"
-        Me.XrTableCell14.StylePriority.UseTextAlignment = False
-        Me.XrTableCell14.Text = "XrTableCell14"
-        Me.XrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell14.Weight = 0.10487783574999242R
-        '
-        'XrTableCell15
-        '
-        Me.XrTableCell15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.Telefono")})
-        Me.XrTableCell15.Name = "XrTableCell15"
-        Me.XrTableCell15.StyleName = "DetailData3"
-        Me.XrTableCell15.StylePriority.UseTextAlignment = False
-        Me.XrTableCell15.Text = "XrTableCell15"
-        Me.XrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell15.Weight = 0.10552443278398509R
-        '
-        'XrTableCell16
-        '
-        Me.XrTableCell16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.IdProfesion")})
-        Me.XrTableCell16.Name = "XrTableCell16"
-        Me.XrTableCell16.StyleName = "DetailData3"
-        Me.XrTableCell16.StylePriority.UseTextAlignment = False
-        Me.XrTableCell16.Text = "XrTableCell16"
-        Me.XrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell16.Weight = 0.1151122107925833R
-        '
-        'XrTableCell17
-        '
-        Me.XrTableCell17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.IdNacionalidad")})
-        Me.XrTableCell17.Name = "XrTableCell17"
-        Me.XrTableCell17.StyleName = "DetailData3"
-        Me.XrTableCell17.StylePriority.UseTextAlignment = False
-        Me.XrTableCell17.Text = "XrTableCell17"
-        Me.XrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell17.Weight = 0.10914081292138056R
-        '
-        'XrTableCell18
-        '
-        Me.XrTableCell18.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.Rtn")})
-        Me.XrTableCell18.Name = "XrTableCell18"
-        Me.XrTableCell18.StyleName = "DetailData3"
-        Me.XrTableCell18.StylePriority.UseTextAlignment = False
-        Me.XrTableCell18.Text = "XrTableCell18"
-        Me.XrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell18.Weight = 0.12577110557501031R
-        '
-        'XrTableCell20
-        '
-        Me.XrTableCell20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Empleado.Estado")})
-        Me.XrTableCell20.Name = "XrTableCell20"
-        Me.XrTableCell20.StyleName = "DetailData3"
-        Me.XrTableCell20.StylePriority.UseTextAlignment = False
-        Me.XrTableCell20.Text = "XrTableCell20"
-        Me.XrTableCell20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell20.Weight = 0.076581280033010443R
+        Me.XrTableCell10.Text = "Nombre Completo"
+        Me.XrTableCell10.Weight = 0.15340585162062415R
         '
         'Title
         '
@@ -448,18 +405,14 @@ Partial Public Class ReporteEmpleado
         Me.PageInfo.Name = "PageInfo"
         Me.PageInfo.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         '
-        'XrPictureBox3
+        'DetallePlanillaTableAdapter2
         '
-        Me.XrPictureBox3.Image = CType(resources.GetObject("XrPictureBox3.Image"), System.Drawing.Image)
-        Me.XrPictureBox3.LocationFloat = New DevExpress.Utils.PointFloat(28.83783!, 25.45834!)
-        Me.XrPictureBox3.Name = "XrPictureBox3"
-        Me.XrPictureBox3.SizeF = New System.Drawing.SizeF(104.7998!, 78.87497!)
-        Me.XrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        Me.DetallePlanillaTableAdapter2.ClearBeforeFill = True
         '
         'XrLabel34
         '
         Me.XrLabel34.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel34.LocationFloat = New DevExpress.Utils.PointFloat(65.85466!, 0!)
+        Me.XrLabel34.LocationFloat = New DevExpress.Utils.PointFloat(56.20651!, 10.00001!)
         Me.XrLabel34.Name = "XrLabel34"
         Me.XrLabel34.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel34.SizeF = New System.Drawing.SizeF(555.3075!, 25.45834!)
@@ -470,7 +423,7 @@ Partial Public Class ReporteEmpleado
         'XrLabel35
         '
         Me.XrLabel35.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel35.LocationFloat = New DevExpress.Utils.PointFloat(273.5834!, 25.45833!)
+        Me.XrLabel35.LocationFloat = New DevExpress.Utils.PointFloat(263.9352!, 35.45834!)
         Me.XrLabel35.Name = "XrLabel35"
         Me.XrLabel35.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel35.SizeF = New System.Drawing.SizeF(108.0834!, 24.41667!)
@@ -478,47 +431,23 @@ Partial Public Class ReporteEmpleado
         Me.XrLabel35.StylePriority.UseFont = False
         Me.XrLabel35.Text = """EVIPRIL"""
         '
-        'XrLabel1
-        '
-        Me.XrLabel1.Font = New System.Drawing.Font("Tahoma", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(147.1793!, 49.87499!)
-        Me.XrLabel1.Name = "XrLabel1"
-        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(371.2916!, 40.74999!)
-        Me.XrLabel1.StyleName = "Title"
-        Me.XrLabel1.StylePriority.UseFont = False
-        Me.XrLabel1.Text = "CONTRATOS EMPLEADOS"
-        '
-        'ReporteEmpleado
+        'RptPlanillas
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMarginBand1, Me.BottomMarginBand1, Me.ReportHeaderBand1, Me.GroupHeaderBand1})
-        Me.DataAdapter = Me.EmpleadoTableAdapter1
-        Me.DataMember = "Empleado"
+        Me.DataAdapter = Me.DetallePlanillaTableAdapter1
+        Me.DataMember = "DetallePlanilla"
         Me.DataSource = Me.Planillas1
-        Me.Margins = New System.Drawing.Printing.Margins(100, 100, 66, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(100, 98, 40, 100)
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Title, Me.DetailCaption3, Me.DetailData3, Me.DetailData3_Odd, Me.DetailCaptionBackground3, Me.PageInfo})
         Me.Version = "17.1"
-        CType(Me.Evipril1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Evipril2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Evipril3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Planillas1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
     Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
-    Friend WithEvents Evipril1 As Evipril
-    Friend WithEvents FieldCaption As DevExpress.XtraReports.UI.XRControlStyle
-    Friend WithEvents DataField As DevExpress.XtraReports.UI.XRControlStyle
-    Friend WithEvents Evipril2 As Evipril
-    Friend WithEvents Evipril3 As Evipril
-    Friend WithEvents Sp_MostrarArmasTableAdapter As EviprilTableAdapters.Sp_MostrarArmasTableAdapter
-    Friend WithEvents Sp_MostrarEmpleadoTableAdapter1 As EviprilTableAdapters.Sp_MostrarEmpleadoTableAdapter
-    Friend WithEvents Planillas1 As Planillas
-    Friend WithEvents PlanillasTableAdapter As PlanillasTableAdapters.PlanillasTableAdapter
-    Friend WithEvents EmpleadoTableAdapter1 As PlanillasTableAdapters.EmpleadoTableAdapter
     Friend WithEvents XrTable2 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow2 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents XrTableCell11 As DevExpress.XtraReports.UI.XRTableCell
@@ -530,14 +459,14 @@ Partial Public Class ReporteEmpleado
     Friend WithEvents XrTableCell17 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell18 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell20 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents Planillas1 As Planillas
+    Friend WithEvents PlanillasTableAdapter As PlanillasTableAdapters.PlanillasTableAdapter
+    Friend WithEvents DetallePlanillaTableAdapter1 As PlanillasTableAdapters.DetallePlanillaTableAdapter
     Friend WithEvents TopMarginBand1 As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMarginBand1 As DevExpress.XtraReports.UI.BottomMarginBand
     Friend WithEvents XrPageInfo1 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents XrPageInfo2 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents ReportHeaderBand1 As DevExpress.XtraReports.UI.ReportHeaderBand
-    Friend WithEvents XrPictureBox3 As DevExpress.XtraReports.UI.XRPictureBox
-    Friend WithEvents XrLabel34 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel35 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents GroupHeaderBand1 As DevExpress.XtraReports.UI.GroupHeaderBand
     Friend WithEvents XrPanel1 As DevExpress.XtraReports.UI.XRPanel
@@ -558,4 +487,9 @@ Partial Public Class ReporteEmpleado
     Friend WithEvents DetailData3_Odd As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents DetailCaptionBackground3 As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents PageInfo As DevExpress.XtraReports.UI.XRControlStyle
+    Friend WithEvents DetallePlanillaTableAdapter2 As PlanillasTableAdapters.DetallePlanillaTableAdapter
+    Friend WithEvents XrPictureBox3 As DevExpress.XtraReports.UI.XRPictureBox
+    Friend WithEvents XrLine1 As DevExpress.XtraReports.UI.XRLine
+    Friend WithEvents XrLabel34 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel35 As DevExpress.XtraReports.UI.XRLabel
 End Class

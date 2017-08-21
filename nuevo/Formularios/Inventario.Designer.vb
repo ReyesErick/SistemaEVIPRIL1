@@ -622,8 +622,8 @@ Partial Class FrmInventario
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.ContratoEmpleadoTableAdapter = Nothing
-        Me.TableAdapterManager.DetallePlanillaTableAdapter = Nothing
+        'Me.TableAdapterManager.ContratoEmpleadoTableAdapter = Nothing
+        'Me.TableAdapterManager.DetallePlanillaTableAdapter = Nothing
         Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
         'Me.TableAdapterManager.InventarioArmasTableAdapter = Nothing
         Me.TableAdapterManager.PlanillasTableAdapter = Nothing

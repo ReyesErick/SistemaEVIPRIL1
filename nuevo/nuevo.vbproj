@@ -71,7 +71,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -176,6 +176,12 @@
       <DependentUpon>AudiLog.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\AudiLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTercerCuartoMes.Designer.vb">
+      <DependentUpon>FrmTercerCuartoMes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTercerCuartoMes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\PermisosArmas.Designer.vb">
@@ -335,10 +341,16 @@
     <Compile Include="Reportes\ReportePrestaciones.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reportes\ReportesPlanilla.Designer.vb">
-      <DependentUpon>ReportesPlanilla.vb</DependentUpon>
+    <Compile Include="Reportes\RptPlanillas.Designer.vb">
+      <DependentUpon>RptPlanillas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ReportesPlanilla.vb">
+    <Compile Include="Reportes\RptPlanillas.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptVoucher.Designer.vb">
+      <DependentUpon>RptVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptVoucher.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -369,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTercerCuartoMes.resx">
+      <DependentUpon>FrmTercerCuartoMes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSeción.resx">
       <DependentUpon>InicioSeción.vb</DependentUpon>
@@ -416,8 +431,11 @@
     <EmbeddedResource Include="Reportes\ReportePrestaciones.resx">
       <DependentUpon>ReportePrestaciones.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReportesPlanilla.resx">
-      <DependentUpon>ReportesPlanilla.vb</DependentUpon>
+    <EmbeddedResource Include="Reportes\RptPlanillas.resx">
+      <DependentUpon>RptPlanillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptVoucher.resx">
+      <DependentUpon>RptVoucher.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

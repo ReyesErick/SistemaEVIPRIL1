@@ -26,6 +26,14 @@ Partial Class FrmPlanilla
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPlanilla))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -33,32 +41,38 @@ Partial Class FrmPlanilla
         Me.BtnRegresarMenu = New System.Windows.Forms.Button()
         Me.LblAgregarPlanilla = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PlanillasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Planillas = New nuevo.Planillas()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.PlanillasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.PlanillasBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Planillas = New nuevo.Planillas()
+        Me.PlanillasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TpPlanilla = New System.Windows.Forms.TabControl()
         Me.PlanillasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlanillasTableAdapter = New nuevo.PlanillasTableAdapters.PlanillasTableAdapter()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.DgvPlanillas = New System.Windows.Forms.DataGridView()
-        Me.IdPlanillaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AnioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TpPlanilla = New System.Windows.Forms.TabControl()
+        Me.TableAdapterManager = New nuevo.PlanillasTableAdapters.TableAdapterManager()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Planillas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        CType(Me.DgvPlanillas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PlanillasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PlanillasBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Planillas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpPlanilla.SuspendLayout()
+        CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -72,6 +86,14 @@ Partial Class FrmPlanilla
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.PictureBox7)
+        Me.Panel1.Controls.Add(Me.PictureBox6)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.PictureBox3)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox5)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -79,15 +101,99 @@ Partial Class FrmPlanilla
         Me.Panel1.Controls.Add(Me.BtnRegresarMenu)
         Me.Panel1.Controls.Add(Me.LblAgregarPlanilla)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(19, 71)
+        Me.Panel1.Location = New System.Drawing.Point(12, 71)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(231, 186)
+        Me.Panel1.Size = New System.Drawing.Size(249, 263)
         Me.Panel1.TabIndex = 4
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(14, 107)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(21, 15)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 26
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(14, 132)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(21, 15)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 25
+        Me.PictureBox6.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(37, 131)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(211, 16)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Agregar Decimo Cuarto Mes"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(37, 106)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(210, 16)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "Agregar Decimo Tercer Mes"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(14, 156)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(21, 15)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 22
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(14, 180)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(21, 15)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 21
+        Me.PictureBox2.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(38, 180)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(179, 16)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Ver Decimo Cuarto Mes"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(38, 156)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(178, 16)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Ver Decimo Tercer Mes"
         '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 16)
+        Me.PictureBox5.Location = New System.Drawing.Point(20, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -97,7 +203,7 @@ Partial Class FrmPlanilla
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(14, 108)
+        Me.PictureBox4.Location = New System.Drawing.Point(14, 204)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -119,9 +225,9 @@ Partial Class FrmPlanilla
         Me.LblPlanillas.AutoSize = True
         Me.LblPlanillas.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblPlanillas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.LblPlanillas.Location = New System.Drawing.Point(38, 108)
+        Me.LblPlanillas.Location = New System.Drawing.Point(38, 205)
         Me.LblPlanillas.Name = "LblPlanillas"
-        Me.LblPlanillas.Size = New System.Drawing.Size(96, 16)
+        Me.LblPlanillas.Size = New System.Drawing.Size(99, 16)
         Me.LblPlanillas.TabIndex = 1
         Me.LblPlanillas.Text = "Ver Planillas"
         '
@@ -131,7 +237,7 @@ Partial Class FrmPlanilla
         Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRegresarMenu.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
+        Me.BtnRegresarMenu.Location = New System.Drawing.Point(11, 12)
         Me.BtnRegresarMenu.Name = "BtnRegresarMenu"
         Me.BtnRegresarMenu.Size = New System.Drawing.Size(225, 29)
         Me.BtnRegresarMenu.TabIndex = 0
@@ -146,7 +252,7 @@ Partial Class FrmPlanilla
         Me.LblAgregarPlanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblAgregarPlanilla.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarPlanilla.Name = "LblAgregarPlanilla"
-        Me.LblAgregarPlanilla.Size = New System.Drawing.Size(169, 16)
+        Me.LblAgregarPlanilla.Size = New System.Drawing.Size(174, 16)
         Me.LblAgregarPlanilla.TabIndex = 0
         Me.LblAgregarPlanilla.Text = "Agregar Nueva Planilla"
         '
@@ -161,16 +267,6 @@ Partial Class FrmPlanilla
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '
-        'PlanillasBindingSource1
-        '
-        Me.PlanillasBindingSource1.DataMember = "Planillas"
-        Me.PlanillasBindingSource1.DataSource = Me.Planillas
-        '
-        'Planillas
-        '
-        Me.Planillas.DataSetName = "Planillas"
-        Me.Planillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LawnGreen
@@ -183,18 +279,9 @@ Partial Class FrmPlanilla
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'PlanillasBindingSource
-        '
-        Me.PlanillasBindingSource.DataSource = Me.Planillas
-        Me.PlanillasBindingSource.Position = 0
-        '
-        'PlanillasTableAdapter
-        '
-        Me.PlanillasTableAdapter.ClearBeforeFill = True
-        '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.DgvPlanillas)
+        Me.TabPage3.Controls.Add(Me.PlanillasDataGridView)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -203,54 +290,30 @@ Partial Class FrmPlanilla
         Me.TabPage3.Text = "Planillas"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'DgvPlanillas
+        'PlanillasDataGridView
         '
-        Me.DgvPlanillas.AutoGenerateColumns = False
-        Me.DgvPlanillas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgvPlanillas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvPlanillas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPlanillaDataGridViewTextBoxColumn, Me.NumPagoDataGridViewTextBoxColumn, Me.MesDataGridViewTextBoxColumn, Me.AnioDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn})
-        Me.DgvPlanillas.DataSource = Me.PlanillasBindingSource1
-        Me.DgvPlanillas.Location = New System.Drawing.Point(131, 23)
-        Me.DgvPlanillas.Name = "DgvPlanillas"
-        Me.DgvPlanillas.ReadOnly = True
-        Me.DgvPlanillas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvPlanillas.Size = New System.Drawing.Size(545, 479)
-        Me.DgvPlanillas.TabIndex = 90
+        Me.PlanillasDataGridView.AllowUserToOrderColumns = True
+        Me.PlanillasDataGridView.AutoGenerateColumns = False
+        Me.PlanillasDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.PlanillasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.PlanillasDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.PlanillasDataGridView.DataSource = Me.PlanillasBindingSource2
+        Me.PlanillasDataGridView.Location = New System.Drawing.Point(221, 50)
+        Me.PlanillasDataGridView.Name = "PlanillasDataGridView"
+        Me.PlanillasDataGridView.ReadOnly = True
+        Me.PlanillasDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.PlanillasDataGridView.Size = New System.Drawing.Size(444, 433)
+        Me.PlanillasDataGridView.TabIndex = 0
         '
-        'IdPlanillaDataGridViewTextBoxColumn
+        'PlanillasBindingSource2
         '
-        Me.IdPlanillaDataGridViewTextBoxColumn.DataPropertyName = "IdPlanilla"
-        Me.IdPlanillaDataGridViewTextBoxColumn.HeaderText = "IdPlanilla"
-        Me.IdPlanillaDataGridViewTextBoxColumn.Name = "IdPlanillaDataGridViewTextBoxColumn"
-        Me.IdPlanillaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PlanillasBindingSource2.DataMember = "Planillas"
+        Me.PlanillasBindingSource2.DataSource = Me.Planillas
         '
-        'NumPagoDataGridViewTextBoxColumn
+        'Planillas
         '
-        Me.NumPagoDataGridViewTextBoxColumn.DataPropertyName = "NumPago"
-        Me.NumPagoDataGridViewTextBoxColumn.HeaderText = "NumPago"
-        Me.NumPagoDataGridViewTextBoxColumn.Name = "NumPagoDataGridViewTextBoxColumn"
-        Me.NumPagoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MesDataGridViewTextBoxColumn
-        '
-        Me.MesDataGridViewTextBoxColumn.DataPropertyName = "Mes"
-        Me.MesDataGridViewTextBoxColumn.HeaderText = "Mes"
-        Me.MesDataGridViewTextBoxColumn.Name = "MesDataGridViewTextBoxColumn"
-        Me.MesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AnioDataGridViewTextBoxColumn
-        '
-        Me.AnioDataGridViewTextBoxColumn.DataPropertyName = "Anio"
-        Me.AnioDataGridViewTextBoxColumn.HeaderText = "Anio"
-        Me.AnioDataGridViewTextBoxColumn.Name = "AnioDataGridViewTextBoxColumn"
-        Me.AnioDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        Me.FechaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Planillas.DataSetName = "Planillas"
+        Me.Planillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TpPlanilla
         '
@@ -262,11 +325,50 @@ Partial Class FrmPlanilla
         Me.TpPlanilla.TabIndex = 3
         Me.TpPlanilla.Visible = False
         '
+        'PlanillasTableAdapter
+        '
+        Me.PlanillasTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
+        Me.TableAdapterManager.PlanillasTableAdapter = Me.PlanillasTableAdapter
+        Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdPlanilla"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdPlanilla"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "NumPago"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "NumPago"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Mes"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Mes"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Anio"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Anio"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
         'FrmPlanilla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1143, 672)
+        Me.ClientSize = New System.Drawing.Size(1153, 673)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -280,16 +382,21 @@ Partial Class FrmPlanilla
         Me.Text = "Planilla"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Planillas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
-        CType(Me.DgvPlanillas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PlanillasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PlanillasBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Planillas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpPlanilla.ResumeLayout(False)
+        CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -307,15 +414,24 @@ Partial Class FrmPlanilla
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents PlanillasBindingSource As BindingSource
-    Friend WithEvents Planillas As Planillas
     Friend WithEvents PlanillasBindingSource1 As BindingSource
-    Friend WithEvents PlanillasTableAdapter As PlanillasTableAdapters.PlanillasTableAdapter
     Friend WithEvents TpPlanilla As TabControl
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents DgvPlanillas As DataGridView
-    Friend WithEvents IdPlanillaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NumPagoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AnioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Planillas As Planillas
+    Friend WithEvents PlanillasBindingSource2 As BindingSource
+    Friend WithEvents PlanillasTableAdapter As PlanillasTableAdapters.PlanillasTableAdapter
+    Friend WithEvents TableAdapterManager As PlanillasTableAdapters.TableAdapterManager
+    Friend WithEvents PlanillasDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class

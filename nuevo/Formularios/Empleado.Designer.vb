@@ -173,7 +173,7 @@ Partial Class FrmEmpleado
         Me.LblVerContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerContratoClien.Location = New System.Drawing.Point(38, 113)
         Me.LblVerContratoClien.Name = "LblVerContratoClien"
-        Me.LblVerContratoClien.Size = New System.Drawing.Size(115, 16)
+        Me.LblVerContratoClien.Size = New System.Drawing.Size(118, 16)
         Me.LblVerContratoClien.TabIndex = 10
         Me.LblVerContratoClien.Text = "Ver Empleados"
         '
@@ -198,7 +198,7 @@ Partial Class FrmEmpleado
         Me.LblAgregarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarEmpleado.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarEmpleado.Name = "LblAgregarEmpleado"
-        Me.LblAgregarEmpleado.Size = New System.Drawing.Size(188, 16)
+        Me.LblAgregarEmpleado.Size = New System.Drawing.Size(193, 16)
         Me.LblAgregarEmpleado.TabIndex = 7
         Me.LblAgregarEmpleado.Text = "Agregar Nuevo Empleado"
         '
@@ -280,7 +280,7 @@ Partial Class FrmEmpleado
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(524, 374)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(61, 16)
+        Me.Label21.Size = New System.Drawing.Size(63, 16)
         Me.Label21.TabIndex = 93
         Me.Label21.Text = "Estado:"
         '
@@ -489,7 +489,7 @@ Partial Class FrmEmpleado
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(94, 70)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(75, 16)
+        Me.Label18.Size = New System.Drawing.Size(77, 16)
         Me.Label18.TabIndex = 59
         Me.Label18.Text = "Nombres:"
         '
@@ -499,7 +499,7 @@ Partial Class FrmEmpleado
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(95, 106)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(74, 16)
+        Me.Label17.Size = New System.Drawing.Size(75, 16)
         Me.Label17.TabIndex = 58
         Me.Label17.Text = "Apellidos"
         '
@@ -509,7 +509,7 @@ Partial Class FrmEmpleado
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(91, 181)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(78, 16)
+        Me.Label16.Size = New System.Drawing.Size(80, 16)
         Me.Label16.TabIndex = 57
         Me.Label16.Text = "Dirección:"
         '
@@ -519,7 +519,7 @@ Partial Class FrmEmpleado
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(95, 255)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(74, 16)
+        Me.Label15.Size = New System.Drawing.Size(75, 16)
         Me.Label15.TabIndex = 56
         Me.Label15.Text = "Telefono:"
         '
@@ -529,7 +529,7 @@ Partial Class FrmEmpleado
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(74, 327)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(95, 16)
+        Me.Label14.Size = New System.Drawing.Size(100, 16)
         Me.Label14.TabIndex = 55
         Me.Label14.Text = "Estado Civil:"
         '
@@ -549,7 +549,7 @@ Partial Class FrmEmpleado
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(496, 32)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(91, 16)
+        Me.Label12.Size = New System.Drawing.Size(93, 16)
         Me.Label12.TabIndex = 53
         Me.Label12.Text = "Beneficiaro:"
         '
@@ -559,7 +559,7 @@ Partial Class FrmEmpleado
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(90, 491)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 16)
+        Me.Label11.Size = New System.Drawing.Size(80, 16)
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "Municipio:"
         '
@@ -569,7 +569,7 @@ Partial Class FrmEmpleado
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(90, 409)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(78, 16)
+        Me.Label10.Size = New System.Drawing.Size(80, 16)
         Me.Label10.TabIndex = 51
         Me.Label10.Text = "Profesión:"
         '
@@ -599,7 +599,7 @@ Partial Class FrmEmpleado
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(118, 368)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(47, 16)
+        Me.Label7.Size = New System.Drawing.Size(49, 16)
         Me.Label7.TabIndex = 48
         Me.Label7.Text = "Sexo:"
         '
@@ -629,7 +629,7 @@ Partial Class FrmEmpleado
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(64, 450)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(105, 16)
+        Me.Label3.Size = New System.Drawing.Size(107, 16)
         Me.Label3.TabIndex = 44
         Me.Label3.Text = "Nacionalidad:"
         '
@@ -639,7 +639,7 @@ Partial Class FrmEmpleado
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 34)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(157, 16)
+        Me.Label2.Size = New System.Drawing.Size(162, 16)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "Numero de Identidad:"
         '
@@ -720,18 +720,18 @@ Partial Class FrmEmpleado
         '
         Me.CmsEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerPerfilToolStripMenuItem})
         Me.CmsEditar.Name = "CmsEditar"
-        Me.CmsEditar.Size = New System.Drawing.Size(121, 48)
+        Me.CmsEditar.Size = New System.Drawing.Size(153, 70)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'VerPerfilToolStripMenuItem
         '
         Me.VerPerfilToolStripMenuItem.Name = "VerPerfilToolStripMenuItem"
-        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.VerPerfilToolStripMenuItem.Text = "Ver Perfil"
         '
         'PtbBuscar
