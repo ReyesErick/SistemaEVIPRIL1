@@ -262,12 +262,21 @@ Public Class FrmPrestacion
 
     Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
         Dim reporte As New ReportePrestaciones()
-        reporte.NumIdentidadEmpleado.Text = txtNumIdentidadEmpleado.Text.ToString()
-        reporte.Nombre.Text = TxtNombre.Text.ToString()
-        reporte.SalarioMensual.Text = TxtSOM.Text.ToString()
-        reporte.SalarioDiario.Text = TxtSOD.Text.ToString()
-        reporte.SubTotal.Text = TxtTotalD.Text.ToString()
-        reporte.TotalDeducciones.Text = TxtTotalP.Text.ToString()
+        reporte.XrlNumIdentidad.Text = txtNumIdentidadEmpleado.Text.ToString()
+        reporte.XrlNombre.Text = TxtNombre.Text.ToString()
+        reporte.XrlSOM.Text = TxtSOM.Text.ToString()
+        reporte.XrlSOD.Text = TxtSOD.Text.ToString()
+        reporte.XrlSubTotal.Text = TxtTotalD.Text.ToString()
+        reporte.XrlTotalP.Text = TxtTotalP.Text.ToString()
+        reporte.XrlSOPM.Text = TxtSOPM.Text.ToString()
+        reporte.XrlSOPD.Text = TxtSOPD.Text.ToString()
+        reporte.XrlFechaIngreso.Text = dtpFechaInicial.Value
+        reporte.XrlFechaFinal.Text = String.Format("{0}-{1}-{2}", TxtDia1.Text, TxtMes1.Text, TxtAño1.Text)
+        reporte.XrlAnio.Text = TxtAnioAnti.Text
+        reporte.XrlMes.Text = TxtMesAnti.Text
+        reporte.XrlDia.Text = TxtDiaAnti.Text
+        reporte.XrlDeducciones.Text = (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text)).ToString
+
         Dim viewer As New ReportPrintTool(reporte)
         viewer.ShowPreview()
 
