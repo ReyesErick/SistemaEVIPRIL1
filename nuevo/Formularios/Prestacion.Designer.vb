@@ -133,10 +133,14 @@ Partial Class FrmPrestacion
         Me.LblDiaanti = New System.Windows.Forms.Label()
         Me.LblTiempoAnti = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.DtpFTerminacion = New System.Windows.Forms.DateTimePicker()
+        Me.TxtAño1 = New System.Windows.Forms.TextBox()
+        Me.LblAño1 = New System.Windows.Forms.Label()
+        Me.TxtMes1 = New System.Windows.Forms.TextBox()
+        Me.LblMes1 = New System.Windows.Forms.Label()
+        Me.TxtDia1 = New System.Windows.Forms.TextBox()
+        Me.LblDia1 = New System.Windows.Forms.Label()
         Me.LblFechaTermi = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.DtpFIngreso = New System.Windows.Forms.DateTimePicker()
         Me.LblFechaIngreso = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.LblNombre = New System.Windows.Forms.Label()
@@ -158,6 +162,7 @@ Partial Class FrmPrestacion
         Me.BtnImprimir = New System.Windows.Forms.Button()
         Me.BtnCalcular = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.dtpFechaInicial = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -1210,6 +1215,7 @@ Partial Class FrmPrestacion
         'LblAñoAnti
         '
         Me.LblAñoAnti.AutoSize = True
+        Me.LblAñoAnti.Enabled = False
         Me.LblAñoAnti.Location = New System.Drawing.Point(148, 19)
         Me.LblAñoAnti.Name = "LblAñoAnti"
         Me.LblAñoAnti.Size = New System.Drawing.Size(26, 13)
@@ -1227,6 +1233,7 @@ Partial Class FrmPrestacion
         'LblMesAnti
         '
         Me.LblMesAnti.AutoSize = True
+        Me.LblMesAnti.Enabled = False
         Me.LblMesAnti.Location = New System.Drawing.Point(78, 20)
         Me.LblMesAnti.Name = "LblMesAnti"
         Me.LblMesAnti.Size = New System.Drawing.Size(27, 13)
@@ -1244,6 +1251,7 @@ Partial Class FrmPrestacion
         'LblDiaanti
         '
         Me.LblDiaanti.AutoSize = True
+        Me.LblDiaanti.Enabled = False
         Me.LblDiaanti.Location = New System.Drawing.Point(10, 20)
         Me.LblDiaanti.Name = "LblDiaanti"
         Me.LblDiaanti.Size = New System.Drawing.Size(23, 13)
@@ -1264,21 +1272,65 @@ Partial Class FrmPrestacion
         'Panel5
         '
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.DtpFTerminacion)
+        Me.Panel5.Controls.Add(Me.TxtAño1)
+        Me.Panel5.Controls.Add(Me.LblAño1)
+        Me.Panel5.Controls.Add(Me.TxtMes1)
+        Me.Panel5.Controls.Add(Me.LblMes1)
+        Me.Panel5.Controls.Add(Me.TxtDia1)
+        Me.Panel5.Controls.Add(Me.LblDia1)
         Me.Panel5.Controls.Add(Me.LblFechaTermi)
         Me.Panel5.Location = New System.Drawing.Point(283, 112)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(274, 52)
         Me.Panel5.TabIndex = 18
         '
-        'DtpFTerminacion
+        'TxtAño1
         '
-        Me.DtpFTerminacion.Enabled = False
-        Me.DtpFTerminacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFTerminacion.Location = New System.Drawing.Point(44, 17)
-        Me.DtpFTerminacion.Name = "DtpFTerminacion"
-        Me.DtpFTerminacion.Size = New System.Drawing.Size(142, 20)
-        Me.DtpFTerminacion.TabIndex = 2
+        Me.TxtAño1.Location = New System.Drawing.Point(177, 15)
+        Me.TxtAño1.Name = "TxtAño1"
+        Me.TxtAño1.Size = New System.Drawing.Size(80, 20)
+        Me.TxtAño1.TabIndex = 20
+        '
+        'LblAño1
+        '
+        Me.LblAño1.AutoSize = True
+        Me.LblAño1.Location = New System.Drawing.Point(145, 18)
+        Me.LblAño1.Name = "LblAño1"
+        Me.LblAño1.Size = New System.Drawing.Size(26, 13)
+        Me.LblAño1.TabIndex = 19
+        Me.LblAño1.Text = "Año"
+        '
+        'TxtMes1
+        '
+        Me.TxtMes1.Location = New System.Drawing.Point(106, 16)
+        Me.TxtMes1.Name = "TxtMes1"
+        Me.TxtMes1.Size = New System.Drawing.Size(33, 20)
+        Me.TxtMes1.TabIndex = 18
+        '
+        'LblMes1
+        '
+        Me.LblMes1.AutoSize = True
+        Me.LblMes1.Location = New System.Drawing.Point(73, 19)
+        Me.LblMes1.Name = "LblMes1"
+        Me.LblMes1.Size = New System.Drawing.Size(27, 13)
+        Me.LblMes1.TabIndex = 17
+        Me.LblMes1.Text = "Mes"
+        '
+        'TxtDia1
+        '
+        Me.TxtDia1.Location = New System.Drawing.Point(34, 16)
+        Me.TxtDia1.Name = "TxtDia1"
+        Me.TxtDia1.Size = New System.Drawing.Size(33, 20)
+        Me.TxtDia1.TabIndex = 16
+        '
+        'LblDia1
+        '
+        Me.LblDia1.AutoSize = True
+        Me.LblDia1.Location = New System.Drawing.Point(5, 18)
+        Me.LblDia1.Name = "LblDia1"
+        Me.LblDia1.Size = New System.Drawing.Size(23, 13)
+        Me.LblDia1.TabIndex = 15
+        Me.LblDia1.Text = "Dia"
         '
         'LblFechaTermi
         '
@@ -1294,21 +1346,12 @@ Partial Class FrmPrestacion
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.DtpFIngreso)
+        Me.Panel4.Controls.Add(Me.dtpFechaInicial)
         Me.Panel4.Controls.Add(Me.LblFechaIngreso)
         Me.Panel4.Location = New System.Drawing.Point(0, 112)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(286, 52)
         Me.Panel4.TabIndex = 17
-        '
-        'DtpFIngreso
-        '
-        Me.DtpFIngreso.Enabled = False
-        Me.DtpFIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFIngreso.Location = New System.Drawing.Point(34, 17)
-        Me.DtpFIngreso.Name = "DtpFIngreso"
-        Me.DtpFIngreso.Size = New System.Drawing.Size(142, 20)
-        Me.DtpFIngreso.TabIndex = 1
         '
         'LblFechaIngreso
         '
@@ -1514,6 +1557,15 @@ Partial Class FrmPrestacion
         Me.BtnCalcular.Text = "Calcular"
         Me.BtnCalcular.UseVisualStyleBackColor = False
         '
+        'dtpFechaInicial
+        '
+        Me.dtpFechaInicial.Enabled = False
+        Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaInicial.Location = New System.Drawing.Point(27, 17)
+        Me.dtpFechaInicial.Name = "dtpFechaInicial"
+        Me.dtpFechaInicial.Size = New System.Drawing.Size(188, 20)
+        Me.dtpFechaInicial.TabIndex = 147
+        '
         'FrmPrestacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1691,7 +1743,12 @@ Partial Class FrmPrestacion
     Friend WithEvents LblOrdinario As Label
     Friend WithEvents BtnImprimir As Button
     Friend WithEvents BtnCalcular As Button
-    Friend WithEvents DtpFTerminacion As DateTimePicker
-    Friend WithEvents DtpFIngreso As DateTimePicker
     Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents TxtAño1 As TextBox
+    Friend WithEvents LblAño1 As Label
+    Friend WithEvents TxtMes1 As TextBox
+    Friend WithEvents LblMes1 As Label
+    Friend WithEvents TxtDia1 As TextBox
+    Friend WithEvents LblDia1 As Label
+    Friend WithEvents dtpFechaInicial As DateTimePicker
 End Class

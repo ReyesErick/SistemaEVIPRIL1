@@ -53,8 +53,8 @@ Public Class PerfilEmpleado
         FrmPrestacion.txtNumIdentidadEmpleado.Text = TxtNumIdentidad.Text
         FrmPrestacion.TxtNombre.Text = TxtNombres.Text + " " + TxtApellidos.Text
         FrmPrestacion.TxtSOM.Text = txtSueldo.Text
-        FrmPrestacion.DtpFIngreso.Value = dtpFechaInicial.Value
-        FrmPrestacion.DtpFTerminacion.Value = TxtFechaFinal.Text
+        FrmPrestacion.dtpFechaInicial.Value = dtpFechaInicial.Value
+        'FrmPrestacion.DtpFTerminacion.Value = TxtFechaFinal.Text
         FrmPrestacion.Show()
         Me.Close()
 

@@ -12,8 +12,8 @@ Public Class FrmPrestacion
         Me.TxtSOD.Text = FormatCurrency(CDbl(Me.TxtSOM.Text) / 30, 2)
         Me.TxtSOPM.Text = FormatCurrency((CDbl(Me.TxtSOM.Text) * 14) / 12, 2)
         Me.TxtSOPD.Text = FormatCurrency(CDbl(TxtSOPM.Text) / 30, 2)
-        FechaInicial = DtpFIngreso.Value
-        FechaActual = DtpFTerminacion.Value
+        FechaInicial = dtpFechaInicial.Value
+        FechaActual = CDate(String.Format("{0}-{1}-{2}", TxtAño1.Text, TxtMes1.Text, TxtDia1.Text))
         Dim diaActual As Integer
         Dim mesActual As Integer
         Dim anioActual As Integer
@@ -102,7 +102,7 @@ Public Class FrmPrestacion
 
         Me.TxtAnioAnti.Text = Anios
         Me.TxtMesAnti.Text = Meses
-        Me.TxtDiaAnti.Text = Dias
+        Me.TxtDiaAnti.Text = (Dias + 1)
         Duracion_Meses = DateDiff(DateInterval.Month, FechaInicial, FechaActual)
 
         If Duracion_Meses < 3 Then
@@ -139,6 +139,7 @@ Public Class FrmPrestacion
             Me.TxtCD1.Text = Cesantia
             Me.TxtCL1.Text = FormatCurrency(Cesantia * CDbl(Me.TxtSOPD.Text))
             TotalPrestaciones += Me.TxtCL1.Text
+
         ElseIf Duracion_Meses >= 6 And Duracion_Meses < 12 Then
             Cesantia = 20
             Me.TxtCD2.Text = Cesantia
@@ -146,9 +147,9 @@ Public Class FrmPrestacion
             TotalPrestaciones += Me.TxtCL2.Text
 
         ElseIf Duracion_Meses >= 12 Then
-            Cesantia = 30
-            Me.TxtCD3.Text = Cesantia
-            Me.TxtCL3.Text = FormatCurrency(Cesantia * CDbl(Me.TxtSOPD.Text))
+            'Cesantia = 30
+            'Me.TxtCD3.Text = Cesantia
+            Me.TxtCL3.Text = FormatCurrency(CDbl(Me.TxtAnioAnti.Text) * CDbl(Me.TxtSOPM.Text))
             TotalPrestaciones += Me.TxtCL3.Text
         End If
 
@@ -157,46 +158,67 @@ Public Class FrmPrestacion
             Vacaciones = 10
             Me.TxtVD1.Text = Vacaciones
             Me.TxtVL1.Text = FormatCurrency(Vacaciones * CDbl(Me.TxtSOPD.Text))
-            TotalPrestaciones += Me.TxtVL1.Text
-            DiasVacacionesProporcionales = 36
+            'TotalPrestaciones += Me.TxtVL1.Text
+            'DiasVacacionesProporcionales = 36
 
 
         ElseIf Duracion_Meses >= 24 And Duracion_Meses < 36 Then
             Vacaciones = 12
             Me.TxtVD2.Text = Vacaciones
             Me.TxtVL2.Text = FormatCurrency(Vacaciones * CDbl(Me.TxtSOPD.Text))
-            TotalPrestaciones += Me.TxtVL2.Text
-            DiasVacacionesProporcionales = 30
+            ''TotalPrestaciones += Me.TxtVL2.Text
+            'DiasVacacionesProporcionales = 30
 
         ElseIf Duracion_Meses >= 36 And Duracion_Meses < 48 Then
             Vacaciones = 15
             Me.TxtVD3.Text = Vacaciones
             Me.TxtVL3.Text = FormatCurrency(Vacaciones * CDbl(Me.TxtSOPD.Text))
-            TotalPrestaciones += Me.TxtVL3.Text
-            DiasVacacionesProporcionales = 24
+            'TotalPrestaciones += Me.TxtVL3.Text
+            'DiasVacacionesProporcionales = 24
 
         ElseIf Duracion_Meses >= 48 Then
             Vacaciones = 20
             Me.TxtVD4.Text = Vacaciones
             Me.TxtVL4.Text = FormatCurrency(Vacaciones * CDbl(Me.TxtSOPD.Text))
-            TotalPrestaciones += Me.TxtVL4.Text
-            DiasVacacionesProporcionales = 18
+            'TotalPrestaciones += Me.TxtVL4.Text
+            'DiasVacacionesProporcionales = 18
         End If
 
         If Duracion_Meses >= 60 Then
-            DiasVacacionesProporcionales = 12
+            '
+        End If
+
+        'Me.TxtVPD.Text = 
+        'Me.TxtVPL.Text = 
+
+
+        If Duracion_Meses < 8 Then
+            DiasVacacionesProporcionales = (((TxtMesAnti.Text * 30) + TxtDiaAnti.Text))
+            Me.TxtVPD.Text = DiasVacacionesProporcionales
+            Me.TxtVPL.Text = FormatCurrency(((TxtVPD.Text) / 36) * CDbl(Me.TxtSOPD.Text))
+            TotalPrestaciones += Me.TxtVL2.Text
+
+        ElseIf Duracion_Meses >= 8 And Duracion_Meses < 24 Then
+            DiasVacacionesProporcionales = (((TxtMesAnti.Text * 30) + TxtDiaAnti.Text))
+            Me.TxtVPD.Text = DiasVacacionesProporcionales
+            Me.TxtVPL.Text = FormatCurrency(((TxtVPD.Text) / 24) * CDbl(Me.TxtSOPD.Text))
+            TotalPrestaciones += Me.TxtVL2.Text
+
+        ElseIf Duracion_Meses >= 24 Then
+            DiasVacacionesProporcionales = (((TxtMesAnti.Text * 30) + TxtDiaAnti.Text))
+            Me.TxtVPD.Text = DiasVacacionesProporcionales
+            Me.TxtVPL.Text = FormatCurrency(((TxtVPD.Text) / 18) * CDbl(Me.TxtSOPD.Text))
+            TotalPrestaciones += Me.TxtVL2.Text
+
         End If
 
 
 
-        Me.TxtVPD.Text = DiasVacacionesProporcionales
-        Me.TxtVPL.Text = FormatCurrency((Duracion_Meses / DiasVacacionesProporcionales) * CDbl(Me.TxtSOPD.Text))
-        TotalPrestaciones += Me.TxtVPL.Text
-
-        Me.TxtCPD.Text = 12
-        Me.TxtCPL.Text = FormatCurrency((Duracion_Meses / 12) * CDbl(Me.TxtSOPD.Text))
+        'CESANTIA
+        Me.TxtCPD.Text = (((TxtMesAnti.Text * 30) + TxtDiaAnti.Text))
+        Me.TxtCPL.Text = FormatCurrency(((TxtCPD.Text) / 12) * CDbl(Me.TxtSOPD.Text))
         TotalPrestaciones += Me.TxtCPL.Text
-        TxtTotalD.Text = FormatCurrency(TotalPrestaciones)
+
         If TxtDL1.Text Is Nothing Then
             TxtDL1.Text = 0
         End If
@@ -212,16 +234,31 @@ Public Class FrmPrestacion
 
         Dim tiempo As String
 
+        '13 año
+
         tiempo = Today.DayOfYear
-        TextBox14.Text = tiempo
-        TextBox19.Text = FormatCurrency(CDbl((tiempo / 360) * TxtSOM.Text))
+        TextBox14.Text = (tiempo - 2)
+        TextBox19.Text = FormatCurrency(CDbl(((tiempo - 2) / 360) * TxtSOM.Text))
+        TotalPrestaciones += Me.TextBox19.Text
 
-        TxtTotalP.Text = FormatCurrency(TotalPrestaciones - (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text)))
+        '14 año
+        Dim FechaAnt As New Date(Now.Year, 6, 1)
+        If (Today < FechaAnt) Then
+            FechaAnt = New Date(Now.Year - 1, 6, 1)
+        End If
 
+        TextBox24.Text = DateDiff(DateInterval.DayOfYear, FechaAnt, Today) - 30
+        TextBox25.Text = FormatCurrency(Convert.ToDouble((TextBox24.Text / 360) * TxtSOM.Text))
+        TotalPrestaciones += Me.TextBox25.Text
 
+        ' = FormatCurrency(TotalPrestaciones + 993.37)
+        TxtTotalD.Text = FormatCurrency(CDbl(TxtPL1.Text) + CDbl(TxtPL2.Text) + CDbl(TxtPL3.Text) + CDbl(TxtPL4.Text) + CDbl(TxtPL5.Text) + CDbl(TxtCL1.Text) + CDbl(TxtCL2.Text) + CDbl(TxtCL3.Text) + CDbl(TxtVPL.Text) + CDbl(TxtCPL.Text) + CDbl(TextBox19.Text) + CDbl(TextBox25.Text))
 
+        TxtTotalP.Text = FormatCurrency(TxtTotalD.Text - (CDbl(TxtDL1.Text) + CDbl(TxtDL2.Text) + CDbl(TxtDL3.Text) + CDbl(TxtDL4.Text)))
 
     End Sub
+
+
 
     Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
         Dim reporte As New ReportePrestaciones()
