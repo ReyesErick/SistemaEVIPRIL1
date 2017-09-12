@@ -19,15 +19,13 @@ Public Class FrmEmpleado
         sele = 0
         verificarHelp()
 
-
+        Call CargarDepartamento()
         Call CargarEstadoCivil()
         Call CargarProfesion()
         Call CargarNacionalidad()
         Call CargarSexo()
-        Call CargarMunicipio()
         Call CargarEmpleado()
         CboEstadoCivil.SelectedValue = -1
-        CboMunicipio.SelectedValue = -1
         CboNacionalidad.SelectedValue = -1
         CboProfesion.SelectedValue = -1
         CboSexo.SelectedValue = -1
@@ -56,6 +54,7 @@ Public Class FrmEmpleado
     Private Sub LblAgregarEmpleado_Click(sender As Object, e As EventArgs) Handles LblAgregarEmpleado.Click
         sele = 1
         Call verificarHelp()
+        Call Limpiar()
         TcEmpleado.Visible = True
         Me.TcEmpleado.SelectedTab = TpAgregar
         BtnModificar.Enabled = False
@@ -281,6 +280,35 @@ Public Class FrmEmpleado
         End Try
     End Sub
 
+    Private Sub CargarDepartamento()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+
+        End If
+
+
+        Try
+            cn.Open()
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_MostrarDepartamento"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                End With
+                Dim da As New SqlDataAdapter(cmd)
+                Dim ds As New DataSet
+                da.Fill(ds, "Departamento")
+                CboDepto.DataSource = ds.Tables(0)
+                CboDepto.DisplayMember = ds.Tables(0).Columns("Departamento").ToString
+                CboDepto.ValueMember = ds.Tables(0).Columns("IdDepto").ToString
+            End Using
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
     Private Sub CargarNacionalidad()
         If cn.State = ConnectionState.Open Then
             cn.Close()
@@ -340,7 +368,6 @@ Public Class FrmEmpleado
     Private Sub CargarMunicipio()
         If cn.State = ConnectionState.Open Then
             cn.Close()
-
         End If
 
         Try
@@ -350,6 +377,7 @@ Public Class FrmEmpleado
                     .CommandText = "Sp_MostrarMunicipio"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cn
+                    .Parameters.Add("@IdDepto", SqlDbType.Int).Value = CInt(CboDepto.SelectedValue)
                 End With
                 Dim da As New SqlDataAdapter(cmd)
                 Dim ds As New DataSet
@@ -359,7 +387,7 @@ Public Class FrmEmpleado
                 CboMunicipio.ValueMember = ds.Tables(0).Columns("IdMunicipio").ToString
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
         Finally
             cn.Close()
         End Try
@@ -599,12 +627,6 @@ Public Class FrmEmpleado
         txtIdBeneficiario.Clear()
     End Sub
 
-    Private Sub DgvVerEmpleado_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvVerEmpleado.CellContentDoubleClick
-        If sele = 1 Then
-            Me.Close()
-        End If
-    End Sub
-
     Private Sub BtnBuscarBeneficiario_Click(sender As Object, e As EventArgs) Handles BtnBuscarBeneficiario.Click
         sele = 1
         FrmBeneficiario.Show()
@@ -789,7 +811,37 @@ Public Class FrmEmpleado
         End Using
     End Sub
 
-    Private Sub Calcular13voToolStripMenuItem_Click(sender As Object, e As EventArgs) 
+    Private Sub AumentarSueldoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AumentarSueldoToolStripMenuItem.Click
+        FrmSalario.TxtNumIdentidad.Text = DgvVerEmpleado.CurrentRow.Cells(0).Value
+        FrmSalario.ShowDialog()
+    End Sub
 
+    Private Sub CboDepto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboDepto.SelectedIndexChanged
+        Call CargarMunicipio()
+    End Sub
+
+    Private Sub PbxProfesion_Click(sender As Object, e As EventArgs) Handles PbxProfesion.Click
+        FrmCatalogo.catalogo = "profesion"
+        FrmCatalogo.TxtNombreCato.Enabled = True
+        FrmCatalogo.LblNombre.Text = "Profesion:"
+        FrmCatalogo.ShowDialog()
+    End Sub
+
+    Private Sub CboProfesion_MouseMove(sender As Object, e As MouseEventArgs) Handles CboProfesion.MouseMove
+        CargarProfesion()
+        CboProfesion.SelectedValue = -1
+    End Sub
+
+    Private Sub PbxMunicipio_Click(sender As Object, e As EventArgs) Handles PbxMunicipio.Click
+        FrmCatalogo.catalogo = "municipio"
+        FrmCatalogo.TxtNombreCato.Enabled = True
+        FrmCatalogo.CboCombo.Enabled = True
+        FrmCatalogo.LblNombre.Text = "Municipio:"
+        FrmCatalogo.LblCombo.Text = "Departamento:"
+        FrmCatalogo.ShowDialog()
+    End Sub
+
+    Private Sub CboProfesion_Click(sender As Object, e As EventArgs) Handles CboProfesion.Click
+        CargarMunicipio()
     End Sub
 End Class

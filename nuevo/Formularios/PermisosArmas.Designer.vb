@@ -72,7 +72,7 @@ Partial Class FrmPermisosArmas
         Me.TableAdapterManager.Connection = Nothing
         'Me.TableAdapterManager.ContratoEmpleadoTableAdapter = Nothing
         'Me.TableAdapterManager.DetallePlanillaTableAdapter = Nothing
-        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
+        'Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
         Me.TableAdapterManager.PlanillasTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

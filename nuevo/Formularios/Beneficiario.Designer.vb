@@ -26,11 +26,9 @@ Partial Class FrmBeneficiario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBeneficiario))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LblVerBeneficiario = New System.Windows.Forms.Label()
-        Me.BtnRegresarMenu = New System.Windows.Forms.Button()
         Me.LblAgregarBeneficiario = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -58,7 +56,6 @@ Partial Class FrmBeneficiario
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -80,11 +77,9 @@ Partial Class FrmBeneficiario
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.PictureBox5)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.LblVerBeneficiario)
-        Me.Panel1.Controls.Add(Me.BtnRegresarMenu)
         Me.Panel1.Controls.Add(Me.LblAgregarBeneficiario)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(19, 71)
@@ -92,20 +87,10 @@ Partial Class FrmBeneficiario
         Me.Panel1.Size = New System.Drawing.Size(235, 186)
         Me.Panel1.TabIndex = 7
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 16)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(23, 21)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 16
-        Me.PictureBox5.TabStop = False
-        '
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(3, 111)
+        Me.PictureBox4.Location = New System.Drawing.Point(3, 78)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -115,7 +100,7 @@ Partial Class FrmBeneficiario
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 83)
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 50)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(21, 15)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -127,32 +112,18 @@ Partial Class FrmBeneficiario
         Me.LblVerBeneficiario.AutoSize = True
         Me.LblVerBeneficiario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblVerBeneficiario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVerBeneficiario.Location = New System.Drawing.Point(27, 111)
+        Me.LblVerBeneficiario.Location = New System.Drawing.Point(27, 78)
         Me.LblVerBeneficiario.Name = "LblVerBeneficiario"
         Me.LblVerBeneficiario.Size = New System.Drawing.Size(119, 16)
         Me.LblVerBeneficiario.TabIndex = 10
         Me.LblVerBeneficiario.Text = "Ver Beneficiario"
-        '
-        'BtnRegresarMenu
-        '
-        Me.BtnRegresarMenu.BackColor = System.Drawing.Color.LawnGreen
-        Me.BtnRegresarMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnRegresarMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegresarMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnRegresarMenu.Location = New System.Drawing.Point(3, 12)
-        Me.BtnRegresarMenu.Name = "BtnRegresarMenu"
-        Me.BtnRegresarMenu.Size = New System.Drawing.Size(225, 29)
-        Me.BtnRegresarMenu.TabIndex = 0
-        Me.BtnRegresarMenu.Text = "Regresar Menú Principal "
-        Me.BtnRegresarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnRegresarMenu.UseVisualStyleBackColor = False
         '
         'LblAgregarBeneficiario
         '
         Me.LblAgregarBeneficiario.AutoSize = True
         Me.LblAgregarBeneficiario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblAgregarBeneficiario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAgregarBeneficiario.Location = New System.Drawing.Point(28, 83)
+        Me.LblAgregarBeneficiario.Location = New System.Drawing.Point(28, 50)
         Me.LblAgregarBeneficiario.Name = "LblAgregarBeneficiario"
         Me.LblAgregarBeneficiario.Size = New System.Drawing.Size(200, 16)
         Me.LblAgregarBeneficiario.TabIndex = 7
@@ -163,7 +134,7 @@ Partial Class FrmBeneficiario
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Label1.Location = New System.Drawing.Point(20, 57)
+        Me.Label1.Location = New System.Drawing.Point(20, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(156, 16)
         Me.Label1.TabIndex = 6
@@ -373,7 +344,7 @@ Partial Class FrmBeneficiario
         '
         'DgvBeneficiario
         '
-        Me.DgvBeneficiario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvBeneficiario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvBeneficiario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvBeneficiario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvBeneficiario.ContextMenuStrip = Me.CmsBeneficiario
@@ -424,7 +395,6 @@ Partial Class FrmBeneficiario
         Me.Text = "Beneficiario"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
@@ -440,11 +410,9 @@ Partial Class FrmBeneficiario
 
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LblVerBeneficiario As Label
-    Friend WithEvents BtnRegresarMenu As Button
     Friend WithEvents LblAgregarBeneficiario As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TabControl1 As TabControl

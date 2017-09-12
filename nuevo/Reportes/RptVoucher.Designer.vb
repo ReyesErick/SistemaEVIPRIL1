@@ -23,6 +23,10 @@ Partial Public Class RptVoucher
         Dim XrLabel36 As DevExpress.XtraReports.UI.XRLabel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RptVoucher))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.XrLabel17 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel38 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel39 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLine8 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLabel37 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLine7 = New DevExpress.XtraReports.UI.XRLine()
@@ -70,10 +74,6 @@ Partial Public Class RptVoucher
         Me.Planillas1 = New nuevo.Planillas()
         Me.PlanillasTableAdapter = New nuevo.PlanillasTableAdapters.PlanillasTableAdapter()
         Me.VoucherTableAdapter1 = New nuevo.PlanillasTableAdapters.VoucherTableAdapter()
-        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
-        Me.XrLabel17 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel38 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel39 = New DevExpress.XtraReports.UI.XRLabel()
         XrLabel35 = New DevExpress.XtraReports.UI.XRLabel()
         XrLabel36 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.Planillas1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,7 +82,7 @@ Partial Public Class RptVoucher
         'XrLabel35
         '
         XrLabel35.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        XrLabel35.LocationFloat = New DevExpress.Utils.PointFloat(206.25!, 211.75!)
+        XrLabel35.LocationFloat = New DevExpress.Utils.PointFloat(215.625!, 211.75!)
         XrLabel35.Name = "XrLabel35"
         XrLabel35.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         XrLabel35.SizeF = New System.Drawing.SizeF(207.2917!, 23.91666!)
@@ -106,6 +106,48 @@ Partial Public Class RptVoucher
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrPictureBox2
+        '
+        Me.XrPictureBox2.Image = CType(resources.GetObject("XrPictureBox2.Image"), System.Drawing.Image)
+        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(45.7653!, 23.00002!)
+        Me.XrPictureBox2.Name = "XrPictureBox2"
+        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(83.40136!, 63.41664!)
+        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
+        'XrLabel17
+        '
+        Me.XrLabel17.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(45.7653!, 0!)
+        Me.XrLabel17.Name = "XrLabel17"
+        Me.XrLabel17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel17.SizeF = New System.Drawing.SizeF(555.3075!, 25.45834!)
+        Me.XrLabel17.StylePriority.UseFont = False
+        Me.XrLabel17.Text = "EMPRESA DE VIGILANCIA PRIVADA LEON S. DE R. L."
+        '
+        'XrLabel38
+        '
+        Me.XrLabel38.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel38.LocationFloat = New DevExpress.Utils.PointFloat(278.4941!, 23.00002!)
+        Me.XrLabel38.Name = "XrLabel38"
+        Me.XrLabel38.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel38.SizeF = New System.Drawing.SizeF(108.0834!, 24.41667!)
+        Me.XrLabel38.StylePriority.UseFont = False
+        Me.XrLabel38.Text = """EVIPRIL"""
+        '
+        'XrLabel39
+        '
+        Me.XrLabel39.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel39.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel39.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel39.LocationFloat = New DevExpress.Utils.PointFloat(129.1667!, 47.41669!)
+        Me.XrLabel39.Name = "XrLabel39"
+        Me.XrLabel39.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel39.SizeF = New System.Drawing.SizeF(407.794!, 38.99997!)
+        Me.XrLabel39.StylePriority.UseBackColor = False
+        Me.XrLabel39.StylePriority.UseBorders = False
+        Me.XrLabel39.StylePriority.UseFont = False
+        Me.XrLabel39.Text = "RECIBO DE PAGO QUINCENAL"
         '
         'XrLine8
         '
@@ -134,7 +176,7 @@ Partial Public Class RptVoucher
         'XrLine6
         '
         Me.XrLine6.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.XrLine6.LocationFloat = New DevExpress.Utils.PointFloat(190.6249!, 200.25!)
+        Me.XrLine6.LocationFloat = New DevExpress.Utils.PointFloat(204.1666!, 200.25!)
         Me.XrLine6.Name = "XrLine6"
         Me.XrLine6.SizeF = New System.Drawing.SizeF(25.00009!, 127.4167!)
         '
@@ -225,7 +267,7 @@ Partial Public Class RptVoucher
         'XrLabel29
         '
         Me.XrLabel29.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel29.LocationFloat = New DevExpress.Utils.PointFloat(215.625!, 235.6667!)
+        Me.XrLabel29.LocationFloat = New DevExpress.Utils.PointFloat(225.0!, 235.6667!)
         Me.XrLabel29.Name = "XrLabel29"
         Me.XrLabel29.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel29.SizeF = New System.Drawing.SizeF(95.83334!, 23.0!)
@@ -321,7 +363,7 @@ Partial Public Class RptVoucher
         'XrLabel21
         '
         Me.XrLabel21.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel21.LocationFloat = New DevExpress.Utils.PointFloat(203.125!, 269.0834!)
+        Me.XrLabel21.LocationFloat = New DevExpress.Utils.PointFloat(212.5!, 269.0834!)
         Me.XrLabel21.Name = "XrLabel21"
         Me.XrLabel21.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel21.SizeF = New System.Drawing.SizeF(108.3333!, 23.0!)
@@ -363,7 +405,7 @@ Partial Public Class RptVoucher
         Me.XrLabel16.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel16.StylePriority.UseTextAlignment = False
         Me.XrLabel16.Text = "XrLabel16"
-        Me.XrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel15
         '
@@ -374,7 +416,7 @@ Partial Public Class RptVoucher
         Me.XrLabel15.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel15.StylePriority.UseTextAlignment = False
         Me.XrLabel15.Text = "XrLabel15"
-        Me.XrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel14
         '
@@ -385,7 +427,7 @@ Partial Public Class RptVoucher
         Me.XrLabel14.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel14.StylePriority.UseTextAlignment = False
         Me.XrLabel14.Text = "XrLabel14"
-        Me.XrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel13
         '
@@ -396,18 +438,18 @@ Partial Public Class RptVoucher
         Me.XrLabel13.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel13.StylePriority.UseTextAlignment = False
         Me.XrLabel13.Text = "XrLabel13"
-        Me.XrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel12
         '
         Me.XrLabel12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Voucher.OtrasDeducciones", "{0:c2}")})
-        Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(311.4583!, 235.6667!)
+        Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(320.8333!, 235.6667!)
         Me.XrLabel12.Name = "XrLabel12"
         Me.XrLabel12.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel12.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel12.StylePriority.UseTextAlignment = False
         Me.XrLabel12.Text = "XrLabel12"
-        Me.XrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel11
         '
@@ -451,7 +493,7 @@ Partial Public Class RptVoucher
         Me.XrLabel8.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel8.StylePriority.UseTextAlignment = False
         Me.XrLabel8.Text = "XrLabel8"
-        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel7
         '
@@ -489,13 +531,13 @@ Partial Public Class RptVoucher
         'XrLabel4
         '
         Me.XrLabel4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Voucher.DeduccionUniforme", "{0:c2}")})
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(311.4583!, 269.0834!)
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(320.8333!, 269.0834!)
         Me.XrLabel4.Name = "XrLabel4"
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel4.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel4.StylePriority.UseTextAlignment = False
         Me.XrLabel4.Text = "XrLabel4"
-        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel3
         '
@@ -506,7 +548,7 @@ Partial Public Class RptVoucher
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel3.StylePriority.UseTextAlignment = False
         Me.XrLabel3.Text = "XrLabel3"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel2
         '
@@ -517,7 +559,7 @@ Partial Public Class RptVoucher
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel2.StylePriority.UseTextAlignment = False
         Me.XrLabel2.Text = "XrLabel2"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel1
         '
@@ -575,48 +617,6 @@ Partial Public Class RptVoucher
         'VoucherTableAdapter1
         '
         Me.VoucherTableAdapter1.ClearBeforeFill = True
-        '
-        'XrPictureBox2
-        '
-        Me.XrPictureBox2.Image = CType(resources.GetObject("XrPictureBox2.Image"), System.Drawing.Image)
-        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(45.7653!, 23.00002!)
-        Me.XrPictureBox2.Name = "XrPictureBox2"
-        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(83.40136!, 63.41664!)
-        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
-        '
-        'XrLabel17
-        '
-        Me.XrLabel17.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(45.7653!, 0!)
-        Me.XrLabel17.Name = "XrLabel17"
-        Me.XrLabel17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel17.SizeF = New System.Drawing.SizeF(555.3075!, 25.45834!)
-        Me.XrLabel17.StylePriority.UseFont = False
-        Me.XrLabel17.Text = "EMPRESA DE VIGILANCIA PRIVADA LEON S. DE R. L."
-        '
-        'XrLabel38
-        '
-        Me.XrLabel38.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel38.LocationFloat = New DevExpress.Utils.PointFloat(278.4941!, 23.00002!)
-        Me.XrLabel38.Name = "XrLabel38"
-        Me.XrLabel38.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel38.SizeF = New System.Drawing.SizeF(108.0834!, 24.41667!)
-        Me.XrLabel38.StylePriority.UseFont = False
-        Me.XrLabel38.Text = """EVIPRIL"""
-        '
-        'XrLabel39
-        '
-        Me.XrLabel39.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel39.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel39.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel39.LocationFloat = New DevExpress.Utils.PointFloat(129.1667!, 47.41669!)
-        Me.XrLabel39.Name = "XrLabel39"
-        Me.XrLabel39.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel39.SizeF = New System.Drawing.SizeF(407.794!, 38.99997!)
-        Me.XrLabel39.StylePriority.UseBackColor = False
-        Me.XrLabel39.StylePriority.UseBorders = False
-        Me.XrLabel39.StylePriority.UseFont = False
-        Me.XrLabel39.Text = "RECIBO DE PAGO QUINCENAL"
         '
         'RptVoucher
         '

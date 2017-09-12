@@ -42,6 +42,8 @@ Partial Class FrmContrato
         Me.dtpfinal = New System.Windows.Forms.DateTimePicker()
         Me.dtpInicio = New System.Windows.Forms.DateTimePicker()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TxtNombreCliente = New System.Windows.Forms.TextBox()
+        Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.TxtCliente = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -53,7 +55,6 @@ Partial Class FrmContrato
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DgvContrato = New System.Windows.Forms.DataGridView()
@@ -294,6 +295,8 @@ Partial Class FrmContrato
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.TxtNombreCliente)
+        Me.TabPage2.Controls.Add(Me.dtpFechaInicio)
         Me.TabPage2.Controls.Add(Me.PictureBox8)
         Me.TabPage2.Controls.Add(Me.TxtCliente)
         Me.TabPage2.Controls.Add(Me.Label13)
@@ -305,7 +308,6 @@ Partial Class FrmContrato
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.dtpFechaFinal)
-        Me.TabPage2.Controls.Add(Me.dtpFechaInicio)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -313,6 +315,23 @@ Partial Class FrmContrato
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Contrato Cliente"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TxtNombreCliente
+        '
+        Me.TxtNombreCliente.Enabled = False
+        Me.TxtNombreCliente.Location = New System.Drawing.Point(402, 224)
+        Me.TxtNombreCliente.Name = "TxtNombreCliente"
+        Me.TxtNombreCliente.Size = New System.Drawing.Size(146, 20)
+        Me.TxtNombreCliente.TabIndex = 64
+        '
+        'dtpFechaInicio
+        '
+        Me.dtpFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(370, 58)
+        Me.dtpFechaInicio.Name = "dtpFechaInicio"
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(200, 20)
+        Me.dtpFechaInicio.TabIndex = 63
         '
         'PictureBox8
         '
@@ -327,9 +346,10 @@ Partial Class FrmContrato
         '
         'TxtCliente
         '
+        Me.TxtCliente.Enabled = False
         Me.TxtCliente.Location = New System.Drawing.Point(370, 224)
         Me.TxtCliente.Name = "TxtCliente"
-        Me.TxtCliente.Size = New System.Drawing.Size(172, 20)
+        Me.TxtCliente.Size = New System.Drawing.Size(31, 20)
         Me.TxtCliente.TabIndex = 3
         '
         'Label13
@@ -419,15 +439,6 @@ Partial Class FrmContrato
         Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 20)
         Me.dtpFechaFinal.TabIndex = 1
         '
-        'dtpFechaInicio
-        '
-        Me.dtpFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(370, 58)
-        Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(200, 20)
-        Me.dtpFechaInicio.TabIndex = 0
-        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Button3)
@@ -457,7 +468,7 @@ Partial Class FrmContrato
         '
         Me.DgvContrato.AllowUserToAddRows = False
         Me.DgvContrato.AllowUserToDeleteRows = False
-        Me.DgvContrato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvContrato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvContrato.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvContrato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvContrato.ContextMenuStrip = Me.CmsContrato
@@ -562,7 +573,7 @@ Partial Class FrmContrato
         '
         'DgvGuardias
         '
-        Me.DgvGuardias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvGuardias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvGuardias.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvGuardias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvGuardias.Location = New System.Drawing.Point(106, 96)
@@ -858,7 +869,6 @@ Partial Class FrmContrato
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents dtpFechaFinal As DateTimePicker
-    Friend WithEvents dtpFechaInicio As DateTimePicker
     Friend WithEvents TxtNumIdentidad As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents PbxBuscar As PictureBox
@@ -882,4 +892,6 @@ Partial Class FrmContrato
     Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents dtpFechaInicio As DateTimePicker
+    Friend WithEvents TxtNombreCliente As TextBox
 End Class

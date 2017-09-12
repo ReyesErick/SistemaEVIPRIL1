@@ -76,7 +76,9 @@ Public Class FrmInventario
                 With cmd
                     .CommandText = "Sp_MostrarModelo"
                     .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@IdMarca", SqlDbType.Int).Value = CInt(CboMarca.SelectedValue)
                     .Connection = cn
+
                 End With
                 Dim da As New SqlDataAdapter(cmd)
                 Dim ds As New DataSet
@@ -86,7 +88,36 @@ Public Class FrmInventario
                 cboModelo.ValueMember = ds.Tables(0).Columns("IdModelo").ToString
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("error")
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
+    Private Sub LlenarMarca()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+
+        End If
+        cn.Open()
+        Try
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_MostrarMarca"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CInt(CboTipoArma.SelectedValue)
+                    .Connection = cn
+
+                End With
+                Dim da As New SqlDataAdapter(cmd)
+                Dim ds As New DataSet
+                da.Fill(ds, "Marca")
+                CboMarca.DataSource = ds.Tables("Marca")
+                CboMarca.DisplayMember = "Marca" 'ds.Tables(0).Columns("Marca").ToString
+                CboMarca.ValueMember = "IdMarca" 'ds.Tables(0).Columns("IdMarca").ToString
+            End Using
+        Catch ex As Exception
+            'MsgBox(ex.Message)
         Finally
             cn.Close()
         End Try
@@ -108,9 +139,9 @@ Public Class FrmInventario
                 Dim da As New SqlDataAdapter(cmd)
                 Dim ds As New DataSet
                 da.Fill(ds, "TipoArma")
-                CboTipoArma.DataSource = ds.Tables(0)
-                CboTipoArma.DisplayMember = ds.Tables(0).Columns("TipoArma").ToString
-                CboTipoArma.ValueMember = ds.Tables(0).Columns("IdTipoArma").ToString
+                CboTipoArma.DataSource = ds.Tables("TipoArma")
+                CboTipoArma.DisplayMember = "TipoArma" 'ds.Tables(0).Columns("TipoArma").ToString
+                CboTipoArma.ValueMember = "IdTipoArma" 'ds.Tables(0).Columns("IdTipoArma").ToString
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -136,8 +167,8 @@ Public Class FrmInventario
                 Dim ds As New DataSet
                 da.Fill(ds, "LugarFabricacion")
                 cboPaisFabricacion.DataSource = ds.Tables(0)
-                cboPaisFabricacion.DisplayMember = ds.Tables(0).Columns("LugarFabricacion").ToString
-                cboPaisFabricacion.ValueMember = ds.Tables(0).Columns("IdFabricacion").ToString
+                cboPaisFabricacion.DisplayMember = "LugarFabricacion" 'ds.Tables(0).Columns("LugarFabricacion").ToString
+                cboPaisFabricacion.ValueMember = "IdFabricacion" 'ds.Tables(0).Columns("IdFabricacion").ToString
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -255,11 +286,11 @@ Public Class FrmInventario
         verificarHelp()
         TcArma.Visible = True
         TcArma.SelectedTab = TabPage2
-        Call LlenarModelo()
         Call LlenarTipi()
         Call LlenarFabricacion()
         cboModelo.SelectedValue = -1
         CboTipoArma.SelectedValue = -1
+        CboMarca.SelectedValue = -1
         cboPaisFabricacion.SelectedValue = -1
         txtSerie.Enabled = True
         MskCalibre.Enabled = True
@@ -371,5 +402,63 @@ Public Class FrmInventario
 
     Private Sub LblAgregarArma_MouseLeave(sender As Object, e As EventArgs) Handles LblAgregarArma.MouseLeave
         LblAgregarArma.ForeColor = Color.Black
+    End Sub
+
+    Private Sub CboTipoArma_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboTipoArma.SelectedIndexChanged
+        Call LlenarMarca()
+    End Sub
+
+    Private Sub CboMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboMarca.SelectedIndexChanged
+        Call LlenarModelo()
+    End Sub
+
+    Private Sub BtnAgregarImagen_Click(sender As Object, e As EventArgs) Handles BtnAgregarImagen.Click
+        FrmCatalogo.catalogo = "tipoarma"
+        FrmCatalogo.TxtNombreCato.Enabled = True
+        FrmCatalogo.LblNombre.Text = "Tipo Arma:"
+        FrmCatalogo.ShowDialog()
+    End Sub
+
+
+
+    Private Sub PbxMarca_Click(sender As Object, e As EventArgs) Handles PbxMarca.Click
+        FrmCatalogo.catalogo = "marca"
+        FrmCatalogo.TxtNombreCato.Enabled = True
+        FrmCatalogo.CboCombo.Enabled = True
+        FrmCatalogo.LblNombre.Text = "Marca:"
+        FrmCatalogo.LblCombo.Text = "Tipo Arma:"
+        FrmCatalogo.ShowDialog()
+    End Sub
+
+    Private Sub PbxModelo_Click(sender As Object, e As EventArgs) Handles PbxModelo.Click
+        FrmCatalogo.catalogo = "modelo"
+        FrmCatalogo.TxtNombreCato.Enabled = True
+        FrmCatalogo.CboCombo.Enabled = True
+        FrmCatalogo.LblNombre.Text = "Modelo:"
+        FrmCatalogo.LblCombo.Text = "Marca:"
+        FrmCatalogo.ShowDialog()
+    End Sub
+
+    Private Sub PbxFabricacion_Click(sender As Object, e As EventArgs) Handles PbxFabricacion.Click
+        FrmCatalogo.catalogo = "fabricacion"
+        FrmCatalogo.TxtNombreCato.Enabled = True
+        FrmCatalogo.LblNombre.Text = "Fabricación:"
+        FrmCatalogo.ShowDialog()
+    End Sub
+
+    Private Sub cboPaisFabricacion_Click(sender As Object, e As EventArgs) Handles cboPaisFabricacion.Click
+        LlenarFabricacion()
+    End Sub
+
+    Private Sub CboTipoArma_Click(sender As Object, e As EventArgs) Handles CboTipoArma.Click
+        LlenarTipi()
+    End Sub
+
+    Private Sub CboMarca_Click(sender As Object, e As EventArgs) Handles CboMarca.Click
+        LlenarMarca()
+    End Sub
+
+    Private Sub cboModelo_Click(sender As Object, e As EventArgs) Handles cboModelo.Click
+        LlenarModelo()
     End Sub
 End Class

@@ -255,7 +255,7 @@ Public Class FrmContrato
         TpContrato.SelectedTab = TabPage1
         CboTipoContrato.Text = ""
         CboTipoEmpleado.Text = ""
-        dtpFechaInicio.Enabled = True
+        dtpInicio.Enabled = True
         txtsueldo.Enabled = True
         CboTipoEmpleado.Enabled = True
         CboTipoContrato.Enabled = True
@@ -308,7 +308,7 @@ Public Class FrmContrato
 
                     .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = dtpFechaInicio.Value
                     .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = dtpFechaFinal.Value
-                    .Parameters.Add("@Monto", SqlDbType.Money).Value = Convert.ToDecimal(txtMonto.Text)
+                    .Parameters.Add("@Monto", SqlDbType.Money).Value = CDbl(txtMonto.Text)
                     .Parameters.Add("@IdCliente", SqlDbType.Int).Value = CInt(TxtCliente.Text)
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar).Value = txtObservacion.Text
                     .ExecuteNonQuery()
@@ -578,13 +578,13 @@ Public Class FrmContrato
     End Sub
 
     Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem.Click
-        dtpFechaInicio.Enabled = False
+        dtpInicio.Enabled = False
         txtsueldo.Enabled = False
         CboTipoEmpleado.Enabled = False
         CboTipoContrato.Enabled = False
         BtnModificar.Enabled = True
         BtnGuardar.Enabled = False
-        dtpFechaInicio.Value = CDate(DgvContrato.CurrentRow.Cells(1).Value)
+        dtpInicio.Value = CDate(DgvContrato.CurrentRow.Cells(1).Value)
         txtsueldo.Text = DgvContrato.CurrentRow.Cells(3).Value
         CboTipoEmpleado.Text = DgvContrato.CurrentRow.Cells(4).Value
         CboTipoContrato.Text = DgvContrato.CurrentRow.Cells(5).Value

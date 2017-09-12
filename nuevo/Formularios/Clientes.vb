@@ -59,6 +59,7 @@ Public Class FrmClientes
         TcCliente.Visible = True
         Me.TcCliente.SelectedTab = TpAgregar
         btnModificar.Enabled = False
+        BtnGuardar.Enabled = True
     End Sub
 
     Private Sub LblVerCliente_Click_1(sender As Object, e As EventArgs) Handles LblVerCliente.Click
@@ -70,10 +71,13 @@ Public Class FrmClientes
     End Sub
 
     Private Sub Cargar()
-
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
         Using cmd As New SqlCommand
 
             Try
+                cn.Open()
                 da = New SqlDataAdapter("select *
                                  from Cliente", cn)
                 dt = New DataTable
@@ -139,22 +143,23 @@ Public Class FrmClientes
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        txtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).ToString()
-        TxtNombreCompañia.Text = DgvCliente.CurrentRow.Cells(1).ToString()
-        TxtNombreContacto.Text = DgvCliente.CurrentRow.Cells(2).ToString()
-        TxtDireccion.Text = DgvCliente.CurrentRow.Cells(3).ToString()
-        MsktTelf1.Text = DgvCliente.CurrentRow.Cells(4).ToString()
-        If (DgvCliente.CurrentRow.Cells(5).ToString() = True) Then
+        txtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).Value
+        TxtNombreCompañia.Text = DgvCliente.CurrentRow.Cells(1).Value
+        TxtNombreContacto.Text = DgvCliente.CurrentRow.Cells(2).Value
+        TxtDireccion.Text = DgvCliente.CurrentRow.Cells(3).Value
+        MsktTelf1.Text = DgvCliente.CurrentRow.Cells(4).Value
+        If (DgvCliente.CurrentRow.Cells(5).Value = True) Then
             RdbActibo.Checked = CheckState.Checked
             op = 1
         Else
-            If (DgvCliente.CurrentRow.Cells(5).ToString() = False) Then
+            If (DgvCliente.CurrentRow.Cells(5).Value = False) Then
                 RdbInactivo.Checked = CheckState.Checked
                 op = 0
             End If
         End If
         TcCliente.SelectedTab = TpAgregar
         btnModificar.Enabled = True
+        BtnGuardar.Enabled = False
     End Sub
 
     'Actualizar un Cliente'
@@ -210,10 +215,6 @@ Public Class FrmClientes
         MsktTelf1.Clear()
         RdbActibo.Checked = False
         RdbInactivo.Checked = False
-    End Sub
-
-    Private Sub LsvCliente_DoubleClick(sender As Object, e As EventArgs)
-        FrmContrato.TxtCliente.Text = DgvCliente.CurrentRow.Cells(0).ToString()
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
@@ -277,27 +278,9 @@ Public Class FrmClientes
         End If
     End Sub
 
-    Private Sub TpAgregar_Click(sender As Object, e As EventArgs) Handles TpAgregar.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
+    Private Sub DgvCliente_DoubleClick(sender As Object, e As EventArgs) Handles DgvCliente.DoubleClick
+        FrmContrato.TxtCliente.Text = DgvCliente.CurrentRow.Cells(0).Value
+        FrmContrato.TxtNombreCliente.Text = DgvCliente.CurrentRow.Cells(1).Value
+        Me.Close()
     End Sub
 End Class

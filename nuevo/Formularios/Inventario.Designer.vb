@@ -26,6 +26,8 @@ Partial Class FrmInventario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInventario))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -35,6 +37,12 @@ Partial Class FrmInventario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TcArma = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PbxFabricacion = New System.Windows.Forms.PictureBox()
+        Me.PbxModelo = New System.Windows.Forms.PictureBox()
+        Me.PbxMarca = New System.Windows.Forms.PictureBox()
+        Me.BtnAgregarImagen = New System.Windows.Forms.PictureBox()
+        Me.CboMarca = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.DtpPermiso = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -58,14 +66,6 @@ Partial Class FrmInventario
         Me.MskCalibre = New System.Windows.Forms.MaskedTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.DgvArmas = New System.Windows.Forms.DataGridView()
-        Me.CmsArmas = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -76,24 +76,34 @@ Partial Class FrmInventario
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CmsArmas = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Planillas = New nuevo.Planillas()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.DataTable1TableAdapter = New nuevo.PlanillasTableAdapters.DataTable1TableAdapter()
         Me.TableAdapterManager = New nuevo.PlanillasTableAdapters.TableAdapterManager()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TcArma.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.PbxFabricacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxModelo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxMarca, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnAgregarImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.DgvArmas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsArmas.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Planillas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -120,6 +130,27 @@ Partial Class FrmInventario
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(231, 186)
         Me.Panel1.TabIndex = 4
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(14, 141)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(21, 15)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 18
+        Me.PictureBox2.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(38, 141)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(153, 16)
+        Me.Label11.TabIndex = 17
+        Me.Label11.Text = "Permisos por Expirar"
         '
         'PictureBox5
         '
@@ -212,6 +243,12 @@ Partial Class FrmInventario
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.PbxFabricacion)
+        Me.TabPage2.Controls.Add(Me.PbxModelo)
+        Me.TabPage2.Controls.Add(Me.PbxMarca)
+        Me.TabPage2.Controls.Add(Me.BtnAgregarImagen)
+        Me.TabPage2.Controls.Add(Me.CboMarca)
+        Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.BtnModificar)
         Me.TabPage2.Controls.Add(Me.DtpPermiso)
         Me.TabPage2.Controls.Add(Me.Label9)
@@ -240,6 +277,69 @@ Partial Class FrmInventario
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Agregar Arma"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'PbxFabricacion
+        '
+        Me.PbxFabricacion.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxFabricacion.Image = CType(resources.GetObject("PbxFabricacion.Image"), System.Drawing.Image)
+        Me.PbxFabricacion.Location = New System.Drawing.Point(530, 274)
+        Me.PbxFabricacion.Name = "PbxFabricacion"
+        Me.PbxFabricacion.Size = New System.Drawing.Size(24, 19)
+        Me.PbxFabricacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxFabricacion.TabIndex = 91
+        Me.PbxFabricacion.TabStop = False
+        '
+        'PbxModelo
+        '
+        Me.PbxModelo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxModelo.Image = CType(resources.GetObject("PbxModelo.Image"), System.Drawing.Image)
+        Me.PbxModelo.Location = New System.Drawing.Point(530, 229)
+        Me.PbxModelo.Name = "PbxModelo"
+        Me.PbxModelo.Size = New System.Drawing.Size(24, 19)
+        Me.PbxModelo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxModelo.TabIndex = 90
+        Me.PbxModelo.TabStop = False
+        '
+        'PbxMarca
+        '
+        Me.PbxMarca.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxMarca.Image = CType(resources.GetObject("PbxMarca.Image"), System.Drawing.Image)
+        Me.PbxMarca.Location = New System.Drawing.Point(530, 185)
+        Me.PbxMarca.Name = "PbxMarca"
+        Me.PbxMarca.Size = New System.Drawing.Size(24, 19)
+        Me.PbxMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxMarca.TabIndex = 89
+        Me.PbxMarca.TabStop = False
+        '
+        'BtnAgregarImagen
+        '
+        Me.BtnAgregarImagen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAgregarImagen.Image = CType(resources.GetObject("BtnAgregarImagen.Image"), System.Drawing.Image)
+        Me.BtnAgregarImagen.Location = New System.Drawing.Point(530, 140)
+        Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
+        Me.BtnAgregarImagen.Size = New System.Drawing.Size(24, 19)
+        Me.BtnAgregarImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnAgregarImagen.TabIndex = 88
+        Me.BtnAgregarImagen.TabStop = False
+        '
+        'CboMarca
+        '
+        Me.CboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboMarca.FormattingEnabled = True
+        Me.CboMarca.Location = New System.Drawing.Point(403, 185)
+        Me.CboMarca.Name = "CboMarca"
+        Me.CboMarca.Size = New System.Drawing.Size(121, 21)
+        Me.CboMarca.TabIndex = 66
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(342, 184)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(55, 18)
+        Me.Label12.TabIndex = 67
+        Me.Label12.Text = "Marca"
         '
         'BtnModificar
         '
@@ -362,7 +462,7 @@ Partial Class FrmInventario
         '
         Me.CboTipoArma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoArma.FormattingEnabled = True
-        Me.CboTipoArma.Location = New System.Drawing.Point(403, 225)
+        Me.CboTipoArma.Location = New System.Drawing.Point(403, 140)
         Me.CboTipoArma.Name = "CboTipoArma"
         Me.CboTipoArma.Size = New System.Drawing.Size(121, 21)
         Me.CboTipoArma.TabIndex = 3
@@ -371,7 +471,7 @@ Partial Class FrmInventario
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(289, 224)
+        Me.Label6.Location = New System.Drawing.Point(289, 139)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 18)
         Me.Label6.TabIndex = 8
@@ -381,7 +481,7 @@ Partial Class FrmInventario
         '
         Me.cboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboModelo.FormattingEnabled = True
-        Me.cboModelo.Location = New System.Drawing.Point(403, 176)
+        Me.cboModelo.Location = New System.Drawing.Point(403, 229)
         Me.cboModelo.Name = "cboModelo"
         Me.cboModelo.Size = New System.Drawing.Size(121, 21)
         Me.cboModelo.TabIndex = 2
@@ -390,7 +490,7 @@ Partial Class FrmInventario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(333, 175)
+        Me.Label5.Location = New System.Drawing.Point(333, 228)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 18)
         Me.Label5.TabIndex = 6
@@ -399,7 +499,7 @@ Partial Class FrmInventario
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(422, 133)
+        Me.Label4.Location = New System.Drawing.Point(422, 95)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(23, 13)
         Me.Label4.TabIndex = 5
@@ -409,7 +509,7 @@ Partial Class FrmInventario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(336, 128)
+        Me.Label3.Location = New System.Drawing.Point(336, 90)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 18)
         Me.Label3.TabIndex = 3
@@ -419,7 +519,7 @@ Partial Class FrmInventario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(350, 86)
+        Me.Label2.Location = New System.Drawing.Point(350, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 18)
         Me.Label2.TabIndex = 1
@@ -435,14 +535,14 @@ Partial Class FrmInventario
         '
         'txtSerie
         '
-        Me.txtSerie.Location = New System.Drawing.Point(403, 87)
+        Me.txtSerie.Location = New System.Drawing.Point(403, 49)
         Me.txtSerie.Name = "txtSerie"
         Me.txtSerie.Size = New System.Drawing.Size(100, 20)
         Me.txtSerie.TabIndex = 0
         '
         'MskCalibre
         '
-        Me.MskCalibre.Location = New System.Drawing.Point(403, 129)
+        Me.MskCalibre.Location = New System.Drawing.Point(403, 91)
         Me.MskCalibre.Mask = "99"
         Me.MskCalibre.Name = "MskCalibre"
         Me.MskCalibre.Size = New System.Drawing.Size(53, 20)
@@ -464,6 +564,7 @@ Partial Class FrmInventario
         'DgvArmas
         '
         Me.DgvArmas.AutoGenerateColumns = False
+        Me.DgvArmas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvArmas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgvArmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvArmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn9})
@@ -476,6 +577,86 @@ Partial Class FrmInventario
         Me.DgvArmas.Size = New System.Drawing.Size(847, 464)
         Me.DgvArmas.TabIndex = 89
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdArma"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdArma"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 65
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Serie"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Serie"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 56
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Calibre"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Calibre"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 64
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Marca"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Width = 62
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Modelo"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Width = 67
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "TipoArma"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "TipoArma"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 77
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "LugarFabricacion"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "LugarFabricacion"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 114
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "IdContratoCliente"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "IdContratoCliente"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 113
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Estado"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Estado"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
+        Me.DataGridViewCheckBoxColumn1.Width = 46
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "FechaPermiso"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "FechaPermiso"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 99
+        '
         'CmsArmas
         '
         Me.CmsArmas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificarToolStripMenuItem})
@@ -487,6 +668,16 @@ Partial Class FrmInventario
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
         Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
+        '
+        'DataTable1BindingSource
+        '
+        Me.DataTable1BindingSource.DataMember = "DataTable1"
+        Me.DataTable1BindingSource.DataSource = Me.Planillas
+        '
+        'Planillas
+        '
+        Me.Planillas.DataSetName = "Planillas"
+        Me.Planillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button1
         '
@@ -513,107 +704,6 @@ Partial Class FrmInventario
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(14, 141)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(21, 15)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 18
-        Me.PictureBox2.TabStop = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(38, 141)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(153, 16)
-        Me.Label11.TabIndex = 17
-        Me.Label11.Text = "Permisos por Expirar"
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdArma"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdArma"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Serie"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Serie"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Calibre"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Calibre"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Marca"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Marca"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Modelo"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Modelo"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "TipoArma"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "TipoArma"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "LugarFabricacion"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "LugarFabricacion"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "IdContratoCliente"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "IdContratoCliente"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Estado"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Estado"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "FechaPermiso"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "FechaPermiso"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataTable1BindingSource
-        '
-        Me.DataTable1BindingSource.DataMember = "DataTable1"
-        Me.DataTable1BindingSource.DataSource = Me.Planillas
-        '
-        'Planillas
-        '
-        Me.Planillas.DataSetName = "Planillas"
-        Me.Planillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'DataTable1TableAdapter
         '
         Me.DataTable1TableAdapter.ClearBeforeFill = True
@@ -622,10 +712,8 @@ Partial Class FrmInventario
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Connection = Nothing
-        'Me.TableAdapterManager.ContratoEmpleadoTableAdapter = Nothing
-        'Me.TableAdapterManager.DetallePlanillaTableAdapter = Nothing
-        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
-        'Me.TableAdapterManager.InventarioArmasTableAdapter = Nothing
+        Me.TableAdapterManager.DetallePlanillaContratoTableAdapter = Nothing
+        Me.TableAdapterManager.DetallePlanillaTemporalTableAdapter = Nothing
         Me.TableAdapterManager.PlanillasTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -645,20 +733,24 @@ Partial Class FrmInventario
         Me.Text = "Inventario"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TcArma.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.PbxFabricacion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxModelo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxMarca, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnAgregarImagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.DgvArmas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsArmas.ResumeLayout(False)
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Planillas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -719,4 +811,10 @@ Partial Class FrmInventario
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents CboMarca As ComboBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents PbxFabricacion As PictureBox
+    Friend WithEvents PbxModelo As PictureBox
+    Friend WithEvents PbxMarca As PictureBox
+    Friend WithEvents BtnAgregarImagen As PictureBox
 End Class

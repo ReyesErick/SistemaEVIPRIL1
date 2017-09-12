@@ -140,7 +140,7 @@ Partial Class FrmClientes
         Me.LblVerCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerCliente.Location = New System.Drawing.Point(38, 111)
         Me.LblVerCliente.Name = "LblVerCliente"
-        Me.LblVerCliente.Size = New System.Drawing.Size(88, 16)
+        Me.LblVerCliente.Size = New System.Drawing.Size(84, 16)
         Me.LblVerCliente.TabIndex = 1
         Me.LblVerCliente.Text = "Ver Cliente"
         '
@@ -165,7 +165,7 @@ Partial Class FrmClientes
         Me.LblAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarCliente.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarCliente.Name = "LblAgregarCliente"
-        Me.LblAgregarCliente.Size = New System.Drawing.Size(171, 16)
+        Me.LblAgregarCliente.Size = New System.Drawing.Size(165, 16)
         Me.LblAgregarCliente.TabIndex = 0
         Me.LblAgregarCliente.Text = "Agregar Nuevo Cliente"
         '
@@ -176,7 +176,7 @@ Partial Class FrmClientes
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.Label1.Location = New System.Drawing.Point(20, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(170, 16)
+        Me.Label1.Size = New System.Drawing.Size(156, 16)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "GESTION DE DATOS"
         '
@@ -403,6 +403,7 @@ Partial Class FrmClientes
         Me.DgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvCliente.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCliente.ContextMenuStrip = Me.CsmCliente
         Me.DgvCliente.Location = New System.Drawing.Point(17, 19)
         Me.DgvCliente.Name = "DgvCliente"
         Me.DgvCliente.ReadOnly = True

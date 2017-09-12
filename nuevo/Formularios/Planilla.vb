@@ -32,9 +32,11 @@ Public Class FrmPlanilla
     ' LABEL PARA AGREGAR UNA NUEVA PLANILLA
     Private Sub LblAgregarPlanilla_Click(sender As Object, e As EventArgs) Handles LblAgregarPlanilla.Click
         sele = 1
-        Call CrearPlanilla()
-        Call AudiLogInsert()
-        Me.PlanillasTableAdapter.FillByIdDesc(Me.Planillas._Planillas)
+        If MessageBox.Show("¿Desea crear una nueva planilla?", "EVIPRIL", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
+            Call CrearPlanilla()
+            Call AudiLogInsert()
+            Me.PlanillasTableAdapter.FillByIdDesc(Me.Planillas._Planillas)
+        End If
 
     End Sub
 
@@ -190,6 +192,10 @@ Public Class FrmPlanilla
     End Sub
 
     Private Sub PlanillasDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles PlanillasDataGridView.CellContentClick
+
+    End Sub
+
+    Private Sub PlanillasDataGridView_DoubleClick(sender As Object, e As EventArgs) Handles PlanillasDataGridView.DoubleClick
         FrmDetallePlanilla.IdPlanilla = PlanillasDataGridView.CurrentRow.Cells(0).Value
         FrmDetallePlanilla.ShowDialog()
     End Sub

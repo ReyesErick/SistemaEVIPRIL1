@@ -4,9 +4,6 @@ Public Class FrmBeneficiario
     Dim dt As DataTable
     Dim da As New SqlDataAdapter
     Dim User As String = FrmPantallaPrincipal.LblBienvenido.Text
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtNumIdentidad.TextChanged
-
-    End Sub
 
     Private Sub FrmBeneficiario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If (sele = 1) Then
@@ -28,35 +25,35 @@ Public Class FrmBeneficiario
         TxtNumIdentidad.Enabled = True
         TabControl1.SelectedTab = TabPage2
         TabControl1.Visible = True
+        BtnModificar.Enabled = False
+        BtnGuardar.Enabled = True
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        If (sele = 1) Then
-            FrmEmpleado.TxtBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(1).Value.ToString()
-            FrmEmpleado.txtIdBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(0).Value.ToString()
-            Me.Dispose()
-        Else
-            txtIdBeneficiario.Enabled = False
-            TxtNumIdentidad.Enabled = False
-            TxtApellidosBeneficiario.Enabled = False
-            TxtNombreBeneficiario.Enabled = False
-            txtIdBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(0).Value
-            TxtNombreBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(1).Value
-            TxtApellidosBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(2).Value
-            TxtDireccion.Text = DgvBeneficiario.CurrentRow.Cells(3).Value
-            MsktTelf1.Text = DgvBeneficiario.CurrentRow.Cells(4).Value
-            MskTel2.Text = DgvBeneficiario.CurrentRow.Cells(5).Value
-            TxtNumIdentidad.Text = DgvBeneficiario.CurrentRow.Cells(6).Value
-            TabControl1.SelectedTab = TabPage2
-        End If
+        txtIdBeneficiario.Enabled = False
+        'TxtNumIdentidad.Enabled =
+        'TxtApellidosBeneficiario.Enabled = False
+        'TxtNombreBeneficiario.Enabled = False
+        txtIdBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(0).Value
+        TxtNombreBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(1).Value
+        TxtApellidosBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(2).Value
+        TxtDireccion.Text = DgvBeneficiario.CurrentRow.Cells(3).Value
+        MsktTelf1.Text = DgvBeneficiario.CurrentRow.Cells(4).Value
+        MskTel2.Text = DgvBeneficiario.CurrentRow.Cells(5).Value
+        TxtNumIdentidad.Text = DgvBeneficiario.CurrentRow.Cells(6).Value
+        TabControl1.SelectedTab = TabPage2
+        BtnModificar.Enabled = True
+        BtnGuardar.Enabled = False
     End Sub
 
     'Funcion para llenar el datagridview'
     Private Sub CargarBeneficiario()
-        da = New SqlDataAdapter("Sp_MostrarBeneficiario", cn)
+
+        da = New SqlDataAdapter("Select * From Beneficiario", cn)
         dt = New DataTable
         da.Fill(dt)
         DgvBeneficiario.DataSource = dt
+
     End Sub
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         If TxtNombreBeneficiario.Text = Nothing Then
@@ -180,16 +177,6 @@ Public Class FrmBeneficiario
         Call CargarBeneficiario()
     End Sub
 
-    Private Sub DgvBeneficiario_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvBeneficiario.CellContentClick
-        If sele = 1 Then
-            FrmEmpleado.txtIdBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(0).Value.ToString
-            FrmEmpleado.TxtBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(1).Value.ToString
-            Me.Close()
-        Else
-
-        End If
-    End Sub
-
     Private Sub AudiLogInsert()
         Using da As New SqlDataAdapter
             da.InsertCommand = New SqlCommand("INSERT INTO AudiLog (Descripcion, Usuario) VALUES (@Descripcion, @Usuario)", cn)
@@ -226,5 +213,29 @@ Public Class FrmBeneficiario
         End Using
     End Sub
 
+    Private Sub LblAgregarBeneficiario_MouseMove(sender As Object, e As MouseEventArgs) Handles LblAgregarBeneficiario.MouseMove
+        LblAgregarBeneficiario.ForeColor = Color.Green
+    End Sub
 
+    Private Sub LblAgregarBeneficiario_MouseLeave(sender As Object, e As EventArgs) Handles LblAgregarBeneficiario.MouseLeave
+        LblAgregarBeneficiario.ForeColor = Color.Black
+    End Sub
+
+    Private Sub LblVerBeneficiario_MouseMove(sender As Object, e As MouseEventArgs) Handles LblVerBeneficiario.MouseMove
+        LblVerBeneficiario.ForeColor = Color.Green
+    End Sub
+
+    Private Sub LblVerBeneficiario_MouseLeave(sender As Object, e As EventArgs) Handles LblVerBeneficiario.MouseLeave
+        LblVerBeneficiario.ForeColor = Color.Black
+    End Sub
+
+    Private Sub DgvBeneficiario_DoubleClick(sender As Object, e As EventArgs) Handles DgvBeneficiario.DoubleClick
+        If sele = 1 Then
+            FrmEmpleado.txtIdBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(0).Value.ToString
+            FrmEmpleado.TxtBeneficiario.Text = DgvBeneficiario.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        Else
+
+        End If
+    End Sub
 End Class

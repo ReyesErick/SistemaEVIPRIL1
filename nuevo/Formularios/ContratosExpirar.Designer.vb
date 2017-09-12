@@ -62,7 +62,7 @@ Partial Class ContratosExpirar
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EmpleadoTableAdapter = Me.EmpleadoTableAdapter
+        'Me.TableAdapterManager.EmpleadoTableAdapter = Me.EmpleadoTableAdapter
         Me.TableAdapterManager.PlanillasTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

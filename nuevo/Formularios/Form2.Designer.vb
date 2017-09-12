@@ -76,7 +76,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label3.AutoSize = True
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(105, 215)
+        Me.Label3.Location = New System.Drawing.Point(104, 215)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 20)
         Me.Label3.TabIndex = 62
@@ -86,7 +86,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxContrato.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxContrato.Image = CType(resources.GetObject("PbxContrato.Image"), System.Drawing.Image)
-        Me.PbxContrato.Location = New System.Drawing.Point(47, 23)
+        Me.PbxContrato.Location = New System.Drawing.Point(51, 25)
         Me.PbxContrato.Name = "PbxContrato"
         Me.PbxContrato.Size = New System.Drawing.Size(194, 177)
         Me.PbxContrato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -98,7 +98,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label9.AutoSize = True
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(103, 215)
+        Me.Label9.Location = New System.Drawing.Point(110, 215)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 20)
         Me.Label9.TabIndex = 70
@@ -118,7 +118,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxInventario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxInventario.Image = CType(resources.GetObject("PbxInventario.Image"), System.Drawing.Image)
-        Me.PbxInventario.Location = New System.Drawing.Point(45, 23)
+        Me.PbxInventario.Location = New System.Drawing.Point(42, 23)
         Me.PbxInventario.Name = "PbxInventario"
         Me.PbxInventario.Size = New System.Drawing.Size(204, 166)
         Me.PbxInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -129,7 +129,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxPrestaciones.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxPrestaciones.Image = CType(resources.GetObject("PbxPrestaciones.Image"), System.Drawing.Image)
-        Me.PbxPrestaciones.Location = New System.Drawing.Point(40, 25)
+        Me.PbxPrestaciones.Location = New System.Drawing.Point(41, 25)
         Me.PbxPrestaciones.Name = "PbxPrestaciones"
         Me.PbxPrestaciones.Size = New System.Drawing.Size(208, 185)
         Me.PbxPrestaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -142,7 +142,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel11.Controls.Add(Me.Label9)
         Me.Panel11.Controls.Add(Me.PbxPrestaciones)
         Me.Panel11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel11.Location = New System.Drawing.Point(715, 140)
+        Me.Panel11.Location = New System.Drawing.Point(664, 137)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(292, 247)
         Me.Panel11.TabIndex = 29
@@ -153,7 +153,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel12.Controls.Add(Me.Label3)
         Me.Panel12.Controls.Add(Me.PbxContrato)
         Me.Panel12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel12.Location = New System.Drawing.Point(387, 140)
+        Me.Panel12.Location = New System.Drawing.Point(336, 137)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(291, 247)
         Me.Panel12.TabIndex = 30
@@ -162,7 +162,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxPlanilla.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxPlanilla.Image = CType(resources.GetObject("PbxPlanilla.Image"), System.Drawing.Image)
-        Me.PbxPlanilla.Location = New System.Drawing.Point(46, 23)
+        Me.PbxPlanilla.Location = New System.Drawing.Point(41, 23)
         Me.PbxPlanilla.Name = "PbxPlanilla"
         Me.PbxPlanilla.Size = New System.Drawing.Size(193, 173)
         Me.PbxPlanilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -174,7 +174,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label4.AutoSize = True
         Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(119, 211)
+        Me.Label4.Location = New System.Drawing.Point(110, 211)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 20)
         Me.Label4.TabIndex = 63
@@ -187,7 +187,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel6.Controls.Add(Me.PbxInventario)
         Me.Panel6.Controls.Add(Me.Label8)
         Me.Panel6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel6.Location = New System.Drawing.Point(386, 426)
+        Me.Panel6.Location = New System.Drawing.Point(336, 426)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(292, 242)
         Me.Panel6.TabIndex = 54
@@ -197,7 +197,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label1.AutoSize = True
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(58, 211)
+        Me.Label1.Location = New System.Drawing.Point(48, 211)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(170, 20)
         Me.Label1.TabIndex = 75
@@ -209,7 +209,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel9.Controls.Add(Me.Label4)
         Me.Panel9.Controls.Add(Me.PbxPlanilla)
         Me.Panel9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel9.Location = New System.Drawing.Point(715, 426)
+        Me.Panel9.Location = New System.Drawing.Point(665, 426)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(292, 242)
         Me.Panel9.TabIndex = 55
@@ -220,7 +220,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel8.Controls.Add(Me.Label5)
         Me.Panel8.Controls.Add(Me.PbxClientes)
         Me.Panel8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel8.Location = New System.Drawing.Point(1034, 140)
+        Me.Panel8.Location = New System.Drawing.Point(983, 137)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(307, 247)
         Me.Panel8.TabIndex = 66
@@ -240,7 +240,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxClientes.Image = CType(resources.GetObject("PbxClientes.Image"), System.Drawing.Image)
-        Me.PbxClientes.Location = New System.Drawing.Point(53, 27)
+        Me.PbxClientes.Location = New System.Drawing.Point(53, 25)
         Me.PbxClientes.Name = "PbxClientes"
         Me.PbxClientes.Size = New System.Drawing.Size(217, 183)
         Me.PbxClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -286,7 +286,7 @@ Partial Class FrmPantallaPrincipal
         Me.Panel5.Controls.Add(Me.Label2)
         Me.Panel5.Controls.Add(Me.PbxUsuario)
         Me.Panel5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel5.Location = New System.Drawing.Point(1034, 426)
+        Me.Panel5.Location = New System.Drawing.Point(984, 426)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(307, 247)
         Me.Panel5.TabIndex = 76
@@ -296,7 +296,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label2.AutoSize = True
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(117, 211)
+        Me.Label2.Location = New System.Drawing.Point(102, 211)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 20)
         Me.Label2.TabIndex = 53
@@ -306,7 +306,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PbxUsuario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxUsuario.Image = CType(resources.GetObject("PbxUsuario.Image"), System.Drawing.Image)
-        Me.PbxUsuario.Location = New System.Drawing.Point(65, 23)
+        Me.PbxUsuario.Location = New System.Drawing.Point(53, 23)
         Me.PbxUsuario.Name = "PbxUsuario"
         Me.PbxUsuario.Size = New System.Drawing.Size(191, 173)
         Me.PbxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -319,7 +319,7 @@ Partial Class FrmPantallaPrincipal
         Me.LblCerrar.BackColor = System.Drawing.Color.Transparent
         Me.LblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCerrar.ForeColor = System.Drawing.Color.Black
-        Me.LblCerrar.Location = New System.Drawing.Point(1220, 58)
+        Me.LblCerrar.Location = New System.Drawing.Point(1103, 57)
         Me.LblCerrar.Name = "LblCerrar"
         Me.LblCerrar.Size = New System.Drawing.Size(83, 13)
         Me.LblCerrar.TabIndex = 71
@@ -339,7 +339,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1223, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(1106, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(57, 52)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -350,7 +350,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1305, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(1188, 1)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(44, 53)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -363,7 +363,7 @@ Partial Class FrmPantallaPrincipal
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(1312, 58)
+        Me.Label6.Location = New System.Drawing.Point(1195, 57)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(32, 13)
         Me.Label6.TabIndex = 75

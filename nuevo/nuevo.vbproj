@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Erick Reyes\Documents\UNICAH\2017\II PERIODO\PDI de Software\</PublishUrl>
+    <PublishUrl>C:\Users\Erick Reyes\Documents\UNICAH\2017\II PERIODO\PDI de Software\ProyectoGit\Setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -178,10 +178,28 @@
     <Compile Include="Formularios\AudiLog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmEmpleadoPlanilla.Designer.vb">
+      <DependentUpon>FrmEmpleadoPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEmpleadoPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSalario.Designer.vb">
+      <DependentUpon>FrmSalario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmSalario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmTercerCuartoMes.Designer.vb">
       <DependentUpon>FrmTercerCuartoMes.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmTercerCuartoMes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTest.Designer.vb">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\PermisosArmas.Designer.vb">
@@ -189,6 +207,27 @@
     </Compile>
     <Compile Include="Formularios\PermisosArmas.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCatalogo.Designer.vb">
+      <DependentUpon>FrmCatalogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCatalogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\dsPagos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\DsPlanillaContrato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPlanillaContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\DsPlanillaTemporal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPlanillaTemporal.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Evipril.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -341,16 +380,40 @@
     <Compile Include="Reportes\ReportePrestaciones.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\RptPlanillaContrato.Designer.vb">
+      <DependentUpon>RptPlanillaContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptPlanillaContrato.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\RptPlanillas.Designer.vb">
       <DependentUpon>RptPlanillas.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\RptPlanillas.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\RptPlanillaTemporal.Designer.vb">
+      <DependentUpon>RptPlanillaTemporal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptPlanillaTemporal.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\RptVoucher.Designer.vb">
       <DependentUpon>RptVoucher.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\RptVoucher.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptVoucherContrato.Designer.vb">
+      <DependentUpon>RptVoucherContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptVoucherContrato.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptVoucherTemporal.Designer.vb">
+      <DependentUpon>RptVoucherTemporal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptVoucherTemporal.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -382,8 +445,17 @@
     <EmbeddedResource Include="Formularios\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEmpleadoPlanilla.resx">
+      <DependentUpon>FrmEmpleadoPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSalario.resx">
+      <DependentUpon>FrmSalario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTercerCuartoMes.resx">
       <DependentUpon>FrmTercerCuartoMes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmTest.resx">
+      <DependentUpon>frmTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSeción.resx">
       <DependentUpon>InicioSeción.vb</DependentUpon>
@@ -396,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PermisosArmas.resx">
       <DependentUpon>PermisosArmas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCatalogo.resx">
+      <DependentUpon>FrmCatalogo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -431,17 +506,62 @@
     <EmbeddedResource Include="Reportes\ReportePrestaciones.resx">
       <DependentUpon>ReportePrestaciones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptPlanillaContrato.resx">
+      <DependentUpon>RptPlanillaContrato.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptPlanillas.resx">
       <DependentUpon>RptPlanillas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptPlanillaTemporal.resx">
+      <DependentUpon>RptPlanillaTemporal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptVoucher.resx">
       <DependentUpon>RptVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptVoucherContrato.resx">
+      <DependentUpon>RptVoucherContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptVoucherTemporal.resx">
+      <DependentUpon>RptVoucherTemporal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ayuda.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Modulos\dsPagos.xsc">
+      <DependentUpon>dsPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\dsPagos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPagos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Modulos\dsPagos.xss">
+      <DependentUpon>dsPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\DsPlanillaContrato.xsc">
+      <DependentUpon>DsPlanillaContrato.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\DsPlanillaContrato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPlanillaContrato.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Modulos\DsPlanillaContrato.xss">
+      <DependentUpon>DsPlanillaContrato.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\DsPlanillaTemporal.xsc">
+      <DependentUpon>DsPlanillaTemporal.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\DsPlanillaTemporal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPlanillaTemporal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Modulos\DsPlanillaTemporal.xss">
+      <DependentUpon>DsPlanillaTemporal.xsd</DependentUpon>
+    </None>
     <None Include="Modulos\Evipril.xsc">
       <DependentUpon>Evipril.xsd</DependentUpon>
     </None>

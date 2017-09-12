@@ -46,6 +46,10 @@ Partial Class FrmPlanilla
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.PlanillasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PlanillasBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Planillas = New nuevo.Planillas()
         Me.PlanillasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -53,10 +57,6 @@ Partial Class FrmPlanilla
         Me.PlanillasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlanillasTableAdapter = New nuevo.PlanillasTableAdapters.PlanillasTableAdapter()
         Me.TableAdapterManager = New nuevo.PlanillasTableAdapters.TableAdapterManager()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,7 +133,7 @@ Partial Class FrmPlanilla
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(37, 131)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(211, 16)
+        Me.Label4.Size = New System.Drawing.Size(203, 16)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Agregar Decimo Cuarto Mes"
         '
@@ -144,7 +144,7 @@ Partial Class FrmPlanilla
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.Location = New System.Drawing.Point(37, 106)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(210, 16)
+        Me.Label5.Size = New System.Drawing.Size(204, 16)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Agregar Decimo Tercer Mes"
         '
@@ -175,7 +175,7 @@ Partial Class FrmPlanilla
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(38, 180)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(179, 16)
+        Me.Label3.Size = New System.Drawing.Size(171, 16)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Ver Decimo Cuarto Mes"
         '
@@ -186,7 +186,7 @@ Partial Class FrmPlanilla
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(38, 156)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(178, 16)
+        Me.Label2.Size = New System.Drawing.Size(172, 16)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Ver Decimo Tercer Mes"
         '
@@ -227,7 +227,7 @@ Partial Class FrmPlanilla
         Me.LblPlanillas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblPlanillas.Location = New System.Drawing.Point(38, 205)
         Me.LblPlanillas.Name = "LblPlanillas"
-        Me.LblPlanillas.Size = New System.Drawing.Size(99, 16)
+        Me.LblPlanillas.Size = New System.Drawing.Size(96, 16)
         Me.LblPlanillas.TabIndex = 1
         Me.LblPlanillas.Text = "Ver Planillas"
         '
@@ -252,7 +252,7 @@ Partial Class FrmPlanilla
         Me.LblAgregarPlanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LblAgregarPlanilla.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarPlanilla.Name = "LblAgregarPlanilla"
-        Me.LblAgregarPlanilla.Size = New System.Drawing.Size(174, 16)
+        Me.LblAgregarPlanilla.Size = New System.Drawing.Size(169, 16)
         Me.LblAgregarPlanilla.TabIndex = 0
         Me.LblAgregarPlanilla.Text = "Agregar Nueva Planilla"
         '
@@ -305,37 +305,6 @@ Partial Class FrmPlanilla
         Me.PlanillasDataGridView.Size = New System.Drawing.Size(444, 433)
         Me.PlanillasDataGridView.TabIndex = 0
         '
-        'PlanillasBindingSource2
-        '
-        Me.PlanillasBindingSource2.DataMember = "Planillas"
-        Me.PlanillasBindingSource2.DataSource = Me.Planillas
-        '
-        'Planillas
-        '
-        Me.Planillas.DataSetName = "Planillas"
-        Me.Planillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TpPlanilla
-        '
-        Me.TpPlanilla.Controls.Add(Me.TabPage3)
-        Me.TpPlanilla.Location = New System.Drawing.Point(267, 71)
-        Me.TpPlanilla.Name = "TpPlanilla"
-        Me.TpPlanilla.SelectedIndex = 0
-        Me.TpPlanilla.Size = New System.Drawing.Size(871, 574)
-        Me.TpPlanilla.TabIndex = 3
-        Me.TpPlanilla.Visible = False
-        '
-        'PlanillasTableAdapter
-        '
-        Me.PlanillasTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
-        Me.TableAdapterManager.PlanillasTableAdapter = Me.PlanillasTableAdapter
-        Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdPlanilla"
@@ -363,6 +332,38 @@ Partial Class FrmPlanilla
         Me.DataGridViewTextBoxColumn4.HeaderText = "Anio"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'PlanillasBindingSource2
+        '
+        Me.PlanillasBindingSource2.DataMember = "Planillas"
+        Me.PlanillasBindingSource2.DataSource = Me.Planillas
+        '
+        'Planillas
+        '
+        Me.Planillas.DataSetName = "Planillas"
+        Me.Planillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TpPlanilla
+        '
+        Me.TpPlanilla.Controls.Add(Me.TabPage3)
+        Me.TpPlanilla.Location = New System.Drawing.Point(267, 71)
+        Me.TpPlanilla.Name = "TpPlanilla"
+        Me.TpPlanilla.SelectedIndex = 0
+        Me.TpPlanilla.Size = New System.Drawing.Size(871, 574)
+        Me.TpPlanilla.TabIndex = 3
+        Me.TpPlanilla.Visible = False
+        '
+        'PlanillasTableAdapter
+        '
+        Me.PlanillasTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.DetallePlanillaContratoTableAdapter = Nothing
+        Me.TableAdapterManager.DetallePlanillaTemporalTableAdapter = Nothing
+        Me.TableAdapterManager.PlanillasTableAdapter = Me.PlanillasTableAdapter
+        Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'FrmPlanilla
         '

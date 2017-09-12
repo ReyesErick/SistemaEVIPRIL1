@@ -5,6 +5,6 @@
         InitializeComponent()
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-        DetallePlanillaTableAdapter1.FillByIdPlanilla(Planillas1.DetallePlanilla, idp)
+        VoucherPermanenteTableAdapter1.FillByIdPlanilla(DsPagos1.VoucherPermanente, idp)
     End Sub
 End Class

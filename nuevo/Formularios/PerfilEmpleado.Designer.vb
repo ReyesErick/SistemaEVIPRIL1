@@ -73,6 +73,7 @@ Partial Class PerfilEmpleado
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.BtnCalcular = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.BtnImprimir = New System.Windows.Forms.Button()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -186,7 +187,7 @@ Partial Class PerfilEmpleado
         '
         Me.TxtNumIdentidad.Enabled = False
         Me.TxtNumIdentidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNumIdentidad.Location = New System.Drawing.Point(204, 234)
+        Me.TxtNumIdentidad.Location = New System.Drawing.Point(204, 229)
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(188, 21)
         Me.TxtNumIdentidad.TabIndex = 106
@@ -345,7 +346,7 @@ Partial Class PerfilEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(61, 232)
+        Me.Label2.Location = New System.Drawing.Point(21, 199)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(137, 16)
         Me.Label2.TabIndex = 89
@@ -353,11 +354,11 @@ Partial Class PerfilEmpleado
         '
         'Panel1
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.txtSexo)
         Me.Panel1.Controls.Add(Me.txtEstadoCivil)
         Me.Panel1.Controls.Add(Me.FotoAgregar)
         Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(39, 32)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(450, 624)
@@ -384,7 +385,7 @@ Partial Class PerfilEmpleado
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(50, 25)
+        Me.Label1.Location = New System.Drawing.Point(50, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(90, 13)
         Me.Label1.TabIndex = 126
@@ -392,7 +393,6 @@ Partial Class PerfilEmpleado
         '
         'Panel2
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.TxtFechaFinal)
         Me.Panel2.Controls.Add(Me.dtpFechaInicial)
         Me.Panel2.Controls.Add(Me.Label23)
@@ -442,9 +442,9 @@ Partial Class PerfilEmpleado
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.Location = New System.Drawing.Point(52, 527)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(108, 16)
+        Me.Label23.Size = New System.Drawing.Size(111, 16)
         Me.Label23.TabIndex = 142
-        Me.Label23.Text = "Tipo de Contrato"
+        Me.Label23.Text = "Tipo de Contrato:"
         '
         'txtTipoContrato
         '
@@ -579,12 +579,27 @@ Partial Class PerfilEmpleado
         Me.BtnCalcular.Text = "Calcular Prestaciones"
         Me.BtnCalcular.UseVisualStyleBackColor = False
         '
+        'BtnImprimir
+        '
+        Me.BtnImprimir.BackColor = System.Drawing.Color.LawnGreen
+        Me.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnImprimir.Location = New System.Drawing.Point(590, 620)
+        Me.BtnImprimir.Name = "BtnImprimir"
+        Me.BtnImprimir.Size = New System.Drawing.Size(119, 40)
+        Me.BtnImprimir.TabIndex = 132
+        Me.BtnImprimir.Text = "Imprimir"
+        Me.BtnImprimir.UseVisualStyleBackColor = False
+        '
         'PerfilEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(957, 672)
+        Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.BtnCalcular)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
@@ -608,7 +623,6 @@ Partial Class PerfilEmpleado
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
@@ -679,4 +693,5 @@ Partial Class PerfilEmpleado
     Friend WithEvents BtnCalcular As Button
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents TxtFechaFinal As TextBox
+    Friend WithEvents BtnImprimir As Button
 End Class

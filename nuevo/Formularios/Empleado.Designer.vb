@@ -36,6 +36,9 @@ Partial Class FrmEmpleado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TcEmpleado = New System.Windows.Forms.TabControl()
         Me.TpAgregar = New System.Windows.Forms.TabPage()
+        Me.PbxProfesion = New System.Windows.Forms.PictureBox()
+        Me.PbxMunicipio = New System.Windows.Forms.PictureBox()
+        Me.CboDepto = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.RdbInactivo = New System.Windows.Forms.RadioButton()
         Me.RdbActivo = New System.Windows.Forms.RadioButton()
@@ -82,10 +85,7 @@ Partial Class FrmEmpleado
         Me.CmsEditar = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerPerfilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PtbBuscar = New System.Windows.Forms.PictureBox()
-        Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.LsvEmpleado = New System.Windows.Forms.ListView()
+        Me.AumentarSueldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbrirFoto = New System.Windows.Forms.OpenFileDialog()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
@@ -95,13 +95,14 @@ Partial Class FrmEmpleado
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TcEmpleado.SuspendLayout()
         Me.TpAgregar.SuspendLayout()
+        CType(Me.PbxProfesion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxMunicipio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnAgregarImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnBuscarBeneficiario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpVer.SuspendLayout()
         CType(Me.DgvVerEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsEditar.SuspendLayout()
-        CType(Me.PtbBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -173,7 +174,7 @@ Partial Class FrmEmpleado
         Me.LblVerContratoClien.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVerContratoClien.Location = New System.Drawing.Point(38, 113)
         Me.LblVerContratoClien.Name = "LblVerContratoClien"
-        Me.LblVerContratoClien.Size = New System.Drawing.Size(118, 16)
+        Me.LblVerContratoClien.Size = New System.Drawing.Size(115, 16)
         Me.LblVerContratoClien.TabIndex = 10
         Me.LblVerContratoClien.Text = "Ver Empleados"
         '
@@ -198,7 +199,7 @@ Partial Class FrmEmpleado
         Me.LblAgregarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAgregarEmpleado.Location = New System.Drawing.Point(38, 82)
         Me.LblAgregarEmpleado.Name = "LblAgregarEmpleado"
-        Me.LblAgregarEmpleado.Size = New System.Drawing.Size(193, 16)
+        Me.LblAgregarEmpleado.Size = New System.Drawing.Size(188, 16)
         Me.LblAgregarEmpleado.TabIndex = 7
         Me.LblAgregarEmpleado.Text = "Agregar Nuevo Empleado"
         '
@@ -226,6 +227,9 @@ Partial Class FrmEmpleado
         '
         'TpAgregar
         '
+        Me.TpAgregar.Controls.Add(Me.PbxProfesion)
+        Me.TpAgregar.Controls.Add(Me.PbxMunicipio)
+        Me.TpAgregar.Controls.Add(Me.CboDepto)
         Me.TpAgregar.Controls.Add(Me.Label21)
         Me.TpAgregar.Controls.Add(Me.RdbInactivo)
         Me.TpAgregar.Controls.Add(Me.RdbActivo)
@@ -274,13 +278,45 @@ Partial Class FrmEmpleado
         Me.TpAgregar.Text = "Agregar Empleado"
         Me.TpAgregar.UseVisualStyleBackColor = True
         '
+        'PbxProfesion
+        '
+        Me.PbxProfesion.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxProfesion.Image = CType(resources.GetObject("PbxProfesion.Image"), System.Drawing.Image)
+        Me.PbxProfesion.Location = New System.Drawing.Point(369, 408)
+        Me.PbxProfesion.Name = "PbxProfesion"
+        Me.PbxProfesion.Size = New System.Drawing.Size(24, 19)
+        Me.PbxProfesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxProfesion.TabIndex = 96
+        Me.PbxProfesion.TabStop = False
+        '
+        'PbxMunicipio
+        '
+        Me.PbxMunicipio.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxMunicipio.Image = CType(resources.GetObject("PbxMunicipio.Image"), System.Drawing.Image)
+        Me.PbxMunicipio.Location = New System.Drawing.Point(464, 490)
+        Me.PbxMunicipio.Name = "PbxMunicipio"
+        Me.PbxMunicipio.Size = New System.Drawing.Size(24, 19)
+        Me.PbxMunicipio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxMunicipio.TabIndex = 95
+        Me.PbxMunicipio.TabStop = False
+        '
+        'CboDepto
+        '
+        Me.CboDepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboDepto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboDepto.FormattingEnabled = True
+        Me.CboDepto.Location = New System.Drawing.Point(211, 488)
+        Me.CboDepto.Name = "CboDepto"
+        Me.CboDepto.Size = New System.Drawing.Size(121, 23)
+        Me.CboDepto.TabIndex = 94
+        '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(524, 374)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(63, 16)
+        Me.Label21.Size = New System.Drawing.Size(61, 16)
         Me.Label21.TabIndex = 93
         Me.Label21.Text = "Estado:"
         '
@@ -317,6 +353,7 @@ Partial Class FrmEmpleado
         '
         'BtnAgregarImagen
         '
+        Me.BtnAgregarImagen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAgregarImagen.Image = CType(resources.GetObject("BtnAgregarImagen.Image"), System.Drawing.Image)
         Me.BtnAgregarImagen.Location = New System.Drawing.Point(757, 309)
         Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
@@ -372,7 +409,7 @@ Partial Class FrmEmpleado
         Me.CboSexo.FormattingEnabled = True
         Me.CboSexo.Location = New System.Drawing.Point(176, 365)
         Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(121, 23)
+        Me.CboSexo.Size = New System.Drawing.Size(187, 23)
         Me.CboSexo.TabIndex = 10
         '
         'CboEstadoCivil
@@ -382,7 +419,7 @@ Partial Class FrmEmpleado
         Me.CboEstadoCivil.FormattingEnabled = True
         Me.CboEstadoCivil.Location = New System.Drawing.Point(175, 324)
         Me.CboEstadoCivil.Name = "CboEstadoCivil"
-        Me.CboEstadoCivil.Size = New System.Drawing.Size(121, 23)
+        Me.CboEstadoCivil.Size = New System.Drawing.Size(188, 23)
         Me.CboEstadoCivil.TabIndex = 9
         '
         'CboMunicipio
@@ -390,7 +427,7 @@ Partial Class FrmEmpleado
         Me.CboMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboMunicipio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboMunicipio.FormattingEnabled = True
-        Me.CboMunicipio.Location = New System.Drawing.Point(175, 488)
+        Me.CboMunicipio.Location = New System.Drawing.Point(337, 488)
         Me.CboMunicipio.Name = "CboMunicipio"
         Me.CboMunicipio.Size = New System.Drawing.Size(121, 23)
         Me.CboMunicipio.TabIndex = 13
@@ -402,7 +439,7 @@ Partial Class FrmEmpleado
         Me.CboNacionalidad.FormattingEnabled = True
         Me.CboNacionalidad.Location = New System.Drawing.Point(175, 447)
         Me.CboNacionalidad.Name = "CboNacionalidad"
-        Me.CboNacionalidad.Size = New System.Drawing.Size(121, 23)
+        Me.CboNacionalidad.Size = New System.Drawing.Size(188, 23)
         Me.CboNacionalidad.TabIndex = 12
         '
         'CboProfesion
@@ -412,7 +449,7 @@ Partial Class FrmEmpleado
         Me.CboProfesion.FormattingEnabled = True
         Me.CboProfesion.Location = New System.Drawing.Point(175, 406)
         Me.CboProfesion.Name = "CboProfesion"
-        Me.CboProfesion.Size = New System.Drawing.Size(121, 23)
+        Me.CboProfesion.Size = New System.Drawing.Size(188, 23)
         Me.CboProfesion.TabIndex = 11
         '
         'TxtNumSeguro
@@ -489,7 +526,7 @@ Partial Class FrmEmpleado
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(94, 70)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(77, 16)
+        Me.Label18.Size = New System.Drawing.Size(75, 16)
         Me.Label18.TabIndex = 59
         Me.Label18.Text = "Nombres:"
         '
@@ -499,7 +536,7 @@ Partial Class FrmEmpleado
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(95, 106)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(75, 16)
+        Me.Label17.Size = New System.Drawing.Size(74, 16)
         Me.Label17.TabIndex = 58
         Me.Label17.Text = "Apellidos"
         '
@@ -509,7 +546,7 @@ Partial Class FrmEmpleado
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(91, 181)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(80, 16)
+        Me.Label16.Size = New System.Drawing.Size(78, 16)
         Me.Label16.TabIndex = 57
         Me.Label16.Text = "Dirección:"
         '
@@ -519,7 +556,7 @@ Partial Class FrmEmpleado
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(95, 255)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(75, 16)
+        Me.Label15.Size = New System.Drawing.Size(74, 16)
         Me.Label15.TabIndex = 56
         Me.Label15.Text = "Telefono:"
         '
@@ -529,7 +566,7 @@ Partial Class FrmEmpleado
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(74, 327)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(100, 16)
+        Me.Label14.Size = New System.Drawing.Size(95, 16)
         Me.Label14.TabIndex = 55
         Me.Label14.Text = "Estado Civil:"
         '
@@ -549,7 +586,7 @@ Partial Class FrmEmpleado
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(496, 32)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(93, 16)
+        Me.Label12.Size = New System.Drawing.Size(91, 16)
         Me.Label12.TabIndex = 53
         Me.Label12.Text = "Beneficiaro:"
         '
@@ -557,11 +594,11 @@ Partial Class FrmEmpleado
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(90, 491)
+        Me.Label11.Location = New System.Drawing.Point(12, 491)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(80, 16)
+        Me.Label11.Size = New System.Drawing.Size(193, 16)
         Me.Label11.TabIndex = 52
-        Me.Label11.Text = "Municipio:"
+        Me.Label11.Text = " Departamento / Municipio:"
         '
         'Label10
         '
@@ -569,7 +606,7 @@ Partial Class FrmEmpleado
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(90, 409)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(80, 16)
+        Me.Label10.Size = New System.Drawing.Size(78, 16)
         Me.Label10.TabIndex = 51
         Me.Label10.Text = "Profesión:"
         '
@@ -599,7 +636,7 @@ Partial Class FrmEmpleado
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(118, 368)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(49, 16)
+        Me.Label7.Size = New System.Drawing.Size(47, 16)
         Me.Label7.TabIndex = 48
         Me.Label7.Text = "Sexo:"
         '
@@ -629,7 +666,7 @@ Partial Class FrmEmpleado
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(64, 450)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 16)
+        Me.Label3.Size = New System.Drawing.Size(105, 16)
         Me.Label3.TabIndex = 44
         Me.Label3.Text = "Nacionalidad:"
         '
@@ -639,7 +676,7 @@ Partial Class FrmEmpleado
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 34)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(162, 16)
+        Me.Label2.Size = New System.Drawing.Size(157, 16)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "Numero de Identidad:"
         '
@@ -674,10 +711,6 @@ Partial Class FrmEmpleado
         '
         Me.TpVer.Controls.Add(Me.Button1)
         Me.TpVer.Controls.Add(Me.DgvVerEmpleado)
-        Me.TpVer.Controls.Add(Me.PtbBuscar)
-        Me.TpVer.Controls.Add(Me.TxtBuscar)
-        Me.TpVer.Controls.Add(Me.Label19)
-        Me.TpVer.Controls.Add(Me.LsvEmpleado)
         Me.TpVer.Location = New System.Drawing.Point(4, 22)
         Me.TpVer.Name = "TpVer"
         Me.TpVer.Padding = New System.Windows.Forms.Padding(3)
@@ -692,7 +725,7 @@ Partial Class FrmEmpleado
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button1.Location = New System.Drawing.Point(641, 481)
+        Me.Button1.Location = New System.Drawing.Point(673, 502)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(184, 40)
         Me.Button1.TabIndex = 87
@@ -703,72 +736,42 @@ Partial Class FrmEmpleado
         '
         Me.DgvVerEmpleado.AllowUserToAddRows = False
         Me.DgvVerEmpleado.AllowUserToDeleteRows = False
-        Me.DgvVerEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvVerEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvVerEmpleado.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DgvVerEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvVerEmpleado.ContextMenuStrip = Me.CmsEditar
-        Me.DgvVerEmpleado.Location = New System.Drawing.Point(30, 122)
+        Me.DgvVerEmpleado.Location = New System.Drawing.Point(6, 6)
         Me.DgvVerEmpleado.Name = "DgvVerEmpleado"
         Me.DgvVerEmpleado.ReadOnly = True
         Me.DgvVerEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvVerEmpleado.ShowCellErrors = False
-        Me.DgvVerEmpleado.Size = New System.Drawing.Size(795, 336)
+        Me.DgvVerEmpleado.Size = New System.Drawing.Size(851, 490)
         Me.DgvVerEmpleado.StandardTab = True
         Me.DgvVerEmpleado.TabIndex = 86
         '
         'CmsEditar
         '
-        Me.CmsEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerPerfilToolStripMenuItem})
+        Me.CmsEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerPerfilToolStripMenuItem, Me.AumentarSueldoToolStripMenuItem})
         Me.CmsEditar.Name = "CmsEditar"
-        Me.CmsEditar.Size = New System.Drawing.Size(153, 70)
+        Me.CmsEditar.Size = New System.Drawing.Size(167, 70)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'VerPerfilToolStripMenuItem
         '
         Me.VerPerfilToolStripMenuItem.Name = "VerPerfilToolStripMenuItem"
-        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerPerfilToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.VerPerfilToolStripMenuItem.Text = "Ver Perfil"
         '
-        'PtbBuscar
+        'AumentarSueldoToolStripMenuItem
         '
-        Me.PtbBuscar.Image = CType(resources.GetObject("PtbBuscar.Image"), System.Drawing.Image)
-        Me.PtbBuscar.Location = New System.Drawing.Point(557, 80)
-        Me.PtbBuscar.Name = "PtbBuscar"
-        Me.PtbBuscar.Size = New System.Drawing.Size(24, 19)
-        Me.PtbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PtbBuscar.TabIndex = 85
-        Me.PtbBuscar.TabStop = False
-        '
-        'TxtBuscar
-        '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
-        Me.TxtBuscar.Location = New System.Drawing.Point(265, 79)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(282, 21)
-        Me.TxtBuscar.TabIndex = 4
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(206, 82)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(53, 16)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Buscar:"
-        '
-        'LsvEmpleado
-        '
-        Me.LsvEmpleado.Location = New System.Drawing.Point(20, 20)
-        Me.LsvEmpleado.Name = "LsvEmpleado"
-        Me.LsvEmpleado.Size = New System.Drawing.Size(824, 509)
-        Me.LsvEmpleado.TabIndex = 2
-        Me.LsvEmpleado.UseCompatibleStateImageBehavior = False
+        Me.AumentarSueldoToolStripMenuItem.Name = "AumentarSueldoToolStripMenuItem"
+        Me.AumentarSueldoToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.AumentarSueldoToolStripMenuItem.Text = "Aumentar Sueldo"
         '
         'AbrirFoto
         '
@@ -802,14 +805,14 @@ Partial Class FrmEmpleado
         Me.TcEmpleado.ResumeLayout(False)
         Me.TpAgregar.ResumeLayout(False)
         Me.TpAgregar.PerformLayout()
+        CType(Me.PbxProfesion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxMunicipio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnAgregarImagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FotoAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnBuscarBeneficiario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpVer.ResumeLayout(False)
-        Me.TpVer.PerformLayout()
         CType(Me.DgvVerEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsEditar.ResumeLayout(False)
-        CType(Me.PtbBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -863,10 +866,6 @@ Partial Class FrmEmpleado
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents TpVer As TabPage
-    Friend WithEvents PtbBuscar As PictureBox
-    Friend WithEvents TxtBuscar As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents LsvEmpleado As ListView
     Friend WithEvents AbrirFoto As OpenFileDialog
     Friend WithEvents DgvVerEmpleado As DataGridView
     Friend WithEvents CmsEditar As ContextMenuStrip
@@ -879,4 +878,8 @@ Partial Class FrmEmpleado
     Friend WithEvents RdbActivo As RadioButton
     Friend WithEvents Button1 As Button
     Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents AumentarSueldoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CboDepto As ComboBox
+    Friend WithEvents PbxProfesion As PictureBox
+    Friend WithEvents PbxMunicipio As PictureBox
 End Class

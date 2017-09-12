@@ -75,7 +75,7 @@ Partial Class FrmTercerCuartoMes
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
+        'Me.TableAdapterManager.EmpleadoTableAdapter = Nothing
         Me.TableAdapterManager.PlanillasTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = nuevo.PlanillasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
 
